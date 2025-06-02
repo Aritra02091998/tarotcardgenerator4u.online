@@ -153,8 +153,8 @@
             transform-style: preserve-3d;
             transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             cursor: pointer;
-            height: 450px;
-            width: 280px;
+            height: 400px; /* Reduced card size */
+            width: 250px;  /* Reduced card size */
         }
         
         .tarot-card.flipped {
@@ -642,7 +642,7 @@
             align-items: center;
             gap: 20px;
             position: relative;
-            height: 500px;
+            height: 450px; /* Reduced height */
             margin-bottom: 30px;
             width: 100%;
             max-width: 900px;
@@ -650,21 +650,21 @@
         
         .card-wrapper {
             position: relative;
-            height: 450px;
-            width: 280px;
+            height: 400px; /* Reduced height */
+            width: 250px;  /* Reduced width */
             transition: all 0.5s ease;
             z-index: 1;
         }
         
         .card-wrapper.left-card {
-            transform: translateX(-70px) rotate(-5deg);
-            z-index: 2;
+            transform: translateX(-80px) rotate(-5deg); /* Increased overlap */
+            z-index: 1; /* Behind the middle card */
             opacity: 0.7;
         }
         
         .card-wrapper.right-card {
-            transform: translateX(70px) rotate(5deg);
-            z-index: 2;
+            transform: translateX(80px) rotate(5deg); /* Increased overlap */
+            z-index: 1; /* Behind the middle card */
             opacity: 0.7;
         }
         
@@ -675,35 +675,35 @@
         /* Responsive Adjustments */
         @media (max-width: 768px) {
             .tarot-card {
-                height: 380px;
-                width: 230px;
+                height: 340px;
+                width: 210px;
             }
             
             .three-card-container {
-                height: 420px;
+                height: 380px;
                 gap: 10px;
             }
             
             .card-wrapper {
-                height: 380px;
-                width: 230px;
+                height: 340px;
+                width: 210px;
             }
             
             .card-wrapper.left-card {
-                transform: translateX(-40px) rotate(-5deg);
+                transform: translateX(-50px) rotate(-5deg);
             }
             
             .card-wrapper.right-card {
-                transform: translateX(40px) rotate(5deg);
+                transform: translateX(50px) rotate(5deg);
             }
             
             .main-title {
-                font-size: 2.3rem;
+                font-size: 2rem; /* Reduced size */
             }
             
             .crystal-ball {
-                width: 180px;
-                height: 180px;
+                width: 160px;
+                height: 160px;
             }
             
             .history-panel {
@@ -735,30 +735,30 @@
         
         @media (max-width: 480px) {
             .tarot-card {
-                height: 320px;
-                width: 190px;
+                height: 280px;
+                width: 170px;
             }
             
             .three-card-container {
-                height: 350px;
+                height: 320px;
                 gap: 5px;
             }
             
             .card-wrapper {
-                height: 320px;
-                width: 190px;
+                height: 280px;
+                width: 170px;
             }
             
             .card-wrapper.left-card {
-                transform: translateX(-30px) rotate(-5deg);
+                transform: translateX(-40px) rotate(-5deg);
             }
             
             .card-wrapper.right-card {
-                transform: translateX(30px) rotate(5deg);
+                transform: translateX(40px) rotate(5deg);
             }
             
             .main-title {
-                font-size: 1.8rem;
+                font-size: 1.6rem; /* Reduced size */
             }
             
             .history-panel {
@@ -888,7 +888,7 @@
             <div class="main-header mb-8">
                 <div class="header-left"></div>
                 <div class="header-center">
-                    <h1 class="text-4xl md:text-5xl font-cinzel shimmer-text main-title">
+                    <h1 class="text-3xl md:text-4xl font-cinzel shimmer-text main-title"> <!-- Reduced size -->
                         Mystic Tarot
                     </h1>
                 </div>
@@ -913,17 +913,7 @@
                     <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
                 </div>
                 
-                <!-- SWAPPED SECTIONS: Preparation instructions now come before deck selection -->
-                <!-- Preparation Instructions -->
-                <div class="bg-indigo-900 bg-opacity-60 rounded-xl p-6 mb-8">
-                    <h3 class="font-cinzel text-2xl mb-4 text-purple-200">
-                        <i class="fas fa-lightbulb mr-2"></i>Preparing for Your Reading
-                    </h3>
-                    <p class="font-playfair text-lg text-purple-100">
-                        Find a quiet space and take a few deep breaths. Focus your mind on a question or area of your life you seek guidance for. When you're ready, enter your question below and draw your card.
-                    </p>
-                </div>
-                
+                <!-- REARRANGED: Deck style and button now before preparation instructions -->
                 <!-- Theme Selection -->
                 <div class="mb-6">
                     <h4 class="font-cinzel text-xl mb-4 text-purple-200">
@@ -949,9 +939,19 @@
                     </div>
                 </div>
                 
-                <button id="startButton" class="mystical-btn font-cinzel px-10 py-5 rounded-lg text-2xl hover:glow mt-4" aria-label="Begin your tarot reading journey">
+                <button id="startButton" class="mystical-btn font-cinzel px-8 py-4 rounded-lg text-xl hover:glow mt-4" aria-label="Begin your tarot reading journey">
                     Begin Your Journey <i class="fas fa-arrow-right ml-3"></i>
                 </button>
+                
+                <!-- Preparation Instructions -->
+                <div class="bg-indigo-900 bg-opacity-60 rounded-xl p-6 mb-8 mt-8">
+                    <h3 class="font-cinzel text-2xl mb-4 text-purple-200">
+                        <i class="fas fa-lightbulb mr-2"></i>Preparing for Your Reading
+                    </h3>
+                    <p class="font-playfair text-lg text-purple-100">
+                        Find a quiet space and take a few deep breaths. Focus your mind on a question or area of your life you seek guidance for. When you're ready, enter your question below and draw your card.
+                    </p>
+                </div>
             </div>
         </section>
         
@@ -965,7 +965,7 @@
                     </button>
                 </div>
                 <div class="header-center">
-                    <h1 class="text-4xl md:text-5xl font-cinzel shimmer-text main-title">
+                    <h1 class="text-3xl md:text-4xl font-cinzel shimmer-text main-title"> <!-- Reduced size -->
                         Mystic Tarot
                     </h1>
                 </div>
@@ -1011,13 +1011,13 @@
                                 <div class="card-symbol top-6 right-6">♏</div>
                                 <div class="card-symbol bottom-6 left-6">♐</div>
                                 <div class="card-symbol bottom-6 right-6">♑</div>
-                                <div class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl">☾</div>
+                                <div class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl" id="leftCenterSymbol">☾</div>
                             </div>
                             <div class="absolute inset-4 flex flex-col items-center justify-center">
-                                <div class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center floating">
-                                    <i class="fas fa-star text-5xl text-purple-800"></i>
+                                <div class="w-20 h-20 rounded-full bg-yellow-200 flex items-center justify-center floating"> <!-- Reduced size -->
+                                    <i class="fas fa-star text-4xl text-purple-800" id="leftCardIcon"></i> <!-- Reduced size -->
                                 </div>
-                                <h2 class="font-cinzel text-2xl text-yellow-200">Mystic Tarot</h2>
+                                <h2 class="font-cinzel text-xl text-yellow-200">Mystic Tarot</h2> <!-- Reduced size -->
                             </div>
                             <div class="absolute inset-0 border-8 border-purple-300 rounded-2xl opacity-30"></div>
                         </div>
@@ -1042,10 +1042,10 @@
                                 <div class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl" id="centerCardSymbol">☾</div>
                             </div>
                             <div class="absolute inset-4 flex flex-col items-center justify-center">
-                                <div class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center floating">
-                                    <i class="fas fa-star text-5xl text-purple-800" id="cardIcon"></i>
+                                <div class="w-20 h-20 rounded-full bg-yellow-200 flex items-center justify-center floating"> <!-- Reduced size -->
+                                    <i class="fas fa-star text-4xl text-purple-800" id="cardIcon"></i> <!-- Reduced size -->
                                 </div>
-                                <h2 class="font-cinzel text-2xl text-yellow-200">Mystic Tarot</h2>
+                                <h2 class="font-cinzel text-xl text-yellow-200">Mystic Tarot</h2> <!-- Reduced size -->
                             </div>
                             <div class="absolute inset-0 border-8 border-purple-300 rounded-2xl opacity-30"></div>
                         </div>
@@ -1067,13 +1067,13 @@
                                 <div class="card-symbol top-6 right-6">♏</div>
                                 <div class="card-symbol bottom-6 left-6">♐</div>
                                 <div class="card-symbol bottom-6 right-6">♑</div>
-                                <div class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl">☾</div>
+                                <div class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl" id="rightCenterSymbol">☾</div>
                             </div>
                             <div class="absolute inset-4 flex flex-col items-center justify-center">
-                                <div class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center floating">
-                                    <i class="fas fa-star text-5xl text-purple-800"></i>
+                                <div class="w-20 h-20 rounded-full bg-yellow-200 flex items-center justify-center floating"> <!-- Reduced size -->
+                                    <i class="fas fa-star text-4xl text-purple-800" id="rightCardIcon"></i> <!-- Reduced size -->
                                 </div>
-                                <h2 class="font-cinzel text-2xl text-yellow-200">Mystic Tarot</h2>
+                                <h2 class="font-cinzel text-xl text-yellow-200">Mystic Tarot</h2> <!-- Reduced size -->
                             </div>
                             <div class="absolute inset-0 border-8 border-purple-300 rounded-2xl opacity-30"></div>
                         </div>
@@ -1362,6 +1362,10 @@
         const cardIcon = document.getElementById('cardIcon');
         const centerCardSymbol = document.getElementById('centerCardSymbol');
         const threeCardContainer = document.getElementById('threeCardContainer');
+        const leftCardIcon = document.getElementById('leftCardIcon');
+        const rightCardIcon = document.getElementById('rightCardIcon');
+        const leftCenterSymbol = document.getElementById('leftCenterSymbol');
+        const rightCenterSymbol = document.getElementById('rightCenterSymbol');
         
         // User's question and reading history
         let currentQuestion = "";
@@ -1372,7 +1376,7 @@
         
         // Initialize
         updateHistoryList();
-        updateCardBackIcon();
+        updateAllCardBackIcons();
         
         // Start the reading experience
         startButton.addEventListener('click', () => {
@@ -1450,9 +1454,9 @@
                 // Build card content
                 cardContent.innerHTML = `
                     ${isReversed ? '<div class="reversed-indicator">Reversed</div>' : ''}
-                    <h3 class="font-cinzel text-3xl text-center mb-4">${card.name}</h3>
+                    <h3 class="font-cinzel text-2xl text-center mb-4">${card.name}</h3>
                     <div class="flex-1 w-full flex items-center justify-center">
-                        <img src="${card.image}" alt="${card.name}" class="max-h-64 rounded-lg ${isReversed ? 'reversed' : ''}">
+                        <img src="${card.image}" alt="${card.name}" class="max-h-52 rounded-lg ${isReversed ? 'reversed' : ''}">
                     </div>
                     <div class="meaning-container mt-4">
                         <p class="font-playfair italic text-center">
@@ -1509,10 +1513,19 @@
             }, 1500);
         }
         
-        // Update card back with selected theme icon
-        function updateCardBackIcon() {
-            cardIcon.className = `fas ${currentThemeIcon} text-5xl text-purple-800`;
+        // Update all card backs with selected theme icon
+        function updateAllCardBackIcons() {
+            // Middle card
+            cardIcon.className = `fas ${currentThemeIcon} text-4xl text-purple-800`;
             centerCardSymbol.textContent = currentCenterSymbol;
+            
+            // Left card
+            leftCardIcon.className = `fas ${currentThemeIcon} text-4xl text-purple-800`;
+            leftCenterSymbol.textContent = currentCenterSymbol;
+            
+            // Right card
+            rightCardIcon.className = `fas ${currentThemeIcon} text-4xl text-purple-800`;
+            rightCenterSymbol.textContent = currentCenterSymbol;
         }
         
         // Reset for new reading
@@ -1641,7 +1654,7 @@ Meaning: ${reading.meaning}
                 currentCenterSymbol = "★";
             }
             
-            updateCardBackIcon();
+            updateAllCardBackIcons();
         }
         
         // Generate PDF report
