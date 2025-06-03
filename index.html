@@ -88,6 +88,7 @@
             display: flex;
             flex-direction: column;
             font-size: 0.95rem; /* Slightly reduced base font size */
+            zoom: 1; /* Reset zoom */
         }
         
         .starry-bg {
@@ -617,11 +618,55 @@
             gap: 0.8rem; /* Slightly reduced gap */
         }
         
+        /* Three Card Layout */
+        .three-card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 500px;
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+        
+        .card-wrapper {
+            position: absolute;
+            transition: all 0.5s ease;
+        }
+        
+        .card-wrapper.left {
+            transform: rotate(-15deg) translateX(-30%);
+            z-index: 1;
+            opacity: 0.8;
+        }
+        
+        .card-wrapper.right {
+            transform: rotate(15deg) translateX(30%);
+            z-index: 1;
+            opacity: 0.8;
+        }
+        
+        .card-wrapper.center {
+            z-index: 2;
+        }
+        
         /* Responsive Adjustments */
         @media (max-width: 768px) {
             .tarot-card {
                 height: 380px; /* Adjusted for mobile */
                 width: 230px; /* Adjusted for mobile */
+            }
+            
+            .three-card-container {
+                height: 400px;
+            }
+            
+            .card-wrapper.left {
+                transform: rotate(-15deg) translateX(-25%);
+            }
+            
+            .card-wrapper.right {
+                transform: rotate(15deg) translateX(25%);
             }
             
             .main-title {
@@ -664,6 +709,18 @@
             .tarot-card {
                 height: 320px; /* Adjusted for small mobile */
                 width: 190px; /* Adjusted for small mobile */
+            }
+            
+            .three-card-container {
+                height: 350px;
+            }
+            
+            .card-wrapper.left {
+                transform: rotate(-15deg) translateX(-20%);
+            }
+            
+            .card-wrapper.right {
+                transform: rotate(15deg) translateX(20%);
             }
             
             .main-title {
@@ -822,15 +879,6 @@
                     <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
                 </div>
                 
-                <div class="bg-indigo-900 bg-opacity-60 rounded-xl p-6 mb-8">
-                    <h3 class="font-cinzel text-2xl mb-4 text-purple-200">
-                        <i class="fas fa-lightbulb mr-2"></i>Preparing for Your Reading
-                    </h3>
-                    <p class="font-playfair text-lg text-purple-100">
-                        Find a quiet space and take a few deep breaths. Focus your mind on a question or area of your life you seek guidance for. When you're ready, enter your question below and draw your card.
-                    </p>
-                </div>
-                
                 <!-- Theme Selection -->
                 <div class="mb-6">
                     <h4 class="font-cinzel text-xl mb-4 text-purple-200">
@@ -859,6 +907,16 @@
                 <button id="startButton" class="mystical-btn font-cinzel px-10 py-5 rounded-lg text-2xl hover:glow mt-4" aria-label="Begin your tarot reading journey">
                     Begin Your Journey <i class="fas fa-arrow-right ml-3"></i>
                 </button>
+                
+                <!-- Moved "Preparing for Your Reading" section after the button -->
+                <div class="bg-indigo-900 bg-opacity-60 rounded-xl p-6 mt-8">
+                    <h3 class="font-cinzel text-2xl mb-4 text-purple-200">
+                        <i class="fas fa-lightbulb mr-2"></i>Preparing for Your Reading
+                    </h3>
+                    <p class="font-playfair text-lg text-purple-100">
+                        Find a quiet space and take a few deep breaths. Focus your mind on a question or area of your life you seek guidance for. When you're ready, enter your question below and draw your card.
+                    </p>
+                </div>
             </div>
         </section>
         
@@ -906,32 +964,89 @@
                 </p>
             </div>
             
-            <!-- Card Container -->
-            <div class="card-container mb-12 relative" id="cardContainer">
-                <div class="tarot-card relative" id="tarotCard">
-                    <!-- Card Back -->
-                    <div class="card-face card-back">
-                        <div class="absolute inset-0 card-back-pattern"></div>
-                        <div class="card-symbols">
-                            <div class="card-symbol top-6 left-6">♎</div>
-                            <div class="card-symbol top-6 right-6">♏</div>
-                            <div class="card-symbol bottom-6 left-6">♐</div>
-                            <div class="card-symbol bottom-6 right-6">♑</div>
-                            <div class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl" id="centerCardSymbol">☾</div>
-                        </div>
-                        <div class="absolute inset-4 flex flex-col items-center justify-center">
-                            <div class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6 floating">
-                                <i class="fas fa-star text-5xl text-purple-800" id="cardIcon"></i>
+            <!-- Three Card Container -->
+            <div class="three-card-container" id="threeCardContainer">
+                <!-- Left Card -->
+                <div class="card-wrapper left">
+                    <div class="card-container">
+                        <div class="tarot-card" id="leftCard">
+                            <!-- Card Back -->
+                            <div class="card-face card-back">
+                                <div class="absolute inset-0 card-back-pattern"></div>
+                                <div class="card-symbols">
+                                    <div class="card-symbol top-6 left-6">♎</div>
+                                    <div class="card-symbol top-6 right-6">♏</div>
+                                    <div class="card-symbol bottom-6 left-6">♐</div>
+                                    <div class="card-symbol bottom-6 right-6">♑</div>
+                                    <div class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol">☾</div>
+                                </div>
+                                <div class="absolute inset-4 flex flex-col items-center justify-center">
+                                    <div class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6 floating">
+                                        <i class="fas fa-star text-5xl text-purple-800 card-icon"></i>
+                                    </div>
+                                    <h2 class="font-cinzel text-2xl text-yellow-200">Mystic Tarot</h2>
+                                </div>
+                                <div class="absolute inset-0 border-8 border-purple-300 rounded-2xl opacity-30"></div>
                             </div>
-                            <h2 class="font-cinzel text-2xl text-yellow-200">Mystic Tarot</h2>
                         </div>
-                        <div class="absolute inset-0 border-8 border-purple-300 rounded-2xl opacity-30"></div>
                     </div>
-                    
-                    <!-- Card Front (will be populated when flipped) -->
-                    <div class="card-face card-front p-6">
-                        <div id="cardContent" class="flex flex-col items-center h-full">
-                            <!-- Content will be populated by JS -->
+                </div>
+                
+                <!-- Center Card -->
+                <div class="card-wrapper center">
+                    <div class="card-container" id="centerCardContainer">
+                        <div class="tarot-card" id="centerCard">
+                            <!-- Card Back -->
+                            <div class="card-face card-back">
+                                <div class="absolute inset-0 card-back-pattern"></div>
+                                <div class="card-symbols">
+                                    <div class="card-symbol top-6 left-6">♎</div>
+                                    <div class="card-symbol top-6 right-6">♏</div>
+                                    <div class="card-symbol bottom-6 left-6">♐</div>
+                                    <div class="card-symbol bottom-6 right-6">♑</div>
+                                    <div class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol">☾</div>
+                                </div>
+                                <div class="absolute inset-4 flex flex-col items-center justify-center">
+                                    <div class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6 floating">
+                                        <i class="fas fa-star text-5xl text-purple-800 card-icon"></i>
+                                    </div>
+                                    <h2 class="font-cinzel text-2xl text-yellow-200">Mystic Tarot</h2>
+                                </div>
+                                <div class="absolute inset-0 border-8 border-purple-300 rounded-2xl opacity-30"></div>
+                            </div>
+                            
+                            <!-- Card Front (will be populated when flipped) -->
+                            <div class="card-face card-front p-6">
+                                <div id="cardContent" class="flex flex-col items-center h-full">
+                                    <!-- Content will be populated by JS -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Card -->
+                <div class="card-wrapper right">
+                    <div class="card-container">
+                        <div class="tarot-card" id="rightCard">
+                            <!-- Card Back -->
+                            <div class="card-face card-back">
+                                <div class="absolute inset-0 card-back-pattern"></div>
+                                <div class="card-symbols">
+                                    <div class="card-symbol top-6 left-6">♎</div>
+                                    <div class="card-symbol top-6 right-6">♏</div>
+                                    <div class="card-symbol bottom-6 left-6">♐</div>
+                                    <div class="card-symbol bottom-6 right-6">♑</div>
+                                    <div class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol">☾</div>
+                                </div>
+                                <div class="absolute inset-4 flex flex-col items-center justify-center">
+                                    <div class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6 floating">
+                                        <i class="fas fa-star text-5xl text-purple-800 card-icon"></i>
+                                    </div>
+                                    <h2 class="font-cinzel text-2xl text-yellow-200">Mystic Tarot</h2>
+                                </div>
+                                <div class="absolute inset-0 border-8 border-purple-300 rounded-2xl opacity-30"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1176,7 +1291,7 @@
         ];
         
         // DOM elements
-        const tarotCard = document.getElementById('tarotCard');
+        const centerCard = document.getElementById('centerCard');
         const cardContent = document.getElementById('cardContent');
         const drawButton = document.getElementById('drawButton');
         const drawAgainButton = document.getElementById('drawAgainButton');
@@ -1210,8 +1325,6 @@
         const backButton = document.getElementById('backButton');
         const changeDeckButton = document.getElementById('changeDeckButton');
         const pdfButton = document.getElementById('pdfButton');
-        const cardIcon = document.getElementById('cardIcon');
-        const centerCardSymbol = document.getElementById('centerCardSymbol');
         
         // User's question and reading history
         let currentQuestion = "";
@@ -1222,7 +1335,7 @@
         
         // Initialize
         updateHistoryList();
-        updateCardBackIcon();
+        updateCardBackIcons();
         
         // Start the reading experience
         startButton.addEventListener('click', () => {
@@ -1259,11 +1372,11 @@
         });
         
         // Add shake animation to card on hover
-        tarotCard.addEventListener('mouseenter', () => {
-            if (!tarotCard.classList.contains('flipped')) {
-                tarotCard.classList.add('card-shake');
+        centerCard.addEventListener('mouseenter', () => {
+            if (!centerCard.classList.contains('flipped')) {
+                centerCard.classList.add('card-shake');
                 setTimeout(() => {
-                    tarotCard.classList.remove('card-shake');
+                    centerCard.classList.remove('card-shake');
                 }, 600);
             }
         });
@@ -1292,14 +1405,19 @@
             createParticles();
             
             // Simulate shuffling animation
-            tarotCard.classList.add('shuffle-animation');
+            const cards = document.querySelectorAll('.tarot-card');
+            cards.forEach(card => {
+                card.classList.add('shuffle-animation');
+            });
             
             setTimeout(() => {
                 // Create mystical swirl animation
                 createSwirl();
                 
                 // Remove shuffling animation
-                tarotCard.classList.remove('shuffle-animation');
+                cards.forEach(card => {
+                    card.classList.remove('shuffle-animation');
+                });
                 
                 // Random card and orientation
                 const randomIndex = Math.floor(Math.random() * tarotDeck.length);
@@ -1322,7 +1440,7 @@
                 `;
                 
                 // Add reversed class if needed
-                const cardFront = tarotCard.querySelector('.card-front');
+                const cardFront = centerCard.querySelector('.card-front');
                 if (isReversed) {
                     cardFront.classList.add('reversed');
                 } else {
@@ -1338,10 +1456,10 @@
                 
                 // Flip the card after a short delay
                 setTimeout(() => {
-                    tarotCard.classList.add('flipped');
+                    centerCard.classList.add('flipped');
                     
                     // Add glow effect to the revealed card
-                    tarotCard.classList.add('glow');
+                    centerCard.classList.add('glow');
                     
                     // Show action buttons
                     setTimeout(() => {
@@ -1368,23 +1486,31 @@
             }, 1500);
         }
         
-        // Update card back with selected theme icon
-        function updateCardBackIcon() {
-            cardIcon.className = `fas ${currentThemeIcon} text-5xl text-purple-800`;
-            centerCardSymbol.textContent = currentCenterSymbol;
+        // Update card back with selected theme icon for all cards
+        function updateCardBackIcons() {
+            document.querySelectorAll('.card-icon').forEach(icon => {
+                icon.className = `fas ${currentThemeIcon} text-5xl text-purple-800 card-icon`;
+            });
+            
+            document.querySelectorAll('.center-card-symbol').forEach(symbol => {
+                symbol.textContent = currentCenterSymbol;
+            });
         }
         
         // Reset for new reading
         function resetReading() {
             // Remove glow effect
-            tarotCard.classList.remove('glow');
+            centerCard.classList.remove('glow');
             
             // Hide action buttons
             drawAgainButton.classList.add('hidden');
             shareButton.classList.add('hidden');
             
             // Flip card back
-            tarotCard.classList.remove('flipped');
+            centerCard.classList.remove('flipped');
+            
+            // Clear card content
+            cardContent.innerHTML = '';
             
             // Show draw button after flip completes
             setTimeout(() => {
@@ -1500,7 +1626,7 @@ Meaning: ${reading.meaning}
                 currentCenterSymbol = "★";
             }
             
-            updateCardBackIcon();
+            updateCardBackIcons();
         }
         
         // Generate PDF report
@@ -1724,9 +1850,9 @@ Meaning: ${reading.meaning}
         
         // Initial animation for the card
         setTimeout(() => {
-            tarotCard.classList.add('card-shake');
+            centerCard.classList.add('card-shake');
             setTimeout(() => {
-                tarotCard.classList.remove('card-shake');
+                centerCard.classList.remove('card-shake');
             }, 600);
         }, 1000);
     </script>
