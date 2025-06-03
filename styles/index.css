@@ -101,6 +101,17 @@ body {
     background: linear-gradient(135deg, #f3e8ff, #ede9fe);
     transform: rotateY(180deg);
     color: #1e293b;
+    /* Instead of centering, stack children from top */
+    justify-content: flex-start;
+    padding-top: 1rem;      /* small gap from top edge */
+    box-sizing: border-box; /* ensure padding doesn’t push outside */
+}
+
+.card-front img {
+    /* ★ Tweak: allow the revealed card image to be larger */
+    max-height: 260px;
+    width: auto;
+    max-width: 90%;
 }
 
 .card-front.reversed img {
@@ -311,9 +322,13 @@ body {
     border-radius: 18px;
     width: 90%;
     max-width: 480px;
+
+    /* New: limit height to 80% of viewport and allow internal scroll */
+    max-height: 80vh;
+    overflow-y: auto;
+    
     box-shadow: 0 0 36px rgba(124, 58, 237, 0.5);
     border: 1px solid var(--primary);
-    overflow: hidden;
 }
 
 .social-share-btn {

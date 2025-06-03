@@ -73,57 +73,41 @@ function createSwirl() {
     }, 1500);
 }
 
-// Tarot card data
-const tarotDeck = [
-    {
-        name: "The Fool",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/RWS_Tarot_00_Fool.jpg/220px-RWS_Tarot_00_Fool.jpg",
-        upright: "New beginnings, innocence, spontaneity, free spirit",
-        reversed: "Recklessness, poor judgment, naivety, risk-taking"
-    },
-    {
-        name: "The Magician",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/RWS_Tarot_01_Magician.jpg/220px-RWS_Tarot_01_Magician.jpg",
-        upright: "Manifestation, resourcefulness, inspired action, power",
-        reversed: "Manipulation, untapped talents, trickery, poor planning"
-    },
-    {
-        name: "The High Priestess",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/RWS_Tarot_02_High_Priestess.jpg/220px-RWS_Tarot_02_High_Priestess.jpg",
-        upright: "Intuition, unconscious knowledge, divine feminine, mystery",
-        reversed: "Secrets, disconnected from intuition, withdrawal, silence"
-    },
-    {
-        name: "The Empress",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/RWS_Tarot_03_Empress.jpg/220px-RWS_Tarot_03_Empress.jpg",
-        upright: "Femininity, beauty, nature, abundance, nurturing",
-        reversed: "Creative block, dependence, neglect, overbearing"
-    },
-    {
-        name: "The Emperor",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/RWS_Tarot_04_Emperor.jpg/220px-RWS_Tarot_04_Emperor.jpg",
-        upright: "Authority, structure, control, fatherhood, leadership",
-        reversed: "Domination, rigidity, lack of discipline, inflexibility"
-    },
-    {
-        name: "The Lovers",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/RWS_Tarot_06_Lovers.jpg/220px-RWS_Tarot_06_Lovers.jpg",
-        upright: "Love, harmony, relationships, alignment, choices",
-        reversed: "Disharmony, imbalance, misalignment, difficult choices"
-    },
-    {
-        name: "The Chariot",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/RWS_Tarot_07_Chariot.jpg/220px-RWS_Tarot_07_Chariot.jpg",
-        upright: "Control, willpower, victory, assertion, determination",
-        reversed: "Lack of direction, aggression, forcefulness, no control"
-    },
-    {
-        name: "Strength",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/RWS_Tarot_08_Strength.jpg/220px-RWS_Tarot_08_Strength.jpg",
-        upright: "Bravery, compassion, inner strength, influence",
-        reversed: "Self-doubt, weakness, low confidence, insecurity"
-    }
-];
+// We'll load tarot card data from a JSON file named 'tarot-details.json' (placed alongside script.js).
+// Each card object must have fields matching the provided JSON structure, e.g.:
+// { name, number, arcana, suit, img, fortune_telling, keywords, meanings: { light, shadow }, Archetype, "Hebrew Alphabet", Numerology, Elemental, "Mythical/Spiritual", "Questions to Ask" }
+
+let tarotDeck = [];  // Will hold the array from data.cards
+
+// Fetch JSON on load
+fetch('tarot-details.json')
+    .then(response => response.json())
+    .then(data => {
+        // Assume the JSON has a top-level "cards" array
+        tarotDeck = data.cards.map(card => {
+            // Prepend image path
+            return {
+                name: card.name,
+                number: card.number,
+                arcana: card.arcana,
+                suit: card.suit,
+                img: '/assets/cards/' + card.img,         // full image path
+                fortune_telling: card.fortune_telling,     // array
+                keywords: card.keywords,                   // array
+                meanings: card.meanings,                   // object { light: [...], shadow: [...] }
+                Archetype: card.Archetype,
+                HebrewAlphabet: card["Hebrew Alphabet"],
+                Numerology: card.Numerology,
+                Elemental: card.Elemental,
+                Mythical: card["Mythical/Spiritual"],
+                questionsToAsk: card["Questions to Ask"]
+            };
+        });
+    })
+    .catch(error => {
+        console.error('Error loading cards.json:', error);
+        // Fallback: tarotDeck remains empty; drawCard should handle this.
+    });
 
 // DOM elements
 const centerCard = document.getElementById('centerCard');
@@ -163,12 +147,13 @@ const pdfButton = document.getElementById('pdfButton');
 
 // User's question and reading history
 let currentQuestion = "";
+// Each history entry will now include: name, arcana, fortune_telling (array), orientation, chosenMeaning, question, timestamp
 let readingHistory = JSON.parse(localStorage.getItem('tarotHistory')) || [];
 let currentTheme = "1";
 let currentThemeIcon = "fa-moon";
 let currentCenterSymbol = "☾";
 
-// Initialize
+// Initialize after DOM is ready
 updateHistoryList();
 updateCardBackIcons();
 
@@ -218,8 +203,14 @@ centerCard.addEventListener('mouseenter', () => {
 
 // Draw a card with enhanced experience
 function drawCard() {
+    // Ensure tarotDeck is loaded
+    if (tarotDeck.length === 0) {
+        alert("Tarot deck data is not yet loaded. Please wait a moment and try again.");
+        return;
+    }
+
     // Get and store user's question
-    currentQuestion = userQuestion.value || "Seeking general guidance";
+    currentQuestion = userQuestion.value.trim() || "Seeking general guidance";
     displayedQuestion.textContent = currentQuestion;
     questionDisplay.classList.remove('hidden');
 
@@ -259,22 +250,27 @@ function drawCard() {
         const isReversed = Math.random() > 0.5;
         const card = tarotDeck[randomIndex];
 
+        // Determine which meaning array to use
+        const chosenMeaningArray = isReversed
+            ? card.meanings.shadow
+            : card.meanings.light;
+        // Join meanings into one string (you could adapt to show list)
+        const chosenMeaning = chosenMeaningArray.join(', ');
+
         // Build card content
         cardContent.innerHTML = `
             ${isReversed ? '<div class="reversed-indicator">Reversed</div>' : ''}
-            <h3 class="font-cinzel text-2xl text-center mb-4">${card.name}</h3>
+            <h3 class="font-cinzel text-2xl text-center mb-2">${card.name}</h3>
+            <p class="text-sm text-purple-400 italic mb-2">${card.arcana}</p>
             <div class="flex-1 w-full flex items-center justify-center">
-                <img src="${card.image}" alt="${card.name}" class="max-h-52 rounded-lg ${
-            isReversed ? 'reversed' : ''
-        }">
+                <img src="${card.img}" alt="${card.name}" class="max-h-52 rounded-lg ${isReversed ? 'reversed' : ''}">
             </div>
-            <div class="meaning-container mt-4">
-                <p class="font-playfair italic text-center text-sm">
-                    <span class="font-bold">${isReversed ? 'Reversed' : 'Upright'}:</span>
-                    ${
-                        isReversed ? card.reversed : card.upright
-                    }
+            <div class="mt-4">
+                <p class="font-playfair italic text-center text-sm mb-2">
+                    <span class="font-bold">${isReversed ? 'Shadow:' : 'Light:'}</span> ${chosenMeaning}
                 </p>
+                <p class="font-playfair text-sm text-center mb-2"><span class="font-bold">Fortune Telling:</span> ${card.fortune_telling.join(', ')}</p>
+                <p class="font-playfair text-sm text-center"><span class="font-bold">Keywords:</span> ${card.keywords.join(', ')}</p>
             </div>
         `;
 
@@ -308,9 +304,11 @@ function drawCard() {
 
             // Add to reading history
             const reading = {
-                card: card.name,
-                orientation: isReversed ? "Reversed" : "Upright",
-                meaning: isReversed ? card.reversed : card.upright,
+                name: card.name,
+                arcana: card.arcana,
+                fortune_telling: card.fortune_telling,     // array
+                orientation: isReversed ? "Reversed" : "Light",
+                chosenMeaning: chosenMeaning,
                 question: currentQuestion,
                 timestamp: new Date().toLocaleString()
             };
@@ -369,43 +367,57 @@ function updateHistoryList() {
     historyList.innerHTML = '';
 
     readingHistory.forEach((reading, index) => {
+        // Ensure chosenMeaning is at least an empty string
+        const snippet = (reading.chosenMeaning || '').substring(0, 60);
+
         const item = document.createElement('div');
         item.classList.add('history-item');
         item.innerHTML = `
             <div class="flex justify-between items-start">
                 <div>
-                    <h4 class="font-cinzel text-lg">${reading.card} <span class="text-sm ${
-            reading.orientation === 'Reversed' ? 'text-red-400' : 'text-green-400'
-        }">(${reading.orientation})</span></h4>
-                    <p class="text-sm text-purple-300">${reading.timestamp}</p>
+                    <h4 class="font-cinzel text-lg">
+                      ${reading.name} 
+                      <span class="text-sm ${reading.orientation === 'Reversed' ? 'text-red-400' : 'text-green-400'}">
+                        (${reading.orientation})
+                      </span>
+                    </h4>
+                    <p class="text-xs text-purple-300 mb-1">${reading.arcana}</p>
+                    <p class="text-sm text-gray-400 italic">${reading.timestamp}</p>
                 </div>
                 <button class="text-purple-400 hover:text-white share-history" data-index="${index}">
                     <i class="fas fa-share-alt"></i>
                 </button>
             </div>
-            <p class="mt-2 text-sm text-gray-300">${reading.question}</p>
-            <p class="mt-1 text-sm text-gray-400 italic">${reading.meaning.substring(0, 60)}...</p>
+            <p class="mt-2 text-sm text-gray-300">
+              <span class="font-bold">Q:</span> ${reading.question}
+            </p>
+            <p class="mt-1 text-sm text-gray-400 italic">
+              <span class="font-bold">Meaning:</span> ${snippet}...
+            </p>
         `;
         historyList.appendChild(item);
     });
 
-    // Add event listeners to share buttons in history
+    // Re-attach share-history listeners if needed…
     document.querySelectorAll('.share-history').forEach(button => {
-        button.addEventListener('click', (e) => {
-            const index = e.currentTarget.dataset.index;
-            openShareModal(readingHistory[index]);
+        button.addEventListener('click', e => {
+            const idx = e.currentTarget.dataset.index;
+            openShareModal(readingHistory[idx]);
         });
     });
 }
 
+
 // Open share modal
 function openShareModal(reading) {
-    shareQuote.textContent = `${reading.card} (${reading.orientation}): ${reading.meaning}`;
+    shareQuote.textContent = `${reading.name} (${reading.orientation}): ${reading.chosenMeaning}`;
     shareTimestamp.textContent = reading.timestamp;
-    shareText.textContent = `I just drew ${reading.card} (${reading.orientation}) on Mystic Tarot! 
-        Question: ${reading.question}
-        Meaning: ${reading.meaning}
-        #TarotReading`;
+    shareText.textContent = `I just drew ${reading.name} (${reading.orientation}) on Mystic Tarot! 
+    Question: ${reading.question}
+    Meaning: ${reading.chosenMeaning}
+    Arcana: ${reading.arcana}
+    Fortune: ${reading.fortune_telling.join(', ')}
+    #TarotReading`;
 
     shareModal.classList.add('active');
 }
@@ -512,12 +524,14 @@ function generatePDF() {
 
     const readingsHTML = readings.map(reading => `
         <div style="border: 1px solid ${primaryColor}; border-radius: 12px; padding: 20px; margin-bottom: 25px; background: rgba(255, 255, 255, 0.05);">
-            <h2 style="color: ${primaryColor}; margin-bottom: 6px; font-size: 1.4em;">${reading.card} <span style="font-size: 0.9em; color: ${reading.orientation === 'Reversed' ? '#f87171' : '#34d399'}">(${reading.orientation})</span></h2>
+            <h2 style="color: ${primaryColor}; margin-bottom: 6px; font-size: 1.4em;">${reading.name} <span style="font-size: 0.9em; color: ${reading.orientation === 'Reversed' ? '#f87171' : '#34d399'}">(${reading.orientation})</span></h2>
+            <p style="font-size: 0.9em; margin-bottom: 6px;"><span style="font-weight: bold;">Arcana:</span> ${reading.arcana}</p>
             <div style="display: flex; justify-content: space-between; font-size: 0.9em; margin-bottom: 10px;">
                 <span>${reading.timestamp}</span>
-                <span style="color: ${mutedText};">Question: ${reading.question}</span>
+                <span style="color: ${mutedText};">Q: ${reading.question}</span>
             </div>
-            <p style="font-weight: bold; font-size: 1em; margin-top: 10px;">Meaning: <span style="font-weight: normal;">${reading.meaning}</span></p>
+            <p style="font-size: 0.9em; margin-bottom: 8px;"><span style="font-weight: bold;">Meaning:</span> ${reading.chosenMeaning}</p>
+            <p style="font-size: 0.9em; margin-bottom: 8px;"><span style="font-weight: bold;">Fortune Telling:</span> ${reading.fortune_telling.join(', ')}</p>
         </div>`).join('');
 
     const footer = `
