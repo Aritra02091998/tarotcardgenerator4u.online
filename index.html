@@ -1,768 +1,32 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mystic Tarot</title>
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
     <!-- PDF generation libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <style>
-        :root {
-            --primary: #7e22ce;
-            --primary-light: #c084fc;
-            --primary-dark: #4c1d95;
-            --accent: #f0abfc;
-            --gold: #fef3c7;
-        }
-        
-        body {
-            background: linear-gradient(125deg, #0a0e1d, #151b2d, #0a0e1d);
-            min-height: 100vh;
-            overflow-x: hidden;
-            font-family: 'Playfair Display', serif;
-            color: white;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .starry-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-        }
-        
-        .star {
-            position: absolute;
-            background-color: white;
-            border-radius: 50%;
-            animation: twinkle var(--duration) linear infinite;
-            opacity: 0;
-        }
-        
-        .mystical-mist {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at center, rgba(124, 58, 237, 0.05) 0%, transparent 70%);
-            z-index: -1;
-            opacity: 0.7;
-            animation: float 15s ease-in-out infinite;
-        }
-        
-        .crystal-ball {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: radial-gradient(circle at 30% 30%, #f0f9ff, #e0f2fe, #bae6fd);
-            box-shadow: inset 0 0 50px #bae6fd, 0 0 60px #38bdf8;
-            filter: blur(2px);
-            opacity: 0.1;
-            animation: float 12s ease-in-out infinite;
-            z-index: -1;
-        }
-        
-        .card-container {
-            perspective: 2000px;
-        }
-        
-        .tarot-card {
-            transform-style: preserve-3d;
-            transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            cursor: pointer;
-            /* CARD SIZE REDUCED BY 8 UNITS */
-            height: 372px;
-            width: 232px;
-        }
-        
-        .tarot-card.flipped {
-            transform: rotateY(180deg);
-        }
-        
-        .card-face {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            border-radius: 18px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            box-shadow: 0 18px 36px rgba(0, 0, 0, 0.6);
-        }
-        
-        .card-back {
-            background: linear-gradient(135deg, #7e22ce, #3b0764);
-            border: 9px solid var(--gold);
-            box-shadow: 0 0 27px rgba(192, 132, 252, 0.5);
-        }
-        
-        .card-front {
-            background: linear-gradient(135deg, #f3e8ff, #ede9fe);
-            transform: rotateY(180deg);
-            color: #1e293b;
-        }
-        
-        .card-front.reversed img {
-            transform: rotate(180deg);
-        }
-        
-        .card-back-pattern {
-            position: absolute;
-            inset: 0;
-            background-image: 
-                radial-gradient(circle at center, var(--gold) 0%, transparent 15%),
-                url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 0c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zM11 70c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 0c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zM9 40c0-2 2-4 4-4s4 2 4 4-2 4-4 4-4-2-4-4zm48 0c0-2 2-4 4-4s4 2 4 4-2 4-4 4-4-2-4-4zm-24-9c2 0 4-2 4-4s-2-4-4-4-4 2-4 4 2 4 4 4zm0 18c2 0 4-2 4-4s-2-4-4-4-4 2-4 4 2 4 4 4z' fill='%23fef3c7' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
-            background-size: 100% 100%, 50px 50px;
-            opacity: 0.7;
-        }
-        
-        .card-symbols {
-            position: absolute;
-            inset: 0;
-            opacity: 0.6;
-        }
-        
-        .card-symbol {
-            position: absolute;
-            color: var(--gold);
-            font-size: 1.4rem;
-            opacity: 0.7;
-        }
-        
-        .reversed-indicator {
-            position: absolute;
-            top: 18px;
-            right: 18px;
-            background: rgba(124, 58, 237, 0.8);
-            padding: 4px 14px;
-            border-radius: 18px;
-            font-weight: bold;
-            box-shadow: 0 3px 9px rgba(0,0,0,0.2);
-            color: white;
-            font-size: 0.9rem;
-        }
-        
-        .meaning-container {
-            background: linear-gradient(to bottom, #fdf4ff, #f5f3ff);
-            border-radius: 14px;
-            padding: 18px;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-            border: 1px solid #e9d5ff;
-            color: #1e293b;
-            font-size: 0.95rem;
-        }
-        
-        .mystical-btn {
-            background: linear-gradient(45deg, var(--primary), var(--primary-dark));
-            border: 2px solid var(--accent);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            color: white;
-            font-weight: bold;
-            font-size: 0.95rem;
-            padding: 0.7rem 1.5rem;
-        }
-        
-        .mystical-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 9px 22px rgba(124, 58, 237, 0.5);
-        }
-        
-        .question-input {
-            background: rgba(30, 41, 59, 0.7);
-            border: 1px solid var(--primary);
-            color: white;
-            transition: all 0.3s ease;
-            font-size: 0.95rem;
-            padding: 0.8rem 1.2rem;
-        }
-        
-        .question-input:focus {
-            outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.3);
-        }
-        
-        .card-shake {
-            animation: shake 0.6s cubic-bezier(.36,.07,.19,.97) both;
-        }
-        
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            10%, 30%, 50%, 70%, 90% { transform: translateX(-7px); }
-            20%, 40%, 60%, 80% { transform: translateX(7px); }
-        }
-        
-        .floating {
-            animation: float 8s ease-in-out infinite;
-        }
-        
-        .shimmer-text {
-            background: linear-gradient(90deg, var(--accent), var(--gold), var(--primary-light), var(--accent));
-            background-size: 300% 300%;
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            animation: shimmer 8s ease infinite;
-        }
-        
-        .revealing-message {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 0;
-            animation: fadeIn 0.5s ease forwards;
-            font-size: 1.1rem;
-            padding: 1.2rem;
-        }
-        
-        .shuffle-animation {
-            animation: shuffle 1.2s ease-in-out infinite;
-        }
-        
-        @keyframes shuffle {
-            0%, 100% { transform: translateX(0) rotate(0deg); }
-            25% { transform: translateX(-8px) rotate(-4deg); }
-            50% { transform: translateX(8px) rotate(4deg); }
-            75% { transform: translateX(-8px) rotate(-4deg); }
-        }
-        
-        .fade-out {
-            animation: fadeOut 0.8s ease forwards;
-        }
-        
-        .fade-in {
-            animation: fadeIn 0.8s ease forwards;
-        }
-        
-        .swirl-animation {
-            position: absolute;
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 10;
-            animation: swirl 1.5s ease-out forwards;
-            background: radial-gradient(circle, rgba(255,255,255,0.8), transparent 70%);
-        }
-        
-        .history-panel {
-            position: fixed;
-            top: 0;
-            right: 0;
-            height: 100vh;
-            width: 300px;
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: -4px 0 14px rgba(0,0,0,0.3);
-            z-index: 100;
-            transform: translateX(100%);
-            transition: transform 0.4s ease;
-            border-left: 1px solid var(--primary);
-        }
-        
-        .history-panel.open {
-            transform: translateX(0);
-        }
-        
-        .history-header {
-            background: rgba(30, 41, 59, 0.9);
-            padding: 1.3rem;
-            border-bottom: 1px solid var(--primary);
-        }
-        
-        .history-item {
-            padding: 0.9rem;
-            border-bottom: 1px solid rgba(124, 58, 237, 0.2);
-            transition: background 0.3s;
-            font-size: 0.9rem;
-        }
-        
-        .history-item:hover {
-            background: rgba(124, 58, 237, 0.1);
-        }
-        
-        .share-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 200;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s;
-        }
-        
-        .share-modal.active {
-            opacity: 1;
-            pointer-events: all;
-        }
-        
-        .share-content {
-            background: linear-gradient(145deg, #1e293b, #0f172a);
-            border-radius: 18px;
-            width: 90%;
-            max-width: 480px;
-            box-shadow: 0 0 36px rgba(124, 58, 237, 0.5);
-            border: 1px solid var(--primary);
-            overflow: hidden;
-        }
-        
-        .social-share-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.7rem;
-            border-radius: 9px;
-            color: white;
-            font-weight: bold;
-            transition: all 0.3s;
-            font-size: 0.9rem;
-        }
-        
-        .social-share-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 14px rgba(0,0,0,0.2);
-        }
-        
-        .particles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 5;
-        }
-        
-        .particle {
-            position: absolute;
-            border-radius: 50%;
-            background: white;
-            opacity: 0.7;
-            animation: float 10s ease-in-out infinite;
-        }
-        
-        .theme-option {
-            width: 95px;
-            height: 114px;
-            border-radius: 11px;
-            cursor: pointer;
-            transition: all 0.3s;
-            border: 2px solid transparent;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 11px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .theme-option::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0));
-            opacity: 0.5;
-        }
-        
-        .theme-option.active {
-            border-color: var(--gold);
-            transform: scale(1.05);
-            box-shadow: 0 0 18px rgba(254, 243, 199, 0.5);
-        }
-        
-        .theme-option:hover {
-            box-shadow: 0 0 25px rgba(254, 243, 199, 0.7);
-            transform: scale(1.05);
-            transition: all 0.3s ease;
-        }
-        
-        .theme-icon {
-            font-size: 2.3rem;
-            margin-bottom: 9px;
-            text-shadow: 0 0 9px rgba(0,0,0,0.5);
-        }
-        
-        .theme-name {
-            font-family: 'Cinzel', serif;
-            font-size: 0.85rem;
-            font-weight: bold;
-            text-shadow: 0 0 4px rgba(0,0,0,0.5);
-        }
-        
-        .theme-1 { 
-            background: linear-gradient(135deg, #7e22ce, #3b0764); 
-            color: #f0abfc;
-        }
-        .theme-2 { 
-            background: linear-gradient(135deg, #0d9488, #115e59); 
-            color: #99f6e4;
-        }
-        .theme-3 { 
-            background: linear-gradient(135deg, #b45309, #7c2d12); 
-            color: #fde68a;
-        }
-        .theme-4 { 
-            background: linear-gradient(135deg, #4338ca, #312e81); 
-            color: #a5b4fc;
-        }
-        
-        .nav-btn {
-            background: rgba(30, 41, 59, 0.7);
-            border: 1px solid var(--primary-light);
-            color: var(--accent);
-            padding: 7px 15px;
-            border-radius: 18px;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 7px;
-            font-size: 0.9rem;
-        }
-        
-        .nav-btn:hover {
-            background: rgba(124, 58, 237, 0.3);
-            transform: translateY(-2px);
-        }
-        
-        .pdf-btn {
-            background: linear-gradient(45deg, var(--primary), var(--primary-dark));
-            border: 2px solid var(--accent);
-            color: white;
-            font-weight: bold;
-            padding: 11px 18px;
-            border-radius: 11px;
-            display: flex;
-            align-items: center;
-            gap: 9px;
-            box-shadow: 0 4px 14px rgba(192, 132, 252, 0.4);
-            transition: all 0.3s;
-        }
-        
-        .pdf-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 7px 18px rgba(192, 132, 252, 0.6);
-        }
-        
-        .footer-nav {
-            background: rgba(15, 23, 42, 0.9);
-            border-top: 1px solid var(--primary);
-            padding: 1.8rem 1rem;
-            margin-top: auto;
-        }
-        
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        
-        .footer-brand {
-            flex: 1;
-            min-width: 240px;
-            margin-bottom: 1.4rem;
-        }
-        
-        .footer-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.8rem;
-        }
-        
-        .footer-column {
-            min-width: 140px;
-        }
-        
-        .footer-title {
-            font-family: 'Cinzel', serif;
-            font-size: 1.15rem;
-            margin-bottom: 0.9rem;
-            color: var(--accent);
-            border-bottom: 1px solid var(--primary-light);
-            padding-bottom: 0.45rem;
-        }
-        
-        .footer-link {
-            display: block;
-            margin-bottom: 0.45rem;
-            color: #cbd5e1;
-            transition: all 0.3s;
-            font-size: 0.9rem;
-        }
-        
-        .footer-link:hover {
-            color: var(--accent);
-            transform: translateX(5px);
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 1.8rem;
-            color: #94a3b8;
-            font-size: 0.85rem;
-        }
-        
-        .main-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-            position: relative;
-            min-height: 80px; /* Ensure enough space for absolute positioned elements */
-        }
-        
-        .header-center {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            padding: 0;
-            flex-grow: 0;
-        }
-        
-        /* HEADER BUTTONS POSITIONED AT TOP RIGHT CORNER */
-        .header-right {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            z-index: 10;
-        }
-        
-        .header-left {
-            position: absolute;
-            top: 1rem;
-            left: 1rem;
-            z-index: 10;
-        }
-        
-        .three-card-container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            position: relative;
-            height: 450px;
-            width: 100%;
-            /* TOP AND BOTTOM MARGINS ADJUSTED */
-            margin-top: -1rem;    /* Reduced by 4 units (1rem) */
-            margin-bottom: 1.5rem; /* Increased by 0.5rem (2 units) */
-        }
-        
-        .card-wrapper {
-            position: absolute;
-            transition: all 0.5s ease;
-        }
-        
-        .card-wrapper.left {
-            transform: rotate(-10deg) translateX(-25%);
-            z-index: 1;
-            opacity: 0.9;
-        }
-        
-        .card-wrapper.right {
-            transform: rotate(10deg) translateX(25%);
-            z-index: 1;
-            opacity: 0.9;
-        }
-        
-        .card-wrapper.center {
-            z-index: 2;
-        }
-        
-        #buttonContainer {
-            margin-top: 3rem;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(-1deg); }
-            50% { transform: translateY(-15px) rotate(1deg); }
-        }
-        
-        @keyframes twinkle {
-            0% { opacity: 0.2; }
-            50% { opacity: 1; }
-            100% { opacity: 0.2; }
-        }
-        
-        @keyframes glow {
-            0% { box-shadow: 0 0 8px #c084fc, 0 0 15px #c084fc; }
-            100% { box-shadow: 0 0 25px #e879f9, 0 0 40px #e879f9; }
-        }
-        
-        @keyframes shimmer {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-        
-        @keyframes fadeOut {
-            0% { opacity: 1; }
-            100% { opacity: 0; }
-        }
-        
-        @keyframes swirl {
-            0% { transform: scale(0) rotate(0deg); opacity: 0.8; }
-            100% { transform: scale(2) rotate(360deg); opacity: 0; }
-        }
-        
-        @media (max-width: 768px) {
-            .tarot-card {
-                /* CARD SIZE REDUCED BY 8 UNITS */
-                height: 312px;
-                width: 192px;
-            }
-            
-            .three-card-container {
-                height: 340px;
-            }
-            
-            .card-wrapper.left {
-                transform: rotate(-10deg) translateX(-20%);
-            }
-            
-            .card-wrapper.right {
-                transform: rotate(10deg) translateX(20%);
-            }
-            
-            .main-title {
-                font-size: 2.3rem;
-            }
-            
-            .crystal-ball {
-                width: 180px;
-                height: 180px;
-            }
-            
-            .history-panel {
-                width: 260px;
-            }
-            
-            .theme-option {
-                width: 75px;
-                height: 95px;
-            }
-            
-            .theme-icon {
-                font-size: 1.6rem;
-            }
-            
-            .footer-container {
-                flex-direction: column;
-            }
-            
-            .footer-links {
-                width: 100%;
-                justify-content: space-between;
-            }
-            
-            .header-center {
-                padding: 0 0.5rem;
-            }
-            
-            .header-right {
-                gap: 0.5rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .tarot-card {
-                /* CARD SIZE REDUCED BY 8 UNITS */
-                height: 272px;
-                width: 162px;
-            }
-            
-            .three-card-container {
-                height: 300px;
-            }
-            
-            .card-wrapper.left {
-                transform: rotate(-10deg) translateX(-15%);
-            }
-            
-            .card-wrapper.right {
-                transform: rotate(10deg) translateX(15%);
-            }
-            
-            .main-title {
-                font-size: 1.8rem;
-            }
-            
-            .history-panel {
-                width: 100%;
-            }
-            
-            .mystical-btn {
-                padding: 0.65rem 1.3rem;
-                font-size: 0.9rem;
-            }
-            
-            .theme-option {
-                width: 65px;
-                height: 85px;
-                padding: 7px;
-            }
-            
-            .theme-icon {
-                font-size: 1.3rem;
-                margin-bottom: 4px;
-            }
-            
-            .theme-name {
-                font-size: 0.7rem;
-            }
-            
-            .footer-links {
-                flex-direction: column;
-                gap: 0.9rem;
-            }
-            
-            .header-right {
-                gap: 0.3rem;
-            }
-            
-            .nav-btn {
-                padding: 6px 12px;
-                font-size: 0.8rem;
-            }
-        }
-    </style>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/styles/index.css" />
 </head>
 <body>
     <!-- Animated Background Elements -->
@@ -771,7 +35,7 @@
     <div class="crystal-ball top-1/4 left-1/4"></div>
     <div class="crystal-ball bottom-1/4 right-1/4"></div>
     <div class="particles" id="particles"></div>
-    
+
     <!-- History Panel -->
     <div class="history-panel" id="historyPanel">
         <div class="history-header">
@@ -794,10 +58,12 @@
         </div>
         <div class="p-4 overflow-y-auto h-[calc(100vh-120px)]" id="historyList">
             <!-- History items will be added here -->
-            <p class="text-center text-purple-300 py-8" id="emptyHistory">No readings yet. Draw your first card to begin!</p>
+            <p class="text-center text-purple-300 py-8" id="emptyHistory">
+                No readings yet. Draw your first card to begin!
+            </p>
         </div>
     </div>
-    
+
     <!-- Share Modal -->
     <div class="share-modal" id="shareModal">
         <div class="share-content">
@@ -810,17 +76,19 @@
                         <i class="fas fa-times text-xl"></i>
                     </button>
                 </div>
-                
+
                 <div class="bg-gray-800 rounded-xl p-4 mb-6">
                     <div class="flex items-center mb-3">
-                        <div class="bg-purple-500 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3">
+                        <div
+                            class="bg-purple-500 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3"
+                        >
                             <i class="fas fa-quote-left"></i>
                         </div>
                         <p class="font-playfair text-white" id="shareQuote"></p>
                     </div>
                     <p class="text-sm text-purple-300 italic" id="shareTimestamp"></p>
                 </div>
-                
+
                 <div class="grid grid-cols-2 gap-3 mb-6">
                     <button id="copyTextBtn" class="social-share-btn bg-indigo-700">
                         <i class="fas fa-copy mr-2"></i> Copy Text
@@ -835,15 +103,18 @@
                         <i class="fab fa-facebook mr-2"></i> Facebook
                     </button>
                 </div>
-                
+
                 <div class="bg-gray-900 rounded-lg p-4">
                     <p class="text-sm text-gray-400 mb-2">Shareable text:</p>
-                    <div class="bg-gray-800 p-3 rounded-lg text-sm font-mono text-gray-300 break-words" id="shareText"></div>
+                    <div
+                        class="bg-gray-800 p-3 rounded-lg text-sm font-mono text-gray-300 break-words"
+                        id="shareText"
+                    ></div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <div class="flex-grow flex flex-col items-center justify-center py-10 px-4">
         <!-- Pre-reading Section -->
         <section id="preReading" class="w-full max-w-3xl text-center mb-14 fade-in">
@@ -855,33 +126,46 @@
                     </h1>
                 </div>
                 <div class="header-right">
-                    <button id="historyButton" class="text-purple-300 hover:text-white" aria-label="View reading history">
+                    <button
+                        id="historyButton"
+                        class="text-purple-300 hover:text-white"
+                        aria-label="View reading history"
+                    >
                         <i class="fas fa-history text-2xl"></i>
                     </button>
-                    <button id="settingsButton" class="text-purple-300 hover:text-white" aria-label="Change settings">
+                    <button
+                        id="settingsButton"
+                        class="text-purple-300 hover:text-white"
+                        aria-label="Change settings"
+                    >
                         <i class="fas fa-cog text-2xl"></i>
                     </button>
                 </div>
             </div>
-            
+
             <div class="bg-purple-900 bg-opacity-50 rounded-2xl p-8 mystical-border">
                 <p class="font-playfair text-xl text-purple-100 mb-6">
                     <i class="fas fa-quote-left text-purple-300 mr-2"></i>
-                    The tarot is a mirror that reflects the hidden aspects of your soul and the unseen forces shaping your journey.
+                    The tarot is a mirror that reflects the hidden aspects of your soul and the unseen forces shaping
+                    your journey.
                     <i class="fas fa-quote-right text-purple-300 ml-2"></i>
                 </p>
-                
+
                 <div class="flex justify-center my-8">
                     <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
                 </div>
-                
+
                 <!-- Theme Selection -->
                 <div class="mb-6">
                     <h4 class="font-cinzel text-xl mb-4 text-purple-200">
                         Choose Your Deck Style
                     </h4>
                     <div class="flex flex-wrap justify-center gap-4">
-                        <div class="theme-option theme-1 active" data-theme="1" aria-label="Celestial deck theme">
+                        <div
+                            class="theme-option theme-1 active"
+                            data-theme="1"
+                            aria-label="Celestial deck theme"
+                        >
                             <i class="fas fa-moon theme-icon"></i>
                             <div class="theme-name">Celestial</div>
                         </div>
@@ -899,25 +183,33 @@
                         </div>
                     </div>
                 </div>
-                
-                <button id="startButton" class="mystical-btn font-cinzel px-10 py-5 rounded-lg text-2xl hover:glow mt-4" aria-label="Begin your tarot reading journey">
+
+                <button
+                    id="startButton"
+                    class="mystical-btn font-cinzel px-10 py-5 rounded-lg text-2xl hover:glow mt-4"
+                    aria-label="Begin your tarot reading journey"
+                >
                     Begin Your Journey <i class="fas fa-arrow-right ml-3"></i>
                 </button>
-                
-                <!-- Moved "Preparing for Your Reading" section after the button -->
+
+                <!-- Preparing for Your Reading -->
                 <div class="bg-indigo-900 bg-opacity-60 rounded-xl p-6 mt-8">
                     <h3 class="font-cinzel text-2xl mb-4 text-purple-200">
                         <i class="fas fa-lightbulb mr-2"></i>Preparing for Your Reading
                     </h3>
                     <p class="font-playfair text-lg text-purple-100">
-                        Find a quiet space and take a few deep breaths. Focus your mind on a question or area of your life you seek guidance for. When you're ready, enter your question below and draw your card.
+                        Find a quiet space and take a few deep breaths. Focus your mind on a question or area of your
+                        life you seek guidance for. When you're ready, enter your question below and draw your card.
                     </p>
                 </div>
             </div>
         </section>
-        
+
         <!-- Main Reading Section (initially hidden) -->
-        <section id="readingSection" class="w-full max-w-4xl flex flex-col items-center hidden">
+        <section
+            id="readingSection"
+            class="w-full max-w-4xl flex flex-col items-center hidden"
+        >
             <!-- Navigation Header with icons in top-right corner -->
             <div class="main-header mb-8 w-full">
                 <div class="header-left">
@@ -934,33 +226,43 @@
                     <button id="changeDeckButton" class="nav-btn">
                         <i class="fas fa-sync-alt mr-1"></i> Change Deck
                     </button>
-                    <button id="historyButtonReading" class="text-purple-300 hover:text-white" aria-label="View reading history">
+                    <button
+                        id="historyButtonReading"
+                        class="text-purple-300 hover:text-white"
+                        aria-label="View reading history"
+                    >
                         <i class="fas fa-history text-2xl"></i>
                     </button>
-                    <button id="settingsButtonReading" class="text-purple-300 hover:text-white" aria-label="Change settings">
+                    <button
+                        id="settingsButtonReading"
+                        class="text-purple-300 hover:text-white"
+                        aria-label="Change settings"
+                    >
                         <i class="fas fa-cog text-2xl"></i>
                     </button>
                 </div>
             </div>
-            
+
             <!-- User Question Input -->
             <div class="w-full max-w-xl mb-10 fade-in">
                 <div class="relative">
-                    <input 
-                        type="text" 
-                        id="userQuestion" 
-                        placeholder="What guidance do you seek today?" 
+                    <input
+                        type="text"
+                        id="userQuestion"
+                        placeholder="What guidance do you seek today?"
                         class="question-input font-playfair w-full px-6 py-4 rounded-2xl text-lg focus:ring-0"
                         aria-label="Enter your question for the tarot reading"
-                    >
-                    <i class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-purple-400"></i>
+                    />
+                    <i
+                        class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-purple-400"
+                    ></i>
                 </div>
                 <p class="text-purple-300 text-sm mt-2 text-center font-playfair italic">
                     Your question will be remembered during this session
                 </p>
             </div>
-            
-            <!-- Three Card Container with adjusted margins -->
+
+            <!-- Three Card Container -->
             <div class="three-card-container" id="threeCardContainer">
                 <!-- Left Card -->
                 <div class="card-wrapper left">
@@ -974,10 +276,14 @@
                                     <div class="card-symbol top-6 right-6">♏</div>
                                     <div class="card-symbol bottom-6 left-6">♐</div>
                                     <div class="card-symbol bottom-6 right-6">♑</div>
-                                    <div class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol">☾</div>
+                                    <div
+                                        class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol"
+                                    >☾</div>
                                 </div>
                                 <div class="absolute inset-4 flex flex-col items-center justify-center">
-                                    <div class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6 floating">
+                                    <div
+                                        class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6 floating"
+                                    >
                                         <i class="fas fa-star text-5xl text-purple-800 card-icon"></i>
                                     </div>
                                     <h2 class="font-cinzel text-2xl text-yellow-200">Mystic Tarot</h2>
@@ -987,7 +293,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Center Card -->
                 <div class="card-wrapper center">
                     <div class="card-container" id="centerCardContainer">
@@ -1000,7 +306,9 @@
                                     <div class="card-symbol top-6 right-6">♏</div>
                                     <div class="card-symbol bottom-6 left-6">♐</div>
                                     <div class="card-symbol bottom-6 right-6">♑</div>
-                                    <div class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol">☾</div>
+                                    <div
+                                        class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol"
+                                    >☾</div>
                                 </div>
                                 <div class="absolute inset-4 flex flex-col items-center justify-center">
                                     <div class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6">
@@ -1010,7 +318,7 @@
                                 </div>
                                 <div class="absolute inset-0 border-8 border-purple-300 rounded-2xl opacity-30"></div>
                             </div>
-                            
+
                             <!-- Card Front (will be populated when flipped) -->
                             <div class="card-face card-front p-6">
                                 <div id="cardContent" class="flex flex-col items-center h-full">
@@ -1020,7 +328,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Right Card -->
                 <div class="card-wrapper right">
                     <div class="card-container">
@@ -1033,10 +341,14 @@
                                     <div class="card-symbol top-6 right-6">♏</div>
                                     <div class="card-symbol bottom-6 left-6">♐</div>
                                     <div class="card-symbol bottom-6 right-6">♑</div>
-                                    <div class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol">☾</div>
+                                    <div
+                                        class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol"
+                                    >☾</div>
                                 </div>
                                 <div class="absolute inset-4 flex flex-col items-center justify-center">
-                                    <div class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6 floating">
+                                    <div
+                                        class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6 floating"
+                                    >
                                         <i class="fas fa-star text-5xl text-purple-800 card-icon"></i>
                                     </div>
                                     <h2 class="font-cinzel text-2xl text-yellow-200">Mystic Tarot</h2>
@@ -1046,7 +358,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Revealing Message -->
                 <div id="revealingMessage" class="revealing-message hidden">
                     <div class="bg-indigo-900 bg-opacity-80 p-6 rounded-2xl border border-purple-500 shadow-lg">
@@ -1057,32 +369,44 @@
                         </p>
                     </div>
                 </div>
-                
+
                 <!-- Swirl Animation Container -->
                 <div id="swirlContainer"></div>
             </div>
-            
+
             <!-- User Question Display -->
             <div id="questionDisplay" class="max-w-xl mb-0 text-center hidden fade-in">
                 <p class="font-playfair text-xl text-purple-200">
-                    <span class="text-purple-300 italic">Your question:</span> 
+                    <span class="text-purple-300 italic">Your question:</span>
                     <span id="displayedQuestion" class="font-semibold"></span>
                 </p>
             </div>
-            
+
             <!-- Action Buttons -->
             <div class="flex flex-col sm:flex-row gap-4 mb-10 fade-in" id="buttonContainer">
-                <button id="drawButton" class="mystical-btn font-cinzel px-8 py-4 rounded-lg text-xl hover:glow shuffle-animation" aria-label="Draw a tarot card">
+                <button
+                    id="drawButton"
+                    class="mystical-btn font-cinzel px-8 py-4 rounded-lg text-xl hover:glow shuffle-animation"
+                    aria-label="Draw a tarot card"
+                >
                     <i class="fas fa-hand-point-up mr-2"></i>Draw My Card
                 </button>
-                <button id="drawAgainButton" class="mystical-btn font-cinzel px-8 py-4 rounded-lg text-xl hidden hover:glow" aria-label="Draw another card">
+                <button
+                    id="drawAgainButton"
+                    class="mystical-btn font-cinzel px-8 py-4 rounded-lg text-xl hidden hover:glow"
+                    aria-label="Draw another card"
+                >
                     <i class="fas fa-redo mr-2"></i>Draw Again
                 </button>
-                <button id="shareButton" class="mystical-btn font-cinzel px-8 py-4 rounded-lg text-xl bg-teal-700 border-teal-400 hidden hover:glow" aria-label="Share your reading">
+                <button
+                    id="shareButton"
+                    class="mystical-btn font-cinzel px-8 py-4 rounded-lg text-xl bg-teal-700 border-teal-400 hidden hover:glow"
+                    aria-label="Share your reading"
+                >
                     <i class="fas fa-share-alt mr-2"></i>Share Reading
                 </button>
             </div>
-            
+
             <!-- Information Section -->
             <div class="w-full max-w-2xl">
                 <div class="bg-purple-900 bg-opacity-50 rounded-xl p-6 mystical-border fade-in">
@@ -1090,13 +414,14 @@
                         <i class="fas fa-book-open mr-2"></i>Interpreting Your Card
                     </h3>
                     <p class="font-playfair text-lg text-purple-100">
-                        Tarot cards offer symbolic guidance. Reflect on how this card's meaning relates to your question. 
-                        Upright cards typically represent energies manifesting clearly, while reversed cards may indicate 
-                        internal processes or obstacles to overcome.
+                        Tarot cards offer symbolic guidance. Reflect on how this card's meaning relates to your
+                        question.
+                        Upright cards typically represent energies manifesting clearly, while reversed cards may
+                        indicate internal processes or obstacles to overcome.
                     </p>
                 </div>
             </div>
-            
+
             <!-- PDF Button -->
             <div class="w-full max-w-xl flex justify-center mt-8 mb-10">
                 <button id="pdfButton" class="pdf-btn">
@@ -1105,17 +430,18 @@
             </div>
         </section>
     </div>
-    
+
     <!-- Footer Navigation -->
     <footer class="footer-nav">
         <div class="footer-container">
             <div class="footer-brand">
                 <h2 class="font-cinzel text-2xl mb-4 shimmer-text">Mystic Tarot</h2>
                 <p class="text-purple-200 font-playfair">
-                    Discover the ancient wisdom of tarot to illuminate your path and guide your journey through life's mysteries.
+                    Discover the ancient wisdom of tarot to illuminate your path and guide your journey through life's
+                    mysteries.
                 </p>
             </div>
-            
+
             <div class="footer-links">
                 <div class="footer-column">
                     <h3 class="footer-title">Information</h3>
@@ -1124,7 +450,7 @@
                     <a href="#" class="footer-link">Tarot Guide</a>
                     <a href="#" class="footer-link">Testimonials</a>
                 </div>
-                
+
                 <div class="footer-column">
                     <h3 class="footer-title">Legal</h3>
                     <a href="#" class="footer-link">Terms & Conditions</a>
@@ -1132,7 +458,7 @@
                     <a href="#" class="footer-link">Disclaimer</a>
                     <a href="#" class="footer-link">Cookie Policy</a>
                 </div>
-                
+
                 <div class="footer-column">
                     <h3 class="footer-title">Support</h3>
                     <a href="#" class="footer-link">Contact Us</a>
@@ -1140,7 +466,7 @@
                     <a href="#" class="footer-link">Support Us</a>
                     <a href="#" class="footer-link">Feedback</a>
                 </div>
-                
+
                 <div class="footer-column">
                     <h3 class="footer-title">Connect</h3>
                     <a href="#" class="footer-link"><i class="fab fa-facebook mr-2"></i> Facebook</a>
@@ -1150,603 +476,21 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="copyright">
             <p>© 2023 Mystic Tarot Readings • All spiritual guidance is for reflection and personal growth</p>
             <p class="mt-2">tarotcardgenerator.com</p>
         </div>
     </footer>
-    
+
     <!-- Sound Effect (base64 encoded) -->
-    <audio id="flipSound" src="data:audio/mpeg;base64,SUQzBAAAAAABEVRYWFgAAAAtAAADY29tbWVudABCaWdTb3VuZEJhbmsuY29tIC8gTGFTb25vdGhlcXVlLm9yZwBURU5DAAAAHQAAA1N3aXRjaCBQbHVzIMKpIE5DSCBTb2Z0d2FyZQBUSVQyAAAABgAAAzIyMzUAVFNTRQAAAA8AAANMYXZmNTcuODMuMTAwAAAAAAAAAAAAAAD/80DEAAAAA0gAAAAATEFNRTMuMTAwVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQsRbAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQMSkAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV" preload="auto"></audio>
-    
-    <script>
-        // Generate stars for background
-        function createStars() {
-            const container = document.getElementById('starry-bg');
-            const starCount = 200;
-            
-            for (let i = 0; i < starCount; i++) {
-                const star = document.createElement('div');
-                star.classList.add('star');
-                
-                // Random position and size
-                const size = Math.random() * 3;
-                star.style.width = `${size}px`;
-                star.style.height = `${size}px`;
-                star.style.left = `${Math.random() * 100}%`;
-                star.style.top = `${Math.random() * 100}%`;
-                
-                // Random animation duration
-                const duration = 3 + Math.random() * 10;
-                star.style.setProperty('--duration', `${duration}s`);
-                
-                // Random delay
-                star.style.animationDelay = `${Math.random() * 5}s`;
-                
-                container.appendChild(star);
-            }
-        }
-        
-        // Create particle effects
-        function createParticles() {
-            const container = document.getElementById('particles');
-            const particleCount = 30;
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                
-                // Random position and size
-                const size = Math.random() * 3 + 1;
-                particle.style.width = `${size}px`;
-                particle.style.height = `${size}px`;
-                particle.style.left = `${Math.random() * 100}%`;
-                particle.style.top = `${Math.random() * 100}%`;
-                
-                // Random animation duration and delay
-                const duration = 10 + Math.random() * 20;
-                particle.style.animationDuration = `${duration}s`;
-                particle.style.animationDelay = `${Math.random() * 5}s`;
-                
-                container.appendChild(particle);
-            }
-        }
-        
-        // Create swirl animation
-        function createSwirl() {
-            const container = document.getElementById('swirlContainer');
-            container.innerHTML = '';
-            
-            const swirl = document.createElement('div');
-            swirl.classList.add('swirl-animation');
-            
-            // Position at center of card
-            swirl.style.top = '50%';
-            swirl.style.left = '50%';
-            swirl.style.transform = 'translate(-50%, -50%)';
-            
-            container.appendChild(swirl);
-            
-            // Remove after animation completes
-            setTimeout(() => {
-                swirl.remove();
-            }, 1500);
-        }
-        
-        // Tarot card data
-        const tarotDeck = [
-            {
-                name: "The Fool",
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/RWS_Tarot_00_Fool.jpg/220px-RWS_Tarot_00_Fool.jpg",
-                upright: "New beginnings, innocence, spontaneity, free spirit",
-                reversed: "Recklessness, poor judgment, naivety, risk-taking"
-            },
-            {
-                name: "The Magician",
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/RWS_Tarot_01_Magician.jpg/220px-RWS_Tarot_01_Magician.jpg",
-                upright: "Manifestation, resourcefulness, inspired action, power",
-                reversed: "Manipulation, untapped talents, trickery, poor planning"
-            },
-            {
-                name: "The High Priestess",
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/RWS_Tarot_02_High_Priestess.jpg/220px-RWS_Tarot_02_High_Priestess.jpg",
-                upright: "Intuition, unconscious knowledge, divine feminine, mystery",
-                reversed: "Secrets, disconnected from intuition, withdrawal, silence"
-            },
-            {
-                name: "The Empress",
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/RWS_Tarot_03_Empress.jpg/220px-RWS_Tarot_03_Empress.jpg",
-                upright: "Femininity, beauty, nature, abundance, nurturing",
-                reversed: "Creative block, dependence, neglect, overbearing"
-            },
-            {
-                name: "The Emperor",
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/RWS_Tarot_04_Emperor.jpg/220px-RWS_Tarot_04_Emperor.jpg",
-                upright: "Authority, structure, control, fatherhood, leadership",
-                reversed: "Domination, rigidity, lack of discipline, inflexibility"
-            },
-            {
-                name: "The Lovers",
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/RWS_Tarot_06_Lovers.jpg/220px-RWS_Tarot_06_Lovers.jpg",
-                upright: "Love, harmony, relationships, alignment, choices",
-                reversed: "Disharmony, imbalance, misalignment, difficult choices"
-            },
-            {
-                name: "The Chariot",
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/RWS_Tarot_07_Chariot.jpg/220px-RWS_Tarot_07_Chariot.jpg",
-                upright: "Control, willpower, victory, assertion, determination",
-                reversed: "Lack of direction, aggression, forcefulness, no control"
-            },
-            {
-                name: "Strength",
-                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/RWS_Tarot_08_Strength.jpg/220px-RWS_Tarot_08_Strength.jpg",
-                upright: "Bravery, compassion, inner strength, influence",
-                reversed: "Self-doubt, weakness, low confidence, insecurity"
-            }
-        ];
-        
-        // DOM elements
-        const centerCard = document.getElementById('centerCard');
-        const cardContent = document.getElementById('cardContent');
-        const drawButton = document.getElementById('drawButton');
-        const drawAgainButton = document.getElementById('drawAgainButton');
-        const shareButton = document.getElementById('shareButton');
-        const preReadingSection = document.getElementById('preReading');
-        const readingSection = document.getElementById('readingSection');
-        const startButton = document.getElementById('startButton');
-        const userQuestion = document.getElementById('userQuestion');
-        const questionDisplay = document.getElementById('questionDisplay');
-        const displayedQuestion = document.getElementById('displayedQuestion');
-        const revealingMessage = document.getElementById('revealingMessage');
-        const flipSound = document.getElementById('flipSound');
-        const historyButton = document.getElementById('historyButton');
-        const historyButtonReading = document.getElementById('historyButtonReading');
-        const historyPanel = document.getElementById('historyPanel');
-        const closeHistory = document.getElementById('closeHistory');
-        const clearHistory = document.getElementById('clearHistory');
-        const saveHistory = document.getElementById('saveHistory');
-        const historyList = document.getElementById('historyList');
-        const emptyHistory = document.getElementById('emptyHistory');
-        const shareModal = document.getElementById('shareModal');
-        const closeShare = document.getElementById('closeShare');
-        const copyTextBtn = document.getElementById('copyTextBtn');
-        const downloadImageBtn = document.getElementById('downloadImageBtn');
-        const twitterShare = document.getElementById('twitterShare');
-        const facebookShare = document.getElementById('facebookShare');
-        const shareText = document.getElementById('shareText');
-        const shareQuote = document.getElementById('shareQuote');
-        const shareTimestamp = document.getElementById('shareTimestamp');
-        const themeOptions = document.querySelectorAll('.theme-option');
-        const backButton = document.getElementById('backButton');
-        const changeDeckButton = document.getElementById('changeDeckButton');
-        const pdfButton = document.getElementById('pdfButton');
-        
-        // User's question and reading history
-        let currentQuestion = "";
-        let readingHistory = JSON.parse(localStorage.getItem('tarotHistory')) || [];
-        let currentTheme = "1";
-        let currentThemeIcon = "fa-moon";
-        let currentCenterSymbol = "☾";
-        
-        // Initialize
-        updateHistoryList();
-        updateCardBackIcons();
-        
-        // Start the reading experience
-        startButton.addEventListener('click', () => {
-            preReadingSection.classList.add('fade-out');
-            setTimeout(() => {
-                preReadingSection.classList.add('hidden');
-                readingSection.classList.remove('hidden');
-                // Add slight delay before showing reading section
-                setTimeout(() => {
-                    readingSection.classList.add('fade-in');
-                }, 50);
-            }, 800);
-        });
-        
-        // Back to home button
-        backButton.addEventListener('click', () => {
-            readingSection.classList.add('fade-out');
-            setTimeout(() => {
-                readingSection.classList.add('hidden');
-                preReadingSection.classList.remove('hidden');
-                preReadingSection.classList.add('fade-in');
-                resetReading();
-            }, 800);
-        });
-        
-        // Change deck button
-        changeDeckButton.addEventListener('click', () => {
-            readingSection.classList.add('fade-out');
-            setTimeout(() => {
-                readingSection.classList.add('hidden');
-                preReadingSection.classList.remove('hidden');
-                preReadingSection.classList.add('fade-in');
-            }, 800);
-        });
-        
-        // Add shake animation to card on hover
-        centerCard.addEventListener('mouseenter', () => {
-            if (!centerCard.classList.contains('flipped')) {
-                centerCard.classList.add('card-shake');
-                setTimeout(() => {
-                    centerCard.classList.remove('card-shake');
-                }, 600);
-            }
-        });
-        
-        // Draw a card with enhanced experience
-        function drawCard() {
-            // Get and store user's question
-            currentQuestion = userQuestion.value || "Seeking general guidance";
-            displayedQuestion.textContent = currentQuestion;
-            questionDisplay.classList.remove('hidden');
-            
-            // Hide input and buttons temporarily
-            userQuestion.classList.add('hidden');
-            drawButton.classList.add('hidden');
-            
-            // Show revealing message
-            revealingMessage.classList.remove('hidden');
-            
-            // Play flip sound
-            if (flipSound) {
-                flipSound.currentTime = 0;
-                flipSound.play().catch(e => console.log("Sound play prevented by browser policy"));
-            }
-            
-            // Create particle effects
-            createParticles();
-            
-            // Simulate shuffling animation
-            const cards = document.querySelectorAll('.tarot-card');
-            cards.forEach(card => {
-                card.classList.add('shuffle-animation');
-            });
-            
-            setTimeout(() => {
-                // Create mystical swirl animation
-                createSwirl();
-                
-                // Remove shuffling animation
-                cards.forEach(card => {
-                    card.classList.remove('shuffle-animation');
-                });
-                
-                // Random card and orientation
-                const randomIndex = Math.floor(Math.random() * tarotDeck.length);
-                const isReversed = Math.random() > 0.5;
-                const card = tarotDeck[randomIndex];
-                
-                // Build card content
-                cardContent.innerHTML = `
-                    ${isReversed ? '<div class="reversed-indicator">Reversed</div>' : ''}
-                    <h3 class="font-cinzel text-2xl text-center mb-4">${card.name}</h3>
-                    <div class="flex-1 w-full flex items-center justify-center">
-                        <img src="${card.image}" alt="${card.name}" class="max-h-52 rounded-lg ${isReversed ? 'reversed' : ''}">
-                    </div>
-                    <div class="meaning-container mt-4">
-                        <p class="font-playfair italic text-center text-sm">
-                            <span class="font-bold">${isReversed ? 'Reversed' : 'Upright'}:</span> 
-                            ${isReversed ? card.reversed : card.upright}
-                        </p>
-                    </div>
-                `;
-                
-                // Add reversed class if needed
-                const cardFront = centerCard.querySelector('.card-front');
-                if (isReversed) {
-                    cardFront.classList.add('reversed');
-                } else {
-                    cardFront.classList.remove('reversed');
-                }
-                
-                // Hide revealing message
-                revealingMessage.classList.add('fade-out');
-                setTimeout(() => {
-                    revealingMessage.classList.add('hidden');
-                    revealingMessage.classList.remove('fade-out');
-                }, 500);
-                
-                // Flip the card after a short delay
-                setTimeout(() => {
-                    centerCard.classList.add('flipped');
-                    
-                    // Add glow effect to the revealed card
-                    centerCard.classList.add('glow');
-                    
-                    // Show action buttons
-                    setTimeout(() => {
-                        drawAgainButton.classList.remove('hidden');
-                        shareButton.classList.remove('hidden');
-                    }, 500);
-                    
-                    // Add to reading history
-                    const reading = {
-                        card: card.name,
-                        orientation: isReversed ? "Reversed" : "Upright",
-                        meaning: isReversed ? card.reversed : card.upright,
-                        question: currentQuestion,
-                        timestamp: new Date().toLocaleString()
-                    };
-                    
-                    readingHistory.unshift(reading);
-                    if (readingHistory.length > 10) readingHistory.pop();
-                    
-                    localStorage.setItem('tarotHistory', JSON.stringify(readingHistory));
-                    updateHistoryList();
-                    
-                }, 300);
-            }, 1500);
-        }
-        
-        // Update card back with selected theme icon for all cards
-        function updateCardBackIcons() {
-            document.querySelectorAll('.card-icon').forEach(icon => {
-                icon.className = `fas ${currentThemeIcon} text-5xl text-purple-800 card-icon`;
-            });
-            
-            document.querySelectorAll('.center-card-symbol').forEach(symbol => {
-                symbol.textContent = currentCenterSymbol;
-            });
-        }
-        
-        // Reset for new reading
-        function resetReading() {
-            // Remove glow effect
-            centerCard.classList.remove('glow');
-            
-            // Hide action buttons
-            drawAgainButton.classList.add('hidden');
-            shareButton.classList.add('hidden');
-            
-            // Flip card back
-            centerCard.classList.remove('flipped');
-            
-            // Clear card content
-            cardContent.innerHTML = '';
-            
-            // Show draw button after flip completes
-            setTimeout(() => {
-                drawButton.classList.remove('hidden');
-                userQuestion.classList.remove('hidden');
-            }, 800);
-        }
-        
-        // Update history list
-        function updateHistoryList() {
-            if (readingHistory.length === 0) {
-                emptyHistory.classList.remove('hidden');
-                historyList.innerHTML = '';
-                return;
-            }
-            
-            emptyHistory.classList.add('hidden');
-            historyList.innerHTML = '';
-            
-            readingHistory.forEach((reading, index) => {
-                const item = document.createElement('div');
-                item.classList.add('history-item');
-                item.innerHTML = `
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h4 class="font-cinzel text-lg">${reading.card} <span class="text-sm ${reading.orientation === 'Reversed' ? 'text-red-400' : 'text-green-400'}">(${reading.orientation})</span></h4>
-                            <p class="text-sm text-purple-300">${reading.timestamp}</p>
-                        </div>
-                        <button class="text-purple-400 hover:text-white share-history" data-index="${index}">
-                            <i class="fas fa-share-alt"></i>
-                        </button>
-                    </div>
-                    <p class="mt-2 text-sm text-gray-300">${reading.question}</p>
-                    <p class="mt-1 text-sm text-gray-400 italic">${reading.meaning.substring(0, 60)}...</p>
-                `;
-                historyList.appendChild(item);
-            });
-            
-            // Add event listeners to share buttons in history
-            document.querySelectorAll('.share-history').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    const index = e.currentTarget.dataset.index;
-                    openShareModal(readingHistory[index]);
-                });
-            });
-        }
-        
-        // Open share modal
-        function openShareModal(reading) {
-            shareQuote.textContent = `${reading.card} (${reading.orientation}): ${reading.meaning}`;
-            shareTimestamp.textContent = reading.timestamp;
-            shareText.textContent = `I just drew ${reading.card} (${reading.orientation}) on Mystic Tarot! 
-Question: ${reading.question}
-Meaning: ${reading.meaning}
-#TarotReading`;
-            
-            shareModal.classList.add('active');
-        }
-        
-        // Close share modal
-        function closeShareModal() {
-            shareModal.classList.remove('active');
-        }
-        
-        // Copy text to clipboard
-        function copyText() {
-            navigator.clipboard.writeText(shareText.textContent)
-                .then(() => {
-                    // Show a confirmation message
-                    const originalText = copyTextBtn.innerHTML;
-                    copyTextBtn.innerHTML = '<i class="fas fa-check mr-2"></i>Copied!';
-                    setTimeout(() => {
-                        copyTextBtn.innerHTML = originalText;
-                    }, 2000);
-                })
-                .catch(console.error);
-        }
-        
-        // Share on Twitter
-        function shareOnTwitter() {
-            const text = encodeURIComponent(`I just drew ${shareQuote.textContent.split(':')[0]} on Mystic Tarot! #TarotReading`);
-            window.open(`https://twitter.com/intent/tweet?text=${text}`, '_blank');
-        }
-        
-        // Share on Facebook
-        function shareOnFacebook() {
-            const url = encodeURIComponent(window.location.href);
-            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
-        }
-        
-        // Set theme
-        function setTheme(theme) {
-            currentTheme = theme;
-            
-            // Set theme colors
-            document.documentElement.style.setProperty('--primary', theme === '1' ? '#7e22ce' : theme === '2' ? '#0d9488' : theme === '3' ? '#b45309' : '#4338ca');
-            document.documentElement.style.setProperty('--primary-dark', theme === '1' ? '#4c1d95' : theme === '2' ? '#115e59' : theme === '3' ? '#7c2d12' : '#312e81');
-            document.documentElement.style.setProperty('--primary-light', theme === '1' ? '#c084fc' : theme === '2' ? '#5eead4' : theme === '3' ? '#fcd34d' : '#818cf8');
-            document.documentElement.style.setProperty('--accent', theme === '1' ? '#f0abfc' : theme === '2' ? '#99f6e4' : theme === '3' ? '#fde68a' : '#a5b4fc');
-            
-            // Set theme icons
-            if (theme === '1') {
-                currentThemeIcon = "fa-moon";
-                currentCenterSymbol = "☾";
-            } else if (theme === '2') {
-                currentThemeIcon = "fa-leaf";
-                currentCenterSymbol = "♣";
-            } else if (theme === '3') {
-                currentThemeIcon = "fa-sun";
-                currentCenterSymbol = "☀";
-            } else {
-                currentThemeIcon = "fa-star";
-                currentCenterSymbol = "★";
-            }
-            
-            updateCardBackIcons();
-        }
-        
-        // Generate PDF report.
-        function generatePDF() {
-            const originalText = pdfButton.innerHTML;
-            pdfButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Generating...';
+    <audio
+        id="flipSound"
+        src="data:audio/mpeg;base64,SUQzBAAAAAABEVRYWFgAAAAtAAADY29tbWVudABCaWdTb3VuZEJhbmsuY29tIC8gTGFTb25vdGhlcXVlLm9yZwBURU5DAAAAHQAAA1N3aXRjaCBQbHVzIMKpIE5DSCBTb2Z0d2FyZQBUSVQyAAAABgAAAzIyMzUAVFNTRQAAAA8AAANMYXZmNTcuODMuMTAwAAAAAAAAAAAAAAD/80DEAAAAA0gAAAAATEFNRTMuMTAwVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQsRbAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQMSkAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV"
+        preload="auto"
+    ></audio>
 
-            const readings = readingHistory;
-
-            if (!readings || readings.length === 0) {
-                alert('No readings available to generate a PDF. Please draw a card first.');
-                pdfButton.innerHTML = originalText;
-                return;
-            }
-
-            const primaryColor = '#c084fc';
-            const backgroundColor = '#0a0e1d';
-            const mutedText = '#d1d5db';
-
-            const container = document.createElement('div');
-            container.style.width = '800px';
-            container.style.padding = '40px';
-            container.style.fontFamily = 'Playfair Display, serif';
-            container.style.background = backgroundColor;
-            container.style.color = 'white';
-            container.style.minHeight = '1120px';
-            container.style.boxSizing = 'border-box';
-
-            const title = `<h1 style="font-family: Cinzel, serif; color: ${primaryColor}; text-align: center; font-size: 2.4em; margin-bottom: 20px;">Your personal guidance from the universe</h1>`;
-            const intro = `<p style="font-size: 1.1em; text-align: center; margin-bottom: 30px;">Below are your recent tarot readings. Reflect on these messages and how they relate to your journey. The universe speaks through symbols and signs - trust your intuition as you interpret these insights.</p>`;
-
-            const readingsHTML = readings.map(reading => `
-                <div style="border: 1px solid ${primaryColor}; border-radius: 12px; padding: 20px; margin-bottom: 25px; background: rgba(255, 255, 255, 0.05);">
-                    <h2 style="color: ${primaryColor}; margin-bottom: 6px; font-size: 1.4em;">${reading.card} <span style="font-size: 0.9em; color: ${reading.orientation === 'Reversed' ? '#f87171' : '#34d399'}">(${reading.orientation})</span></h2>
-                    <div style="display: flex; justify-content: space-between; font-size: 0.9em; margin-bottom: 10px;">
-                        <span>${reading.timestamp}</span>
-                        <span style="color: ${mutedText};">Question: ${reading.question}</span>
-                    </div>
-                    <p style="font-weight: bold; font-size: 1em; margin-top: 10px;">Meaning: <span style="font-weight: normal;">${reading.meaning}</span></p>
-                </div>`).join('');
-
-            const footer = `
-                <p style="font-style: italic; text-align: center; font-size: 1em; color: #f3f4f6; margin-top: 30px;">
-                    The tarot reveals possibilities, not certainties. Your free will and actions shape your destiny.
-                </p>
-                <h3 style="color: ${primaryColor}; text-align: center; margin-top: 20px; font-size: 1.2em;">TAROTCARDGENERATOR.COM</h3>
-                <p style="text-align: center; color: #f3f4f6; font-size: 0.9em;">Visit us anytime for more guidance on your journey</p>
-            `;
-
-            container.innerHTML = title + intro + readingsHTML + footer;
-
-            document.body.appendChild(container);
-
-            html2canvas(container, { backgroundColor: null }).then(canvas => {
-                const imgData = canvas.toDataURL('image/png');
-                const pdf = new jspdf.jsPDF('p', 'pt', 'a4');
-
-                const pageWidth = pdf.internal.pageSize.getWidth();
-                const pageHeight = pdf.internal.pageSize.getHeight();
-                const ratio = Math.min(pageWidth / canvas.width, pageHeight / canvas.height);
-                const imgWidth = canvas.width * ratio;
-                const imgHeight = canvas.height * ratio;
-
-                pdf.setFillColor(backgroundColor);
-                pdf.rect(0, 0, pageWidth, pageHeight, 'F');
-
-                pdf.addImage(imgData, 'PNG', (pageWidth - imgWidth) / 2, 20, imgWidth, imgHeight);
-                pdf.save('Mystic_Tarot_Readings.pdf');
-
-                pdfButton.innerHTML = originalText;
-                document.body.removeChild(container);
-            }).catch(error => {
-                console.error('PDF generation error:', error);
-                pdfButton.innerHTML = originalText;
-                alert('Failed to generate PDF. Please try again.');
-            });
-        }
-
-        // End of pdf generation.
-        
-        // Event listeners
-        drawButton.addEventListener('click', drawCard);
-        drawAgainButton.addEventListener('click', resetReading);
-        shareButton.addEventListener('click', () => openShareModal(readingHistory[0]));
-        historyButton.addEventListener('click', () => historyPanel.classList.add('open'));
-        historyButtonReading.addEventListener('click', () => historyPanel.classList.add('open'));
-        closeHistory.addEventListener('click', () => historyPanel.classList.remove('open'));
-        clearHistory.addEventListener('click', () => {
-            readingHistory = [];
-            localStorage.removeItem('tarotHistory');
-            updateHistoryList();
-        });
-        saveHistory.addEventListener('click', () => {
-            alert('Your reading history has been saved to your browser storage. It will persist even if you close the browser.');
-        });
-        closeShare.addEventListener('click', closeShareModal);
-        copyTextBtn.addEventListener('click', copyText);
-        twitterShare.addEventListener('click', shareOnTwitter);
-        facebookShare.addEventListener('click', shareOnFacebook);
-        downloadImageBtn.addEventListener('click', () => {
-            alert('In a production environment, this would generate and download an image of your reading.');
-        });
-        pdfButton.addEventListener('click', generatePDF);
-        
-        // Theme selection
-        themeOptions.forEach(option => {
-            option.addEventListener('click', () => {
-                themeOptions.forEach(opt => opt.classList.remove('active'));
-                option.classList.add('active');
-                setTheme(option.dataset.theme);
-            });
-        });
-        
-        // Initialize stars and particles
-        createStars();
-        createParticles();
-        
-        // Initial animation for the card
-        setTimeout(() => {
-            centerCard.classList.add('card-shake');
-            setTimeout(() => {
-                centerCard.classList.remove('card-shake');
-            }, 600);
-        }, 1000);
-    </script>
+    <!-- External JS -->
+    <script src="/scripts/index.js"></script>
 </body>
 </html>
