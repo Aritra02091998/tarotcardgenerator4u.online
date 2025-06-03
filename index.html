@@ -7,6 +7,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- PDF generation libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <style>
         :root {
             --primary: #7e22ce;
@@ -77,9 +80,9 @@
             transform-style: preserve-3d;
             transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             cursor: pointer;
-            /* CARD SIZE ADJUSTED HERE - Reduced from 420px to 380px */
-            height: 380px;
-            width: 240px;
+            /* CARD SIZE REDUCED BY 8 UNITS */
+            height: 372px;
+            width: 232px;
         }
         
         .tarot-card.flipped {
@@ -535,11 +538,12 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 1rem;
-            position: relative; /* Added for absolute positioning */
+            position: relative;
+            min-height: 80px; /* Ensure enough space for absolute positioned elements */
         }
         
         .header-center {
-            position: absolute; /* Changed for positioning */
+            position: absolute;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
@@ -547,16 +551,22 @@
             flex-grow: 0;
         }
         
-        .header-left, .header-right {
-            position: relative;
-            z-index: 10;
-        }
-        
+        /* HEADER BUTTONS POSITIONED AT TOP RIGHT CORNER */
         .header-right {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
             display: flex;
             align-items: center;
             gap: 0.8rem;
-            margin-left: auto;
+            z-index: 10;
+        }
+        
+        .header-left {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            z-index: 10;
         }
         
         .three-card-container {
@@ -564,11 +574,11 @@
             justify-content: center;
             align-items: flex-end;
             position: relative;
-            /* CONTAINER HEIGHT ADJUSTED HERE - Reduced from 500px to 450px */
             height: 450px;
             width: 100%;
-            /* SPACING ADJUSTED HERE - Reduced from 3rem to 1rem */
-            margin-bottom: 1rem;
+            /* TOP AND BOTTOM MARGINS ADJUSTED */
+            margin-top: -1rem;    /* Reduced by 4 units (1rem) */
+            margin-bottom: 1.5rem; /* Increased by 0.5rem (2 units) */
         }
         
         .card-wrapper {
@@ -592,7 +602,6 @@
             z-index: 2;
         }
         
-        /* SPACE ADJUSTMENT - Increased space before button */
         #buttonContainer {
             margin-top: 3rem;
         }
@@ -635,14 +644,12 @@
         
         @media (max-width: 768px) {
             .tarot-card {
-                /* CARD SIZE ADJUSTED HERE - Reduced from 360px to 320px */
-                height: 320px;
-                /* CARD WIDTH ADJUSTED HERE - Reduced from 220px to 200px */
-                width: 200px;
+                /* CARD SIZE REDUCED BY 8 UNITS */
+                height: 312px;
+                width: 192px;
             }
             
             .three-card-container {
-                /* CONTAINER HEIGHT ADJUSTED HERE - Reduced from 380px to 340px */
                 height: 340px;
             }
             
@@ -696,14 +703,12 @@
         
         @media (max-width: 480px) {
             .tarot-card {
-                /* CARD SIZE ADJUSTED HERE - Reduced from 300px to 280px */
-                height: 280px;
-                /* CARD WIDTH ADJUSTED HERE - Reduced from 180px to 170px */
-                width: 170px;
+                /* CARD SIZE REDUCED BY 8 UNITS */
+                height: 272px;
+                width: 162px;
             }
             
             .three-card-container {
-                /* CONTAINER HEIGHT ADJUSTED HERE - Reduced from 330px to 300px */
                 height: 300px;
             }
             
@@ -842,9 +847,8 @@
     <div class="flex-grow flex flex-col items-center justify-center py-10 px-4">
         <!-- Pre-reading Section -->
         <section id="preReading" class="w-full max-w-3xl text-center mb-14 fade-in">
-            <!-- Header with icons pushed to top-right -->
+            <!-- Header with icons in top-right corner -->
             <div class="main-header mb-8">
-                <div class="header-left"></div>
                 <div class="header-center">
                     <h1 class="text-4xl md:text-5xl font-cinzel shimmer-text main-title">
                         Mystic Tarot
@@ -914,7 +918,7 @@
         
         <!-- Main Reading Section (initially hidden) -->
         <section id="readingSection" class="w-full max-w-4xl flex flex-col items-center hidden">
-            <!-- Navigation Header with icons pushed to top-right -->
+            <!-- Navigation Header with icons in top-right corner -->
             <div class="main-header mb-8 w-full">
                 <div class="header-left">
                     <button id="backButton" class="nav-btn">
@@ -951,13 +955,12 @@
                     >
                     <i class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-purple-400"></i>
                 </div>
-                <!-- SPACING ADJUSTED - Removed mb-8 class to reduce space -->
                 <p class="text-purple-300 text-sm mt-2 text-center font-playfair italic">
                     Your question will be remembered during this session
                 </p>
             </div>
             
-            <!-- Three Card Container -->
+            <!-- Three Card Container with adjusted margins -->
             <div class="three-card-container" id="threeCardContainer">
                 <!-- Left Card -->
                 <div class="card-wrapper left">
@@ -1000,7 +1003,6 @@
                                     <div class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol">☾</div>
                                 </div>
                                 <div class="absolute inset-4 flex flex-col items-center justify-center">
-                                    <!-- ANIMATION REMOVED - Removed 'floating' class from center card -->
                                     <div class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6">
                                         <i class="fas fa-star text-5xl text-purple-800 card-icon"></i>
                                     </div>
@@ -1623,6 +1625,36 @@ Meaning: ${reading.meaning}
             updateCardBackIcons();
         }
         
+        // Generate PDF report
+        function generatePDF() {
+            // Show generating indicator
+            const originalText = pdfButton.innerHTML;
+            pdfButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Generating...';
+            
+            // Capture the reading section
+            const element = document.getElementById('readingSection');
+            
+            html2canvas(element).then(canvas => {
+                const imgData = canvas.toDataURL('image/png');
+                
+                // Calculate dimensions
+                const imgWidth = canvas.width * 0.75;
+                const imgHeight = canvas.height * 0.75;
+                
+                // Create PDF
+                const pdf = new jspdf.jsPDF('p', 'pt', [imgWidth, imgHeight]);
+                pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+                
+                // Save and reset button
+                pdf.save('tarot-reading.pdf');
+                pdfButton.innerHTML = originalText;
+            }).catch(error => {
+                console.error('Error generating PDF:', error);
+                pdfButton.innerHTML = originalText;
+                alert('Failed to generate PDF. Please try again.');
+            });
+        }
+        
         // Event listeners
         drawButton.addEventListener('click', drawCard);
         drawAgainButton.addEventListener('click', resetReading);
@@ -1645,9 +1677,7 @@ Meaning: ${reading.meaning}
         downloadImageBtn.addEventListener('click', () => {
             alert('In a production environment, this would generate and download an image of your reading.');
         });
-        pdfButton.addEventListener('click', () => {
-            alert('PDF generation would be implemented in a production environment');
-        });
+        pdfButton.addEventListener('click', generatePDF);
         
         // Theme selection
         themeOptions.forEach(option => {
