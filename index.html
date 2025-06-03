@@ -1625,7 +1625,7 @@ Meaning: ${reading.meaning}
             updateCardBackIcons();
         }
         
-        // Generate PDF report
+        // Generate PDF report.
         function generatePDF() {
             const originalText = pdfButton.innerHTML;
             pdfButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Generating...';
@@ -1701,8 +1701,7 @@ Meaning: ${reading.meaning}
             });
         }
 
-
-        // end of pdf generation.
+        // End of pdf generation.
         
         // Event listeners
         drawButton.addEventListener('click', drawCard);
