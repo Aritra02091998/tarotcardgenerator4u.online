@@ -1627,33 +1627,82 @@ Meaning: ${reading.meaning}
         
         // Generate PDF report
         function generatePDF() {
-            // Show generating indicator
             const originalText = pdfButton.innerHTML;
             pdfButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Generating...';
-            
-            // Capture the reading section
-            const element = document.getElementById('readingSection');
-            
-            html2canvas(element).then(canvas => {
-                const imgData = canvas.toDataURL('image/png');
-                
-                // Calculate dimensions
-                const imgWidth = canvas.width * 0.75;
-                const imgHeight = canvas.height * 0.75;
-                
-                // Create PDF
-                const pdf = new jspdf.jsPDF('p', 'pt', [imgWidth, imgHeight]);
-                pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
-                
-                // Save and reset button
-                pdf.save('tarot-reading.pdf');
+
+            const readings = readingHistory;
+
+            if (!readings || readings.length === 0) {
+                alert('No readings available to generate a PDF. Please draw a card first.');
                 pdfButton.innerHTML = originalText;
+                return;
+            }
+
+            const primaryColor = '#c084fc';
+            const backgroundColor = '#0a0e1d';
+            const mutedText = '#d1d5db';
+
+            const container = document.createElement('div');
+            container.style.width = '800px';
+            container.style.padding = '40px';
+            container.style.fontFamily = 'Playfair Display, serif';
+            container.style.background = backgroundColor;
+            container.style.color = 'white';
+            container.style.minHeight = '1120px';
+            container.style.boxSizing = 'border-box';
+
+            const title = `<h1 style="font-family: Cinzel, serif; color: ${primaryColor}; text-align: center; font-size: 2.4em; margin-bottom: 20px;">Your personal guidance from the universe</h1>`;
+            const intro = `<p style="font-size: 1.1em; text-align: center; margin-bottom: 30px;">Below are your recent tarot readings. Reflect on these messages and how they relate to your journey. The universe speaks through symbols and signs - trust your intuition as you interpret these insights.</p>`;
+
+            const readingsHTML = readings.map(reading => `
+                <div style="border: 1px solid ${primaryColor}; border-radius: 12px; padding: 20px; margin-bottom: 25px; background: rgba(255, 255, 255, 0.05);">
+                    <h2 style="color: ${primaryColor}; margin-bottom: 6px; font-size: 1.4em;">${reading.card} <span style="font-size: 0.9em; color: ${reading.orientation === 'Reversed' ? '#f87171' : '#34d399'}">(${reading.orientation})</span></h2>
+                    <div style="display: flex; justify-content: space-between; font-size: 0.9em; margin-bottom: 10px;">
+                        <span>${reading.timestamp}</span>
+                        <span style="color: ${mutedText};">Question: ${reading.question}</span>
+                    </div>
+                    <p style="font-weight: bold; font-size: 1em; margin-top: 10px;">Meaning: <span style="font-weight: normal;">${reading.meaning}</span></p>
+                </div>`).join('');
+
+            const footer = `
+                <p style="font-style: italic; text-align: center; font-size: 1em; color: #f3f4f6; margin-top: 30px;">
+                    The tarot reveals possibilities, not certainties. Your free will and actions shape your destiny.
+                </p>
+                <h3 style="color: ${primaryColor}; text-align: center; margin-top: 20px; font-size: 1.2em;">TAROTCARDGENERATOR.COM</h3>
+                <p style="text-align: center; color: #f3f4f6; font-size: 0.9em;">Visit us anytime for more guidance on your journey</p>
+            `;
+
+            container.innerHTML = title + intro + readingsHTML + footer;
+
+            document.body.appendChild(container);
+
+            html2canvas(container, { backgroundColor: null }).then(canvas => {
+                const imgData = canvas.toDataURL('image/png');
+                const pdf = new jspdf.jsPDF('p', 'pt', 'a4');
+
+                const pageWidth = pdf.internal.pageSize.getWidth();
+                const pageHeight = pdf.internal.pageSize.getHeight();
+                const ratio = Math.min(pageWidth / canvas.width, pageHeight / canvas.height);
+                const imgWidth = canvas.width * ratio;
+                const imgHeight = canvas.height * ratio;
+
+                pdf.setFillColor(backgroundColor);
+                pdf.rect(0, 0, pageWidth, pageHeight, 'F');
+
+                pdf.addImage(imgData, 'PNG', (pageWidth - imgWidth) / 2, 20, imgWidth, imgHeight);
+                pdf.save('Mystic_Tarot_Readings.pdf');
+
+                pdfButton.innerHTML = originalText;
+                document.body.removeChild(container);
             }).catch(error => {
-                console.error('Error generating PDF:', error);
+                console.error('PDF generation error:', error);
                 pdfButton.innerHTML = originalText;
                 alert('Failed to generate PDF. Please try again.');
             });
         }
+
+
+        // end of pdf generation.
         
         // Event listeners
         drawButton.addEventListener('click', drawCard);
