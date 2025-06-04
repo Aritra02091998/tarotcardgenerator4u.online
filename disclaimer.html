@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Disclaimer - Mystic Tarot</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/styles/index.css" />
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-indigo-950 to-black text-white font-playfair">
+  <!-- Animated Background Elements -->
+  <div class="starry-bg" id="starry-bg"></div>
+  <div class="mystical-mist"></div>
+  <div class="crystal-ball top-1/4 left-1/4"></div>
+  <div class="crystal-ball bottom-1/4 right-1/4"></div>
+  <div class="particles" id="particles"></div>
+
+  <!-- Header -->
+  <header class="main-header mt-6 mb-12">
+    <div class="header-center">
+      <h1 class="text-4xl md:text-5xl font-cinzel shimmer-text main-title">Mystic Tarot</h1>
+    </div>
+    <div class="header-right">
+      <button id="historyButton" class="text-purple-300 hover:text-white" aria-label="View reading history">
+        <i class="fas fa-history text-2xl"></i>
+      </button>
+      <button id="settingsButton" class="text-purple-300 hover:text-white" aria-label="Change settings">
+        <i class="fas fa-cog text-2xl"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Disclaimer Section -->
+  <main class="max-w-4xl mx-auto px-6 py-10 bg-purple-900 bg-opacity-60 rounded-xl shadow-xl backdrop-blur-lg">
+    <h2 class="font-cinzel text-3xl text-purple-200 mb-6 text-center">Disclaimer</h2>
+
+    <div class="mb-6 p-4 border-l-8 border-red-600 bg-red-900 bg-opacity-60 rounded">
+      <p class="text-red-200 font-semibold">
+        Important: Tarot readings provided by Mystic Tarot are for entertainment, self-reflection, and personal insight only. They are not a substitute for professional advice.
+      </p>
+    </div>
+
+    <p class="mb-4 text-purple-100">
+      By using Mystic Tarot, you acknowledge and agree that tarot readings, interpretations, and spiritual guidance provided on this site are subject to your own interpretation and are offered solely for your exploration and contemplation.
+    </p>
+
+    <h3 class="font-cinzel text-xl text-purple-300 mt-6 mb-2">1. No Professional Advice</h3>
+    <p class="mb-4 text-purple-100">
+      Mystic Tarot is not intended to replace legal, financial, medical, psychological, or other licensed professional services. You should always consult a qualified professional for advice relevant to your personal situation.
+    </p>
+
+    <h3 class="font-cinzel text-xl text-purple-300 mt-6 mb-2">2. User Responsibility</h3>
+    <p class="mb-4 text-purple-100">
+      Users are responsible for their own actions, decisions, and interpretations derived from the readings. We do not assume any responsibility or liability for consequences arising from your use of the platform.
+    </p>
+
+    <h3 class="font-cinzel text-xl text-purple-300 mt-6 mb-2">3. Limitation of Liability</h3>
+    <p class="mb-4 text-purple-100">
+      We make no guarantees regarding the accuracy, reliability, or completeness of any reading. Your use of Mystic Tarot is at your own discretion and risk.
+    </p>
+
+    <h3 class="font-cinzel text-xl text-purple-300 mt-6 mb-2">4. Repetitive Use Warning</h3>
+    <p class="mb-4 text-purple-100">
+      Excessive reliance on tarot readings can lead to unhealthy patterns of dependency. We encourage users to use readings as a complement to self-awareness, not as a decision-making crutch.
+    </p>
+
+    <h3 class="font-cinzel text-xl text-purple-300 mt-6 mb-2">5. Age Restriction</h3>
+    <p class="mb-4 text-purple-100">
+      This site is intended for users 13 years and older. Minors must have parental consent to use the platform.
+    </p>
+
+    <p class="mt-6 text-purple-200 italic">
+      Use Mystic Tarot as a companion to your inner journey, not a replacement for real-world choices and responsibilities.
+    </p>
+  </main>
+
+  <!-- Footer Navigation -->
+  <footer class="footer-nav mt-20">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2 class="font-cinzel text-2xl mb-4 shimmer-text">Mystic Tarot</h2>
+        <p class="text-purple-200 font-playfair">
+          Discover the ancient wisdom of tarot to illuminate your path and guide your journey through life's mysteries.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-column">
+          <h3 class="footer-title">Information</h3>
+          <a href="#" class="footer-link">About Us</a>
+          <a href="#" class="footer-link">How It Works</a>
+          <a href="#" class="footer-link">Tarot Guide</a>
+          <a href="#" class="footer-link">Testimonials</a>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-title">Legal</h3>
+          <a href="#" class="footer-link">Terms & Conditions</a>
+          <a href="/privacy-policy.html" class="footer-link">Privacy Policy</a>
+          <a href="/disclaimer.html" class="footer-link">Disclaimer</a>
+          <a href="#" class="footer-link">Cookie Policy</a>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-title">Support</h3>
+          <a href="#" class="footer-link">Contact Us</a>
+          <a href="#" class="footer-link">FAQs</a>
+          <a href="#" class="footer-link">Support Us</a>
+          <a href="#" class="footer-link">Feedback</a>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-title">Connect</h3>
+          <a href="#" class="footer-link"><i class="fab fa-facebook mr-2"></i> Facebook</a>
+          <a href="#" class="footer-link"><i class="fab fa-instagram mr-2"></i> Instagram</a>
+          <a href="#" class="footer-link"><i class="fab fa-twitter mr-2"></i> Twitter</a>
+          <a href="#" class="footer-link"><i class="fab fa-pinterest mr-2"></i> Pinterest</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>© 2023 Mystic Tarot Readings • All spiritual guidance is for reflection and personal growth</p>
+      <p class="mt-2">tarotcardgenerator.com</p>
+    </div>
+  </footer>
+</body>
+</html>
