@@ -73,10 +73,7 @@ function createSwirl() {
     }, 1500);
 }
 
-// We'll load tarot card data from a JSON file named 'tarot-details.json' (placed alongside script.js).
-// Each card object must have fields matching the provided JSON structure, e.g.:
-// { name, number, arcana, suit, img, fortune_telling, keywords, meanings: { light, shadow }, Archetype, "Hebrew Alphabet", Numerology, Elemental, "Mythical/Spiritual", "Questions to Ask" }
-
+// We'll load tarot card data from a JSON file named 'tarot-details.json'.
 let tarotDeck = [];  // Will hold the array from data.cards
 
 // Fetch JSON on load
@@ -85,7 +82,6 @@ fetch('tarot-details.json')
     .then(data => {
         // Assume the JSON has a top-level "cards" array
         tarotDeck = data.cards.map(card => {
-            // Prepend image path
             return {
                 name: card.name,
                 number: card.number,
@@ -105,8 +101,8 @@ fetch('tarot-details.json')
         });
     })
     .catch(error => {
-        console.error('Error loading cards.json:', error);
-        // Fallback: tarotDeck remains empty; drawCard should handle this.
+        console.error('Error loading tarot-details.json:', error);
+        // tarotDeck remains empty; drawCard() will alert the user if they try to draw too soon.
     });
 
 // DOM elements
@@ -145,9 +141,10 @@ const backButton = document.getElementById('backButton');
 const changeDeckButton = document.getElementById('changeDeckButton');
 const pdfButton = document.getElementById('pdfButton');
 
-// User's question and reading history
+// New: the container we’ll inject into
+const dynamicInterpret = document.getElementById('dynamicInterpret');
+
 let currentQuestion = "";
-// Each history entry will now include: name, arcana, fortune_telling (array), orientation, chosenMeaning, question, timestamp
 let readingHistory = JSON.parse(localStorage.getItem('tarotHistory')) || [];
 let currentTheme = "1";
 let currentThemeIcon = "fa-moon";
@@ -232,18 +229,14 @@ function drawCard() {
 
     // Simulate shuffling animation
     const cards = document.querySelectorAll('.tarot-card');
-    cards.forEach(card => {
-        card.classList.add('shuffle-animation');
-    });
+    cards.forEach(card => card.classList.add('shuffle-animation'));
 
     setTimeout(() => {
         // Create mystical swirl animation
         createSwirl();
 
         // Remove shuffling animation
-        cards.forEach(card => {
-            card.classList.remove('shuffle-animation');
-        });
+        cards.forEach(card => card.classList.remove('shuffle-animation'));
 
         // Random card and orientation
         const randomIndex = Math.floor(Math.random() * tarotDeck.length);
@@ -254,16 +247,16 @@ function drawCard() {
         const chosenMeaningArray = isReversed
             ? card.meanings.shadow
             : card.meanings.light;
-        // Join meanings into one string (you could adapt to show list)
+        // Join meanings into one string
         const chosenMeaning = chosenMeaningArray.join(', ');
 
-        // Build card content
+        // Build card content in the flip card front
         cardContent.innerHTML = `
             ${isReversed ? '<div class="reversed-indicator">Reversed</div>' : ''}
             <h3 class="font-cinzel text-2xl text-center mb-2">${card.name}</h3>
             <p class="text-sm text-purple-400 italic mb-2">${card.arcana}</p>
             <div class="flex-1 w-full flex items-center justify-center">
-                <img src="${card.img}" alt="${card.name}" class="max-h-52 rounded-lg ${isReversed ? 'reversed' : ''}">
+                <img src="${card.img}" alt="${card.name}" class="rounded-lg ${isReversed ? 'reversed' : ''}">
             </div>
             <div class="mt-4">
                 <p class="font-playfair italic text-center text-sm mb-2">
@@ -274,7 +267,7 @@ function drawCard() {
             </div>
         `;
 
-        // Add reversed class if needed
+        // 1) Flip the card face
         const cardFront = centerCard.querySelector('.card-front');
         if (isReversed) {
             cardFront.classList.add('reversed');
@@ -282,31 +275,44 @@ function drawCard() {
             cardFront.classList.remove('reversed');
         }
 
-        // Hide revealing message
+        // 2) Hide revealing message
         revealingMessage.classList.add('fade-out');
         setTimeout(() => {
             revealingMessage.classList.add('hidden');
             revealingMessage.classList.remove('fade-out');
         }, 500);
 
-        // Flip the card after a short delay
+        // 3) After a short delay, perform the 3D flip
         setTimeout(() => {
             centerCard.classList.add('flipped');
-
-            // Add glow effect to the revealed card
             centerCard.classList.add('glow');
 
-            // Show action buttons
+            // SHOW the “Interpreting Your Card” box now that we have a result:
+            document.getElementById('interpretContainer').classList.remove('hidden');
+
+            // SHOW the “Note to You” box as well:
+            document.getElementById('noteContainer').classList.remove('hidden');
+
+            // Show “Draw Again” & “Share Reading”
             setTimeout(() => {
                 drawAgainButton.classList.remove('hidden');
                 shareButton.classList.remove('hidden');
             }, 500);
 
-            // Add to reading history
+            // 4) Populate the “Interpreting Your Card” dynamic content
+            dynamicInterpret.innerHTML = `
+                <p><span class="font-bold">Name:</span> ${card.name} (${isReversed ? 'Reversed' : 'Light'})</p>
+                <p><span class="font-bold">Arcana:</span> ${card.arcana}</p>
+                <p><span class="font-bold">Meaning:</span> ${chosenMeaning}</p>
+                <p><span class="font-bold">Fortune Telling:</span> ${card.fortune_telling.join(', ')}</p>
+                <p><span class="font-bold">Keywords:</span> ${card.keywords.join(', ')}</p>
+            `;
+
+            // 5) Add to reading history
             const reading = {
                 name: card.name,
                 arcana: card.arcana,
-                fortune_telling: card.fortune_telling,     // array
+                fortune_telling: card.fortune_telling, // array
                 orientation: isReversed ? "Reversed" : "Light",
                 chosenMeaning: chosenMeaning,
                 question: currentQuestion,
@@ -335,20 +341,12 @@ function updateCardBackIcons() {
 
 // Reset for new reading
 function resetReading() {
-    // Remove glow effect
     centerCard.classList.remove('glow');
-
-    // Hide action buttons
     drawAgainButton.classList.add('hidden');
     shareButton.classList.add('hidden');
-
-    // Flip card back
     centerCard.classList.remove('flipped');
-
-    // Clear card content
     cardContent.innerHTML = '';
-
-    // Show draw button after flip completes
+    dynamicInterpret.innerHTML = '';   // Clear the dynamic box
     setTimeout(() => {
         drawButton.classList.remove('hidden');
         userQuestion.classList.remove('hidden');
@@ -367,7 +365,6 @@ function updateHistoryList() {
     historyList.innerHTML = '';
 
     readingHistory.forEach((reading, index) => {
-        // Ensure chosenMeaning is at least an empty string
         const snippet = (reading.chosenMeaning || '').substring(0, 60);
 
         const item = document.createElement('div');
@@ -376,10 +373,10 @@ function updateHistoryList() {
             <div class="flex justify-between items-start">
                 <div>
                     <h4 class="font-cinzel text-lg">
-                      ${reading.name} 
-                      <span class="text-sm ${reading.orientation === 'Reversed' ? 'text-red-400' : 'text-green-400'}">
-                        (${reading.orientation})
-                      </span>
+                        ${reading.name} 
+                        <span class="text-sm ${reading.orientation === 'Reversed' ? 'text-red-400' : 'text-green-400'}">
+                            (${reading.orientation})
+                        </span>
                     </h4>
                     <p class="text-xs text-purple-300 mb-1">${reading.arcana}</p>
                     <p class="text-sm text-gray-400 italic">${reading.timestamp}</p>
@@ -389,16 +386,16 @@ function updateHistoryList() {
                 </button>
             </div>
             <p class="mt-2 text-sm text-gray-300">
-              <span class="font-bold">Q:</span> ${reading.question}
+                <span class="font-bold">Q:</span> ${reading.question}
             </p>
             <p class="mt-1 text-sm text-gray-400 italic">
-              <span class="font-bold">Meaning:</span> ${snippet}...
+                <span class="font-bold">Meaning:</span> ${snippet}...
             </p>
         `;
         historyList.appendChild(item);
     });
 
-    // Re-attach share-history listeners if needed…
+    // Re‐attach share‐history listeners
     document.querySelectorAll('.share-history').forEach(button => {
         button.addEventListener('click', e => {
             const idx = e.currentTarget.dataset.index;
@@ -407,17 +404,16 @@ function updateHistoryList() {
     });
 }
 
-
 // Open share modal
 function openShareModal(reading) {
     shareQuote.textContent = `${reading.name} (${reading.orientation}): ${reading.chosenMeaning}`;
     shareTimestamp.textContent = reading.timestamp;
     shareText.textContent = `I just drew ${reading.name} (${reading.orientation}) on Mystic Tarot! 
-    Question: ${reading.question}
-    Meaning: ${reading.chosenMeaning}
-    Arcana: ${reading.arcana}
-    Fortune: ${reading.fortune_telling.join(', ')}
-    #TarotReading`;
+Question: ${reading.question}
+Meaning: ${reading.chosenMeaning}
+Arcana: ${reading.arcana}
+Fortune: ${reading.fortune_telling.join(', ')}
+#TarotReading`;
 
     shareModal.classList.add('active');
 }
@@ -431,7 +427,6 @@ function closeShareModal() {
 function copyText() {
     navigator.clipboard.writeText(shareText.textContent)
         .then(() => {
-            // Show a confirmation message
             const originalText = copyTextBtn.innerHTML;
             copyTextBtn.innerHTML = '<i class="fas fa-check mr-2"></i>Copied!';
             setTimeout(() => {
@@ -456,8 +451,6 @@ function shareOnFacebook() {
 // Set theme
 function setTheme(theme) {
     currentTheme = theme;
-
-    // Set theme colors
     document.documentElement.style.setProperty(
         '--primary',
         theme === '1' ? '#7e22ce' : theme === '2' ? '#0d9488' : theme === '3' ? '#b45309' : '#4338ca'
@@ -475,7 +468,6 @@ function setTheme(theme) {
         theme === '1' ? '#f0abfc' : theme === '2' ? '#99f6e4' : theme === '3' ? '#fde68a' : '#a5b4fc'
     );
 
-    // Set theme icons
     if (theme === '1') {
         currentThemeIcon = "fa-moon";
         currentCenterSymbol = "☾";
@@ -493,13 +485,12 @@ function setTheme(theme) {
     updateCardBackIcons();
 }
 
-// Generate PDF report.
+// Generate PDF report
 function generatePDF() {
     const originalText = pdfButton.innerHTML;
     pdfButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Generating...';
 
     const readings = readingHistory;
-
     if (!readings || readings.length === 0) {
         alert('No readings available to generate a PDF. Please draw a card first.');
         pdfButton.innerHTML = originalText;
@@ -543,7 +534,6 @@ function generatePDF() {
     `;
 
     container.innerHTML = title + intro + readingsHTML + footer;
-
     document.body.appendChild(container);
 
     html2canvas(container, { backgroundColor: null })

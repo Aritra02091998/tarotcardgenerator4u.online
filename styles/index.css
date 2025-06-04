@@ -645,6 +645,20 @@ body {
     100% { transform: scale(2) rotate(360deg); opacity: 0; }
 }
 
+
+#dynamicInterpret p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
 @media (max-width: 768px) {
     .tarot-card {
         /* CARD SIZE REDUCED BY 8 UNITS */
@@ -765,3 +779,4 @@ body {
         font-size: 0.8rem;
     }
 }
+

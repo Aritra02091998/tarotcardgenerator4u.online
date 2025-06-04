@@ -382,6 +382,19 @@
                 </p>
             </div>
 
+            <!-- Information Section -->
+            <div id="interpretContainer" class="w-full max-w-2xl mb-8 hidden">
+                <div class="bg-purple-900 bg-opacity-50 rounded-xl p-6 mystical-border fade-in">
+                    <h3 class="font-cinzel text-2xl mb-4 text-center text-purple-200">
+                        <i class="fas fa-book-open mr-2"></i>Interpreting Your Card
+                    </h3>
+                    <!--
+                        We removed the static paragraph here. Only dynamic content will go into this div:
+                    -->
+                    <div id="dynamicInterpret" class="space-y-2 text-center text-sm text-purple-100"></div>
+                </div>
+            </div>
+
             <!-- Action Buttons -->
             <div class="flex flex-col sm:flex-row gap-4 mb-10 fade-in" id="buttonContainer">
                 <button
@@ -407,17 +420,16 @@
                 </button>
             </div>
 
-            <!-- Information Section -->
-            <div class="w-full max-w-2xl">
+            <!-- Note to You -->
+            <div id="noteContainer" class="w-full max-w-2xl mb-8 hidden">
                 <div class="bg-purple-900 bg-opacity-50 rounded-xl p-6 mystical-border fade-in">
                     <h3 class="font-cinzel text-2xl mb-4 text-center text-purple-200">
-                        <i class="fas fa-book-open mr-2"></i>Interpreting Your Card
+                        <i class="fas fa-sticky-note mr-2"></i>Note to You
                     </h3>
                     <p class="font-playfair text-lg text-purple-100">
-                        Tarot cards offer symbolic guidance. Reflect on how this card's meaning relates to your
-                        question.
-                        Upright cards typically represent energies manifesting clearly, while reversed cards may
-                        indicate internal processes or obstacles to overcome.
+                        Tarot cards offer symbolic guidance. Reflect on how this card’s meaning relates to your question.
+                        Upright cards typically represent energies manifesting clearly, while reversed cards may indicate
+                        internal processes or obstacles to overcome.
                     </p>
                 </div>
             </div>
