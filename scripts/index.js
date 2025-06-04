@@ -287,11 +287,8 @@ function drawCard() {
             centerCard.classList.add('flipped');
             centerCard.classList.add('glow');
 
-            // SHOW the “Interpreting Your Card” box now that we have a result:
+            // (OLD: this shows the purple boxes immediately)  
             document.getElementById('interpretContainer').classList.remove('hidden');
-
-            // SHOW the “Note to You” box as well:
-            document.getElementById('noteContainer').classList.remove('hidden');
 
             // Show “Draw Again” & “Share Reading”
             setTimeout(() => {

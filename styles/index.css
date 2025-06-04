@@ -102,7 +102,7 @@ body {
     transform: rotateY(180deg);
     color: #1e293b;
     justify-content: flex-start;
-    padding-top: 0.4rem;    /* small gap so your heading sits close to the top */
+    padding-top: 0rem;    /* small gap so your heading sits close to the top */
     box-sizing: border-box;
 }
 
