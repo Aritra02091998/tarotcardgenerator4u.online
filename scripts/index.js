@@ -494,7 +494,7 @@ function generatePDF() {
     const originalText = pdfButton.innerHTML;
     pdfButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Generating...';
 
-    const readings = readingHistory;
+    const readings = readingHistory.slice(0, 3);
     if (!readings || readings.length === 0) {
         alert('No readings available to generate a PDF. Please draw a card first.');
         pdfButton.innerHTML = originalText;
@@ -533,7 +533,7 @@ function generatePDF() {
         <p style="font-style: italic; text-align: center; font-size: 1em; color: #f3f4f6; margin-top: 30px;">
             The tarot reveals possibilities, not certainties. Your free will and actions shape your destiny.
         </p>
-        <h3 style="color: ${primaryColor}; text-align: center; margin-top: 20px; font-size: 1.2em;">TAROTCARDGENERATOR.COM</h3>
+        <h3 style="color: #f3f4f6; text-align: center; margin-top: 20px; font-size: 1.2em;">Brought to you with ❤️ by TAROTCARDGENERATOR.COM</h3>
         <p style="text-align: center; color: #f3f4f6; font-size: 0.9em;">Visit us anytime for more guidance on your journey</p>
     `;
 

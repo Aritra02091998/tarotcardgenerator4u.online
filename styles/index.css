@@ -101,15 +101,13 @@ body {
     background: linear-gradient(135deg, #f3e8ff, #ede9fe);
     transform: rotateY(180deg);
     color: #1e293b;
-    /* Instead of centering, stack children from top */
     justify-content: flex-start;
-    padding-top: 1rem;      /* small gap from top edge */
-    box-sizing: border-box; /* ensure padding doesn’t push outside */
+    padding-top: 0.4rem;    /* small gap so your heading sits close to the top */
+    box-sizing: border-box;
 }
 
 .card-front img {
-    /* ★ Tweak: allow the revealed card image to be larger */
-    max-height: 260px;
+    max-height: 300px;      /* ↑ was 260px → now 300px, so you no longer crop off the bottom */
     width: auto;
     max-width: 90%;
 }
