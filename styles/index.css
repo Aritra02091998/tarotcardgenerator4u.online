@@ -578,7 +578,7 @@ body {
     height: 450px;
     width: 100%;
     /* TOP AND BOTTOM MARGINS ADJUSTED */
-    margin-top: -1rem;    /* Reduced by 4 units (1rem) */
+    margin-top: -2rem;    /* Reduced by 4 units (1rem) */
     margin-bottom: 1.5rem; /* Increased by 0.5rem (2 units) */
 }
 
@@ -813,3 +813,37 @@ body {
     }
 }
 
+/* 1. On small screens, hide nav-btn text and show only icons */
+@media (max-width: 640px) {
+    .nav-btn .btn-text {
+        display: none;
+    }
+    .nav-btn i {
+        margin: 0;
+    }
+    .main-title {
+        font-size: 1.8rem;
+    }
+    #changeDeckButton {
+        display: none;
+    }
+}
+
+/* 2. Footer stacking: center columns and links vertically on small screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-links {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+    }
+    .footer-column {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}
