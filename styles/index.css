@@ -659,6 +659,41 @@ body {
     animation: fadeIn 0.8s ease forwards;
 }
 
+
+#dynamicInterpret p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.125rem;      /* same as text-lg in Tailwind */
+  line-height: 1.75rem;     /* a bit more breathing room */
+  color: #EDE9FE;           /* a very pale lavender to match text-purple-100 */
+  margin-bottom: 0.75rem;   /* consistent spacing between lines */
+}
+
+/* 2) If you want the “Interpreting Your Card” box
+   to look a bit richer, you can bump up the padding
+   or corner radius here (optional): */
+#interpretContainer > div,
+#noteContainer > div {
+  /* slightly bump up padding from p-6 to p-8: */
+  padding: 2rem;            /* equals Tailwind’s p-8 */
+  border-radius: 1.25rem;   /* equals Tailwind’s rounded-xl, but slightly bigger */
+}
+
+/* 3) Make sure the headings are consistent */
+#interpretContainer h3,
+#noteContainer h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;        /* Tailwind’s text-2xl → 1.5rem */
+  margin-bottom: 1rem;      /* Tailwind’s mb-4 → 1rem */
+  color: #D8B4FE;           /* a slightly lighter purple than the background */
+}
+
+/* 4) A touch more line‐height inside the wrapper so text doesn’t hug the edges */
+#interpretContainer > div,
+#noteContainer > div {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+}
+
 @media (max-width: 768px) {
     .tarot-card {
         /* CARD SIZE REDUCED BY 8 UNITS */

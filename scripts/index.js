@@ -347,6 +347,10 @@ function resetReading() {
     centerCard.classList.remove('flipped');
     cardContent.innerHTML = '';
     dynamicInterpret.innerHTML = '';   // Clear the dynamic box
+
+    // Remove the Interpretation box when the user clicks “Draw Again”:
+    document.getElementById('interpretContainer').classList.add('hidden');
+
     setTimeout(() => {
         drawButton.classList.remove('hidden');
         userQuestion.classList.remove('hidden');
