@@ -277,100 +277,351 @@
                 </div>
             </div>
 
-            <!-- Three Card Container -->
-            <div class="three-card-container" id="threeCardContainer">
-                <!-- Left Card -->
-                <div class="card-wrapper left">
-                    <div class="card-container">
-                        <div class="tarot-card" id="leftCard">
-                            <!-- Card Back -->
-                            <div class="card-face card-back">
-                                <div class="absolute inset-0 card-back-pattern"></div>
-                                <div class="card-symbols">
-                                    <div class="card-symbol top-6 left-6">♎</div>
-                                    <div class="card-symbol top-6 right-6">♏</div>
-                                    <div class="card-symbol bottom-6 left-6">♐</div>
-                                    <div class="card-symbol bottom-6 right-6">♑</div>
-                                    <div
-                                        class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol"
-                                    >☾</div>
-                                </div>
-                                <div class="absolute inset-4 flex flex-col items-center justify-center">
-                                    <div
-                                        class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6 floating"
-                                    >
-                                        <i class="fas fa-star text-5xl text-purple-800 card-icon"></i>
-                                    </div>
-                                    <h2 class="font-cinzel text-2xl text-yellow-200">Mystic Tarot</h2>
-                                </div>
-                                <div class="absolute inset-0 border-8 border-purple-300 rounded-2xl opacity-30"></div>
-                            </div>
+
+            <!-- 11 Tarot Card Display -->
+            <div class="deck-container" id="deckContainer">
+
+                <div class="card-wrapper" style="--i:1;">
+                    <div class="tarot-card deck-card" data-card-index="0">
+                    <div class="card-face card-back">
+                        <!-- Put your existing “back” design here -->
+                        <div class="absolute inset-0 card-back-pattern"></div>
+                        <div class="card-symbols">
+                        <div class="card-symbol top-6 left-6">♎</div>
+                        <div class="card-symbol top-6 right-6">♏</div>
+                        <div class="card-symbol bottom-6 left-6">♐</div>
+                        <div class="card-symbol bottom-6 right-6">♑</div>
+                        <div
+                            class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol"
+                        >☾</div>
                         </div>
+                        <div class="absolute inset-4 flex flex-col items-center justify-center">
+                        <div
+                            class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6 floating"
+                        >
+                            <i class="fas fa-star text-5xl text-purple-800 card-icon"></i>
+                        </div>
+                        <h2 class="font-cinzel text-2xl text-yellow-200">Mystic Tarot</h2>
+                        </div>
+                        <div class="absolute inset-0 border-8 border-purple-300 rounded-2xl opacity-30"></div>
+                    </div>
+
+                    <div class="card-face card-front">
+                        <!-- This img will be filled by JS when flipped -->
+                        <div class="flex items-center justify-center h-full">
+                        <img src="" alt="Tarot Card Image" class="max-h-full max-w-full card-front-img" />
+                        </div>
+                    </div>
                     </div>
                 </div>
 
-                <!-- Center Card -->
-                <div class="card-wrapper center">
-                    <div class="card-container" id="centerCardContainer">
-                        <div class="tarot-card" id="centerCard">
-                            <!-- Card Back -->
-                            <div class="card-face card-back">
-                                <div class="absolute inset-0 card-back-pattern"></div>
-                                <div class="card-symbols">
-                                    <div class="card-symbol top-6 left-6">♎</div>
-                                    <div class="card-symbol top-6 right-6">♏</div>
-                                    <div class="card-symbol bottom-6 left-6">♐</div>
-                                    <div class="card-symbol bottom-6 right-6">♑</div>
-                                    <div
-                                        class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol"
-                                    >☾</div>
-                                </div>
-                                <div class="absolute inset-4 flex flex-col items-center justify-center">
-                                    <div class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6">
-                                        <i class="fas fa-star text-5xl text-purple-800 card-icon"></i>
-                                    </div>
-                                    <h2 class="font-cinzel text-2xl text-yellow-200">Mystic Tarot</h2>
-                                </div>
-                                <div class="absolute inset-0 border-8 border-purple-300 rounded-2xl opacity-30"></div>
-                            </div>
-
-                            <!-- Card Front (only the image; name and arcana removed) -->
-                            <div class="card-face card-front">
-                                <div class="flex items-center justify-center h-full">
-                                    <img id="centerCardImage" src="" alt="Tarot Card Image" class="max-h-full max-w-full" />
-                                </div>
-                            </div>
+                <div class="card-wrapper" style="--i:2;">
+                    <div class="tarot-card deck-card" data-card-index="1">
+                    <div class="card-face card-back">
+                        <div class="absolute inset-0 card-back-pattern"></div>
+                        <div class="card-symbols">
+                        <div class="card-symbol top-6 left-6">♎</div>
+                        <div class="card-symbol top-6 right-6">♏</div>
+                        <div class="card-symbol bottom-6 left-6">♐</div>
+                        <div class="card-symbol bottom-6 right-6">♑</div>
+                        <div
+                            class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol"
+                        >☾</div>
                         </div>
+                        <div class="absolute inset-4 flex flex-col items-center justify-center">
+                        <div
+                            class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6 floating"
+                        >
+                            <i class="fas fa-star text-5xl text-purple-800 card-icon"></i>
+                        </div>
+                        <h2 class="font-cinzel text-2xl text-yellow-200">Mystic Tarot</h2>
+                        </div>
+                        <div class="absolute inset-0 border-8 border-purple-300 rounded-2xl opacity-30"></div>
+                    </div>
+                    <div class="card-face card-front">
+                        <div class="flex items-center justify-center h-full">
+                        <img src="" alt="Tarot Card Image" class="max-h-full max-w-full card-front-img" />
+                        </div>
+                    </div>
                     </div>
                 </div>
 
-                <!-- Right Card -->
-                <div class="card-wrapper right">
-                    <div class="card-container">
-                        <div class="tarot-card" id="rightCard">
-                            <!-- Card Back -->
-                            <div class="card-face card-back">
-                                <div class="absolute inset-0 card-back-pattern"></div>
-                                <div class="card-symbols">
-                                    <div class="card-symbol top-6 left-6">♎</div>
-                                    <div class="card-symbol top-6 right-6">♏</div>
-                                    <div class="card-symbol bottom-6 left-6">♐</div>
-                                    <div class="card-symbol bottom-6 right-6">♑</div>
-                                    <div
-                                        class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol"
-                                    >☾</div>
-                                </div>
-                                <div class="absolute inset-4 flex flex-col items-center justify-center">
-                                    <div
-                                        class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6 floating"
-                                    >
-                                        <i class="fas fa-star text-5xl text-purple-800 card-icon"></i>
-                                    </div>
-                                    <h2 class="font-cinzel text-2xl text-yellow-200">Mystic Tarot</h2>
-                                </div>
-                                <div class="absolute inset-0 border-8 border-purple-300 rounded-2xl opacity-30"></div>
-                            </div>
+                <div class="card-wrapper" style="--i:3;">
+                    <div class="tarot-card deck-card" data-card-index="2">
+                    <div class="card-face card-back">
+                        <div class="absolute inset-0 card-back-pattern"></div>
+                        <div class="card-symbols">
+                        <div class="card-symbol top-6 left-6">♎</div>
+                        <div class="card-symbol top-6 right-6">♏</div>
+                        <div class="card-symbol bottom-6 left-6">♐</div>
+                        <div class="card-symbol bottom-6 right-6">♑</div>
+                        <div
+                            class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol"
+                        >☾</div>
                         </div>
+                        <div class="absolute inset-4 flex flex-col items-center justify-center">
+                        <div
+                            class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6 floating"
+                        >
+                            <i class="fas fa-star text-5xl text-purple-800 card-icon"></i>
+                        </div>
+                        <h2 class="font-cinzel text-2xl text-yellow-200">Mystic Tarot</h2>
+                        </div>
+                        <div class="absolute inset-0 border-8 border-purple-300 rounded-2xl opacity-30"></div>
+                    </div>
+                    <div class="card-face card-front">
+                        <div class="flex items-center justify-center h-full">
+                        <img src="" alt="Tarot Card Image" class="max-h-full max-w-full card-front-img" />
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card-wrapper" style="--i:4;">
+                    <div class="tarot-card deck-card" data-card-index="3">
+                    <div class="card-face card-back">
+                        <div class="absolute inset-0 card-back-pattern"></div>
+                        <div class="card-symbols">
+                        <div class="card-symbol top-6 left-6">♎</div>
+                        <div class="card-symbol top-6 right-6">♏</div>
+                        <div class="card-symbol bottom-6 left-6">♐</div>
+                        <div class="card-symbol bottom-6 right-6">♑</div>
+                        <div
+                            class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol"
+                        >☾</div>
+                        </div>
+                        <div class="absolute inset-4 flex flex-col items-center justify-center">
+                        <div
+                            class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6 floating"
+                        >
+                            <i class="fas fa-star text-5xl text-purple-800 card-icon"></i>
+                        </div>
+                        <h2 class="font-cinzel text-2xl text-yellow-200">Mystic Tarot</h2>
+                        </div>
+                        <div class="absolute inset-0 border-8 border-purple-300 rounded-2xl opacity-30"></div>
+                    </div>
+                    <div class="card-face card-front">
+                        <div class="flex items-center justify-center h-full">
+                        <img src="" alt="Tarot Card Image" class="max-h-full max-w-full card-front-img" />
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card-wrapper" style="--i:5;">
+                    <div class="tarot-card deck-card" data-card-index="5">
+                    <div class="card-face card-back">
+                        <div class="absolute inset-0 card-back-pattern"></div>
+                        <div class="card-symbols">
+                        <div class="card-symbol top-6 left-6">♎</div>
+                        <div class="card-symbol top-6 right-6">♏</div>
+                        <div class="card-symbol bottom-6 left-6">♐</div>
+                        <div class="card-symbol bottom-6 right-6">♑</div>
+                        <div
+                            class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol"
+                        >☾</div>
+                        </div>
+                        <div class="absolute inset-4 flex flex-col items-center justify-center">
+                        <div
+                            class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6 floating"
+                        >
+                            <i class="fas fa-star text-5xl text-purple-800 card-icon"></i>
+                        </div>
+                        <h2 class="font-cinzel text-2xl text-yellow-200">Mystic Tarot</h2>
+                        </div>
+                        <div class="absolute inset-0 border-8 border-purple-300 rounded-2xl opacity-30"></div>
+                    </div>
+                    <div class="card-face card-front">
+                        <div class="flex items-center justify-center h-full">
+                        <img src="" alt="Tarot Card Image" class="max-h-full max-w-full card-front-img" />
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card-wrapper" style="--i:6;">
+                    <div class="tarot-card deck-card" data-card-index="4">
+                    <div class="card-face card-back">
+                        <div class="absolute inset-0 card-back-pattern"></div>
+                        <div class="card-symbols">
+                        <div class="card-symbol top-6 left-6">♎</div>
+                        <div class="card-symbol top-6 right-6">♏</div>
+                        <div class="card-symbol bottom-6 left-6">♐</div>
+                        <div class="card-symbol bottom-6 right-6">♑</div>
+                        <div
+                            class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol"
+                        >☾</div>
+                        </div>
+                        <div class="absolute inset-4 flex flex-col items-center justify-center">
+                        <div
+                            class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6 floating"
+                        >
+                            <i class="fas fa-star text-5xl text-purple-800 card-icon"></i>
+                        </div>
+                        <h2 class="font-cinzel text-2xl text-yellow-200">Mystic Tarot</h2>
+                        </div>
+                        <div class="absolute inset-0 border-8 border-purple-300 rounded-2xl opacity-30"></div>
+                    </div>
+                    <div class="card-face card-front">
+                        <div class="flex items-center justify-center h-full">
+                        <img src="" alt="Tarot Card Image" class="max-h-full max-w-full card-front-img" />
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card-wrapper" style="--i:7;">
+                    <div class="tarot-card deck-card" data-card-index="6">
+                    <div class="card-face card-back">
+                        <div class="absolute inset-0 card-back-pattern"></div>
+                        <div class="card-symbols">
+                        <div class="card-symbol top-6 left-6">♎</div>
+                        <div class="card-symbol top-6 right-6">♏</div>
+                        <div class="card-symbol bottom-6 left-6">♐</div>
+                        <div class="card-symbol bottom-6 right-6">♑</div>
+                        <div
+                            class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol"
+                        >☾</div>
+                        </div>
+                        <div class="absolute inset-4 flex flex-col items-center justify-center">
+                        <div
+                            class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6 floating"
+                        >
+                            <i class="fas fa-star text-5xl text-purple-800 card-icon"></i>
+                        </div>
+                        <h2 class="font-cinzel text-2xl text-yellow-200">Mystic Tarot</h2>
+                        </div>
+                        <div class="absolute inset-0 border-8 border-purple-300 rounded-2xl opacity-30"></div>
+                    </div>
+                    <div class="card-face card-front">
+                        <div class="flex items-center justify-center h-full">
+                        <img src="" alt="Tarot Card Image" class="max-h-full max-w-full card-front-img" />
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card-wrapper" style="--i:8;">
+                    <div class="tarot-card deck-card" data-card-index="7">
+                    <div class="card-face card-back">
+                        <div class="absolute inset-0 card-back-pattern"></div>
+                        <div class="card-symbols">
+                        <div class="card-symbol top-6 left-6">♎</div>
+                        <div class="card-symbol top-6 right-6">♏</div>
+                        <div class="card-symbol bottom-6 left-6">♐</div>
+                        <div class="card-symbol bottom-6 right-6">♑</div>
+                        <div
+                            class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol"
+                        >☾</div>
+                        </div>
+                        <div class="absolute inset-4 flex flex-col items-center justify-center">
+                        <div
+                            class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6 floating"
+                        >
+                            <i class="fas fa-star text-5xl text-purple-800 card-icon"></i>
+                        </div>
+                        <h2 class="font-cinzel text-2xl text-yellow-200">Mystic Tarot</h2>
+                        </div>
+                        <div class="absolute inset-0 border-8 border-purple-300 rounded-2xl opacity-30"></div>
+                    </div>
+                    <div class="card-face card-front">
+                        <div class="flex items-center justify-center h-full">
+                        <img src="" alt="Tarot Card Image" class="max-h-full max-w-full card-front-img" />
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card-wrapper" style="--i:9;">
+                    <div class="tarot-card deck-card" data-card-index="8">
+                    <div class="card-face card-back">
+                        <div class="absolute inset-0 card-back-pattern"></div>
+                        <div class="card-symbols">
+                        <div class="card-symbol top-6 left-6">♎</div>
+                        <div class="card-symbol top-6 right-6">♏</div>
+                        <div class="card-symbol bottom-6 left-6">♐</div>
+                        <div class="card-symbol bottom-6 right-6">♑</div>
+                        <div
+                            class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol"
+                        >☾</div>
+                        </div>
+                        <div class="absolute inset-4 flex flex-col items-center justify-center">
+                        <div
+                            class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6 floating"
+                        >
+                            <i class="fas fa-star text-5xl text-purple-800 card-icon"></i>
+                        </div>
+                        <h2 class="font-cinzel text-2xl text-yellow-200">Mystic Tarot</h2>
+                        </div>
+                        <div class="absolute inset-0 border-8 border-purple-300 rounded-2xl opacity-30"></div>
+                    </div>
+                    <div class="card-face card-front">
+                        <div class="flex items-center justify-center h-full">
+                        <img src="" alt="Tarot Card Image" class="max-h-full max-w-full card-front-img" />
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card-wrapper" style="--i:10;">
+                    <div class="tarot-card deck-card" data-card-index="9">
+                    <div class="card-face card-back">
+                        <div class="absolute inset-0 card-back-pattern"></div>
+                        <div class="card-symbols">
+                        <div class="card-symbol top-6 left-6">♎</div>
+                        <div class="card-symbol top-6 right-6">♏</div>
+                        <div class="card-symbol bottom-6 left-6">♐</div>
+                        <div class="card-symbol bottom-6 right-6">♑</div>
+                        <div
+                            class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol"
+                        >☾</div>
+                        </div>
+                        <div class="absolute inset-4 flex flex-col items-center justify-center">
+                        <div
+                            class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6 floating"
+                        >
+                            <i class="fas fa-star text-5xl text-purple-800 card-icon"></i>
+                        </div>
+                        <h2 class="font-cinzel text-2xl text-yellow-200">Mystic Tarot</h2>
+                        </div>
+                        <div class="absolute inset-0 border-8 border-purple-300 rounded-2xl opacity-30"></div>
+                    </div>
+                    <div class="card-face card-front">
+                        <div class="flex items-center justify-center h-full">
+                        <img src="" alt="Tarot Card Image" class="max-h-full max-w-full card-front-img" />
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card-wrapper" style="--i:11;">
+                    <div class="tarot-card deck-card" data-card-index="10">
+                    <div class="card-face card-back">
+                        <div class="absolute inset-0 card-back-pattern"></div>
+                        <div class="card-symbols">
+                        <div class="card-symbol top-6 left-6">♎</div>
+                        <div class="card-symbol top-6 right-6">♏</div>
+                        <div class="card-symbol bottom-6 left-6">♐</div>
+                        <div class="card-symbol bottom-6 right-6">♑</div>
+                        <div
+                            class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol"
+                        >☾</div>
+                        </div>
+                        <div class="absolute inset-4 flex flex-col items-center justify-center">
+                        <div
+                            class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6 floating"
+                        >
+                            <i class="fas fa-star text-5xl text-purple-800 card-icon"></i>
+                        </div>
+                        <h2 class="font-cinzel text-2xl text-yellow-200">Mystic Tarot</h2>
+                        </div>
+                        <div class="absolute inset-0 border-8 border-purple-300 rounded-2xl opacity-30"></div>
+                    </div>
+                    <div class="card-face card-front">
+                        <div class="flex items-center justify-center h-full">
+                        <img src="" alt="Tarot Card Image" class="max-h-full max-w-full card-front-img" />
+                        </div>
+                    </div>
                     </div>
                 </div>
 
@@ -388,6 +639,7 @@
                 <!-- Swirl Animation Container -->
                 <div id="swirlContainer"></div>
             </div>
+            <!-- ─────────────────────────────────────────────────────────────────────────────────────── -->
 
             <!-- Card Name & Arcana Display (after three-card group) -->
             <div id="cardDetails" class="mt-6 text-center">

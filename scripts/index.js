@@ -187,12 +187,6 @@ let currentCenterSymbol = "☾";
 updateHistoryList();
 updateCardBackIcons();
 
-// On page load, add a small shake to the center card to draw attention
-setTimeout(() => {
-    centerCard.classList.add('card-shake');
-    setTimeout(() => centerCard.classList.remove('card-shake'), 600);
-}, 1000);
-
 
 // ─────────────────────────────────────────────────────────────────────────────
 // 6) EVENT LISTENERS FOR NAVIGATION & UI
@@ -273,25 +267,11 @@ themeOptions.forEach(option => {
     });
 });
 
-// Add a shake animation on hover when the center card is not yet flipped
-centerCard.addEventListener('mouseenter', () => {
-    if (!centerCard.classList.contains('flipped')) {
-        centerCard.classList.add('card-shake');
-        setTimeout(() => centerCard.classList.remove('card-shake'), 600);
-    }
-});
+
 
 // Draw button listener
 drawButton.addEventListener('click', drawCard);
 
-
-// ─────────────────────────────────────────────────────────────────────────────
-// 7) CORE FUNCTION: drawCard()
-// ─────────────────────────────────────────────────────────────────────────────
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Updated drawCard() Function (index.js)
-// ─────────────────────────────────────────────────────────────────────────────
 
 function drawCard() {
   // 1) Make sure the deck is loaded
@@ -300,90 +280,91 @@ function drawCard() {
     return;
   }
 
-  // 2) Grab the user's question (or default to a generic prompt)
+  // 2) Grab the user's question (or default)
   currentQuestion = userQuestion.value.trim() || "Seeking general guidance";
   displayedQuestion.textContent = currentQuestion;
   questionDisplay.classList.remove('hidden');
 
-  // 3) Hide the input and draw button
+  // 3) Hide input & draw‐button
   userQuestion.classList.add('hidden');
   drawButton.classList.add('hidden');
 
-  // 4) Show the "revealing..." message overlay
-  revealingMessage.classList.remove('hidden');
-
-  // 5) Play flip sound if available
+  // 5) Play flip sound if you have it
   if (flipSound) {
     flipSound.currentTime = 0;
     flipSound.play().catch(e => console.log("Sound play prevented by browser policy"));
   }
 
-  // 6) Trigger particle effects
+  // 6) Trigger particle‐effects (if desired)
   createParticles();
 
-  // 7) Add a “shuffling” animation to all cards
-  const allCards = document.querySelectorAll('.tarot-card');
-  allCards.forEach(card => card.classList.add('shuffle-animation'));
+  // 7) Add a “shuffling” animation to all cards in the deck
+  const allDeckCards = document.querySelectorAll('.deck-card');
+  allDeckCards.forEach(card => {
+    card.classList.add('shuffle-animation');
+  });
 
-  // After 1.5 seconds: remove shuffle, swirl, pick a card, then flip
+  // After 1.5 seconds: remove shuffle, swirl, pick a random card to flip
   setTimeout(() => {
-    // 7a) Remove shuffle animation
-    allCards.forEach(card => card.classList.remove('shuffle-animation'));
+    // 7a) Remove shuffle from all
+    allDeckCards.forEach(card => {
+      card.classList.remove('shuffle-animation');
+      // Also reset any previous flipped state (in case of “Draw Again”)
+      card.classList.remove('flipped');
+      const imgElem = card.querySelector('.card-front-img');
+      imgElem.src = "";       // clear any old front image
+      imgElem.classList.remove('reversed');
+    });
 
-    // 7b) Create the swirl animation on the center
+    // 7b) Create swirl over the entire deck‐container (optional)
     createSwirl();
 
-    // 7c) Choose a random card + orientation
-    const randomIndex  = Math.floor(Math.random() * tarotDeck.length);
-    const isReversed   = Math.random() > 0.5;
-    const chosenCard   = tarotDeck[randomIndex];
+    // 7c) Choose one random DOM card (out of the 11 displayed) to flip
+    const randomDomIndex = Math.floor(Math.random() * allDeckCards.length);
+    const chosenDomCard   = allDeckCards[randomDomIndex];
 
-    // 7d) Determine which meaning array to use
-    const meaningArray     = isReversed
-      ? chosenCard.meanings.shadow
-      : chosenCard.meanings.light;
-    const chosenMeaning    = meaningArray.join(', ');
+    // 7d) Choose a random tarot‐deck object (out of the 78)
+    const randomIndex78 = Math.floor(Math.random() * tarotDeck.length);
+    const isReversed    = Math.random() > 0.5;
+    const chosenCard    = tarotDeck[randomIndex78];
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // ─── 7e) POPULATE THE CENTER CARD FRONT (ONLY IMAGE) ─────────────────
-    // Instead of `cardContent.innerHTML = ...`, we now simply set the <img> src:
-    centerCardImage.src = chosenCard.img;
+    // 7e) Populate the <img> inside the chosenDomCard
+    const frontImg = chosenDomCard.querySelector('.card-front-img');
+    frontImg.src = chosenCard.img;
     if (isReversed) {
-      centerCardImage.classList.add('reversed');
-    } else {
-      centerCardImage.classList.remove('reversed');
+      frontImg.classList.add('reversed');
     }
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // ─── 7f) POPULATE THE “CARD DETAILS” SECTION (NAME + ARCANA) ────────────
+    // 7f) Populate your “card details” (name + arcana) but keep them hidden until flip ends
     cardNameElem.textContent   = chosenCard.name;
     cardArcanaElem.textContent = chosenCard.arcana;
-    // Ensure it’s hidden until the flip finishes:
     cardDetailsBox.classList.remove('show');
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // ─── 7g) HIDE THE “REVEALING” MESSAGE AFTER A SHORT FADE ─────────────────
+    // 7g) Hide the “revealing…” message after a short fade
     revealingMessage.classList.add('fade-out');
     setTimeout(() => {
       revealingMessage.classList.add('hidden');
       revealingMessage.classList.remove('fade-out');
     }, 500);
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // ─── 7h) FLIP THE CENTER CARD AFTER A BRIEF PAUSE ───────────────────────
+    // 7h) Flip the chosen DOM card after a brief pause
     setTimeout(() => {
-      centerCard.classList.add('flipped');
-      centerCard.classList.add('glow');
+      chosenDomCard.classList.add('flipped');
+      // optionally add a glow class so CSS glitter kicks in
+      chosenDomCard.classList.add('glow');
 
-      // ───────────────────────────────────────────────────────────────────────
-      // ─── 7i) SHOW “DRAW AGAIN” & “SHARE READING” BUTTONS AFTER FLIP ─────────
+      // 7i) Show “Draw Again” & “Share Reading” after the flip
       setTimeout(() => {
         drawAgainButton.classList.remove('hidden');
         shareButton.classList.remove('hidden');
-      }, 500);
+      }, 600);
 
-      // ───────────────────────────────────────────────────────────────────────
-      // ─── 7j) POPULATE “INTERPRETING YOUR CARD” (UNDER #dynamicInterpret) ───
+      // 7j) Populate “Interpreting Your Card” beneath (#dynamicInterpret)
+      const meaningArray = isReversed
+        ? chosenCard.meanings.shadow
+        : chosenCard.meanings.light;
+      const chosenMeaning = meaningArray.join(', ');
+
       dynamicInterpret.innerHTML = `
         <p><span class="font-bold">Name:</span> ${chosenCard.name} ${isReversed ? '(Reversed)' : ''}</p>
         <p><span class="font-bold">Arcana:</span> ${chosenCard.arcana}</p>
@@ -393,8 +374,7 @@ function drawCard() {
       `;
       interpretContainer.classList.remove('hidden');
 
-      // ───────────────────────────────────────────────────────────────────────
-      // ─── 7k) ADD THIS READING TO HISTORY & UPDATE LIST ─────────────────────
+      // 7k) Add this to readingHistory & update localStorage
       const reading = {
         name: chosenCard.name,
         arcana: chosenCard.arcana,
@@ -408,56 +388,51 @@ function drawCard() {
       if (readingHistory.length > 10) readingHistory.pop();
       localStorage.setItem('tarotHistory', JSON.stringify(readingHistory));
       updateHistoryList();
-    }, 300);
+    }, 400);
   }, 1500);
 }
 
 
-// ─────────────────────────────────────────────────────────────────────────────
-// 8) AFTER THE FLIP: SHOW CARD NAME & ARCANA
-// ─────────────────────────────────────────────────────────────────────────────
 
-// Wait for the CSS transition (flip) to finish, then reveal #cardDetails
-centerCard.addEventListener('transitionend', (evt) => {
-    if (evt.propertyName === 'transform' && centerCard.classList.contains('flipped')) {
-        cardDetailsBox.classList.add('show');
+document.querySelectorAll('.deck-card').forEach(card => {
+  card.addEventListener('transitionend', (evt) => {
+    if (evt.propertyName === 'transform' && card.classList.contains('flipped')) {
+      cardDetailsBox.classList.add('show');
     }
+  });
 });
-
 
 // ─────────────────────────────────────────────────────────────────────────────
 // 9) RESET FUNCTION (for “Draw Again” or going back home)
 // ─────────────────────────────────────────────────────────────────────────────
 
 function resetReading() {
-    // Remove glow & flipped state
-    centerCard.classList.remove('glow');
-    centerCard.classList.remove('flipped');
+  // Remove glow & flipped state from every deck card
+  const allDeckCards = document.querySelectorAll('.deck-card');
+  allDeckCards.forEach(card => {
+    card.classList.remove('flipped');
+    card.classList.remove('glow');
+    const imgElem = card.querySelector('.card-front-img');
+    imgElem.src = "";
+    imgElem.classList.remove('reversed');
+  });
 
-    // Hide Draw Again & Share Reading
-    drawAgainButton.classList.add('hidden');
-    shareButton.classList.add('hidden');
+  // Hide Draw Again & Share Reading
+  drawAgainButton.classList.add('hidden');
+  shareButton.classList.add('hidden');
 
-    // Hide dynamic interpretation box
-    interpretContainer.classList.add('hidden');
+  // Hide dynamic interpretation box
+  interpretContainer.classList.add('hidden');
 
-    // Hide card details
-    cardDetailsBox.classList.remove('show');
+  // Hide card details name/arcana
+  cardDetailsBox.classList.remove('show');
 
-    // Clear the centerCardImage
-    centerCardImage.src = '';
-    centerCardImage.classList.remove('reversed');
-
-    // Clear dynamicInterpret
-    dynamicInterpret.innerHTML = '';
-
-    // After a short pause, show the draw button and question input again
-    setTimeout(() => {
-        drawButton.classList.remove('hidden');
-        userQuestion.classList.remove('hidden');
-    }, 800);
+  // After a short pause, show the draw button + question input again
+  setTimeout(() => {
+    drawButton.classList.remove('hidden');
+    userQuestion.classList.remove('hidden');
+  }, 800);
 }
-
 
 // ─────────────────────────────────────────────────────────────────────────────
 // 10) HISTORY LIST MANAGEMENT
