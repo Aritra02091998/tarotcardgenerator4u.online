@@ -112,6 +112,7 @@ body {
     max-width: 90%;
 }
 
+
 .card-front.reversed img {
     transform: rotate(180deg);
 }
