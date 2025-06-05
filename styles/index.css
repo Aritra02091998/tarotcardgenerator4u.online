@@ -107,9 +107,11 @@ body {
 }
 
 .card-front img {
-    max-height: 300px;      /* ↑ was 260px → now 300px, so you no longer crop off the bottom */
-    width: auto;
-    max-width: 90%;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  padding: 2px;              /* adjust to taste so the card has some breathing room */
+  box-sizing: border-box;
 }
 
 
@@ -857,7 +859,7 @@ body {
 
 /* Desktop */
 .tarot-card {
-    height: 362px;  /* was 372px */
+    height: 400px;  /* was 372px */
     width:  222px;  /* was 232px */
 }
 
@@ -873,18 +875,10 @@ body {
 /* ─── 2) MAKE THE CENTER CARD FRONT SHOW ONLY THE IMAGE ─────────────────– */
 /* We remove any default background or text on the .card-face.card-front 
    so that only the <img> we inject will appear.                               */
-.card-face.card-front {
-    /* Remove background gradients, borders, etc., if any are inherited */
-    background: none !important;
-    box-shadow: none  !important;
-    border: none      !important;
-    /* We still allow the inner <img> (with id="centerCardImage") to show. */
-}
+
 
 /* Ensure the image inside the card always fills the card proportionally */
 #centerCardImage {
-    width: 100%;
-    height: auto;
     object-fit: contain;
 }
 
@@ -903,29 +897,3 @@ body {
     display: block;
 }
 
-/* Optional: tweak the spacing/font‐sizes if you want more control */
-/* We already assigned font‐related classes in HTML (font-cinzel / font-playfair),
-   but you can override/adjust here if needed: */
-
-/* e.g. Card Name (h2) is font‐cinzel and text‐2xl, but if you want slightly different: */
-/*
-#cardName {
-    font-size: 1.75rem;    / * ~28px instead of 32px * /
-    margin-bottom: 0.25rem;
-}
-#cardArcana {
-    font-size: 1.125rem;   / * ~18px instead of 20px * /
-    opacity: 0.9;
-}
-*/
-
-/* ───────────────────────────────────────────────────────────────────────── */
-/* ─── 4) (OPTIONAL) TWEAK THE “THREE‐CARD CONTAINER” IF NEEDED ─────────────– */
-/* If your layout relied on a fixed .three-card-container height (e.g. 340px),
-   you may want to nudge it down a bit. But usually not needed since cards are auto-sized. */
-/*
-.three-card-container {
-    /* height: 330px;  / * for instance, 10px less than before * /
-}
-*/
-/* ───────────────────────────────────────────────────────────────────────── */

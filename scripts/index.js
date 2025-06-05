@@ -385,8 +385,7 @@ function drawCard() {
       // ───────────────────────────────────────────────────────────────────────
       // ─── 7j) POPULATE “INTERPRETING YOUR CARD” (UNDER #dynamicInterpret) ───
       dynamicInterpret.innerHTML = `
-        <p><span class="font-bold">Name:</span> ${chosenCard.name} ${isReversed ? '(Reversed)' : ''}</p>
-        <p><span class="font-bold">Arcana:</span> ${chosenCard.arcana}</p>
+        <p><span class="font-bold">Orientation:</span> ${isReversed ? '(Reversed)' : '(Forward)'}</p>
         <p><span class="font-bold">Meaning:</span> ${chosenMeaning}</p>
         <p><span class="font-bold">Fortune Telling:</span> ${chosenCard.fortune_telling.join(', ')}</p>
         <p><span class="font-bold">Keywords:</span> ${chosenCard.keywords.join(', ')}</p>
