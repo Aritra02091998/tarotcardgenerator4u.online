@@ -94,18 +94,18 @@ body {
   4) DECK & CARD LAYOUT
 ─────────────────────────────────────────────────────────────────────────────*/
 
-/* 4.1) Deck container (holds 11 cards in a “fan”) */
+/* 4.1) Deck container (holds all cards in a straight line) */
 .deck-container {
   position: relative;
   width: 100%;
-  height: 480px;        /* adjust if you want more or less vertical space */
-  margin-top: -2rem;    /* tweak to align with overall layout */
-  margin-bottom: 1.5rem;
-  perspective: 1500px;  /* 3D perspective for card flips */
-  overflow: hidden;     /* prevent horizontal scroll from wide fan */
+  height: 360px;       /* reduced vertical height to tighten spacing */
+  margin-top: -2rem;   /* pulled up from -3rem to -2rem */
+  margin-bottom: 1rem; /* reduced bottom margin to tighten spacing */
+  perspective: 1500px; /* 3D perspective for card flips */
+  overflow: visible;   /* allow flipped cards to escape above */
 }
 
-/* 4.2) Each card‐wrapper: bottom‐aligned, rotated and offset via custom properties */
+/* 4.2) Each card‐wrapper: bottom‐aligned, horizontally offset in a line */
 .card-wrapper {
   position: absolute;
   bottom: 0;            /* anchor the bottom of each card to container bottom */
@@ -113,37 +113,40 @@ body {
   transform-origin: bottom center;
   transition: all 0.4s ease;
 
-  /* Compute a rotation from –35° (i=1) to +35° (i=11) */
+  /* The angle variable is preserved but not used, so cards remain unrotated */
   --angle: calc(-35deg + ((var(--i) - 1) * (70deg / 10)));
 
   /* Horizontal shift: i=6 is center (0px), i=1 is far left, i=11 is far right.
-     65px spacing on desktop (–325px … +325px). Tweak 65px if you want tighter/wider. */
+     65px spacing on desktop (–325px … +325px). Tweak if you want tighter/wider. */
   --offset: calc((var(--i) - 6) * 65px);
 
-  transform: translateX(var(--offset)) rotate(var(--angle));
+  /* Place cards in a straight horizontal line (no rotation) */
+  transform: translateX(var(--offset));
   z-index: calc(100 - var(--i)); /* lower i sits behind higher i */
 }
 
 /* On hover, lift card up by 10px and scale very slightly; bring to front */
 .card-wrapper:hover {
-  transform: translateX(var(--offset)) rotate(var(--angle)) translateY(-10px) scale(1.03);
+  transform: translateX(var(--offset)) translateY(-10px) scale(1.03);
   z-index: 300 !important;
 }
 
 /* 4.3) Card element itself (face-down or face-up) */
 .deck-card {
   cursor: pointer;
-  width: 222px;    /* was 232px—reduced by 10px total */
-  height: 362px;   /* was 372px—reduced by 10px total */
+  width: 180px;    /* reduced card width */
+  height: 300px;   /* reduced card height */
   transform-style: preserve-3d;
   transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* remove any glow box-shadow if added */
+  box-shadow: none !important;
 }
 
 /* When flipped, rotate 180° on Y axis (no size change) */
 .deck-card.flipped {
   transform: rotateY(180deg);
-  /* JS will also bump the parent .card-wrapper’s z-index to 500, 
-     so this card truly floats above all others. */
+  position: relative;
+  z-index: 800;   /* keep it above all siblings */
 }
 
 /* Remove any box-shadow on hover—card only “lifts” via wrapper */
@@ -183,6 +186,12 @@ body {
     url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 0c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zM11 70c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 0c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zM9 40c0-2 2-4 4-4s4 2 4 4-2 4-4 4-4-2-4-4zm48 0c0-2 2-4 4-4s4 2 4 4-2 4-4 4-4-2-4-4zm-24-9c2 0 4-2 4-4s-2-4-4-4-4 2-4 4 2 4 4 4zm0 18c2 0 4-2 4-4s-2-4-4-4-4 2-4 4 2 4 4 4z' fill='%23fef3c7' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
   background-size: 100% 100%, 50px 50px;
   opacity: 0.7;
+}
+
+/* Reduce the “Mystic Tarot” text size on the back because the card itself is now smaller */
+.card-back h2 {
+  font-size: 1.25rem;  /* scaled down from ~1.5rem */
+  margin: 0;
 }
 
 /* Zodiac symbols (corners + center) */
@@ -398,40 +407,74 @@ body {
   display: block;
 }
 
-/* 6.2) Dynamic interpretation text (beneath the flip) */
-#dynamicInterpret p {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.125rem;    /* ~18px */
-  line-height: 1.75rem;   /* ~28px */
-  color: #EDE9FE;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+
+/*─────────────────────────────────────────────────────────────────────────────
+  6.2) “Interpreting Your Card” & “Note to You” BOX STYLING (DARK PURPLE)
+─────────────────────────────────────────────────────────────────────────────*/
+
+/* Container for both sections */
+#interpretContainer,
+#noteContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-/* 6.3) “Meaning” container styling */
+/* Inner box for “Interpreting Your Card” */
 #interpretContainer > div,
 #noteContainer > div {
-  background: linear-gradient(to bottom, #fdf4ff, #f5f3ff);
-  border-radius: 1.25rem;      /* ~20px */
-  padding: 2rem;               /* ~32px */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(4px);
-  border: 1px solid #e9d5ff;
-  color: #1e293b;
+  background: #4F1368;            /* deep purple */
+  border: 3px solid var(--gold);  /* gold border */
+  border-radius: 1rem;            /* rounded corners */
+  padding: 2rem;                  /* inner spacing */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  color: #EDE9FE;                 /* light‐lavender text */
   font-size: 0.95rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;                 /* center horizontally */
 }
 
+/* Heading inside both sections */
 #interpretContainer h3,
 #noteContainer h3 {
-  font-family: 'Cinzel', serif;
-  font-size: 1.5rem;           /* ~24px */
+  font-family: 'Cinzel', serif;   /* Cinzel heading */
+  font-size: 1.75rem;             /* ~28px */
+  color: #F3E8FF;                 /* pale lavender */
+  text-align: center;
   margin-bottom: 1rem;
-  color: #D8B4FE;
+}
+
+/* Icon + heading color */
+#interpretContainer h3 i,
+#noteContainer h3 i {
+  color: #F3E8FF;
+  margin-right: 0.5rem;
+}
+
+/* Body text inside both sections */
+#dynamicInterpret,
+#noteContainer .note-text {
+  line-height: 1.6;
+  color: #f0eaf9;                /* very light lavender */
+}
+
+/* On smaller screens, shrink padding and heading font */
+@media (max-width: 768px) {
+  #interpretContainer > div,
+  #noteContainer > div {
+    padding: 1.5rem;
+  }
+  #interpretContainer h3,
+  #noteContainer h3 {
+    font-size: 1.5rem;
+  }
 }
 
 
 /*─────────────────────────────────────────────────────────────────────────────
-  7) PANELS & MODALS
+  7) PANELS & MODALS (unchanged)
 ─────────────────────────────────────────────────────────────────────────────*/
 
 /* 7.1) History side‐panel (slide-in from right) */
@@ -506,7 +549,7 @@ body {
 
 
 /*─────────────────────────────────────────────────────────────────────────────
-  8) HEADER & NAVIGATION
+  8) HEADER & NAVIGATION (unchanged)
 ─────────────────────────────────────────────────────────────────────────────*/
 
 .main-header {
@@ -549,7 +592,7 @@ body {
 
 
 /*─────────────────────────────────────────────────────────────────────────────
-  9) FOOTER
+  9) FOOTER (unchanged)
 ─────────────────────────────────────────────────────────────────────────────*/
 
 .footer-nav {
@@ -687,14 +730,45 @@ body {
 
 
 /*─────────────────────────────────────────────────────────────────────────────
+ 11.7) SHAKE & FLIP ANIMATION HELPERS
+─────────────────────────────────────────────────────────────────────────────*/
+
+/* Class to trigger a brief “shake” */
+.shake-animation {
+  animation: shake 0.6s ease-in-out;
+}
+
+/* When a card is in the “shaking + about to flip” state, it must be absolutely centered */
+.card-wrapper.flipping-wrapper {
+  position: fixed;                 /* remove from the fan’s stacking; pin to viewport */
+  top: 50%;                        /* center vertically */
+  left: 50%;                       /* center horizontally */
+  transform: translate(-50%, -50%);/* perfect centering */
+  z-index: 750 !important;         /* above even .deck-card.flipped (which is at 800) */
+  pointer-events: none;            /* avoid accidental hovers/clicks on underlying deck */
+}
+
+/* As soon as the inner .deck-card gets .flipped, we still want it to stay on top */
+.deck-card.flipped {
+  position: relative;
+  z-index: 800;
+}
+
+/* After flipping, ensure the wrapper doesn’t clip when returning to reset */
+.card-wrapper.flipped-wrapper {
+  z-index: 600 !important;    /* keep wrapper above the rest while flipped */
+}
+
+
+/*─────────────────────────────────────────────────────────────────────────────
  12) RESPONSIVE MEDIA QUERIES
 ─────────────────────────────────────────────────────────────────────────────*/
 
 /* 12.1) Desktop → Tablet (max-width: 1024px) */
 @media (max-width: 1024px) {
   .deck-card {
-    width: 200px;
-    height: 320px;
+    width: 160px;
+    height: 270px;
   }
   .card-wrapper {
     --offset: calc((var(--i) - 6) * 50px);
@@ -705,8 +779,8 @@ body {
 @media (max-width: 768px) {
   /* Shrink deck cards further */
   .deck-card {
-    width: 182px;
-    height: 302px;
+    width: 140px;
+    height: 240px;
   }
   .card-wrapper {
     --offset: calc((var(--i) - 6) * 35px);
@@ -729,15 +803,8 @@ body {
     margin-bottom: 1rem;
   }
 
-  /* Three-card container (if still present) */
-  .three-card-container {
-    height: 340px; /* slightly smaller on tablets */
-  }
-  .card-wrapper.left  { transform: rotate(-10deg) translateX(-20%); }
-  .card-wrapper.right { transform: rotate(10deg) translateX(20%); }
-
   /* Header & misc resizing */
-  .main-title { font-size: 2.3rem; }
+  .main-title { font-size: 2.2rem; }
   .crystal-ball {
     width: 180px;
     height: 180px;
@@ -759,19 +826,12 @@ body {
 /* 12.3) Large Phone → Small Phone (max-width: 480px) */
 @media (max-width: 480px) {
   .deck-card {
-    width: 162px;
-    height: 272px;
+    width: 120px;
+    height: 210px;
   }
   .card-wrapper {
     --offset: calc((var(--i) - 6) * 20px);
   }
-
-  /* Three-card container (if still present) */
-  .three-card-container {
-    height: 300px;
-  }
-  .card-wrapper.left  { transform: rotate(-10deg) translateX(-15%); }
-  .card-wrapper.right { transform: rotate(10deg) translateX(15%); }
 
   .main-title {
     font-size: 1.8rem;

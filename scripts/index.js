@@ -4,774 +4,410 @@
 // 1) BACKGROUND EFFECTS (Stars, Particles, Swirl)
 // ─────────────────────────────────────────────────────────────────────────────
 
-// Generate starry background
 function createStars() {
-    const container = document.getElementById('starry-bg');
-    const starCount = 200;
+  const container = document.getElementById('starry-bg');
+  if (!container) return;
+  const starCount = 200;
 
-    for (let i = 0; i < starCount; i++) {
-        const star = document.createElement('div');
-        star.classList.add('star');
+  for (let i = 0; i < starCount; i++) {
+    const star = document.createElement('div');
+    star.classList.add('star');
 
-        // Random position and size
-        const size = Math.random() * 3;
-        star.style.width = `${size}px`;
-        star.style.height = `${size}px`;
-        star.style.left = `${Math.random() * 100}%`;
-        star.style.top = `${Math.random() * 100}%`;
+    // Random position, size, and animation duration
+    const size = Math.random() * 2 + 1; // 1px–3px
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
+    star.style.top = `${Math.random() * 100}%`;
+    star.style.left = `${Math.random() * 100}%`;
+    star.style.animationDuration = `${Math.random() * 2 + 1}s`;
+    star.style.opacity = `${Math.random() * 0.5 + 0.3}`;
 
-        // Random animation duration and delay
-        const duration = 3 + Math.random() * 10;
-        star.style.setProperty('--duration', `${duration}s`);
-        star.style.animationDelay = `${Math.random() * 5}s`;
-
-        container.appendChild(star);
-    }
+    container.appendChild(star);
+  }
 }
 
-// Create floating particle effects
 function createParticles() {
-    const container = document.getElementById('particles');
-    const particleCount = 30;
-
-    for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement('div');
-        particle.classList.add('particle');
-
-        // Random position and size
-        const size = Math.random() * 3 + 1;
-        particle.style.width = `${size}px`;
-        particle.style.height = `${size}px`;
-        particle.style.left = `${Math.random() * 100}%`;
-        particle.style.top = `${Math.random() * 100}%`;
-
-        // Random animation duration and delay
-        const duration = 10 + Math.random() * 20;
-        particle.style.animationDuration = `${duration}s`;
-        particle.style.animationDelay = `${Math.random() * 5}s`;
-
-        container.appendChild(particle);
-    }
+  // Placeholder if you want floating dust or other particles
+  // For now, nothing happens here.
 }
 
-// Create a short swirl animation over the center card
-function createSwirl() {
-    const container = document.getElementById('swirlContainer');
-    container.innerHTML = '';
-
-    const swirl = document.createElement('div');
-    swirl.classList.add('swirl-animation');
-
-    // Position at the center of the card container
-    swirl.style.top = '50%';
-    swirl.style.left = '50%';
-    swirl.style.transform = 'translate(-50%, -50%)';
-
-    container.appendChild(swirl);
-
-    // Remove swirl after it finishes (1.5s)
-    setTimeout(() => {
-        swirl.remove();
-    }, 1500);
-}
-
-
 // ─────────────────────────────────────────────────────────────────────────────
-// 2) TAROT DECK DATA LOADING
+// 2) WRAP EVERYTHING IN DOMContentLoaded
 // ─────────────────────────────────────────────────────────────────────────────
 
-// We'll load tarot card data from a JSON file named 'tarot-details.json'.
-let tarotDeck = [];  // Will hold the array fetched from data.cards
+document.addEventListener('DOMContentLoaded', () => {
+  // ───────────────────────────────────────────────────────────────────────────
+  // 2.1) CACHE DOM ELEMENTS
+  // ───────────────────────────────────────────────────────────────────────────
+  // Note: If any of these IDs/classes are not present in your HTML, the variable will be null or empty.
+  const drawButton          = document.getElementById('drawButton');
+  const drawAgainButton     = document.getElementById('drawAgainButton');
+  const shareButton         = document.getElementById('shareButton');
+  const userQuestion        = document.getElementById('userQuestion');
+  const questionDisplay     = document.getElementById('questionDisplay');
+  const displayedQuestion   = document.getElementById('displayedQuestion');
+  const cardWrappers        = document.querySelectorAll('.card-wrapper');
+  const cardDetailsBox      = document.getElementById('cardDetails');
+  const cardNameElem        = document.getElementById('cardName');
+  const cardArcanaElem      = document.getElementById('cardArcana');
+  const interpretContainer  = document.getElementById('interpretContainer');
+  const dynamicInterpret    = document.getElementById('dynamicInterpret');
+  const noteContainer       = document.getElementById('noteContainer');
+  const historyList         = document.getElementById('historyList');
+  const emptyHistory        = document.getElementById('emptyHistory');
+  const changeDeckButton    = document.getElementById('changeDeckButton');
+  const pdfButton           = document.getElementById('pdfButton');
+  const downloadImageBtn    = document.getElementById('downloadImageBtn');
+  const themeOptions        = document.querySelectorAll('.theme-option');
 
-// Fetch the JSON file on page load
-fetch('tarot-details.json')
+  // State
+  let tarotDeck         = [];
+  let currentQuestion   = '';
+  let readingHistory    = JSON.parse(localStorage.getItem('tarotHistory') || '[]');
+
+  // ───────────────────────────────────────────────────────────────────────────
+  // 2.2) INITIAL SETUP FOR CARDS
+  // ───────────────────────────────────────────────────────────────────────────
+  cardWrappers.forEach((wrapper, idx) => {
+    const i = idx + 1; // 1..11 if you have 11 cards
+    wrapper.style.setProperty('--i', i);
+    // No rotation: CSS will handle horizontal line placement via translateX(var(--offset)).
+  });
+
+  // Initially hide “Draw Again” and “Share Reading” buttons
+  if (drawAgainButton) drawAgainButton.classList.add('hidden');
+  if (shareButton) shareButton.classList.add('hidden');
+
+  // Initially hide card details and interpretation/note sections
+  if (cardDetailsBox)       cardDetailsBox.classList.remove('show');
+  if (interpretContainer)   interpretContainer.classList.add('hidden');
+  if (noteContainer)        noteContainer.classList.add('hidden');
+
+  // ───────────────────────────────────────────────────────────────────────────
+  // 3) FETCH TAROT DECK DATA (from JSON file)
+  // ───────────────────────────────────────────────────────────────────────────
+  fetch('tarot-details.json')
     .then(response => response.json())
     .then(data => {
-        // Assume the JSON has a top-level "cards" array
-        tarotDeck = data.cards.map(card => {
-            return {
-                name: card.name,
-                number: card.number,
-                arcana: card.arcana,
-                suit: card.suit,
-                img: '/assets/cards/' + card.img,         // full image path
-                fortune_telling: card.fortune_telling,     // array
-                keywords: card.keywords,                   // array
-                meanings: card.meanings,                   // object { light: [...], shadow: [...] }
-                Archetype: card.Archetype,
-                HebrewAlphabet: card["Hebrew Alphabet"],
-                Numerology: card.Numerology,
-                Elemental: card.Elemental,
-                Mythical: card["Mythical/Spiritual"],
-                questionsToAsk: card["Questions to Ask"]
-            };
-        });
+      // Expecting data.cards to be an array of card objects
+      tarotDeck = data.cards.map(card => ({
+        name: card.name,
+        number: card.number,
+        arcana: card.arcana,
+        suit: card.suit,
+        img: '/assets/cards/' + card.img,        // adjust path if needed
+        fortune_telling: card.fortune_telling,   // array of strings
+        keywords: card.keywords,                 // array of keywords
+        meanings: card.meanings                   // { light: [...], shadow: [...] }
+      }));
     })
     .catch(error => {
-        console.error('Error loading tarot-details.json:', error);
-        // tarotDeck remains empty; drawCard() will alert the user if they try to draw too soon.
+      console.error('Error loading tarot-details.json:', error);
+      // If the deck fails to load, drawCard() will alert the user.
     });
 
+  // ───────────────────────────────────────────────────────────────────────────
+  // 4) EVENT LISTENERS
+  // ───────────────────────────────────────────────────────────────────────────
 
-// ─────────────────────────────────────────────────────────────────────────────
-// 3) DOM ELEMENT REFERENCES
-// ─────────────────────────────────────────────────────────────────────────────
-
-const centerCard       = document.getElementById('centerCard');             // The container that flips
-const centerCardImage  = document.getElementById('centerCardImage');        // <img> inside center card front
-
-// Hidden details area (will display name + arcana after flip)
-const cardNameElem     = document.getElementById('cardName');
-const cardArcanaElem   = document.getElementById('cardArcana');
-const cardDetailsBox   = document.getElementById('cardDetails');
-
-const drawButton       = document.getElementById('drawButton');
-const drawAgainButton  = document.getElementById('drawAgainButton');
-const shareButton      = document.getElementById('shareButton');
-
-const preReadingSection   = document.getElementById('preReading');
-const readingSection      = document.getElementById('readingSection');
-const startButton         = document.getElementById('startButton');
-
-const userQuestion        = document.getElementById('userQuestion');
-const questionDisplay     = document.getElementById('questionDisplay');
-const displayedQuestion   = document.getElementById('displayedQuestion');
-
-const revealingMessage    = document.getElementById('revealingMessage');
-const flipSound           = document.getElementById('flipSound') || null;
-
-const historyButton        = document.getElementById('historyButton');
-const historyButtonReading = document.getElementById('historyButtonReading');
-const historyPanel         = document.getElementById('historyPanel');
-const closeHistory         = document.getElementById('closeHistory');
-const clearHistory         = document.getElementById('clearHistory');
-const saveHistory          = document.getElementById('saveHistory');
-const historyList          = document.getElementById('historyList');
-const emptyHistory         = document.getElementById('emptyHistory');
-
-const shareModal       = document.getElementById('shareModal');
-const closeShare       = document.getElementById('closeShare');
-const copyTextBtn      = document.getElementById('copyTextBtn');
-const downloadImageBtn = document.getElementById('downloadImageBtn');
-const twitterShare     = document.getElementById('twitterShare');
-const facebookShare    = document.getElementById('facebookShare');
-const shareText        = document.getElementById('shareText');
-const shareQuote       = document.getElementById('shareQuote');
-const shareTimestamp   = document.getElementById('shareTimestamp');
-
-const themeOptions        = document.querySelectorAll('.theme-option');
-const backButton          = document.getElementById('backButton');
-const changeDeckButton    = document.getElementById('changeDeckButton');
-
-const dynamicInterpret    = document.getElementById('dynamicInterpret');
-const interpretContainer  = document.getElementById('interpretContainer');
-
-const pdfButton           = document.getElementById('pdfButton');
-
-
-// ─────────────────────────────────────────────────────────────────────────────
-// 4) STATE VARIABLES
-// ─────────────────────────────────────────────────────────────────────────────
-
-let currentQuestion = "";
-let readingHistory  = JSON.parse(localStorage.getItem('tarotHistory')) || [];
-let currentTheme    = "1";
-let currentThemeIcon    = "fa-moon";
-let currentCenterSymbol = "☾";
-
-
-// ─────────────────────────────────────────────────────────────────────────────
-// 5) INITIAL SETUP
-// ─────────────────────────────────────────────────────────────────────────────
-
-updateHistoryList();
-updateCardBackIcons();
-
-
-// ─────────────────────────────────────────────────────────────────────────────
-// 6) EVENT LISTENERS FOR NAVIGATION & UI
-// ─────────────────────────────────────────────────────────────────────────────
-
-// Start the reading experience (fade out pre-reading, show reading section)
-startButton.addEventListener('click', () => {
-    preReadingSection.classList.add('fade-out');
-    setTimeout(() => {
-        preReadingSection.classList.add('hidden');
-        readingSection.classList.remove('hidden');
-        setTimeout(() => {
-            readingSection.classList.add('fade-in');
-        }, 50);
-    }, 800);
-});
-
-// Back to home button
-backButton.addEventListener('click', () => {
-    readingSection.classList.add('fade-out');
-    setTimeout(() => {
-        readingSection.classList.add('hidden');
-        preReadingSection.classList.remove('hidden');
-        preReadingSection.classList.add('fade-in');
-        resetReading();
-    }, 800);
-});
-
-// Change deck button (same behavior as Back Home)
-changeDeckButton.addEventListener('click', () => {
-    readingSection.classList.add('fade-out');
-    setTimeout(() => {
-        readingSection.classList.add('hidden');
-        preReadingSection.classList.remove('hidden');
-        preReadingSection.classList.add('fade-in');
-    }, 800);
-});
-
-// History panel toggles
-historyButton.addEventListener('click', () => historyPanel.classList.add('open'));
-historyButtonReading.addEventListener('click', () => historyPanel.classList.add('open'));
-closeHistory.addEventListener('click', () => historyPanel.classList.remove('open'));
-
-// Clear reading history
-clearHistory.addEventListener('click', () => {
-    readingHistory = [];
-    localStorage.removeItem('tarotHistory');
-    updateHistoryList();
-});
-
-// Save history (just a notification—our data is already in localStorage)
-saveHistory.addEventListener('click', () => {
-    alert('Your reading history has been saved to your browser storage. It will persist even if you close the browser.');
-});
-
-// Share modal toggles
-shareButton.addEventListener('click', () => openShareModal(readingHistory[0]));
-closeShare.addEventListener('click', closeShareModal);
-copyTextBtn.addEventListener('click', copyText);
-twitterShare.addEventListener('click', shareOnTwitter);
-facebookShare.addEventListener('click', shareOnFacebook);
-downloadImageBtn.addEventListener('click', () => {
-    alert('In a production environment, this would generate and download an image of your reading.');
-});
-
-// “Draw Again” resets the center card to face-down
-drawAgainButton.addEventListener('click', resetReading);
-
-// PDF generation
-pdfButton.addEventListener('click', generatePDF);
-
-// Theme selection
-themeOptions.forEach(option => {
-    option.addEventListener('click', () => {
-        themeOptions.forEach(opt => opt.classList.remove('active'));
-        option.classList.add('active');
-        setTheme(option.dataset.theme);
-    });
-});
-
-
-
-// Draw button listener
-drawButton.addEventListener('click', drawCard);
-
-
-function drawCard() {
-  // 1) Make sure the deck is loaded
-  if (tarotDeck.length === 0) {
-    alert("Tarot deck data is not yet loaded. Please wait a moment and try again.");
-    return;
+  // 4.1) Draw a card when “Draw” button is clicked
+  if (drawButton) {
+    drawButton.addEventListener('click', drawCard);
   }
 
-  // 2) Grab the user's question (or default)
-  currentQuestion = userQuestion.value.trim() || "Seeking general guidance";
-  displayedQuestion.textContent = currentQuestion;
-  questionDisplay.classList.remove('hidden');
-
-  // 3) Hide input & draw‐button
-  userQuestion.classList.add('hidden');
-  drawButton.classList.add('hidden');
-
-  // 4) Show the “revealing…” overlay (if you have one)
-  revealingMessage.classList.remove('hidden');
-
-  // 5) Play flip sound if you have it
-  if (flipSound) {
-    flipSound.currentTime = 0;
-    flipSound.play().catch(e => console.log("Sound play prevented by browser policy"));
+  // 4.2) “Draw Again” resets the center card to face-down
+  if (drawAgainButton) {
+    drawAgainButton.addEventListener('click', resetReading);
   }
 
-  // 6) Trigger particle‐effects (if desired)
-  createParticles();
-
-  // 7) Add a “shuffling” animation to all cards in the deck
-  const allDeckCards = document.querySelectorAll('.deck-card');
-  allDeckCards.forEach(card => {
-    card.classList.add('shuffle-animation');
-  });
-
-  // After 1.5 seconds: remove shuffle, swirl, pick a random card to flip
-  setTimeout(() => {
-    // 7a) Remove shuffle from all
-    allDeckCards.forEach(card => {
-      card.classList.remove('shuffle-animation');
-      // Also reset any previous flipped state (in case of “Draw Again”)
-      card.classList.remove('flipped');
-      const imgElem = card.querySelector('.card-front-img');
-      imgElem.src = "";       // clear any old front image
-      imgElem.classList.remove('reversed');
+  // 4.3) “Share Reading” placeholder
+  if (shareButton) {
+    shareButton.addEventListener('click', () => {
+      alert('Share functionality would open here.');
     });
+  }
 
-    // 7b) Create swirl over the entire deck‐container (optional)
-    createSwirl();
+  // 4.4) Change deck button (if you have it)
+  if (changeDeckButton) {
+    changeDeckButton.addEventListener('click', () => {
+      // For simplicity, just reload the page
+      window.location.reload();
+    });
+  }
 
-    // 7c) Choose one random DOM card (out of the 11 displayed) to flip
-    const randomDomIndex = Math.floor(Math.random() * allDeckCards.length);
-    const chosenDomCard   = allDeckCards[randomDomIndex];
-
-    // 7d) Choose a random tarot‐deck object (out of the 78)
-    const randomIndex78 = Math.floor(Math.random() * tarotDeck.length);
-    const isReversed    = Math.random() > 0.5;
-    const chosenCard    = tarotDeck[randomIndex78];
-
-    // 7e) Populate the <img> inside the chosenDomCard
-    const frontImg = chosenDomCard.querySelector('.card-front-img');
-    frontImg.src = chosenCard.img;
-    if (isReversed) {
-      frontImg.classList.add('reversed');
-    }
-
-    // 7f) Populate your “card details” (name + arcana) but keep them hidden until flip ends
-    cardNameElem.textContent   = chosenCard.name;
-    cardArcanaElem.textContent = chosenCard.arcana;
-    cardDetailsBox.classList.remove('show');
-
-    // 7g) Hide the “revealing…” message after a short fade
-    revealingMessage.classList.add('fade-out');
-    setTimeout(() => {
-      revealingMessage.classList.add('hidden');
-      revealingMessage.classList.remove('fade-out');
-    }, 500);
-
-    // 7h) Flip the chosen DOM card after a brief pause
-    setTimeout(() => {
-      chosenDomCard.classList.add('flipped');
-
-      // IMPORTANT: bump this card’s z-index so it sits on top of all others
-      chosenDomCard.parentElement.style.zIndex = '500';
-
-      // optionally add a glow class so CSS glitter kicks in
-      chosenDomCard.classList.add('glow');
-
-      // 7i) Show “Draw Again” & “Share Reading” after the flip
+  // 4.5) PDF generation placeholder
+  if (pdfButton) {
+    pdfButton.addEventListener('click', () => {
+      const originalText = pdfButton.innerText;
+      pdfButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Generating...';
       setTimeout(() => {
-        drawAgainButton.classList.remove('hidden');
-        shareButton.classList.remove('hidden');
+        alert('PDF generation placeholder: your reading would be exported as a PDF.');
+        pdfButton.innerText = originalText;
+      }, 1200);
+    });
+  }
+
+  // 4.6) “Download Image” placeholder
+  if (downloadImageBtn) {
+    downloadImageBtn.addEventListener('click', () => {
+      alert('Download image placeholder: this would generate an image of your reading.');
+    });
+  }
+
+  // 4.7) Theme selection (if you have deck‐theme tiles)
+  themeOptions.forEach(option => {
+    option.addEventListener('click', () => {
+      themeOptions.forEach(opt => opt.classList.remove('active'));
+      option.classList.add('active');
+      setTheme(option.dataset.theme);
+    });
+  });
+
+  // 4.8) Initialize reading history in side panel
+  updateHistoryList();
+
+  // ───────────────────────────────────────────────────────────────────────────
+  // 5) DRAW CARD LOGIC (SHAKE → FLIP → SHOW DETAILS & INTERPRETATION)
+  // ───────────────────────────────────────────────────────────────────────────
+
+  function drawCard() {
+    // 5.1) Ensure the deck is loaded
+    if (tarotDeck.length === 0) {
+      alert("Tarot deck data is not yet loaded. Please wait a moment and try again.");
+      return;
+    }
+
+    // 5.2) Grab the user’s question (or default to “Seeking general guidance”)
+    currentQuestion = (userQuestion && userQuestion.value.trim()) || "Seeking general guidance";
+    if (displayedQuestion) {
+      displayedQuestion.textContent = currentQuestion;
+    }
+    if (questionDisplay) {
+      questionDisplay.classList.remove('hidden');
+    }
+
+    // 5.3) Hide input & Draw button
+    if (userQuestion) userQuestion.classList.add('hidden');
+    if (drawButton)    drawButton.classList.add('hidden');
+
+    // 5.4) Pick a random card index
+    const randomIndex = Math.floor(Math.random() * tarotDeck.length);
+    const chosenCard  = tarotDeck[randomIndex];
+    const isReversed  = Math.random() > 0.5;
+
+    // 5.5) Find the corresponding DOM wrapper and inner card
+    const chosenWrapper = cardWrappers[randomIndex];
+    const chosenDomCard = chosenWrapper ? chosenWrapper.querySelector('.deck-card') : null;
+    if (!chosenWrapper || !chosenDomCard) {
+      console.error("Card wrapper or .deck-card not found for index:", randomIndex);
+      return;
+    }
+
+    // 5.6) Populate the front‐image of the chosen card
+    const frontImg = chosenDomCard.querySelector('.card-front-img');
+    if (frontImg) {
+      frontImg.src = chosenCard.img;
+      if (isReversed) {
+        frontImg.classList.add('reversed');
+      } else {
+        frontImg.classList.remove('reversed');
+      }
+    }
+
+    // 5.7) Populate & hide “Card Details” until after flip
+    if (cardNameElem)   cardNameElem.textContent   = chosenCard.name + (isReversed ? ' (Reversed)' : '');
+    if (cardArcanaElem) cardArcanaElem.textContent = chosenCard.arcana;
+    if (cardDetailsBox) cardDetailsBox.classList.remove('show');
+
+    // 5.8) Hide “Interpreting Your Card” & “Note to You” sections before flip
+    if (interpretContainer) interpretContainer.classList.add('hidden');
+    if (noteContainer)      noteContainer.classList.add('hidden');
+
+    // 5.9) Reset all cards (remove any flipped/shake/glow classes, restore z-index)
+    cardWrappers.forEach(wrapper => {
+      const card = wrapper.querySelector('.deck-card');
+      if (card) {
+        card.classList.remove('flipped', 'glow', 'shake-animation');
+        wrapper.classList.remove('flipping-wrapper', 'flipped-wrapper');
+        // Reset wrapper’s z-index to default based on --i
+        const iVal = parseInt(wrapper.style.getPropertyValue('--i')) || 0;
+        wrapper.style.zIndex = `${100 - iVal}`;
+      }
+      // Clear any previous front‐img
+      const imgElem = wrapper.querySelector('.card-front-img');
+      if (imgElem) {
+        imgElem.src = '';
+        imgElem.classList.remove('reversed');
+      }
+    });
+
+    // 5.10) After a brief “pause” (e.g., allow any swirl animation to finish), start shake+flip
+    setTimeout(() => {
+      // a) Bring chosen wrapper to center and on top by adding “flipping-wrapper”
+      chosenWrapper.classList.add('flipping-wrapper');
+
+      // b) Trigger a “shake” on the inner .deck-card for 0.6 seconds
+      chosenDomCard.classList.add('shake-animation');
+
+      // c) After 0.6s, remove the shake and perform the actual flip
+      setTimeout(() => {
+        chosenDomCard.classList.remove('shake-animation');
+
+        // i) Add “flipped” so the card rotates on its Y-axis
+        chosenDomCard.classList.add('flipped');
+
+        // ii) Bring the flipped card fully on top
+        chosenWrapper.style.zIndex = '750';
+        chosenWrapper.classList.remove('flipping-wrapper');
+        chosenWrapper.classList.add('flipped-wrapper');
+
+        // iii) Optionally add a glow effect (you can remove if not desired)
+        chosenDomCard.classList.add('glow');
+
+        // iv) Show the “Card Details” box
+        if (cardDetailsBox) cardDetailsBox.classList.add('show');
+
+        // v) After an additional delay (0.6s after flip), reveal buttons & interpretation
+        setTimeout(() => {
+          if (drawAgainButton) drawAgainButton.classList.remove('hidden');
+          if (shareButton)     shareButton.classList.remove('hidden');
+
+          // Populate “Interpreting Your Card”
+          const meaningArray = isReversed
+            ? chosenCard.meanings.shadow
+            : chosenCard.meanings.light;
+          const chosenMeaning = meaningArray.join(', ');
+
+          if (dynamicInterpret) {
+            dynamicInterpret.innerHTML = `
+              <p><span class="font-bold">Name:</span> ${chosenCard.name} ${isReversed ? '(Reversed)' : ''}</p>
+              <p><span class="font-bold">Arcana:</span> ${chosenCard.arcana}</p>
+              <p><span class="font-bold">Meaning:</span> ${chosenMeaning}</p>
+              <p><span class="font-bold">Fortune Telling:</span> ${chosenCard.fortune_telling.join(', ')}</p>
+              <p><span class="font-bold">Keywords:</span> ${chosenCard.keywords.join(', ')}</p>
+            `;
+            interpretContainer.classList.remove('hidden');
+          }
+
+          // Show “Note to You” section
+          if (noteContainer) noteContainer.classList.remove('hidden');
+
+          // Save reading to history
+          const reading = {
+            name: chosenCard.name,
+            arcana: chosenCard.arcana,
+            fortune_telling: chosenCard.fortune_telling,
+            orientation: isReversed ? "Reversed" : "Light",
+            chosenMeaning: chosenMeaning,
+            question: currentQuestion,
+            timestamp: new Date().toLocaleString()
+          };
+          readingHistory.unshift(reading);
+          if (readingHistory.length > 10) readingHistory.pop();
+          localStorage.setItem('tarotHistory', JSON.stringify(readingHistory));
+          updateHistoryList();
+
+        }, 600);
       }, 600);
+    }, 500); // short pause before shaking (adjust if you have swirl animations)
+  }
 
-      // 7j) Populate “Interpreting Your Card” beneath (#dynamicInterpret)
-      const meaningArray = isReversed
-        ? chosenCard.meanings.shadow
-        : chosenCard.meanings.light;
-      const chosenMeaning = meaningArray.join(', ');
+  // ───────────────────────────────────────────────────────────────────────────
+  // 6) RESET READING (flip cards face-down, clear images & hide details)
+  // ───────────────────────────────────────────────────────────────────────────
 
-      dynamicInterpret.innerHTML = `
-        <p><span class="font-bold">Name:</span> ${chosenCard.name} ${isReversed ? '(Reversed)' : ''}</p>
-        <p><span class="font-bold">Arcana:</span> ${chosenCard.arcana}</p>
-        <p><span class="font-bold">Meaning:</span> ${chosenMeaning}</p>
-        <p><span class="font-bold">Fortune Telling:</span> ${chosenCard.fortune_telling.join(', ')}</p>
-        <p><span class="font-bold">Keywords:</span> ${chosenCard.keywords.join(', ')}</p>
-      `;
-      interpretContainer.classList.remove('hidden');
+  function resetReading() {
+    cardWrappers.forEach(wrapper => {
+      const card = wrapper.querySelector('.deck-card');
+      if (card) {
+        card.classList.remove('flipped', 'glow', 'shake-animation');
+      }
+      wrapper.classList.remove('flipping-wrapper', 'flipped-wrapper');
 
-      // 7k) Add this to readingHistory & update localStorage
-      const reading = {
-        name: chosenCard.name,
-        arcana: chosenCard.arcana,
-        fortune_telling: chosenCard.fortune_telling,
-        orientation: isReversed ? "Reversed" : "Light",
-        chosenMeaning: chosenMeaning,
-        question: currentQuestion,
-        timestamp: new Date().toLocaleString()
-      };
-      readingHistory.unshift(reading);
-      if (readingHistory.length > 10) readingHistory.pop();
-      localStorage.setItem('tarotHistory', JSON.stringify(readingHistory));
-      updateHistoryList();
+      // Clear front‐img src and reversed class
+      const imgElem = wrapper.querySelector('.card-front-img');
+      if (imgElem) {
+        imgElem.src = '';
+        imgElem.classList.remove('reversed');
+      }
+
+      // Reset wrapper’s z-index to default
+      const iVal = parseInt(wrapper.style.getPropertyValue('--i')) || 0;
+      wrapper.style.zIndex = `${100 - iVal}`;
+    });
+
+    // Hide buttons, card details, interpretation, and note sections
+    if (drawAgainButton) drawAgainButton.classList.add('hidden');
+    if (shareButton)     shareButton.classList.add('hidden');
+    if (cardDetailsBox)  cardDetailsBox.classList.remove('show');
+    if (interpretContainer) interpretContainer.classList.add('hidden');
+    if (noteContainer)      noteContainer.classList.add('hidden');
+
+    // Show question input & Draw button again
+    setTimeout(() => {
+      if (drawButton)    drawButton.classList.remove('hidden');
+      if (userQuestion)  userQuestion.classList.remove('hidden');
     }, 400);
-  }, 1500);
-}
+  }
 
+  // ───────────────────────────────────────────────────────────────────────────
+  // 7) UPDATE HISTORY LIST (populate side‐panel with past readings)
+  // ───────────────────────────────────────────────────────────────────────────
 
-
-document.querySelectorAll('.deck-card').forEach(card => {
-  card.addEventListener('transitionend', (evt) => {
-    if (evt.propertyName === 'transform' && card.classList.contains('flipped')) {
-      cardDetailsBox.classList.add('show');
-    }
-  });
-});
-
-// ─────────────────────────────────────────────────────────────────────────────
-// 9) RESET FUNCTION (for “Draw Again” or going back home)
-// ─────────────────────────────────────────────────────────────────────────────
-
-function resetReading() {
-  // Remove glow & flipped state from every deck card
-  const allDeckCards = document.querySelectorAll('.deck-card');
-  allDeckCards.forEach(card => {
-    card.classList.remove('flipped');
-    card.classList.remove('glow');
-    const imgElem = card.querySelector('.card-front-img');
-    imgElem.src = "";
-    imgElem.classList.remove('reversed');
-  });
-
-  // Hide Draw Again & Share Reading
-  drawAgainButton.classList.add('hidden');
-  shareButton.classList.add('hidden');
-
-  // Hide dynamic interpretation box
-  interpretContainer.classList.add('hidden');
-
-  // Hide card details name/arcana
-  cardDetailsBox.classList.remove('show');
-
-  // After a short pause, show the draw button + question input again
-  setTimeout(() => {
-    drawButton.classList.remove('hidden');
-    userQuestion.classList.remove('hidden');
-  }, 800);
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
-// 10) HISTORY LIST MANAGEMENT
-// ─────────────────────────────────────────────────────────────────────────────
-
-function updateHistoryList() {
-    if (readingHistory.length === 0) {
-        emptyHistory.classList.remove('hidden');
-        historyList.innerHTML = '';
-        return;
-    }
-
-    emptyHistory.classList.add('hidden');
+  function updateHistoryList() {
+    if (!historyList) return;
     historyList.innerHTML = '';
 
-    readingHistory.forEach((reading, index) => {
-        const snippet = (reading.chosenMeaning || '').substring(0, 60);
+    if (readingHistory.length === 0) {
+      if (emptyHistory) emptyHistory.classList.remove('hidden');
+      return;
+    }
+    if (emptyHistory) emptyHistory.classList.add('hidden');
 
-        const item = document.createElement('div');
-        item.classList.add('history-item');
-        item.innerHTML = `
-            <div class="flex justify-between items-start">
-                <div>
-                    <h4 class="font-cinzel text-lg">
-                        ${reading.name}
-                        <span class="text-sm ${reading.orientation === 'Reversed' ? 'text-red-400' : 'text-green-400'}">
-                            (${reading.orientation})
-                        </span>
-                    </h4>
-                    <p class="text-xs text-purple-300 mb-1">${reading.arcana}</p>
-                    <p class="text-sm text-gray-400 italic">${reading.timestamp}</p>
-                </div>
-                <button class="text-purple-400 hover:text-white share-history" data-index="${index}">
-                    <i class="fas fa-share-alt"></i>
-                </button>
-            </div>
-            <p class="mt-2 text-sm text-gray-300">
-                <span class="font-bold">Q:</span> ${reading.question}
-            </p>
-            <p class="mt-1 text-sm text-gray-400 italic">
-                <span class="font-bold">Meaning:</span> ${snippet}...
-            </p>
-        `;
-        historyList.appendChild(item);
+    readingHistory.forEach((reading, idx) => {
+      const item = document.createElement('div');
+      item.classList.add('history-item');
+      item.innerHTML = `
+        <p><strong>${reading.name}</strong> (${reading.orientation})</p>
+        <p><em>${reading.arcana}</em></p>
+        <p>${reading.question}</p>
+        <button class="share-history btn" data-index="${idx}">
+          <i class="fas fa-share-alt"></i> Share
+        </button>
+      `;
+      historyList.appendChild(item);
     });
 
-    // Re‐attach share-history listeners
+    // Attach listeners to “Share” buttons in history items
     document.querySelectorAll('.share-history').forEach(button => {
-        button.addEventListener('click', e => {
-            const idx = e.currentTarget.dataset.index;
-            openShareModal(readingHistory[idx]);
-        });
+      button.addEventListener('click', e => {
+        const idx = e.currentTarget.dataset.index;
+        openShareModal(readingHistory[idx]);
+      });
     });
-}
+  }
 
+  // ───────────────────────────────────────────────────────────────────────────
+  // 8) SHARE MODAL HANDLERS (placeholder)
+  // ───────────────────────────────────────────────────────────────────────────
 
-// ─────────────────────────────────────────────────────────────────────────────
-// 11) SHARE MODAL HANDLERS
-// ─────────────────────────────────────────────────────────────────────────────
+  function openShareModal(reading) {
+    alert(`Share functionality for "${reading.name}" would open now.`);
+  }
 
-function openShareModal(reading) {
-    shareQuote.textContent = `${reading.name} (${reading.orientation}): ${reading.chosenMeaning}`;
-    shareTimestamp.textContent = reading.timestamp;
-    shareText.textContent = `
-I just drew ${reading.name} (${reading.orientation}) on Mystic Tarot!
-Question: ${reading.question}
-Meaning: ${reading.chosenMeaning}
-Arcana: ${reading.arcana}
-Fortune: ${reading.fortune_telling.join(', ')}
-#TarotReading
-    `.trim();
+  // ───────────────────────────────────────────────────────────────────────────
+  // 9) THEME HANDLING (placeholder, if you have multiple card designs)
+  // ───────────────────────────────────────────────────────────────────────────
 
-    shareModal.classList.add('active');
-}
+  function setTheme(theme) {
+    console.log(`Theme changed to: ${theme}`);
+    // Implement actual theme‐switch logic here if you have other styles/assets
+  }
 
-function closeShareModal() {
-    shareModal.classList.remove('active');
-}
+  // ───────────────────────────────────────────────────────────────────────────
+  // 10) INITIALIZE BACKGROUND & PARTICLES
+  // ───────────────────────────────────────────────────────────────────────────
 
-function copyText() {
-    navigator.clipboard.writeText(shareText.textContent.trim())
-        .then(() => {
-            const originalText = copyTextBtn.innerHTML;
-            copyTextBtn.innerHTML = '<i class="fas fa-check mr-2"></i>Copied!';
-            setTimeout(() => {
-                copyTextBtn.innerHTML = originalText;
-            }, 2000);
-        })
-        .catch(console.error);
-}
-
-function shareOnTwitter() {
-    const text = encodeURIComponent(`I just drew ${shareQuote.textContent.split(':')[0]} on Mystic Tarot! #TarotReading`);
-    window.open(`https://twitter.com/intent/tweet?text=${text}`, '_blank');
-}
-
-function shareOnFacebook() {
-    const url = encodeURIComponent(window.location.href);
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
-}
-
-
-// ─────────────────────────────────────────────────────────────────────────────
-// 12) THEME SELECTION
-// ─────────────────────────────────────────────────────────────────────────────
-
-function setTheme(theme) {
-    currentTheme = theme;
-
-    document.documentElement.style.setProperty(
-        '--primary',
-        theme === '1' ? '#7e22ce'
-                      : theme === '2' ? '#0d9488'
-                      : theme === '3' ? '#b45309'
-                                      : '#4338ca'
-    );
-    document.documentElement.style.setProperty(
-        '--primary-dark',
-        theme === '1' ? '#4c1d95'
-                      : theme === '2' ? '#115e59'
-                      : theme === '3' ? '#7c2d12'
-                                      : '#312e81'
-    );
-    document.documentElement.style.setProperty(
-        '--primary-light',
-        theme === '1' ? '#c084fc'
-                      : theme === '2' ? '#5eead4'
-                      : theme === '3' ? '#fcd34d'
-                                      : '#818cf8'
-    );
-    document.documentElement.style.setProperty(
-        '--accent',
-        theme === '1' ? '#f0abfc'
-                      : theme === '2' ? '#99f6e4'
-                      : theme === '3' ? '#fde68a'
-                                      : '#a5b4fc'
-    );
-
-    if (theme === '1') {
-        currentThemeIcon    = "fa-moon";
-        currentCenterSymbol = "☾";
-    } else if (theme === '2') {
-        currentThemeIcon    = "fa-leaf";
-        currentCenterSymbol = "♣";
-    } else if (theme === '3') {
-        currentThemeIcon    = "fa-sun";
-        currentCenterSymbol = "☀";
-    } else {
-        currentThemeIcon    = "fa-star";
-        currentCenterSymbol = "★";
-    }
-
-    updateCardBackIcons();
-}
-
-function updateCardBackIcons() {
-    // Update the icon on all card backs
-    document.querySelectorAll('.card-icon').forEach(icon => {
-        icon.className = `fas ${currentThemeIcon} text-5xl text-purple-800 card-icon`;
-    });
-
-    // Update the central symbol on the back of the center card
-    document.querySelectorAll('.center-card-symbol').forEach(symbol => {
-        symbol.textContent = currentCenterSymbol;
-    });
-}
-
-
-// ─────────────────────────────────────────────────────────────────────────────
-// 13) PDF GENERATION
-// ─────────────────────────────────────────────────────────────────────────────
-
-function generatePDF() {
-    const originalText = pdfButton.innerHTML;
-    pdfButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Generating...';
-
-    const readings = readingHistory.slice(0, 3);
-    if (!readings || readings.length === 0) {
-        alert('No readings available to generate a PDF. Please draw a card first.');
-        pdfButton.innerHTML = originalText;
-        return;
-    }
-
-    // PDF styling parameters
-    const primaryColor   = '#c084fc';
-    const backgroundColor= '#0a0e1d';
-    const mutedText      = '#d1d5db';
-
-    // Create a temporary container to render the PDF contents
-    const container = document.createElement('div');
-    container.style.width        = '800px';
-    container.style.padding      = '40px';
-    container.style.fontFamily   = 'Playfair Display, serif';
-    container.style.background   = backgroundColor;
-    container.style.color        = 'white';
-    container.style.minHeight    = '1120px';
-    container.style.boxSizing    = 'border-box';
-
-    const title = `
-        <h1 style="
-            font-family: Cinzel, serif;
-            color: ${primaryColor};
-            text-align: center;
-            font-size: 2.4em;
-            margin-bottom: 20px;
-        ">
-            Your personal guidance from the universe
-        </h1>`;
-    const intro = `
-        <p style="
-            font-size: 1.1em;
-            text-align: center;
-            margin-bottom: 30px;
-        ">
-            Below are your recent tarot readings. Reflect on these messages
-            and how they relate to your journey. The universe speaks through
-            symbols and signs—trust your intuition as you interpret these insights.
-        </p>`;
-
-    const readingsHTML = readings.map(reading => `
-        <div style="
-            border: 1px solid ${primaryColor};
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 25px;
-            background: rgba(255, 255, 255, 0.05);
-        ">
-            <h2 style="
-                color: ${primaryColor};
-                margin-bottom: 6px;
-                font-size: 1.4em;
-            ">
-                ${reading.name}
-                <span style="
-                    font-size: 0.9em;
-                    color: ${reading.orientation === 'Reversed' ? '#f87171' : '#34d399'};
-                ">
-                    (${reading.orientation})
-                </span>
-            </h2>
-            <p style="
-                font-size: 0.9em;
-                margin-bottom: 6px;
-            ">
-                <span style="font-weight: bold;">Arcana:</span> ${reading.arcana}
-            </p>
-            <div style="
-                display: flex;
-                justify-content: space-between;
-                font-size: 0.9em;
-                margin-bottom: 10px;
-            ">
-                <span>${reading.timestamp}</span>
-                <span style="color: ${mutedText};">Q: ${reading.question}</span>
-            </div>
-            <p style="
-                font-size: 0.9em;
-                margin-bottom: 8px;
-            ">
-                <span style="font-weight: bold;">Meaning:</span> ${reading.chosenMeaning}
-            </p>
-            <p style="
-                font-size: 0.9em;
-                margin-bottom: 8px;
-            ">
-                <span style="font-weight: bold;">Fortune Telling:</span> ${reading.fortune_telling.join(', ')}
-            </p>
-        </div>
-    `).join('');
-
-    const footer = `
-        <p style="
-            font-style: italic;
-            text-align: center;
-            font-size: 1em;
-            color: #f3f4f6;
-            margin-top: 30px;
-        ">
-            The tarot reveals possibilities, not certainties. Your free will
-            and actions shape your destiny.
-        </p>
-        <h3 style="
-            color: #f3f4f6;
-            text-align: center;
-            margin-top: 20px;
-            font-size: 1.2em;
-        ">
-            Brought to you with ❤️ by TAROTCARDGENERATOR.COM
-        </h3>
-        <p style="
-            text-align: center;
-            color: #f3f4f6;
-            font-size: 0.9em;
-        ">
-            Visit us anytime for more guidance on your journey
-        </p>
-    `;
-
-    container.innerHTML = title + intro + readingsHTML + footer;
-    document.body.appendChild(container);
-
-    html2canvas(container, { backgroundColor: null })
-        .then(canvas => {
-            const imgData = canvas.toDataURL('image/png');
-            const pdf = new jspdf.jsPDF('p', 'pt', 'a4');
-
-            const pageWidth  = pdf.internal.pageSize.getWidth();
-            const pageHeight = pdf.internal.pageSize.getHeight();
-            const ratio      = Math.min(pageWidth / canvas.width, pageHeight / canvas.height);
-            const imgWidth   = canvas.width * ratio;
-            const imgHeight  = canvas.height * ratio;
-
-            pdf.setFillColor(backgroundColor);
-            pdf.rect(0, 0, pageWidth, pageHeight, 'F');
-            pdf.addImage(imgData, 'PNG', (pageWidth - imgWidth) / 2, 20, imgWidth, imgHeight);
-            pdf.save('Mystic_Tarot_Readings.pdf');
-
-            pdfButton.innerHTML = originalText;
-            document.body.removeChild(container);
-        })
-        .catch(error => {
-            console.error('PDF generation error:', error);
-            pdfButton.innerHTML = originalText;
-            alert('Failed to generate PDF. Please try again.');
-        });
-}
-
-
-// ─────────────────────────────────────────────────────────────────────────────
-// 14) INITIALIZE BACKGROUND & PARTICLES
-// ─────────────────────────────────────────────────────────────────────────────
-
-createStars();
-createParticles();
-
+  createStars();
+  createParticles();
+});
