@@ -289,6 +289,9 @@ function drawCard() {
   userQuestion.classList.add('hidden');
   drawButton.classList.add('hidden');
 
+  // 4) Show the “revealing…” overlay (if you have one)
+  revealingMessage.classList.remove('hidden');
+
   // 5) Play flip sound if you have it
   if (flipSound) {
     flipSound.currentTime = 0;
@@ -350,6 +353,10 @@ function drawCard() {
     // 7h) Flip the chosen DOM card after a brief pause
     setTimeout(() => {
       chosenDomCard.classList.add('flipped');
+
+      // IMPORTANT: bump this card’s z-index so it sits on top of all others
+      chosenDomCard.parentElement.style.zIndex = '500';
+
       // optionally add a glow class so CSS glitter kicks in
       chosenDomCard.classList.add('glow');
 
