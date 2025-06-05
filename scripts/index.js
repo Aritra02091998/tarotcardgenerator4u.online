@@ -388,7 +388,7 @@ function drawCard() {
         <p><span class="font-bold">Orientation:</span> ${isReversed ? '(Reversed)' : '(Forward)'}</p>
         <p><span class="font-bold">Meaning:</span> ${chosenMeaning}</p>
         <p><span class="font-bold">Fortune Telling:</span> ${chosenCard.fortune_telling.join(', ')}</p>
-        <p><span class="font-bold">Keywords:</span> ${chosenCard.keywords.join(', ')}</p>
+        <p><span class="font-bold">Focus On:</span> ${chosenCard.keywords.join(', ')}</p>
       `;
       interpretContainer.classList.remove('hidden');
 
@@ -744,7 +744,7 @@ function generatePDF() {
             margin-top: 20px;
             font-size: 1.2em;
         ">
-            Brought to you with ❤️ by TAROTCARDGENERATOR.COM
+            Brought to you with ❤️ by TAROTCARDGENERATOR.ONLINE
         </h3>
         <p style="
             text-align: center;
