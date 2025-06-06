@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mystic Tarot – Home</title>
+
+  <!-- Primary SEO Meta Tags -->
+  <meta name="description" content="Mystic Tarot – Your portal to AI-powered tarot readings, combining ancient wisdom with modern technology. Get free tarot readings anytime." />
+  <meta name="keywords" content="tarot card generator, random tarot card generator, tarot card generator online, tarot card generator free, best AI tarot card generator, 3-card reading, love reading, career reading, health reading, AI tarot" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Mystic Tarot – Free Online Tarot Card Generator" />
+  <meta property="og:description" content="Generate your tarot card readings with our free AI-powered Tarot Card Generator. Discover insights and guidance instantly." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.com/" />
+  <meta property="og:image" content="/assets/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mystic Tarot – Free Online Tarot Card Generator" />
+  <meta name="twitter:description" content="Generate your tarot card readings with our free AI-powered Tarot Card Generator. Discover insights and guidance instantly." />
+  <meta name="twitter:image" content="/assets/og-image.jpg" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://your-domain.com/" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <!-- Main Stylesheet (exact same as index.html) -->
+  <link rel="stylesheet" href="/styles/index.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/icons/site-icon-32.png" type="image/x-icon" />
+
+  <style>
+    /* Only the “background + hero” overrides go here; everything else lives in index.css */
+    body {
+      background: linear-gradient(125deg, #0a0e1d, #151b2d, #0a0e1d);
+      color: white;
+      font-family: 'Playfair Display', serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Starry background */
+    .starry-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+    .star {
+      position: absolute;
+      background-color: white;
+      border-radius: 50%;
+      animation: twinkle var(--duration) linear infinite;
+      opacity: 0;
+    }
+
+    /* Mystical mist */
+    .mystical-mist {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(124, 58, 237, 0.05) 0%, transparent 70%);
+      z-index: -1;
+      opacity: 0.7;
+      animation: float 15s ease-in-out infinite;
+    }
+
+    /* Floating crystal orbs */
+    .crystal-ball {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #f0f9ff, #e0f2fe, #bae6fd);
+      box-shadow: inset 0 0 50px #bae6fd, 0 0 60px #38bdf8;
+      filter: blur(2px);
+      opacity: 0.1;
+      animation: float 12s ease-in-out infinite;
+      z-index: -1;
+    }
+
+    @keyframes twinkle {
+      0% { opacity: 0.2; }
+      50% { opacity: 1; }
+      100% { opacity: 0.2; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(-1deg); }
+      50%      { transform: translateY(-15px) rotate(1deg); }
+    }
+
+    /* Hero section sizing (no theme changes here) */
+    .hero-section {
+      text-align: center;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+    .tools-container {
+      position: relative;
+      height: 250px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+    .tools-arc {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+    .tool-item {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.4s ease;
+      z-index: 5;
+      width: 120px; /* same as index.html */
+    }
+    .tool-icon-wrapper {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #7e22ce, #3b0764);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+      border: 2px solid #fef3c7;  /* var(--gold) */
+      box-shadow: 0 0 25px rgba(192, 132, 252, 0.5);
+      transition: all 0.3s ease;
+    }
+    .tool-icon {
+      font-size: 2.2rem;
+      color: #fef3c7;  /* var(--gold) */
+      transition: all 0.3s ease;
+    }
+    .tool-name {
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem;
+      color: #fef3c7;  /* var(--gold) */
+      opacity: 0.9;
+      transition: all 0.3s ease;
+    }
+    .tool-item:hover .tool-icon-wrapper {
+      transform: scale(1.15);
+      background: linear-gradient(135deg, #c084fc, #4c1d95); /* var(--primary-light → primary-dark) */
+      box-shadow: 0 0 35px rgba(254, 243, 199, 0.8);
+    }
+    .tool-item:hover .tool-icon {
+      transform: scale(1.2);
+      color: white;
+    }
+    .tool-item:hover .tool-name {
+      opacity: 1;
+      transform: translateY(5px);
+      color: white;
+    }
+    .arc-line {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 100px;
+      border-bottom: 2px solid rgba(192, 132, 252, 0.2);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    /* “Unlock Your Destiny” text */
+    .hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: 2.8rem;
+      color: #f0abfc; /* var(--accent) */
+      margin-top: 2rem;
+    }
+    .hero-subtitle {
+      font-size: 1.3rem;
+      color: #d8b4fe;
+      margin-top: 0.5rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Responsive tweaks (same as index.html) */
+    @media (max-width: 900px) {
+      .hero-title { font-size: 2.2rem; }
+      .hero-subtitle { font-size: 1.1rem; }
+      .tool-item { width: 110px; }
+      .tool-icon-wrapper { width: 70px; height: 70px; }
+      .tool-icon { font-size: 1.8rem; }
+      .tool-name { font-size: 1rem; }
+    }
+    @media (max-width: 768px) {
+      .tools-container { height: 220px; }
+      .tool-item { width: 95px; }
+      .tool-icon-wrapper { width: 60px; height: 60px; }
+      .tool-icon { font-size: 1.6rem; }
+      .tool-name { font-size: 0.9rem; }
+      .hero-title { font-size: 2rem; }
+      .hero-subtitle { font-size: 1rem; }
+    }
+    @media (max-width: 600px) {
+      .tools-container { height: 180px; }
+      .hero-title { font-size: 1.9rem; }
+      .hero-subtitle { font-size: 1rem; }
+      .tool-item { width: 80px; }
+      .tool-icon-wrapper { width: 50px; height: 50px; }
+      .tool-icon { font-size: 1.3rem; }
+      .tool-name { font-size: 0.8rem; }
+      .footer-links {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Animated Background Elements -->
+  <div class="starry-bg" id="starry-bg"></div>
+  <div class="mystical-mist"></div>
+  <div class="crystal-ball" style="top:15%; left:10%;"></div>
+  <div class="crystal-ball" style="bottom:15%; right:10%;"></div>
+
+  <!-- ─── HEADER (copy exactly from index.html) ─────────────────────────────────── -->
+  <header class="main-header mb-8 w-full">
+    <div class="header-center">
+      <h1 class="text-4xl md:text-5xl font-cinzel shimmer-text main-title">
+        Mystic Tarot
+      </h1>
+    </div>
+    <div class="header-right">
+      <button id="historyButton" class="text-purple-300 hover:text-white" aria-label="View reading history">
+        <i class="fas fa-history text-2xl"></i>
+      </button>
+      <button id="settingsButton" class="text-purple-300 hover:text-white" aria-label="Change settings">
+        <i class="fas fa-cog text-2xl"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ─── HERO / TOOLS ARC (wrapped in the same container as “Unlock Your Destiny”) ──────────────────────────────────────────────────────────── -->
+  <div class="w-full max-w-3xl mx-auto px-4">
+    <section class="hero-section">
+      <div class="tools-container">
+        <div class="tools-arc">
+          <div class="arc-line"></div>
+
+          <!-- Single Tarot – shifted left for more breathing room -->
+          <div class="tool-item" style="bottom:40px; left:8%;">
+            <div class="tool-icon-wrapper floating-icon">
+              <i class="fas fa-star tool-icon"></i>
+            </div>
+            <span class="tool-name">Single Tarot</span>
+          </div>
+
+          <!-- 3-Card Reading -->
+          <div class="tool-item" style="bottom:60px; left:23%;">
+            <div class="tool-icon-wrapper floating-icon delay-1">
+              <i class="fas fa-cards tool-icon"></i>
+            </div>
+            <span class="tool-name">3-Card Reading</span>
+          </div>
+
+          <!-- Love Reading -->
+          <div class="tool-item" style="bottom:80px; left:40%;">
+            <div class="tool-icon-wrapper floating-icon delay-2">
+              <i class="fas fa-heart tool-icon"></i>
+            </div>
+            <span class="tool-name">Love Reading</span>
+          </div>
+
+          <!-- Health Reading -->
+          <div class="tool-item" style="bottom:80px; left:60%;">
+            <div class="tool-icon-wrapper floating-icon delay-3">
+              <i class="fas fa-heartbeat tool-icon"></i>
+            </div>
+            <span class="tool-name">Health Reading</span>
+          </div>
+
+          <!-- Career Reading -->
+          <div class="tool-item" style="bottom:60px; left:77%;">
+            <div class="tool-icon-wrapper floating-icon delay-4">
+              <i class="fas fa-briefcase tool-icon"></i>
+            </div>
+            <span class="tool-name">Career Reading</span>
+          </div>
+
+          <!-- AI Tarot -->
+          <div class="tool-item" style="bottom:40px; left:94%;">
+            <div class="tool-icon-wrapper floating-icon delay-5">
+              <i class="fas fa-robot tool-icon"></i>
+            </div>
+            <span class="tool-name">AI Tarot</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- “Unlock Your Destiny” (directly under same max-w/px-4 container) -->
+      <h2 class="hero-title">Unlock Your Destiny</h2>
+      <p class="hero-subtitle">
+        The cards hold answers to your deepest questions. Choose your reading below.
+      </p>
+    </section>
+  </div>
+
+  <!-- ─── “WISDOM” → SEO-STYLE SECTION (exactly from index.html) ─────────────────────────────────────────────────────────────────────────────── -->
+  <div class="w-full max-w-4xl mx-auto px-4 mb-10">
+    <hr class="border-purple-700 mb-6" />
+    <section class="mb-6">
+      <h2 class="font-cinzel text-3xl text-purple-200 mb-4 text-center">The Wisdom of Tarot</h2>
+      <p class="font-playfair text-purple-100 text-sm leading-relaxed mb-4">
+        Tarot cards have been used for centuries as a tool for introspection, guidance, and divination. Each
+        card in the deck holds symbolic imagery and meaning, offering insights into our lives and the challenges
+        we face. Whether you're seeking clarity on a specific issue or looking for general guidance, the tarot
+        can help illuminate your path.
+      </p>
+      <p class="font-playfair text-purple-100 text-sm leading-relaxed">
+        Our AI-powered tarot readings combine ancient wisdom with modern technology to provide you with
+        personalized insights that resonate with your unique situation. The cards you draw are not random—they're
+        selected based on your energy and the questions you bring to the reading.
+      </p>
+    </section>
+  </div>
+
+  <!-- ─── REMAINING SEO CONTENT SECTIONS (verbatim from index.html) ────────────────────────────────────────────────────────────────────── -->
+  <div class="w-full max-w-4xl mx-auto px-4 mb-10">
+    <!-- Tarot Card Generator -->
+    <hr class="border-purple-700 mb-6" />
+    <section class="mb-6">
+      <h2 class="font-cinzel text-3xl text-purple-200 mb-4 text-center">Tarot Card Generator</h2>
+      <p class="font-playfair text-purple-100 text-sm leading-relaxed">
+        Discover our powerful tarot card generator, designed to provide you with instant, meaningful readings.
+        Whether you're a beginner or an experienced reader, the Mystic Tarot card generator delivers clarity and
+        insight. Easily generate a personalized tarot card reading that helps unveil hidden messages and guide
+        your path.
+      </p>
+    </section>
+
+    <!-- Random Tarot Card Generator -->
+    <hr class="border-purple-700 mb-6" />
+    <section class="mb-6">
+      <h2 class="font-cinzel text-3xl text-purple-200 mb-4 text-center">Random Tarot Card Generator</h2>
+      <p class="font-playfair text-purple-100 text-sm leading-relaxed">
+        Our random tarot card generator offers spontaneous readings at the click of a button. Perfect for yes-or-no
+        questions and quick insights, this tool draws cards at random and interprets their meanings, providing
+        you with immediate guidance. Use it for daily reflections, journaling prompts, or decision making.
+      </p>
+    </section>
+
+    <!-- Tarot Card Generator Online -->
+    <hr class="border-purple-700 mb-6" />
+    <section class="mb-6">
+      <h2 class="font-cinzel text-3xl text-purple-200 mb-4 text-center">Tarot Card Generator Online</h2>
+      <p class="font-playfair text-purple-100 text-sm leading-relaxed">
+        Access our tarot card generator online anytime, anywhere. No downloads or sign-ups required—just visit Mystic
+        Tarot and begin your reading. Get free tarot card readings online on any device, and explore the ancient
+        wisdom of the cards to gain insight into your past, present, and future.
+      </p>
+    </section>
+
+    <!-- Tarot Card Generator Free -->
+    <hr class="border-purple-700 mb-6" />
+    <section class="mb-6">
+      <h2 class="font-cinzel text-3xl text-purple-200 mb-4 text-center">Tarot Card Generator Free</h2>
+      <p class="font-playfair text-purple-100 text-sm leading-relaxed">
+        Enjoy our tarot card generator free of charge. Mystic Tarot provides unlimited readings, allowing you to
+        explore various spreads, interpretations, and reversals without spending a dime. Dive into your personal
+        journey with our completely free tarot card reading experience.
+      </p>
+    </section>
+
+    <!-- Best AI Tarot Card Generator -->
+    <hr class="border-purple-700 mb-6" />
+    <section class="mb-6">
+      <h2 class="font-cinzel text-3xl text-purple-200 mb-4 text-center">Best AI Tarot Card Generator</h2>
+      <p class="font-playfair text-purple-100 text-sm leading-relaxed">
+        Experience the best AI tarot card generator with Mystic Tarot. Our advanced AI algorithms interpret card
+        meanings, provide contextual insights, and offer personalized guidance. Combining traditional tarot
+        knowledge with modern AI, we deliver accurate, intuitive readings that resonate with your unique situation.
+      </p>
+    </section>
+  </div>
+
+  <!-- ─── FOOTER (copy exactly from index.html) ───────────────────────────────────────────────────────────────────────────────────────────── -->
+  <footer class="footer-nav mt-auto">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2 class="font-cinzel text-2xl mb-4 shimmer-text">Mystic Tarot</h2>
+        <p class="text-purple-200 font-playfair">
+          Discover the ancient wisdom of tarot to illuminate your path and guide your journey through life's mysteries.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-column">
+          <h3 class="footer-title">Information</h3>
+          <a href="/about-us.html" class="footer-link">About Us</a>
+          <a href="/information/how-it-works.html" class="footer-link">How It Works</a>
+          <a href="/information/tarot-guide.html" class="footer-link">Tarot Guide</a>
+          <a href="/information/testimonials.html" class="footer-link">Testimonials</a>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-title">Legal</h3>
+          <a href="/terms-and-conditions.html" class="footer-link">Terms & Conditions</a>
+          <a href="/privacy-policy.html" class="footer-link">Privacy Policy</a>
+          <a href="/disclaimer.html" class="footer-link">Disclaimer</a>
+          <a href="/cookie-policy.html" class="footer-link">Cookie Policy</a>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-title">Support</h3>
+          <a href="/contact-us.html" class="footer-link">Contact Us</a>
+          <a href="/faq.html" class="footer-link">FAQs</a>
+          <a href="/support-us.html" class="footer-link">Support Us</a>
+          <a href="/feedback.html" class="footer-link">Feedback</a>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-title">Connect</h3>
+          <a href="#" class="footer-link"><i class="fab fa-facebook mr-2"></i> Facebook</a>
+          <a href="#" class="footer-link"><i class="fab fa-instagram mr-2"></i> Instagram</a>
+          <a href="#" class="footer-link"><i class="fab fa-twitter mr-2"></i> Twitter</a>
+          <a href="#" class="footer-link"><i class="fab fa-pinterest mr-2"></i> Pinterest</a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">© 2025 Mystic Tarot. All rights reserved.</p>
+  </footer>
+
+  <!-- ─── SCRIPTS ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── -->
+  <script>
+    // Generate starry background
+    function createStars() {
+      const container = document.getElementById('starry-bg');
+      const starCount = 200;
+      for (let i = 0; i < starCount; i++) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        const size = Math.random() * 3;
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.top = `${Math.random() * 100}%`;
+        const duration = 3 + Math.random() * 10;
+        star.style.setProperty('--duration', `${duration}s`);
+        star.style.animationDelay = `${Math.random() * 5}s`;
+        container.appendChild(star);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      createStars();
+
+      // Tool‐icon hover & click feedback
+      document.querySelectorAll('.tool-item').forEach((tool) => {
+        tool.addEventListener('click', () => {
+          const wrapper = tool.querySelector('.tool-icon-wrapper');
+          wrapper.style.transform = 'scale(1.15)';
+          wrapper.style.boxShadow = '0 0 40px rgba(254, 243, 199, 0.9)';
+          setTimeout(() => {
+            wrapper.style.transform = '';
+            wrapper.style.boxShadow = '';
+          }, 300);
+          alert(`Navigating to ${tool.querySelector('.tool-name').textContent} tool`);
+        });
+      });
+    });
+  </script>
+
+  <!-- Remaining JS (history panel, card draws, etc.) -->
+  <script src="/scripts/index.js"></script>
+</body>
+</html>
