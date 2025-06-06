@@ -1,0 +1,902 @@
+/* styles.css */
+:root {
+    --primary: #7e22ce;
+    --primary-light: #c084fc;
+    --primary-dark: #4c1d95;
+    --accent: #f0abfc;
+    --gold: #fef3c7;
+}
+
+body {
+    background: linear-gradient(125deg, #0a0e1d, #151b2d, #0a0e1d);
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Playfair Display', serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.starry-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    animation: twinkle var(--duration) linear infinite;
+    opacity: 0;
+}
+
+.mystical-mist {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(124, 58, 237, 0.05) 0%, transparent 70%);
+    z-index: -1;
+    opacity: 0.7;
+    animation: float 15s ease-in-out infinite;
+}
+
+.crystal-ball {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #f0f9ff, #e0f2fe, #bae6fd);
+    box-shadow: inset 0 0 50px #bae6fd, 0 0 60px #38bdf8;
+    filter: blur(2px);
+    opacity: 0.1;
+    animation: float 12s ease-in-out infinite;
+    z-index: -1;
+}
+
+.card-container {
+    perspective: 2000px;
+}
+
+.tarot-card {
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    /* CARD SIZE REDUCED BY 8 UNITS */
+    height: 372px;
+    width: 232px;
+}
+
+.tarot-card.flipped {
+    transform: rotateY(180deg);
+}
+
+/* This block controls the height of cards */
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 85%;
+    backface-visibility: hidden;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.6);
+}
+
+.card-back {
+    background: linear-gradient(135deg, #7e22ce, #3b0764);
+    border: 9px solid var(--gold);
+    box-shadow: 0 0 27px rgba(192, 132, 252, 0.5);
+}
+
+.card-front {
+    background: linear-gradient(135deg, #f3e8ff, #ede9fe);
+    transform: rotateY(180deg);
+    color: #1e293b;
+    justify-content: flex-start;
+    padding-top: 0rem;    /* small gap so your heading sits close to the top */
+    box-sizing: border-box;
+}
+
+.card-front img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  padding: 2px;              /* adjust to taste so the card has some breathing room */
+  box-sizing: border-box;
+}
+
+
+.card-front.reversed img {
+    transform: rotate(180deg);
+}
+
+.card-back-pattern {
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle at center, var(--gold) 0%, transparent 15%),
+        url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 0c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zM11 70c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 0c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zM9 40c0-2 2-4 4-4s4 2 4 4-2 4-4 4-4-2-4-4zm48 0c0-2 2-4 4-4s4 2 4 4-2 4-4 4-4-2-4-4zm-24-9c2 0 4-2 4-4s-2-4-4-4-4 2-4 4 2 4 4 4zm0 18c2 0 4-2 4-4s-2-4-4-4-4 2-4 4 2 4 4 4z' fill='%23fef3c7' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-size: 100% 100%, 50px 50px;
+    opacity: 0.7;
+}
+
+.card-symbols {
+    position: absolute;
+    inset: 0;
+    opacity: 0.6;
+}
+
+.card-symbol {
+    position: absolute;
+    color: var(--gold);
+    font-size: 1.4rem;
+    opacity: 0.7;
+}
+
+.reversed-indicator {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: rgba(124, 58, 237, 0.8);
+    padding: 4px 14px;
+    border-radius: 18px;
+    font-weight: bold;
+    box-shadow: 0 3px 9px rgba(0,0,0,0.2);
+    color: white;
+    font-size: 0.9rem;
+}
+
+.meaning-container {
+    background: linear-gradient(to bottom, #fdf4ff, #f5f3ff);
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9d5ff;
+    color: #1e293b;
+    font-size: 0.95rem;
+}
+
+.mystical-btn {
+    background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+    border: 2px solid var(--accent);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    font-weight: bold;
+    font-size: 0.95rem;
+    padding: 0.7rem 1.5rem;
+}
+
+.mystical-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 22px rgba(124, 58, 237, 0.5);
+}
+
+.question-input {
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid var(--primary);
+    color: white;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    padding: 0.8rem 1.2rem;
+}
+
+.question-input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.3);
+}
+
+.card-shake {
+    animation: shake 0.6s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-7px); }
+    20%, 40%, 60%, 80% { transform: translateX(7px); }
+}
+
+.floating {
+    animation: float 8s ease-in-out infinite;
+}
+
+.shimmer-text {
+    background: linear-gradient(90deg, var(--accent), var(--gold), var(--primary-light), var(--accent));
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 8s ease infinite;
+}
+
+.revealing-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+    font-size: 1.1rem;
+    padding: 1.2rem;
+}
+
+.shuffle-animation {
+    animation: shuffle 1.2s ease-in-out infinite;
+}
+
+@keyframes shuffle {
+    0%, 100% { transform: translateX(0) rotate(0deg); }
+    25% { transform: translateX(-8px) rotate(-4deg); }
+    50% { transform: translateX(8px) rotate(4deg); }
+    75% { transform: translateX(-8px) rotate(-4deg); }
+}
+
+.fade-out {
+    animation: fadeOut 0.8s ease forwards;
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.swirl-animation {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10;
+    animation: swirl 1.5s ease-out forwards;
+    background: radial-gradient(circle, rgba(255,255,255,0.8), transparent 70%);
+}
+
+.history-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: -4px 0 14px rgba(0,0,0,0.3);
+    z-index: 100;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    border-left: 1px solid var(--primary);
+}
+
+.history-panel.open {
+    transform: translateX(0);
+}
+
+.history-header {
+    background: rgba(30, 41, 59, 0.9);
+    padding: 1.3rem;
+    border-bottom: 1px solid var(--primary);
+}
+
+.history-item {
+    padding: 0.9rem;
+    border-bottom: 1px solid rgba(124, 58, 237, 0.2);
+    transition: background 0.3s;
+    font-size: 0.9rem;
+}
+
+.history-item:hover {
+    background: rgba(124, 58, 237, 0.1);
+}
+
+.share-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.share-modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.share-content {
+    background: linear-gradient(145deg, #1e293b, #0f172a);
+    border-radius: 18px;
+    width: 90%;
+    max-width: 480px;
+
+    /* New: limit height to 80% of viewport and allow internal scroll */
+    max-height: 80vh;
+    overflow-y: auto;
+    
+    box-shadow: 0 0 36px rgba(124, 58, 237, 0.5);
+    border: 1px solid var(--primary);
+}
+
+.social-share-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem;
+    border-radius: 9px;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.social-share-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+}
+
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    opacity: 0.7;
+    animation: float 10s ease-in-out infinite;
+}
+
+.theme-option {
+    width: 95px;
+    height: 114px;
+    border-radius: 11px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 11px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-option::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0));
+    opacity: 0.5;
+}
+
+.theme-option.active {
+    border-color: var(--gold);
+    transform: scale(1.05);
+    box-shadow: 0 0 18px rgba(254, 243, 199, 0.5);
+}
+
+.theme-option:hover {
+    box-shadow: 0 0 25px rgba(254, 243, 199, 0.7);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.theme-icon {
+    font-size: 2.3rem;
+    margin-bottom: 9px;
+    text-shadow: 0 0 9px rgba(0,0,0,0.5);
+}
+
+.theme-name {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-shadow: 0 0 4px rgba(0,0,0,0.5);
+}
+
+.theme-1 {
+    background: linear-gradient(135deg, #7e22ce, #3b0764);
+    color: #f0abfc;
+}
+.theme-2 {
+    background: linear-gradient(135deg, #0d9488, #115e59);
+    color: #99f6e4;
+}
+.theme-3 {
+    background: linear-gradient(135deg, #b45309, #7c2d12);
+    color: #fde68a;
+}
+.theme-4 {
+    background: linear-gradient(135deg, #4338ca, #312e81);
+    color: #a5b4fc;
+}
+
+.nav-btn {
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid var(--primary-light);
+    color: var(--accent);
+    padding: 7px 15px;
+    border-radius: 18px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.9rem;
+}
+
+.nav-btn:hover {
+    background: rgba(124, 58, 237, 0.3);
+    transform: translateY(-2px);
+}
+
+.pdf-btn {
+    background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+    border: 2px solid var(--accent);
+    color: white;
+    font-weight: bold;
+    padding: 11px 18px;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    box-shadow: 0 4px 14px rgba(192, 132, 252, 0.4);
+    transition: all 0.3s;
+}
+
+.pdf-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(192, 132, 252, 0.6);
+}
+
+.footer-nav {
+    background: rgba(15, 23, 42, 0.9);
+    border-top: 1px solid var(--primary);
+    padding: 1.8rem 1rem;
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-brand {
+    flex: 1;
+    min-width: 240px;
+    margin-bottom: 1.4rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+}
+
+.footer-column {
+    min-width: 140px;
+}
+
+.footer-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.15rem;
+    margin-bottom: 0.9rem;
+    color: var(--accent);
+    border-bottom: 1px solid var(--primary-light);
+    padding-bottom: 0.45rem;
+}
+
+.footer-link {
+    display: block;
+    margin-bottom: 0.45rem;
+    color: #cbd5e1;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.footer-link:hover {
+    color: var(--accent);
+    transform: translateX(5px);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 1.8rem;
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    min-height: 80px; /* Ensure enough space for absolute positioned elements */
+}
+
+.header-center {
+    position: absolute;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    max-width: 90vw;  /* or some sensible value like 1000px if you want it fixed */
+    width: 100%;
+    padding: 0;
+    text-align: center;
+}
+
+/* HEADER BUTTONS POSITIONED AT TOP RIGHT CORNER */
+.header-right {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    z-index: 10;
+}
+
+.header-left {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 10;
+}
+
+.three-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    height: 450px;
+    width: 100%;
+    /* TOP AND BOTTOM MARGINS ADJUSTED */
+    margin-top: 0rem;    /* Reduced by 4 units (1rem) */
+    margin-bottom: -1rem; /* Increased by 0.5rem (2 units) */
+}
+
+.card-wrapper {
+    position: absolute;
+    transition: all 0.5s ease;
+}
+
+/* Below 2 code blocks is for changing the Angle of the left and right cards*/
+.card-wrapper.left {
+    transform: rotate(-10deg) translateX(-25%);
+    z-index: 1;
+    opacity: 0.9;
+}
+
+.card-wrapper.right {
+    transform: rotate(10deg) translateX(25%);
+    z-index: 1;
+    opacity: 0.9;
+}
+
+.card-wrapper.center {
+    z-index: 2;
+}
+
+#buttonContainer {
+    margin-top: 3rem;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-1deg); }
+    50% { transform: translateY(-15px) rotate(1deg); }
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.2; }
+    50% { opacity: 1; }
+    100% { opacity: 0.2; }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 8px #c084fc, 0 0 15px #c084fc; }
+    100% { box-shadow: 0 0 25px #e879f9, 0 0 40px #e879f9; }
+}
+
+@keyframes shimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes swirl {
+    0% { transform: scale(0) rotate(0deg); opacity: 0.8; }
+    100% { transform: scale(2) rotate(360deg); opacity: 0; }
+}
+
+
+#dynamicInterpret p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+
+#dynamicInterpret p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.125rem;      /* same as text-lg in Tailwind */
+  line-height: 1.75rem;     /* a bit more breathing room */
+  color: #EDE9FE;           /* a very pale lavender to match text-purple-100 */
+  margin-bottom: 0.75rem;   /* consistent spacing between lines */
+}
+
+/* 2) If you want the “Interpreting Your Card” box
+   to look a bit richer, you can bump up the padding
+   or corner radius here (optional): */
+#interpretContainer > div,
+#noteContainer > div {
+  /* slightly bump up padding from p-6 to p-8: */
+  padding: 2rem;            /* equals Tailwind’s p-8 */
+  border-radius: 1.25rem;   /* equals Tailwind’s rounded-xl, but slightly bigger */
+}
+
+/* 3) Make sure the headings are consistent */
+#interpretContainer h3,
+#noteContainer h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;        /* Tailwind’s text-2xl → 1.5rem */
+  margin-bottom: 1rem;      /* Tailwind’s mb-4 → 1rem */
+  color: #D8B4FE;           /* a slightly lighter purple than the background */
+}
+
+/* 4) A touch more line‐height inside the wrapper so text doesn’t hug the edges */
+#interpretContainer > div,
+#noteContainer > div {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+}
+
+@media (max-width: 768px) {
+    .tarot-card {
+        /* CARD SIZE REDUCED BY 8 UNITS */
+        height: 312px;
+        width: 192px;
+    }
+
+    .three-card-container {
+        height: 340px;
+    }
+
+    .card-wrapper.left {
+        transform: rotate(-10deg) translateX(-20%);
+    }
+
+    .card-wrapper.right {
+        transform: rotate(10deg) translateX(20%);
+    }
+
+    .main-title {
+        font-size: 2.3rem;
+    }
+
+    .crystal-ball {
+        width: 180px;
+        height: 180px;
+    }
+
+    .history-panel {
+        width: 260px;
+    }
+
+    .theme-option {
+        width: 75px;
+        height: 95px;
+    }
+
+    .theme-icon {
+        font-size: 1.6rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .header-center {
+        padding: 0 0.5rem;
+    }
+
+    .header-right {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tarot-card {
+        /* CARD SIZE REDUCED BY 8 UNITS */
+        height: 272px;
+        width: 162px;
+    }
+
+    .three-card-container {
+        height: 300px;
+    }
+
+    .card-wrapper.left {
+        transform: rotate(-10deg) translateX(-15%);
+    }
+
+    .card-wrapper.right {
+        transform: rotate(10deg) translateX(15%);
+    }
+
+    .main-title {
+        font-size: 1.8rem;
+    }
+
+    .history-panel {
+        width: 100%;
+    }
+
+    .mystical-btn {
+        padding: 0.65rem 1.3rem;
+        font-size: 0.9rem;
+    }
+
+    .theme-option {
+        width: 65px;
+        height: 85px;
+        padding: 7px;
+    }
+
+    .theme-icon {
+        font-size: 1.3rem;
+        margin-bottom: 4px;
+    }
+
+    .theme-name {
+        font-size: 0.7rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 0.9rem;
+    }
+
+    .header-right {
+        gap: 0.3rem;
+    }
+
+    .nav-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
+
+/* 1. On small screens, hide nav-btn text and show only icons */
+@media (max-width: 640px) {
+    .nav-btn .btn-text {
+        display: none;
+    }
+    .nav-btn i {
+        margin: 0;
+    }
+    .main-title {
+        font-size: 1.8rem;
+    }
+    #changeDeckButton {
+        display: none;
+    }
+}
+
+/* 2. Footer stacking: center columns and links vertically on small screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-links {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+    }
+    .footer-column {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}
+
+
+/* ───────────────────────────────────────────────────────────────────────── */
+/* ─── 1) REDUCE EVERY TAROT CARD’S DIMENSIONS BY 10px ───────────────────── */
+/* Note: The original dimensions in your CSS were 372×232 (desktop) and 312×192 (mobile),
+   so we subtract 10px from each side.                                          */
+
+/* Desktop */
+.tarot-card {
+    height: 400px;  /* was 372px */
+    width:  222px;  /* was 232px */
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    .tarot-card {
+        height: 302px;  /* was 312px */
+        width:  182px;  /* was 192px */
+    }
+}
+
+/* ───────────────────────────────────────────────────────────────────────── */
+/* ─── 2) MAKE THE CENTER CARD FRONT SHOW ONLY THE IMAGE ─────────────────– */
+/* We remove any default background or text on the .card-face.card-front 
+   so that only the <img> we inject will appear.                               */
+
+
+/* Ensure the image inside the card always fills the card proportionally */
+#centerCardImage {
+    object-fit: contain;
+}
+
+/* ───────────────────────────────────────────────────────────────────────── */
+/* ─── 3) STYLE & HIDE THE “CARD DETAILS” SECTION UNTIL FLIP IS COMPLETE ──── */
+/* The HTML we added gives <div id="cardDetails"> which contains 
+   <h2 id="cardName"> and <p id="cardArcana">. We hide this by default.      */
+#cardDetails {
+    display: none; 
+    margin-top: 1rem;          /* a little breathing room above */
+    text-align: center;        /* center‐align text */
+}
+
+/* When we add the .show class (via JS), it becomes visible */
+#cardDetails.show {
+    display: block;
+}
+
