@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mystic Tarot</title>
+
+    <!-- Primary SEO Meta Tags -->
+    <meta name="description" content="Mystic Tarot - Free AI-powered Tarot Card Generator for insightful readings. Generate your tarot card reading online anytime and discover guidance." />
+    <meta name="keywords" content="tarot card generator, random tarot card generator, tarot card generator online, tarot card generator free, best ai tarot card generator, tarot card generator reading, generate tarot card, 3 tarot card generator, tarot card generator with meaning, tarot card generator with reversals, tarot card generator with reverse, random tarot card generator yes or no, tarot card reading online, free tarot reading online free, online free tarot card reading" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Mystic Tarot - Free Online Tarot Card Generator" />
+    <meta property="og:description" content="Generate your tarot card readings with our free AI-powered Tarot Card Generator. Discover insights and guidance instantly." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tarotcardgenerator.online/" />
+    <meta property="og:image" content="/assets/og-image.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mystic Tarot - Free Online Tarot Card Generator" />
+    <meta name="twitter:description" content="Generate your tarot card readings with our free AI-powered Tarot Card Generator. Discover insights and guidance instantly." />
+    <meta name="twitter:image" content="/assets/og-image.jpg" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tarotcardgenerator.online/" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- PDF generation libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/styles/3-card-reading.css" />
+
+    <!-- Site Icon / Favicon -->
+    <link rel="icon" href="/assets/icons/site-icon-32.png" type="image/x-icon" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QSWHND4TS3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-QSWHND4TS3');
+    </script>
+</head>
+
+<body>
+    <!-- Animated Background Elements -->
+    <div class="starry-bg" id="starry-bg"></div>
+    <div class="mystical-mist"></div>
+    <div class="crystal-ball top-1/4 left-1/4"></div>
+    <div class="crystal-ball bottom-1/4 right-1/4"></div>
+    <div class="particles" id="particles"></div>
+
+    <!-- --- Global Header (always visible) --- -->
+    <div class="main-header mt-10 mb-12 w-full">
+
+        <div class="header-left">
+            <button id="backButton" class="nav-btn hidden" aria-label="Go back home">
+                <i class="fas fa-arrow-left"></i>
+                <span class="btn-text">Back Home</span>
+            </button>
+        </div>
+
+        <div class="header-center">
+            <h1 class="text-2xl sm:text-4xl md:text-5xl font-cinzel main-title">
+                Online Tarot Card Generator
+            </h1>
+        </div>
+
+        <div class="header-right flex items-center gap-2">
+            <!-- Pre-reading history -->
+            <button
+                id="historyButton"
+                class="text-purple-300 hover:text-white"
+                aria-label="View reading history"
+            >
+                <i class="fas fa-history text-2xl"></i>
+            </button>
+
+            <!-- Reading-mode history -->
+            <button
+                id="historyButtonReading"
+                class="text-purple-300 hover:text-white hidden"
+                aria-label="View reading history"
+            >
+                <i class="fas fa-history text-2xl"></i>
+            </button>
+
+            <!-- Change deck (reading mode only) -->
+            <button id="changeDeckButton" class="nav-btn hidden" aria-label="Change deck">
+                <i class="fas fa-sync-alt"></i>
+                <span class="btn-text">Change Deck</span>
+            </button>
+
+            <!-- Settings (reading mode only) -->
+            <button
+                id="settingsButtonReading"
+                class="text-purple-300 hover:text-white hidden"
+                aria-label="Settings"
+            >
+                <i class="fas fa-cog text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- History Panel -->
+    <div class="history-panel" id="historyPanel">
+        <div class="history-header">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-cinzel text-purple-200">
+                    <i class="fas fa-history mr-2"></i>Reading History
+                </h2>
+                <button id="closeHistory" class="text-purple-300 hover:text-white">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <div class="flex gap-2">
+                <button id="clearHistory" class="mystical-btn px-4 py-2 text-sm">
+                    <i class="fas fa-trash mr-1"></i> Clear History
+                </button>
+                <button id="saveHistory" class="mystical-btn px-4 py-2 text-sm bg-teal-700 border-teal-400">
+                    <i class="fas fa-save mr-1"></i> Save Session
+                </button>
+            </div>
+        </div>
+        <div class="p-4 overflow-y-auto h-[calc(100vh-120px)]" id="historyList">
+            <!-- History items will be added here -->
+            <p class="text-center text-purple-300 py-8" id="emptyHistory">
+                No readings yet. Draw your first card to begin!
+            </p>
+        </div>
+    </div>
+
+    <!-- Share Modal -->
+    <div class="share-modal" id="shareModal">
+        <div class="share-content">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl font-cinzel text-purple-200">
+                        <i class="fas fa-share-alt mr-2"></i>Share Your Reading
+                    </h3>
+                    <button id="closeShare" class="text-purple-300 hover:text-white">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl p-4 mb-6">
+                    <div class="flex items-center mb-3">
+                        <div
+                            class="bg-purple-500 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3"
+                        >
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="font-playfair text-white" id="shareQuote"></p>
+                    </div>
+                    <p class="text-sm text-purple-300 italic" id="shareTimestamp"></p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3 mb-6">
+                    <button id="copyTextBtn" class="social-share-btn bg-indigo-700">
+                        <i class="fas fa-copy mr-2"></i> Copy Text
+                    </button>
+                    <button id="downloadImageBtn" class="social-share-btn bg-purple-700">
+                        <i class="fas fa-download mr-2"></i> Save Image
+                    </button>
+                    <button id="twitterShare" class="social-share-btn bg-blue-500">
+                        <i class="fab fa-twitter mr-2"></i> Twitter
+                    </button>
+                    <button id="facebookShare" class="social-share-btn bg-blue-700">
+                        <i class="fab fa-facebook mr-2"></i> Facebook
+                    </button>
+                </div>
+
+                <div class="bg-gray-900 rounded-lg p-4">
+                    <p class="text-sm text-gray-400 mb-2">Shareable text:</p>
+                    <div
+                        class="bg-gray-800 p-3 rounded-lg text-sm font-mono text-gray-300 break-words"
+                        id="shareText"
+                    ></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-grow flex flex-col items-center justify-center pt-2 pb-4 px-4 mt-4">
+        <!-- Pre-reading Section -->
+        <section id="preReading" class="w-full max-w-3xl text-center mb-6 fade-in">
+
+            <div class="bg-opacity-50 rounded-2xl p-4 mystical-border">
+
+                <!-- Deck Selection -->
+                <div class="mb-10">
+                    <h4 class="font-cinzel text-xl mb-4 text-purple-200">
+                        Choose Your Deck Style
+                    </h4>
+                    <div class="flex flex-nowrap justify-center gap-4">
+
+                        <div class="theme-option theme-1 active" data-theme="1" aria-label="Celestial deck theme">
+                            <i class="fas fa-moon theme-icon"></i>
+                            <div class="theme-name">Celestial</div>
+                        </div>
+
+                        <div class="theme-option theme-2" data-theme="2" aria-label="Nature deck theme">
+                            <i class="fas fa-leaf theme-icon"></i>
+                            <div class="theme-name">Nature</div>
+                        </div>
+
+                        <div class="theme-option theme-3" data-theme="3" aria-label="Solar deck theme">
+                            <i class="fas fa-sun theme-icon"></i>
+                            <div class="theme-name">Solar</div>
+                        </div>
+
+                        <div class="theme-option theme-4" data-theme="4" aria-label="Cosmic deck theme">
+                            <i class="fas fa-star theme-icon"></i>
+                            <div class="theme-name">Cosmic</div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <p class="font-playfair text-xl text-purple-100 mb-6">
+                    <i class="fas fa-quote-left text-purple-300 mr-2"></i>
+                    The tarot is a mirror that reflects the hidden aspects of your soul and the unseen forces shaping
+                    your journey.
+                    <i class="fas fa-quote-right text-purple-300 ml-2"></i>
+                </p>
+
+                <div class="flex justify-center my-8">
+                    <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+                </div>
+
+                <button
+                    id="startButton"
+                    class="mystical-btn font-cinzel px-10 py-5 rounded-lg text-2xl hover:glow mt-4"
+                    aria-label="Begin your tarot reading journey"
+                >
+                    Begin Your Journey <i class="fas fa-arrow-right ml-3"></i>
+                </button>
+
+                <!-- Preparing for Your Reading -->
+                <div class="bg-indigo-900 bg-opacity-60 rounded-xl p-6 mt-14">
+                    <h3 class="font-cinzel text-2xl mb-4 text-purple-200">
+                        <i class="fas fa-lightbulb mr-2"></i>Preparing for Your Reading
+                    </h3>
+                    <p class="font-playfair text-lg text-purple-100">
+                        Find a quiet space and take a few deep breaths. Focus your mind on a question or area of your
+                        life you seek guidance for. When you're ready, enter your question below and draw your card.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Reading Section (initially hidden) -->
+        <section id="readingSection"
+            class="w-full max-w-full flex flex-col items-center hidden">
+
+            <!-- Three Card Container -->
+            <div class="three-card-container" id="threeCardContainer">
+
+                <!-- Left Card (Past) -->
+                <div class="card-wrapper left">
+                    <div class="card-container">
+                        <div class="tarot-card" id="leftCard">
+                            <!-- Card Back -->
+                            <div class="card-face card-back">
+                                <div class="absolute inset-0 card-back-pattern"></div>
+                                <div class="card-symbols">
+                                    <div class="card-symbol top-6 left-6">♎</div>
+                                    <div class="card-symbol top-6 right-6">♏</div>
+                                    <div class="card-symbol bottom-6 left-6">♐</div>
+                                    <div class="card-symbol bottom-6 right-6">♑</div>
+                                    <div
+                                        class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol"
+                                    >☾</div>
+                                </div>
+                                <div class="absolute inset-4 flex flex-col items-center justify-center">
+                                    <div
+                                        class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6 floating"
+                                    >
+                                        <i class="fas fa-star text-5xl text-purple-800 card-icon"></i>
+                                    </div>
+                                    <h2 class="font-cinzel text-2xl text-yellow-200">Mystic Tarot</h2>
+                                </div>
+                                <div class="absolute inset-0 border-8 border-purple-300 rounded-2xl opacity-30"></div>
+                            </div>
+                            <!-- Card Front -->
+                            <div class="card-face card-front">
+                                <img id="leftCardImage" src="" alt="Tarot Card Image"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center Card (Present) -->
+                <div class="card-wrapper center">
+                    <div class="card-container" id="centerCardContainer">
+                        <div class="tarot-card" id="centerCard">
+                            <!-- Card Back -->
+                            <div class="card-face card-back">
+                                <div class="absolute inset-0 card-back-pattern"></div>
+                                <div class="card-symbols">
+                                    <div class="card-symbol top-6 left-6">♎</div>
+                                    <div class="card-symbol top-6 right-6">♏</div>
+                                    <div class="card-symbol bottom-6 left-6">♐</div>
+                                    <div class="card-symbol bottom-6 right-6">♑</div>
+                                    <div
+                                        class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol"
+                                    >☾</div>
+                                </div>
+                                <div class="absolute inset-4 flex flex-col items-center justify-center">
+                                    <div class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6">
+                                        <i class="fas fa-star text-5xl text-purple-800 card-icon"></i>
+                                    </div>
+                                    <h2 class="font-cinzel text-2xl text-yellow-200">Mystic Tarot</h2>
+                                </div>
+                                <div class="absolute inset-0 border-8 border-purple-300 rounded-2xl opacity-30"></div>
+                            </div>
+
+                            <!-- Card Front -->
+                            <div class="card-face card-front">
+                                <img id="centerCardImage" src="" alt="Tarot Card Image"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Card (Future) -->
+                <div class="card-wrapper right">
+                    <div class="card-container">
+                        <div class="tarot-card" id="rightCard">
+                            <!-- Card Back -->
+                            <div class="card-face card-back">
+                                <div class="absolute inset-0 card-back-pattern"></div>
+                                <div class="card-symbols">
+                                    <div class="card-symbol top-6 left-6">♎</div>
+                                    <div class="card-symbol top-6 right-6">♏</div>
+                                    <div class="card-symbol bottom-6 left-6">♐</div>
+                                    <div class="card-symbol bottom-6 right-6">♑</div>
+                                    <div
+                                        class="card-symbol top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl center-card-symbol"
+                                    >☾</div>
+                                </div>
+                                <div class="absolute inset-4 flex flex-col items-center justify-center">
+                                    <div
+                                        class="w-24 h-24 rounded-full bg-yellow-200 flex items-center justify-center mb-6 floating"
+                                    >
+                                        <i class="fas fa-star text-5xl text-purple-800 card-icon"></i>
+                                    </div>
+                                    <h2 class="font-cinzel text-2xl text-yellow-200">Mystic Tarot</h2>
+                                </div>
+                                <div class="absolute inset-0 border-8 border-purple-300 rounded-2xl opacity-30"></div>
+                            </div>
+                            <!-- Card Front -->
+                            <div class="card-face card-front">
+                                <img id="rightCardImage" src="" alt="Tarot Card Image"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Revealing Message -->
+                <div id="revealingMessage" class="revealing-message hidden">
+                    <div class="bg-indigo-900 bg-opacity-80 p-6 rounded-2xl border border-purple-500 shadow-lg">
+                        <p class="font-cinzel text-2xl text-center text-purple-200">
+                            <i class="fas fa-crystal mr-2"></i>
+                            The universe is revealing your message...
+                            <i class="fas fa-crystal ml-2"></i>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Swirl Animation Container -->
+                <div id="swirlContainer"></div>
+            </div>
+
+            <!-- Card Names & Arcana Display -->
+            <div id="cardDetails" class="text-center w-full max-w-4xl hidden">
+                <div class="grid grid-cols-3 gap-4 mt-6">
+                    <div>
+                        <h3 class="font-cinzel text-xl text-purple-300">Past</h3>
+                        <h2 id="leftCardName" class="font-cinzel text-2xl text-purple-200"></h2>
+                        <p id="leftCardArcana" class="font-playfair text-lg text-purple-100"></p>
+                    </div>
+                    <div>
+                        <h3 class="font-cinzel text-xl text-purple-300">Present</h3>
+                        <h2 id="centerCardName" class="font-cinzel text-2xl text-purple-200"></h2>
+                        <p id="centerCardArcana" class="font-playfair text-lg text-purple-100"></p>
+                    </div>
+                    <div>
+                        <h3 class="font-cinzel text-xl text-purple-300">Future</h3>
+                        <h2 id="rightCardName" class="font-cinzel text-2xl text-purple-200"></h2>
+                        <p id="rightCardArcana" class="font-playfair text-lg text-purple-100"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Question Input -->
+            <div class="w-full max-w-xl mt-10 fade-in">
+                <div class="relative">
+                    <input
+                        type="text"
+                        id="userQuestion"
+                        placeholder="What guidance do you seek today?"
+                        class="question-input font-playfair w-full px-6 py-4 rounded-2xl text-lg focus:ring-0"
+                        aria-label="Enter your question for the tarot reading"
+                    />
+                    <i
+                        class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-purple-400"
+                    ></i>
+                </div>
+                <p class="text-purple-300 text-sm mt-2 text-center font-playfair italic">
+                    Your question will be remembered by AI to give you self tailored insights.
+                </p>
+            </div>
+
+            <!-- User Question Display -->
+            <div id="questionDisplay" class="max-w-xl mt-2 mb-0 text-center hidden fade-in">
+                <p class="font-playfair text-xl text-purple-200">
+                    <span class="text-purple-300 italic">Your question:</span>
+                    <span id="displayedQuestion" class="font-semibold"></span>
+                </p>
+            </div>
+
+            <!-- Interpretation Sections -->
+            <div id="interpretContainer" class="w-full max-w-full mt-6 mb-2 hidden">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Past Interpretation -->
+                    <div class="bg-purple-900 bg-opacity-50 rounded-xl p-6 mystical-border fade-in">
+                        <h3 class="font-cinzel text-xl mb-4 text-center text-purple-200">
+                            <i class="fas fa-history mr-2"></i>Past Interpretation
+                        </h3>
+                        <div id="leftCardInterpret" class="space-y-2 text-left text-sm text-purple-100"></div>
+                    </div>
+                    
+                    <!-- Present Interpretation -->
+                    <div class="bg-purple-900 bg-opacity-50 rounded-xl p-6 mystical-border fade-in">
+                        <h3 class="font-cinzel text-xl mb-4 text-center text-purple-200">
+                            <i class="fas fa-clock mr-2"></i>Present Interpretation
+                        </h3>
+                        <div id="centerCardInterpret" class="space-y-2 text-left text-sm text-purple-100"></div>
+                    </div>
+                    
+                    <!-- Future Interpretation -->
+                    <div class="bg-purple-900 bg-opacity-50 rounded-xl p-6 mystical-border fade-in">
+                        <h3 class="font-cinzel text-xl mb-4 text-center text-purple-200">
+                            <i class="fas fa-crystal-ball mr-2"></i>Future Interpretation
+                        </h3>
+                        <div id="rightCardInterpret" class="space-y-2 text-left text-sm text-purple-100"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 mb-10 fade-in" id="buttonContainer">
+                <button
+                    id="drawButton"
+                    class="mystical-btn font-cinzel px-8 py-4 rounded-lg text-xl hover:glow shuffle-animation"
+                    aria-label="Draw a tarot card"
+                >
+                    <i class="fas fa-hand-point-up mr-2"></i>Draw 3 Cards
+                </button>
+                <button
+                    id="drawAgainButton"
+                    class="mystical-btn font-cinzel px-8 py-4 rounded-lg text-xl hidden hover:glow"
+                    aria-label="Draw another card"
+                >
+                    <i class="fas fa-redo mr-2"></i>Draw Again
+                </button>
+                <button
+                    id="shareButton"
+                    class="mystical-btn font-cinzel px-8 py-4 rounded-lg text-xl bg-teal-700 border-teal-400 hidden hover:glow"
+                    aria-label="Share your reading"
+                >
+                    <i class="fas fa-share-alt mr-2"></i>Share Reading
+                </button>
+            </div>
+
+            <!-- Note to You -->
+            <div id="noteContainer" class="w-full max-w-2xl mb-8">
+                <div class="bg-purple-900 bg-opacity-50 rounded-xl p-6 mystical-border fade-in">
+                    <h3 class="font-cinzel text-2xl mb-4 text-center text-purple-200">
+                        <i class="fas fa-sticky-note mr-2"></i>Note to You
+                    </h3>
+                    <p class="font-playfair text-lg text-purple-100">
+                        Tarot cards offer symbolic guidance. Reflect on how these cards' meanings relate to your question.
+                        Upright cards typically represent energies manifesting clearly, while reversed cards may indicate
+                        internal processes or obstacles to overcome. The three-card spread represents Past, Present, and Future.
+                    </p>
+                </div>
+            </div>
+
+            <!-- PDF Button -->
+            <div class="w-full max-w-xl flex justify-center mt-4 mb-6">
+                <button id="pdfButton" class="pdf-btn">
+                    <i class="fas fa-file-pdf mr-2"></i> Download PDF Report
+                </button>
+            </div>
+
+        </section>
+    </div>
+
+    <!-- SEO Content Sections -->
+    <div class="w-full max-w-4xl mx-auto px-4 mb-10">
+        <!-- Section: Tarot Card Generator -->
+        <hr class="border-purple-700 mb-6" />
+        <section class="mb-6">
+            <h2 class="font-cinzel text-3xl text-purple-200 mb-4 text-center">Tarot Card Generator</h2>
+            <p class="font-playfair text-purple-100 text-sm leading-relaxed">
+                Discover our powerful tarot card generator, designed to provide you with instant, meaningful readings.
+                Whether you're a beginner or an experienced reader, the Mystic Tarot card generator delivers clarity
+                and insight. Easily generate a personalized tarot card reading that helps unveil hidden messages and
+                guide your path.
+            </p>
+        </section>
+
+        <!-- Section: Random Tarot Card Generator -->
+        <hr class="border-purple-700 mb-6" />
+        <section class="mb-6">
+            <h2 class="font-cinzel text-3xl text-purple-200 mb-4 text-center">Random Tarot Card Generator</h2>
+            <p class="font-playfair text-purple-100 text-sm leading-relaxed">
+                Our random tarot card generator offers spontaneous readings at the click of a button. Perfect for
+                yes-or-no questions and quick insights, this tool draws cards at random and interprets their meanings,
+                providing you with immediate guidance. Use it for daily reflections, journaling prompts, or decision
+                making.
+            </p>
+        </section>
+
+        <!-- Section: Tarot Card Generator Online -->
+        <hr class="border-purple-700 mb-6" />
+        <section class="mb-6">
+            <h2 class="font-cinzel text-3xl text-purple-200 mb-4 text-center">Tarot Card Generator Online</h2>
+            <p class="font-playfair text-purple-100 text-sm leading-relaxed">
+                Access our tarot card generator online anytime, anywhere. No downloads or sign-ups required—just visit
+                Mystic Tarot and begin your reading. Get free tarot card readings online on any device, and explore
+                the ancient wisdom of the cards to gain insight into your past, present, and future.
+            </p>
+        </section>
+
+        <!-- Section: Tarot Card Generator Free -->
+        <hr class="border-purple-700 mb-6" />
+        <section class="mb-6">
+            <h2 class="font-cinzel text-3xl text-purple-200 mb-4 text-center">Tarot Card Generator Free</h2>
+            <p class="font-playfair text-purple-100 text-sm leading-relaxed">
+                Enjoy our tarot card generator free of charge. Mystic Tarot provides unlimited readings, allowing you
+                to explore various spreads, interpretations, and reversals without spending a dime. Dive into your
+                personal journey with our completely free tarot card reading experience.
+            </p>
+        </section>
+
+        <!-- Section: Best AI Tarot Card Generator -->
+        <hr class="border-purple-700 mb-6" />
+        <section class="mb-6">
+            <h2 class="font-cinzel text-3xl text-purple-200 mb-4 text-center">Best AI Tarot Card Generator</h2>
+            <p class="font-playfair text-purple-100 text-sm leading-relaxed">
+                Experience the best AI tarot card generator with Mystic Tarot. Our advanced AI algorithms interpret
+                card meanings, provide contextual insights, and offer personalized guidance. Combining traditional
+                tarot knowledge with modern AI, we deliver accurate, intuitive readings that resonate with your
+                unique situation.
+            </p>
+        </section>
+    </div>
+
+    <!-- FAQ Section -->
+    <div id="faq" class="w-full max-w-2xl mx-auto mb-12 px-2">
+        <h2 class="font-cinzel text-3xl text-center text-purple-200 mb-8">Frequently Asked Questions</h2>
+
+        <!-- FAQ Card 1 -->
+        <div class="mb-4">
+            <button type="button"
+            class="w-full flex justify-between items-center rounded-xl px-5 py-4 bg-[#211b37] bg-opacity-70 font-cinzel text-base md:text-lg text-purple-100 font-semibold shadow-md transition-all outline-none focus:ring-2 focus:ring-purple-400"
+            onclick="this.nextElementSibling.classList.toggle('hidden');this.querySelector('i').classList.toggle('fa-chevron-down');this.querySelector('i').classList.toggle('fa-chevron-up')">
+            <span>Are tarot cards legitimate?</span>
+            <i class="fas fa-chevron-down ml-4 transition-all"></i>
+            </button>
+            <div class="hidden bg-transparent rounded-b-xl px-6 py-4">
+            <p class="font-playfair text-purple-100 text-sm leading-relaxed">
+                Tarot cards have been used for centuries as a tool for introspection and spiritual guidance.
+                While skeptics may question their “legitimacy,” many users find value in tarot card readings—whether
+                through a traditional deck or via a free online tarot card generator. The legitimacy often lies in
+                the insight and reflection they inspire, rather than any guaranteed prediction of the future.
+            </p>
+            </div>
+        </div>
+
+        <!-- FAQ Card 2 -->
+        <div class="mb-4">
+            <button type="button"
+            class="w-full flex justify-between items-center rounded-xl px-5 py-4 bg-[#211b37] bg-opacity-70 font-cinzel text-base md:text-lg text-purple-100 font-semibold shadow-md transition-all outline-none focus:ring-2 focus:ring-purple-400"
+            onclick="this.nextElementSibling.classList.toggle('hidden');this.querySelector('i').classList.toggle('fa-chevron-down');this.querySelector('i').classList.toggle('fa-chevron-up')">
+            <span>Are tarot card readings fake?</span>
+            <i class="fas fa-chevron-down ml-4 transition-all"></i>
+            </button>
+            <div class="hidden bg-transparent rounded-b-xl px-6 py-4">
+            <p class="font-playfair text-purple-100 text-sm leading-relaxed">
+                Tarot card readings—whether live or generated by a tarot card generator online—are not “fake,” but
+                rather subjective. The cards serve as symbolic prompts that encourage self‐reflection. Even a random
+                tarot card generator can spark new perspectives, helping you explore possibilities and clarify your path.
+            </p>
+            </div>
+        </div>
+
+        <!-- FAQ Card 3 -->
+        <div class="mb-4">
+            <button type="button"
+            class="w-full flex justify-between items-center rounded-xl px-5 py-4 bg-[#211b37] bg-opacity-70 font-cinzel text-base md:text-lg text-purple-100 font-semibold shadow-md transition-all outline-none focus:ring-2 focus:ring-purple-400"
+            onclick="this.nextElementSibling.classList.toggle('hidden');this.querySelector('i').classList.toggle('fa-chevron-down');this.querySelector('i').classList.toggle('fa-chevron-up')">
+            <span>Is tarot cards dangerous?</span>
+            <i class="fas fa-chevron-down ml-4 transition-all"></i>
+            </button>
+            <div class="hidden bg-transparent rounded-b-xl px-6 py-4">
+            <p class="font-playfair text-purple-100 text-sm leading-relaxed">
+                Tarot cards are not inherently dangerous. They are a tool for reflection, not a means of causing harm.
+                Using a free tarot card reading online or a trusted tarot card generator with meaning can be a safe
+                way to explore your intuition. As with any spiritual practice, it’s important to approach readings
+                with a clear mind and healthy boundaries.
+            </p>
+            </div>
+        </div>
+
+        <!-- FAQ Card 4 -->
+        <div class="mb-4">
+            <button type="button"
+            class="w-full flex justify-between items-center rounded-xl px-5 py-4 bg-[#211b37] bg-opacity-70 font-cinzel text-base md:text-lg text-purple-100 font-semibold shadow-md transition-all outline-none focus:ring-2 focus:ring-purple-400"
+            onclick="this.nextElementSibling.classList.toggle('hidden');this.querySelector('i').classList.toggle('fa-chevron-down');this.querySelector('i').classList.toggle('fa-chevron-up')">
+            <span>Is tarot card accurate?</span>
+            <i class="fas fa-chevron-down ml-4 transition-all"></i>
+            </button>
+            <div class="hidden bg-transparent rounded-b-xl px-6 py-4">
+            <p class="font-playfair text-purple-100 text-sm leading-relaxed">
+                The accuracy of a tarot card reading—whether from a live reader or an AI tarot card generator—depends
+                on interpretation and the user’s openness to insight. A well‐designed 3 tarot card generator with
+                reversals or a tarot card generator with reverse can offer nuanced readings. Remember that tarot is
+                not a definitive fortune‐telling tool but a guide to help you reflect on your situation.
+            </p>
+            </div>
+        </div>
+
+        <!-- FAQ Card 5 -->
+        <div class="mb-4">
+            <button type="button"
+            class="w-full flex justify-between items-center rounded-xl px-5 py-4 bg-[#211b37] bg-opacity-70 font-cinzel text-base md:text-lg text-purple-100 font-semibold shadow-md transition-all outline-none focus:ring-2 focus:ring-purple-400"
+            onclick="this.nextElementSibling.classList.toggle('hidden');this.querySelector('i').classList.toggle('fa-chevron-down');this.querySelector('i').classList.toggle('fa-chevron-up')">
+            <span>How often should I get a tarot card reading?</span>
+            <i class="fas fa-chevron-down ml-4 transition-all"></i>
+            </button>
+            <div class="hidden bg-transparent rounded-b-xl px-6 py-4">
+            <p class="font-playfair text-purple-100 text-sm leading-relaxed">
+                The frequency of tarot card readings is a personal choice. Many people use a random tarot card
+                generator once per day for quick insights or try a more in‐depth tarot card reading online once a
+                week or month. If you’re using a free tarot card generator online, you can experiment with daily
+                draws, weekly three-card spreads, or whenever you feel the need for clarity.
+            </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Navigation -->
+    <footer class="footer-nav">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2 class="font-cinzel text-2xl mb-4 shimmer-text">Mystic Tarot</h2>
+                <p class="text-purple-200 font-playfair">
+                    Discover the ancient wisdom of tarot to illuminate your path and guide your journey through life's
+                    mysteries.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3 class="footer-title">Information</h3>
+                    <a href="/about-us.html" class="footer-link">About Us</a>
+                    <a href="/information/how-it-works.html" class="footer-link">How It Works</a>
+                    <a href="/information/tarot-guide.html" class="footer-link">Tarot Guide</a>
+                    <a href="/information/testimonials.html" class="footer-link">Testimonials</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Legal</h3>
+                    <a href="/terms-and-conditions.html" class="footer-link">Terms & Conditions</a>
+                    <a href="/privacy-policy.html" class="footer-link">Privacy Policy</a>
+                    <a href="/disclaimer.html" class="footer-link">Disclaimer</a>
+                    <a href="/cookie-policy.html" class="footer-link">Cookie Policy</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Support</h3>
+                    <a href="/contact-us.html" class="footer-link">Contact Us</a>
+                    <a href="/faq.html" class="footer-link">FAQs</a>
+                    <a href="/support-us.html" class="footer-link">Support Us</a>
+                    <a href="/feedback.html" class="footer-link">Feedback</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Connect</h3>
+                    <a href="#" class="footer-link"><i class="fab fa-facebook mr-2"></i> Facebook</a>
+                    <a href="#" class="footer-link"><i class="fab fa-instagram mr-2"></i> Instagram</a>
+                    <a href="#" class="footer-link"><i class="fab fa-twitter mr-2"></i> Twitter</a>
+                    <a href="#" class="footer-link"><i class="fab fa-pinterest mr-2"></i> Pinterest</a>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">© 2025 Mystic Tarot. All rights reserved.</p>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="/scripts/3-card-reading.js"></script>
+</body>
+</html>
