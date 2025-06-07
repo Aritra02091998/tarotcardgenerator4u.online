@@ -529,7 +529,6 @@ body {
 .main-header {
     position: relative;
     width: 100%;
-    justify-content: center;
 }
 
 .header-left,
@@ -800,6 +799,23 @@ body {
     #startButton {
         padding: 0.6rem 1rem;     /* even smaller on extra-small */
         font-size: 0.9rem;
+    }
+
+    /* shrink the yellow logo circle */
+    .card-face.card-back .w-24 {
+        width: 4.5rem;   /* down from 6rem (w-24) */
+        height: 4.5rem;  /* down from 6rem (h-24) */
+    }
+
+  /* shrink the star icon inside it */
+  .card-face.card-back .card-icon {
+    font-size: 2rem; /* down from text-5xl (~3rem) */
+  }
+
+  /* shrink the “Mystic Tarot” text */
+  .card-face.card-back h2 {
+    font-size: 1.2rem;       /* down from text-2xl (1.5rem) */
+    margin-bottom: 0.25rem; /* tighten spacing under the icon */
   }
 }
 
@@ -828,9 +844,9 @@ body {
 
     /* if it still wraps too much, force a tighter mobile font */
     .main-title {
-        font-size: 1.75rem;  /* ~text-3xl */
+        font-size: 2.2rem;  /* ~text-3xl */
         line-height: 1.2;
-        justify-content: center;
+        text-align: center;
     }
 }
 
@@ -874,10 +890,7 @@ body {
     object-fit: contain;
 }
 
-/* ───────────────────────────────────────────────────────────────────────── */
 /* ─── 3) STYLE & HIDE THE “CARD DETAILS” SECTION UNTIL FLIP IS COMPLETE ──── */
-/* The HTML we added gives <div id="cardDetails"> which contains 
-   <h2 id="cardName"> and <p id="cardArcana">. We hide this by default.      */
 #cardDetails {
     display: none; 
     margin-top: 1rem;          /* a little breathing room above */
