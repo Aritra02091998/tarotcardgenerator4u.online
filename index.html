@@ -70,6 +70,58 @@
     <div class="crystal-ball bottom-1/4 right-1/4"></div>
     <div class="particles" id="particles"></div>
 
+    <!-- --- Global Header (always visible) --- -->
+    <div class="main-header mt-10 mb-12 w-full">
+        
+        <div class="header-left">
+            <button id="backButton" class="nav-btn hidden" aria-label="Go back home">
+                <i class="fas fa-arrow-left"></i>
+                <span class="btn-text">Back Home</span>
+            </button>
+        </div>
+
+        <div class="header-center">
+            <h1 class="text-2xl sm:text-4xl md:text-5xl font-cinzel shimmer-text main-title">
+                Online Tarot Card Generator
+            </h1>
+        </div>
+
+        <div class="header-right flex items-center gap-2">
+            <!-- Pre-reading history -->
+            <button
+                id="historyButton"
+                class="text-purple-300 hover:text-white"
+                aria-label="View reading history"
+            >
+                <i class="fas fa-history text-2xl"></i>
+            </button>
+
+            <!-- Reading-mode history -->
+            <button
+                id="historyButtonReading"
+                class="text-purple-300 hover:text-white hidden"
+                aria-label="View reading history"
+            >
+                <i class="fas fa-history text-2xl"></i>
+            </button>
+
+            <!-- Change deck (reading mode only) -->
+            <button id="changeDeckButton" class="nav-btn hidden" aria-label="Change deck">
+                <i class="fas fa-sync-alt"></i>
+                <span class="btn-text">Change Deck</span>
+            </button>
+
+            <!-- Settings (reading mode only) -->
+            <button
+                id="settingsButtonReading"
+                class="text-purple-300 hover:text-white hidden"
+                aria-label="Settings"
+            >
+                <i class="fas fa-cog text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
     <!-- History Panel -->
     <div class="history-panel" id="historyPanel">
         <div class="history-header">
@@ -149,52 +201,18 @@
         </div>
     </div>
 
-    <div class="flex-grow flex flex-col items-center justify-center pt-2 pb-10 px-4">
+    <div class="flex-grow flex flex-col items-center justify-center pt-2 pb-4 px-4 mt-4">
         <!-- Pre-reading Section -->
-        <section id="preReading" class="w-full max-w-3xl text-center mb-14 fade-in">
-            <!-- Header with icons in top-right corner -->
-            <div class="main-header mb-8">
-                <div class="header-center">
-                    <h1 class="text-4xl md:text-5xl font-cinzel shimmer-text main-title">
-                        Mystic Tarot
-                    </h1>
-                </div>
-                <div class="header-right">
-                    <button
-                        id="historyButton"
-                        class="text-purple-300 hover:text-white"
-                        aria-label="View reading history"
-                    >
-                        <i class="fas fa-history text-2xl"></i>
-                    </button>
-                    <button
-                        id="settingsButton"
-                        class="text-purple-300 hover:text-white"
-                        aria-label="Change settings"
-                    >
-                        <i class="fas fa-cog text-2xl"></i>
-                    </button>
-                </div>
-            </div>
+        <section id="preReading" class="w-full max-w-3xl text-center mb-6 fade-in">
 
-            <div class="bg-opacity-50 rounded-2xl p-8 mystical-border">
-                <p class="font-playfair text-xl text-purple-100 mb-6">
-                    <i class="fas fa-quote-left text-purple-300 mr-2"></i>
-                    The tarot is a mirror that reflects the hidden aspects of your soul and the unseen forces shaping
-                    your journey.
-                    <i class="fas fa-quote-right text-purple-300 ml-2"></i>
-                </p>
-
-                <div class="flex justify-center my-8">
-                    <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
-                </div>
+            <div class="bg-opacity-50 rounded-2xl p-4 mystical-border">
 
                 <!-- Theme Selection -->
-                <div class="mb-6">
+                <div class="mb-10">
                     <h4 class="font-cinzel text-xl mb-4 text-purple-200">
                         Choose Your Deck Style
                     </h4>
-                    <div class="flex flex-wrap justify-center gap-4">
+                    <div class="flex flex-nowrap justify-center gap-4">
 
                         <div class="theme-option theme-1 active" data-theme="1" aria-label="Celestial deck theme">
                             <i class="fas fa-moon theme-icon"></i>
@@ -219,6 +237,17 @@
                     </div>
                 </div>
 
+                <p class="font-playfair text-xl text-purple-100 mb-6">
+                    <i class="fas fa-quote-left text-purple-300 mr-2"></i>
+                    The tarot is a mirror that reflects the hidden aspects of your soul and the unseen forces shaping
+                    your journey.
+                    <i class="fas fa-quote-right text-purple-300 ml-2"></i>
+                </p>
+
+                <div class="flex justify-center my-8">
+                    <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+                </div>
+
                 <button
                     id="startButton"
                     class="mystical-btn font-cinzel px-10 py-5 rounded-lg text-2xl hover:glow mt-4"
@@ -228,7 +257,7 @@
                 </button>
 
                 <!-- Preparing for Your Reading -->
-                <div class="bg-indigo-900 bg-opacity-60 rounded-xl p-6 mt-8">
+                <div class="bg-indigo-900 bg-opacity-60 rounded-xl p-6 mt-14">
                     <h3 class="font-cinzel text-2xl mb-4 text-purple-200">
                         <i class="fas fa-lightbulb mr-2"></i>Preparing for Your Reading
                     </h3>
@@ -245,38 +274,6 @@
             id="readingSection"
             class="w-full max-w-4xl flex flex-col items-center hidden"
         >
-            <!-- Navigation Header with icons in top-right corner -->
-            <div class="main-header mb-4 w-full">
-                <div class="header-left">
-                    <button id="backButton" class="nav-btn">
-                        <i class="fas fa-arrow-left"></i><span class="btn-text"> Back Home</span>
-                    </button>
-                </div>
-                <div class="header-center">
-                    <h1 class="text-4xl md:text-5xl font-cinzel shimmer-text main-title">
-                        Mystic Tarot
-                    </h1>
-                </div>
-                <div class="header-right">
-                    <button id="changeDeckButton" class="nav-btn">
-                        <i class="fas fa-sync-alt"></i><span class="btn-text"> Change Deck</span>
-                    </button>
-                    <button
-                        id="historyButtonReading"
-                        class="text-purple-300 hover:text-white"
-                        aria-label="View reading history"
-                    >
-                        <i class="fas fa-history text-2xl"></i>
-                    </button>
-                    <button
-                        id="settingsButtonReading"
-                        class="text-purple-300 hover:text-white"
-                        aria-label="Change settings"
-                    >
-                        <i class="fas fa-cog text-2xl"></i>
-                    </button>
-                </div>
-            </div>
 
             <!-- Three Card Container -->
             <div class="three-card-container" id="threeCardContainer">

@@ -137,7 +137,6 @@ const userQuestion        = document.getElementById('userQuestion');
 const questionDisplay     = document.getElementById('questionDisplay');
 const displayedQuestion   = document.getElementById('displayedQuestion');
 
-const revealingMessage    = document.getElementById('revealingMessage');
 const flipSound           = document.getElementById('flipSound') || null;
 
 const historyButton        = document.getElementById('historyButton');
@@ -200,14 +199,16 @@ setTimeout(() => {
 
 // Start the reading experience (fade out pre-reading, show reading section)
 startButton.addEventListener('click', () => {
-    preReadingSection.classList.add('fade-out');
-    setTimeout(() => {
-        preReadingSection.classList.add('hidden');
-        readingSection.classList.remove('hidden');
-        setTimeout(() => {
-            readingSection.classList.add('fade-in');
-        }, 50);
-    }, 800);
+  preReadingSection.classList.add('fade-out');
+  setTimeout(() => {
+    preReadingSection.classList.add('hidden');
+    readingSection.classList.remove('hidden');
+    readingSection.classList.add('fade-in');
+
+    // now reveal the reading-mode buttons
+    backButton.classList.remove('hidden');
+    changeDeckButton.classList.remove('hidden');
+  }, 800);
 });
 
 // Back to home button
@@ -309,9 +310,6 @@ function drawCard() {
   userQuestion.classList.add('hidden');
   drawButton.classList.add('hidden');
 
-  // 4) Show the "revealing..." message overlay
-  revealingMessage.classList.remove('hidden');
-
   // 5) Play flip sound if available
   if (flipSound) {
     flipSound.currentTime = 0;
@@ -344,7 +342,6 @@ function drawCard() {
       : chosenCard.meanings.light;
     const chosenMeaning    = meaningArray.join(', ');
 
-    // ─────────────────────────────────────────────────────────────────────────
     // ─── 7e) POPULATE THE CENTER CARD FRONT (ONLY IMAGE) ─────────────────
     // Instead of `cardContent.innerHTML = ...`, we now simply set the <img> src:
     centerCardImage.src = chosenCard.img;
@@ -354,35 +351,23 @@ function drawCard() {
       centerCardImage.classList.remove('reversed');
     }
 
-    // ─────────────────────────────────────────────────────────────────────────
     // ─── 7f) POPULATE THE “CARD DETAILS” SECTION (NAME + ARCANA) ────────────
     cardNameElem.textContent   = chosenCard.name;
     cardArcanaElem.textContent = chosenCard.arcana;
     // Ensure it’s hidden until the flip finishes:
     cardDetailsBox.classList.remove('show');
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // ─── 7g) HIDE THE “REVEALING” MESSAGE AFTER A SHORT FADE ─────────────────
-    revealingMessage.classList.add('fade-out');
-    setTimeout(() => {
-      revealingMessage.classList.add('hidden');
-      revealingMessage.classList.remove('fade-out');
-    }, 500);
-
-    // ─────────────────────────────────────────────────────────────────────────
     // ─── 7h) FLIP THE CENTER CARD AFTER A BRIEF PAUSE ───────────────────────
     setTimeout(() => {
       centerCard.classList.add('flipped');
       centerCard.classList.add('glow');
 
-      // ───────────────────────────────────────────────────────────────────────
       // ─── 7i) SHOW “DRAW AGAIN” & “SHARE READING” BUTTONS AFTER FLIP ─────────
       setTimeout(() => {
         drawAgainButton.classList.remove('hidden');
         shareButton.classList.remove('hidden');
       }, 500);
 
-      // ───────────────────────────────────────────────────────────────────────
       // ─── 7j) POPULATE “INTERPRETING YOUR CARD” (UNDER #dynamicInterpret) ───
       dynamicInterpret.innerHTML = `
         <p><span class="font-bold">Orientation:</span> ${isReversed ? '(Reversed)' : '(Forward)'}</p>
@@ -392,7 +377,6 @@ function drawCard() {
       `;
       interpretContainer.classList.remove('hidden');
 
-      // ───────────────────────────────────────────────────────────────────────
       // ─── 7k) ADD THIS READING TO HISTORY & UPDATE LIST ─────────────────────
       const reading = {
         name: chosenCard.name,
@@ -414,7 +398,6 @@ function drawCard() {
 
 // ─────────────────────────────────────────────────────────────────────────────
 // 8) AFTER THE FLIP: SHOW CARD NAME & ARCANA
-// ─────────────────────────────────────────────────────────────────────────────
 
 // Wait for the CSS transition (flip) to finish, then reveal #cardDetails
 centerCard.addEventListener('transitionend', (evt) => {
@@ -424,9 +407,7 @@ centerCard.addEventListener('transitionend', (evt) => {
 });
 
 
-// ─────────────────────────────────────────────────────────────────────────────
 // 9) RESET FUNCTION (for “Draw Again” or going back home)
-// ─────────────────────────────────────────────────────────────────────────────
 
 function resetReading() {
     // Remove glow & flipped state
@@ -458,9 +439,7 @@ function resetReading() {
 }
 
 
-// ─────────────────────────────────────────────────────────────────────────────
 // 10) HISTORY LIST MANAGEMENT
-// ─────────────────────────────────────────────────────────────────────────────
 
 function updateHistoryList() {
     if (readingHistory.length === 0) {
@@ -513,21 +492,17 @@ function updateHistoryList() {
 }
 
 
-// ─────────────────────────────────────────────────────────────────────────────
 // 11) SHARE MODAL HANDLERS
-// ─────────────────────────────────────────────────────────────────────────────
-
 function openShareModal(reading) {
     shareQuote.textContent = `${reading.name} (${reading.orientation}): ${reading.chosenMeaning}`;
     shareTimestamp.textContent = reading.timestamp;
     shareText.textContent = `
-I just drew ${reading.name} (${reading.orientation}) on Mystic Tarot!
-Question: ${reading.question}
-Meaning: ${reading.chosenMeaning}
-Arcana: ${reading.arcana}
-Fortune: ${reading.fortune_telling.join(', ')}
-#TarotReading
-    `.trim();
+        I just drew ${reading.name} (${reading.orientation}) on Mystic Tarot!
+        Question: ${reading.question}
+        Meaning: ${reading.chosenMeaning}
+        Arcana: ${reading.arcana}
+        Fortune: ${reading.fortune_telling.join(', ')}
+        #TarotReading`.trim();
 
     shareModal.classList.add('active');
 }
@@ -559,9 +534,7 @@ function shareOnFacebook() {
 }
 
 
-// ─────────────────────────────────────────────────────────────────────────────
 // 12) THEME SELECTION
-// ─────────────────────────────────────────────────────────────────────────────
 
 function setTheme(theme) {
     currentTheme = theme;
@@ -625,10 +598,7 @@ function updateCardBackIcons() {
 }
 
 
-// ─────────────────────────────────────────────────────────────────────────────
 // 13) PDF GENERATION
-// ─────────────────────────────────────────────────────────────────────────────
-
 function generatePDF() {
     const originalText = pdfButton.innerHTML;
     pdfButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Generating...';
@@ -785,10 +755,7 @@ function generatePDF() {
 }
 
 
-// ─────────────────────────────────────────────────────────────────────────────
 // 14) INITIALIZE BACKGROUND & PARTICLES
-// ─────────────────────────────────────────────────────────────────────────────
-
 createStars();
 createParticles();
 

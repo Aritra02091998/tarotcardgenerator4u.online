@@ -212,15 +212,6 @@ body {
     animation: float 8s ease-in-out infinite;
 }
 
-.shimmer-text {
-    background: linear-gradient(90deg, var(--accent), var(--gold), var(--primary-light), var(--accent));
-    background-size: 300% 300%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: shimmer 8s ease infinite;
-}
-
 .revealing-message {
     position: absolute;
     top: 50%;
@@ -536,42 +527,36 @@ body {
 }
 
 .main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
     position: relative;
-    min-height: 80px; /* Ensure enough space for absolute positioned elements */
+    width: 100%;
+    justify-content: center;
 }
 
-.header-center {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    padding: 0;
-    flex-grow: 0;
-}
-
-/* HEADER BUTTONS POSITIONED AT TOP RIGHT CORNER */
+.header-left,
+.header-center,
 .header-right {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .header-left {
-    position: absolute;
-    top: 1rem;
     left: 1rem;
-    z-index: 10;
+}
+
+.header-center {
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-right {
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.hidden {
+    display: none !important;
 }
 
 .three-card-container {
@@ -622,11 +607,6 @@ body {
 @keyframes glow {
     0% { box-shadow: 0 0 8px #c084fc, 0 0 15px #c084fc; }
     100% { box-shadow: 0 0 25px #e879f9, 0 0 40px #e879f9; }
-}
-
-@keyframes shimmer {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
 }
 
 @keyframes fadeIn {
@@ -750,6 +730,11 @@ body {
     .header-right {
         gap: 0.5rem;
     }
+    #startButton {
+        padding: 0.8rem 1.2rem;   /* down from px-10 py-5 */
+        font-size: 1rem;          /* down from text-2xl */
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -812,9 +797,12 @@ body {
         padding: 6px 12px;
         font-size: 0.8rem;
     }
+    #startButton {
+        padding: 0.6rem 1rem;     /* even smaller on extra-small */
+        font-size: 0.9rem;
+  }
 }
 
-/* 1. On small screens, hide nav-btn text and show only icons */
 @media (max-width: 640px) {
     .nav-btn .btn-text {
         display: none;
@@ -828,9 +816,24 @@ body {
     #changeDeckButton {
         display: none;
     }
+
+    .main-header {
+        padding: 0.5rem 1rem;
+    }
+
+    #preReading,
+    #readingSection {
+        padding-top: 1rem;
+    }
+
+    /* if it still wraps too much, force a tighter mobile font */
+    .main-title {
+        font-size: 1.75rem;  /* ~text-3xl */
+        line-height: 1.2;
+        justify-content: center;
+    }
 }
 
-/* 2. Footer stacking: center columns and links vertically on small screens */
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
@@ -849,9 +852,6 @@ body {
     }
 }
 
-/* ─── 1) REDUCE EVERY TAROT CARD’S DIMENSIONS BY 10px ───────────────────── */
-/* Note: The original dimensions in your CSS were 372×232 (desktop) and 312×192 (mobile),
-   so we subtract 10px from each side.                                          */
 
 /* Desktop */
 .tarot-card {
@@ -867,11 +867,7 @@ body {
     }
 }
 
-/* ───────────────────────────────────────────────────────────────────────── */
 /* ─── 2) MAKE THE CENTER CARD FRONT SHOW ONLY THE IMAGE ─────────────────– */
-/* We remove any default background or text on the .card-face.card-front 
-   so that only the <img> we inject will appear.                               */
-
 
 /* Ensure the image inside the card always fills the card proportionally */
 #centerCardImage {

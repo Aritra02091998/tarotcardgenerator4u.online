@@ -549,7 +549,7 @@ body {
 
 .header-center {
     position: absolute;
-    left: 52%;
+    left: 50%;
     transform: translate(-50%, -50%);
     max-width: 90vw;  /* or some sensible value like 1000px if you want it fixed */
     width: 100%;
