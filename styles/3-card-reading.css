@@ -721,6 +721,8 @@ body {
     #interpretContainer .grid {
         grid-template-columns: 1fr;
     }
+
+    
 }
 
 @media (max-width: 480px) {
@@ -862,4 +864,53 @@ body {
         height: 302px;
         width: 182px;
     }
+}
+
+/* when we add .move-left/.move-right, cards slide further out */
+.card-wrapper.left.move-left {
+  /* exaggerate the X-offset so the left card peeks out fully */
+  transform: rotate(-10deg) translateX(-150%);
+}
+.card-wrapper.right.move-right {
+  transform: rotate(10deg) translateX(150%);
+}
+
+/* styled label under each card */
+.card-label {
+  position: absolute;
+  bottom: -3rem;               /* sits just below the card */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(30, 41, 59, 0.85);
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  color: #c084fc;              /* your accent/purple */
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+}
+
+/* once the card is flipped, fade the label in */
+.tarot-card.flipped + .card-label {
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .card-wrapper.left.move-left {
+    transform: rotate(-10deg) translateX(-150%);
+  }
+  .card-wrapper.right.move-right {
+    transform: rotate(10deg) translateX(150%);
+  }
+}
+@media (max-width: 767px) {
+  .card-wrapper.left.move-left,
+  .card-wrapper.right.move-right {
+    /* no movement on small screens */
+    transform: none;
+  }
 }

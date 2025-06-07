@@ -299,121 +299,139 @@ centerCard.addEventListener('mouseenter', () => {
     }
 });
 
-// Draw button listener
-drawButton.addEventListener('click', drawThreeCards);
+
+function resetBoard() {
+  // wrappers
+  document.querySelectorAll('.card-wrapper')
+    .forEach(w => w.classList.remove('move-left','move-right'));
+
+  // cards
+  ['leftCard','centerCard','rightCard'].forEach(id => {
+    const c = document.getElementById(id);
+    c.classList.remove('flipped','glow');
+  });
+
+  // labels
+  ['leftCardLabel','presentCardLabel','rightCardLabel'].forEach(id => {
+    document.getElementById(id).textContent = '';
+  });
+}
+
+// :
+drawButton.addEventListener('click', () => {
+  resetBoard();
+  drawThreeCards();
+});
 
 
-// ─────────────────────────────────────────────────────────────────────────────
 // 7) CORE FUNCTION: drawThreeCards()
-// ─────────────────────────────────────────────────────────────────────────────
-
 function drawThreeCards() {
-    // 1) Make sure the deck is loaded
-    if (tarotDeck.length === 0) {
-        alert("Tarot deck data is not yet loaded. Please wait a moment and try again.");
-        return;
-    }
+  // ─── RESET from any previous draw ───────────────────────────────
 
-    // 2) Grab the user's question
-    currentQuestion = userQuestion.value.trim() || "Seeking general guidance";
-    displayedQuestion.textContent = currentQuestion;
-    questionDisplay.classList.remove('hidden');
-
-    // 3) Hide the input and draw button
+    document.getElementById('questionInputSection').classList.add('hidden');
     userQuestion.classList.add('hidden');
     drawButton.classList.add('hidden');
 
-    // 5) Play flip sound if available
-    if (flipSound) {
-        flipSound.currentTime = 0;
-        flipSound.play().catch(e => console.log("Sound play prevented by browser policy"));
+    // 1) remove move-left/move-right from the wrappers
+    document.querySelectorAll('.card-wrapper')
+    .forEach(w => w.classList.remove('move-left','move-right'));
+
+    // 2) remove flip/glow/shuffle from the cards themselves
+    [leftCard, centerCard, rightCard].forEach(c =>
+    c.classList.remove('flipped','glow','shuffle-animation')
+    );
+
+    // 3) clear out any old labels
+    [leftCardLabel, presentCardLabel, rightCardLabel].forEach(lbl =>lbl.textContent = '');
+
+    // ─── OLD startup logic (deck check, question grab, hide UI) ──────
+    if (tarotDeck.length === 0) {
+    alert("Tarot deck data is not yet loaded. Please wait a moment and try again.");
+    return;
     }
+    currentQuestion = userQuestion.value.trim() || "Seeking general guidance";
+    displayedQuestion.textContent = currentQuestion;
+    questionDisplay.classList.remove('hidden');
+    userQuestion.classList.add('hidden');
+    drawButton.classList.add('hidden');
 
-    // 6) Trigger particle effects
+    // play sound, particles, shuffle classes…
+    if (flipSound) {
+    flipSound.currentTime = 0;
+    flipSound.play().catch(e => console.log("Sound play prevented"));
+    }
     createParticles();
+    document.querySelectorAll('.tarot-card')
+    .forEach(card => card.classList.add('shuffle-animation'));
 
-    // 7) Add a “shuffling” animation to all cards
-    const allCards = document.querySelectorAll('.tarot-card');
-    allCards.forEach(card => card.classList.add('shuffle-animation'));
-
-    // After 1.5 seconds: remove shuffle, swirl, pick cards, then flip
+    // ─── after 1.5s: pick + show ────────────────────────────────────
     setTimeout(() => {
-        // 7a) Remove shuffle animation
-        allCards.forEach(card => card.classList.remove('shuffle-animation'));
+    // remove shuffle, swirl, pick cards…
+    document.querySelectorAll('.tarot-card')
+        .forEach(card => card.classList.remove('shuffle-animation'));
+    createSwirl();
 
-        // 7b) Create the swirl animation on the center
-        createSwirl();
+    const pastCard    = getRandomCard();
+    const presentCard = getRandomCard();
+    const futureCard  = getRandomCard();
 
-        // 7c) Choose three random cards + orientations
-        const pastCard = getRandomCard();
-        const presentCard = getRandomCard();
-        const futureCard = getRandomCard();
+    currentReading.past    = pastCard;
+    currentReading.present = presentCard;
+    currentReading.future  = futureCard;
 
-        // Store cards for later use
-        currentReading.past = pastCard;
-        currentReading.present = presentCard;
-        currentReading.future = futureCard;
+    // 7d) set the images & reversed classes
+    leftCardImage.src   = pastCard.card.img;
+    centerCardImage.src = presentCard.card.img;
+    rightCardImage.src  = futureCard.card.img;
+    leftCardImage.classList.toggle('reversed', pastCard.isReversed);
+    centerCardImage.classList.toggle('reversed', presentCard.isReversed);
+    rightCardImage.classList.toggle('reversed', futureCard.isReversed);
 
-        // 7d) Set card images
-        leftCardImage.src = pastCard.card.img;
-        centerCardImage.src = presentCard.card.img;
-        rightCardImage.src = futureCard.card.img;
+    // ─── 7e) NEW: set your single label under each card ───────────
+    leftCardLabel.textContent    = `${pastCard.card.name} — ${pastCard.card.arcana}`;
+    presentCardLabel.textContent = `${presentCard.card.name} — ${presentCard.card.arcana}`;
+    rightCardLabel.textContent   = `${futureCard.card.name} — ${futureCard.card.arcana}`;
 
-        // Apply reversed class if needed
-        leftCardImage.classList.toggle('reversed', pastCard.isReversed);
-        centerCardImage.classList.toggle('reversed', presentCard.isReversed);
-        rightCardImage.classList.toggle('reversed', futureCard.isReversed);
+    // hide any old detail boxes…
+    cardDetailsBox.classList.remove('show');
 
-        // 7e) Set card names and arcana
-        leftCardNameElem.textContent = pastCard.card.name;
-        leftCardArcanaElem.textContent = pastCard.card.arcana;
-        centerCardNameElem.textContent = presentCard.card.name;
-        centerCardArcanaElem.textContent = presentCard.card.arcana;
-        rightCardNameElem.textContent = futureCard.card.name;
-        rightCardArcanaElem.textContent = futureCard.card.arcana;
+    // ─── 7f) FLIP & MOVE ──────────────────────────────────────────
+    setTimeout(() => {
+        const leftWrapper  = document.querySelector('.card-wrapper.left');
+        const rightWrapper = document.querySelector('.card-wrapper.right');
+        leftWrapper.classList.add('move-left');
+        rightWrapper.classList.add('move-right');
 
-        // Hide card details until flip completes
-        cardDetailsBox.classList.remove('show');
+        leftCard.classList.add('flipped','glow');
+        centerCard.classList.add('flipped','glow');
+        rightCard.classList.add('flipped','glow');
 
-        // 7f) FLIP ALL THREE CARDS AFTER A BRIEF PAUSE
+        // 7g) show your post-flip buttons
         setTimeout(() => {
-            leftCard.classList.add('flipped');
-            centerCard.classList.add('flipped');
-            rightCard.classList.add('flipped');
-            
-            // Add glow effect to all cards
-            leftCard.classList.add('glow');
-            centerCard.classList.add('glow');
-            rightCard.classList.add('glow');
+        drawAgainButton.classList.remove('hidden');
+        shareButton.classList.remove('hidden');
+        }, 500);
 
-            // 7g) SHOW “DRAW AGAIN” & “SHARE READING” BUTTONS AFTER FLIP
-            setTimeout(() => {
-                drawAgainButton.classList.remove('hidden');
-                shareButton.classList.remove('hidden');
-            }, 500);
+        // 7h) interpretations & history
+        populateInterpretation(leftCardInterpret,   pastCard);
+        populateInterpretation(centerCardInterpret, presentCard);
+        populateInterpretation(rightCardInterpret,  futureCard);
+        interpretContainer.classList.remove('hidden');
 
-            // 7h) POPULATE INTERPRETATIONS
-            populateInterpretation(leftCardInterpret, pastCard);
-            populateInterpretation(centerCardInterpret, presentCard);
-            populateInterpretation(rightCardInterpret, futureCard);
-            interpretContainer.classList.remove('hidden');
-
-            // 7i) ADD THIS READING TO HISTORY & UPDATE LIST
-            const reading = {
-                past: pastCard,
-                present: presentCard,
-                future: futureCard,
-                question: currentQuestion,
-                timestamp: new Date().toLocaleString()
-            };
-            readingHistory.unshift(reading);
-            if (readingHistory.length > 10) readingHistory.pop();
-            localStorage.setItem('tarotHistory', JSON.stringify(readingHistory));
-            updateHistoryList();
-        }, 300);
+        const reading = {
+        past:      pastCard,
+        present:   presentCard,
+        future:    futureCard,
+        question:  currentQuestion,
+        timestamp: new Date().toLocaleString()
+        };
+        readingHistory.unshift(reading);
+        if (readingHistory.length > 10) readingHistory.pop();
+        localStorage.setItem('tarotHistory', JSON.stringify(readingHistory));
+        updateHistoryList();
+    }, 300);
     }, 1500);
 }
-
 // Helper to get a random card with reversal status
 function getRandomCard() {
     const randomIndex = Math.floor(Math.random() * tarotDeck.length);
@@ -761,7 +779,7 @@ function generatePDF() {
 
   document.body.appendChild(container);
 
-  // 3) wait for fonts & images
+  // Wait for fonts & images
   Promise.all([
     document.fonts.ready,
     ...Array.from(container.querySelectorAll('img')).map(img => new Promise(res => {
