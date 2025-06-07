@@ -80,8 +80,8 @@ body {
 /* This block controls the height of cards */
 .card-face {
     position: absolute;
-    width: 100%;
-    height: 85%;
+    width: 94%;
+    height: 77%;
     backface-visibility: hidden;
     border-radius: 18px;
     display: flex;
@@ -579,11 +579,11 @@ body {
     justify-content: center;
     align-items: flex-end;
     position: relative;
-    height: 450px;
+    height: 440px;
     width: 100%;
     /* TOP AND BOTTOM MARGINS ADJUSTED */
-    margin-top: 0rem;    /* Reduced by 4 units (1rem) */
-    margin-bottom: -1rem; /* Increased by 0.5rem (2 units) */
+    margin-top: -1rem;    /* Reduced by 4 units (1rem) */
+    margin-bottom: -2rem; /* Increased by 0.5rem (2 units) */
 }
 
 .card-wrapper {
@@ -612,10 +612,6 @@ body {
     margin-top: 3rem;
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0) rotate(-1deg); }
-    50% { transform: translateY(-15px) rotate(1deg); }
-}
 
 @keyframes twinkle {
     0% { opacity: 0.2; }
@@ -853,15 +849,13 @@ body {
     }
 }
 
-
-/* ───────────────────────────────────────────────────────────────────────── */
 /* ─── 1) REDUCE EVERY TAROT CARD’S DIMENSIONS BY 10px ───────────────────── */
 /* Note: The original dimensions in your CSS were 372×232 (desktop) and 312×192 (mobile),
    so we subtract 10px from each side.                                          */
 
 /* Desktop */
 .tarot-card {
-    height: 400px;  /* was 372px */
+    height: 380px;  /* was 372px */
     width:  222px;  /* was 232px */
 }
 
