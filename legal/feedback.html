@@ -3,181 +3,169 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>User Feedback | Mystic Tarot - Free Tarot Card Generator</title>
-  <meta name="description" content="See what users are saying about Mystic Tarot's free online tarot card generator. Honest reviews and magical feedback from real tarot enthusiasts." />
-  <meta name="keywords" content="tarot card generator feedback, user review tarot, best ai tarot card generator, free tarot card reading online, random tarot card generator reviews" />
-  <meta name="author" content="Mystic Tarot Team" />
+  <title>User Feedback | tarotcardgenerator.online</title>
+  <meta name="description" content="Read real user reviews of the tarotcardgenerator.online experience. Honest feedback from tarot lovers around the world.">
+  <meta name="keywords" content="tarot feedback, tarot reviews, ai tarot user experience, tarotcardgenerator.online testimonials, tarot generator opinions">
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Social Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tarotcardgenerator.online/feedback.html" />
+  <meta property="og:title" content="User Feedback | tarotcardgenerator.online" />
+  <meta property="og:description" content="See what real users are saying about tarotcardgenerator.online — magical and insightful tarot readings, every time." />
+  <meta property="og:image" content="https://tarotcardgenerator.online/assets/og-image.jpg" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://tarotcardgenerator.online/feedback.html" />
+  <meta name="twitter:title" content="User Feedback | tarotcardgenerator.online" />
+  <meta name="twitter:description" content="See what real users are saying about tarotcardgenerator.online — magical and insightful tarot readings, every time." />
+  <meta name="twitter:image" content="https://tarotcardgenerator.online/assets/og-image.jpg" />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <!-- External CSS -->
-  <link rel="stylesheet" href="/styles/index.css" />
-
-  <!-- Site Icon / Favicon -->
   <link rel="icon" href="/assets/icons/site-icon-32.png" type="image/x-icon" />
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QSWHND4TS3"></script>
-  <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-QSWHND4TS3');
-  </script>
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="/styles/homepage.css" />
 </head>
 
-<body class="bg-gradient-to-br from-gray-900 via-indigo-950 to-black text-white font-playfair">
-  <!-- Animated Background Elements -->
-  <div class="starry-bg" id="starry-bg"></div>
-  <div class="mystical-mist"></div>
-  <div class="crystal-ball top-1/4 left-1/4"></div>
-  <div class="crystal-ball bottom-1/4 right-1/4"></div>
-  <div class="particles" id="particles"></div>
+<body>
+  <!-- BACKGROUND EFFECTS -->
+  <canvas id="starfield"></canvas>
+  <div class="spotlight"></div>
 
-  <!-- Header -->
-  <header class="main-header mt-6 mb-12">
-    <div class="header-center">
-      <h1 class="text-4xl md:text-5xl font-cinzel shimmer-text main-title">Mystic Tarot</h1>
-    </div>
-    <div class="header-right">
-      <button id="historyButton" class="text-purple-300 hover:text-white" aria-label="View reading history">
-        <i class="fas fa-history text-2xl"></i>
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="/" class="logo">Tarot Card Generator</a>
+    <div class="header-controls">
+      <select class="lang-select" aria-label="Select Language">
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="de">Deutsch</option>
+        <option value="fr">Français</option>
+      </select>
+      <button class="mute-btn" aria-label="Toggle Sound">
+        <i class="fas fa-volume-mute"></i>
       </button>
-      <button id="settingsButton" class="text-purple-300 hover:text-white" aria-label="Change settings">
-        <i class="fas fa-cog text-2xl"></i>
+      <button class="menu-btn" aria-label="Menu">
+        <i class="fas fa-ellipsis-v"></i>
       </button>
     </div>
   </header>
 
-  <!-- Feedback Section -->
-  <main class="max-w-4xl mx-auto px-6 py-10 bg-purple-900 bg-opacity-60 rounded-xl shadow-xl backdrop-blur-lg">
-    <h2 class="font-cinzel text-3xl text-purple-200 mb-10 text-center">What Our Users Say</h2>
+  <!-- MAIN -->
+  <main>
+    <section class="seo-cards-container">
+      <div class="seo-card">
+        <h2 style="color: #fad16f; text-align: center; margin-bottom: 2rem;">What Our Users Say</h2>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-      <!-- Feedback Card 1 -->
-      <div class="bg-indigo-950 p-6 rounded-2xl border border-purple-500 shadow-lg transform rotate-2">
-        <p class="text-purple-100 mb-4 italic">“The most intuitive tarot card generator I’ve ever used. The reversals and meanings feel so personal. I’m amazed!”</p>
-        <div class="flex items-center">
-          <i class="fas fa-user-circle text-3xl text-purple-400 mr-3"></i>
-          <div>
-            <p class="font-semibold text-purple-200">Lena M.</p>
-            <p class="text-sm text-purple-400">Astrology Enthusiast</p>
+        <!-- Feedback Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+          <!-- Feedback Card 1 -->
+          <div style="background-color: rgba(0,0,0,0.2); border: 1px solid #fad16f; border-radius: 1rem; padding: 1.5rem; transform: rotate(2deg);">
+            <p style="color: #fff; font-style: italic;">“The most intuitive tarot card generator I’ve ever used. The reversals and meanings feel so personal. I’m amazed!”</p>
+            <div style="display: flex; align-items: center; margin-top: 1rem;">
+              <i class="fas fa-user-circle" style="font-size: 1.75rem; color: #fad16f; margin-right: 0.5rem;"></i>
+              <div>
+                <p style="margin: 0; font-weight: bold; color: #fad16f;">Lena M.</p>
+                <p style="margin: 0; font-size: 0.85rem; color: #ccc;">Astrology Enthusiast</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feedback Card 2 -->
+          <div style="background-color: rgba(0,0,0,0.2); border: 1px solid #fad16f; border-radius: 1rem; padding: 1.5rem; transform: rotate(-2deg);">
+            <p style="color: #fff; font-style: italic;">“I love using this <strong>random tarot card generator</strong> every morning—it’s my daily moment of clarity and magic.”</p>
+            <div style="display: flex; align-items: center; margin-top: 1rem;">
+              <i class="fas fa-user-circle" style="font-size: 1.75rem; color: #fad16f; margin-right: 0.5rem;"></i>
+              <div>
+                <p style="margin: 0; font-weight: bold; color: #fad16f;">Carlos T.</p>
+                <p style="margin: 0; font-size: 0.85rem; color: #ccc;">Spiritual Blogger</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feedback Card 3 -->
+          <div style="background-color: rgba(0,0,0,0.2); border: 1px solid #fad16f; border-radius: 1rem; padding: 1.5rem; transform: rotate(1deg);">
+            <p style="color: #fff; font-style: italic;">“This site helped me reconnect with tarot. It’s the <strong>best AI tarot card generator</strong> I’ve found—no fluff, just deep insight.”</p>
+            <div style="display: flex; align-items: center; margin-top: 1rem;">
+              <i class="fas fa-user-circle" style="font-size: 1.75rem; color: #fad16f; margin-right: 0.5rem;"></i>
+              <div>
+                <p style="margin: 0; font-weight: bold; color: #fad16f;">Ravi N.</p>
+                <p style="margin: 0; font-size: 0.85rem; color: #ccc;">Meditation Coach</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feedback Card 4 -->
+          <div style="background-color: rgba(0,0,0,0.2); border: 1px solid #fad16f; border-radius: 1rem; padding: 1.5rem; transform: rotate(-1deg);">
+            <p style="color: #fff; font-style: italic;">“The <strong>tarot card generator with meaning</strong> made everything easy to understand, even for a beginner like me. Thank you!”</p>
+            <div style="display: flex; align-items: center; margin-top: 1rem;">
+              <i class="fas fa-user-circle" style="font-size: 1.75rem; color: #fad16f; margin-right: 0.5rem;"></i>
+              <div>
+                <p style="margin: 0; font-weight: bold; color: #fad16f;">Jasmine A.</p>
+                <p style="margin: 0; font-size: 0.85rem; color: #ccc;">New to Tarot</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feedback Card 5 -->
+          <div style="background-color: rgba(0,0,0,0.2); border: 1px solid #fad16f; border-radius: 1rem; padding: 1.5rem; transform: rotate(3deg);">
+            <p style="color: #fff; font-style: italic;">“So glad I found this. The <strong>online free tarot card reading</strong> is spot on. It’s my go-to whenever I’m stuck.”</p>
+            <div style="display: flex; align-items: center; margin-top: 1rem;">
+              <i class="fas fa-user-circle" style="font-size: 1.75rem; color: #fad16f; margin-right: 0.5rem;"></i>
+              <div>
+                <p style="margin: 0; font-weight: bold; color: #fad16f;">Amira Z.</p>
+                <p style="margin: 0; font-size: 0.85rem; color: #ccc;">Student & Dreamer</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Feedback Card 2 -->
-      <div class="bg-indigo-950 p-6 rounded-2xl border border-purple-500 shadow-lg transform -rotate-3">
-        <p class="text-purple-100 mb-4 italic">“I love using this <strong>random tarot card generator</strong> every morning—it’s my daily moment of clarity and magic.”</p>
-        <div class="flex items-center">
-          <i class="fas fa-user-circle text-3xl text-purple-400 mr-3"></i>
-          <div>
-            <p class="font-semibold text-purple-200">Carlos T.</p>
-            <p class="text-sm text-purple-400">Spiritual Blogger</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Feedback Card 3 -->
-      <div class="bg-indigo-950 p-6 rounded-2xl border border-purple-500 shadow-lg transform rotate-1">
-        <p class="text-purple-100 mb-4 italic">“This site helped me reconnect with tarot. It’s the <strong>best AI tarot card generator</strong> I’ve found—no fluff, just deep insight.”</p>
-        <div class="flex items-center">
-          <i class="fas fa-user-circle text-3xl text-purple-400 mr-3"></i>
-          <div>
-            <p class="font-semibold text-purple-200">Ravi N.</p>
-            <p class="text-sm text-purple-400">Meditation Coach</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Feedback Card 4 -->
-      <div class="bg-indigo-950 p-6 rounded-2xl border border-purple-500 shadow-lg transform -rotate-2">
-        <p class="text-purple-100 mb-4 italic">“The <strong>tarot card generator with meaning</strong> made everything easy to understand, even for a beginner like me. Thank you!”</p>
-        <div class="flex items-center">
-          <i class="fas fa-user-circle text-3xl text-purple-400 mr-3"></i>
-          <div>
-            <p class="font-semibold text-purple-200">Jasmine A.</p>
-            <p class="text-sm text-purple-400">New to Tarot</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Feedback Card 5 -->
-      <div class="bg-indigo-950 p-6 rounded-2xl border border-purple-500 shadow-lg transform rotate-3">
-        <p class="text-purple-100 mb-4 italic">“So glad I found this. The <strong>online free tarot card reading</strong> is spot on. It’s my go-to whenever I’m stuck.”</p>
-        <div class="flex items-center">
-          <i class="fas fa-user-circle text-3xl text-purple-400 mr-3"></i>
-          <div>
-            <p class="font-semibold text-purple-200">Amira Z.</p>
-            <p class="text-sm text-purple-400">Student & Dreamer</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <p class="text-center text-purple-200 mt-12 text-sm italic">
-      Want to share your experience with our <strong>tarot card generator free online</strong>? Reach out anytime @ <a href="/contact-us.html"> here </a>! We love hearing from our community.
-    </p>
-  </main>
-
-  <!-- Footer Navigation -->
-  <footer class="footer-nav mt-20">
-    <div class="footer-container">
-      <div class="footer-brand">
-        <h2 class="font-cinzel text-2xl mb-4 shimmer-text">Mystic Tarot</h2>
-        <p class="text-purple-200 font-playfair">
-          Discover the ancient wisdom of tarot to illuminate your path and guide your journey through life's mysteries.
+        <p style="text-align: center; margin-top: 2rem; font-style: italic; color: #ccc;">
+          Want to share your experience with our <strong>tarot card generator free online</strong>? Reach out <a href="/contact-us.html" style="color: #fad16f;">here</a> — we love hearing from you.
         </p>
       </div>
+    </section>
+  </main>
 
-      <div class="footer-links">
-        <div class="footer-column">
-          <h3 class="footer-title">Information</h3>
-          <a href="#" class="footer-link">About Us</a>
-          <a href="#" class="footer-link">How It Works</a>
-          <a href="#" class="footer-link">Tarot Guide</a>
-          <a href="#" class="footer-link">Testimonials</a>
-        </div>
-
-        <div class="footer-column">
-          <h3 class="footer-title">Legal</h3>
-          <a href="#" class="footer-link">Terms & Conditions</a>
-          <a href="/privacy-policy.html" class="footer-link">Privacy Policy</a>
-          <a href="#" class="footer-link">Disclaimer</a>
-          <a href="#" class="footer-link">Cookie Policy</a>
-        </div>
-
-        <div class="footer-column">
-          <h3 class="footer-title">Support</h3>
-          <a href="/contact-us.html" class="footer-link">Contact Us</a>
-          <a href="/faq.html" class="footer-link">FAQs</a>
-          <a href="/support-us.html" class="footer-link">Support Us</a>
-          <a href="/feedback.html" class="footer-link">Feedback</a>
-        </div>
-
-        <div class="footer-column">
-          <h3 class="footer-title">Connect</h3>
-          <a href="#" class="footer-link"><i class="fab fa-facebook mr-2"></i> Facebook</a>
-          <a href="#" class="footer-link"><i class="fab fa-instagram mr-2"></i> Instagram</a>
-          <a href="#" class="footer-link"><i class="fab fa-twitter mr-2"></i> Twitter</a>
-          <a href="#" class="footer-link"><i class="fab fa-pinterest mr-2"></i> Pinterest</a>
-        </div>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <h2>tarotcardgenerator.online</h2>
+      <p>Discover the ancient wisdom of tarot to illuminate your path and guide your journey through life’s mysteries.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Information</h4>
+        <a href="/legal/about-us.html">About Us</a>
+        <a href="/information/how-it-works.html">How It Works</a>
+        <a href="/information/tarot-guide.html">Tarot Guide</a>
+        <a href="/information/testimonials.html">Testimonials</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="/legal/terms-and-conditions.html">Terms &amp; Conditions</a>
+        <a href="/legal/privacy-policy.html">Privacy Policy</a>
+        <a href="/legal/disclaimer.html">Disclaimer</a>
+        <a href="/legal/cookie-policy.html">Cookie Policy</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="/legal/contact-us.html">Contact Us</a>
+        <a href="/information/faq.html">FAQs</a>
+        <a href="/legal/support-us.html">Support Us</a>
+        <a href="/legal/feedback.html">Feedback</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="#"><i class="fab fa-pinterest"></i> Pinterest</a>
       </div>
     </div>
-
-    <div class="copyright">
-      <p>© 2023 Mystic Tarot Readings • All spiritual guidance is for reflection and personal growth</p>
-      <p class="mt-2">tarotcardgenerator.online</p>
+    <div class="footer-bottom">
+      <p>© 2025 tarotcardgenerator.online. All rights reserved.</p>
     </div>
   </footer>
+
+  <script src="/scripts/homepage.js"></script>
 </body>
 </html>

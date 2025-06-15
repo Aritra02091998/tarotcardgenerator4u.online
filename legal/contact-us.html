@@ -1,149 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us | Mystic Tarot - Free Online Tarot Card Readings</title>
-  <meta name="description" content="Get in touch with the Mystic Tarot team for questions, concerns, or support related to your tarot reading experience. We're here to help." />
-  <meta name="keywords" content="contact mystic tarot, tarot card support, tarot help, dispute tarot reading, tarot question, contact tarot card generator" />
-  <meta name="author" content="Mystic Tarot Team" />
+  <!--───────────────────────────────────────────────────────────────────
+    Page Metadata & SEO
+  ────────────────────────────────────────────────────────────────────-->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Contact Us | tarotcardgenerator.online</title>
+  <meta name="description" content="Contact tarotcardgenerator.online for support, feedback, and technical questions. We’re here to help with your tarot card reading experience.">
+  <meta name="keywords" content="contact tarot site, tarot help, support tarot readings, tarotcardgenerator.online support, get in touch tarot">
+  <meta name="author" content="tarotcardgenerator.online Team">
 
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
-    rel="stylesheet"
-  />
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://tarotcardgenerator.online/contact-us.html">
+  <meta property="og:title"       content="Contact Us | tarotcardgenerator.online">
+  <meta property="og:description" content="Contact tarotcardgenerator.online for support, feedback, and technical questions. We’re here to help with your tarot card reading experience.">
+  <meta property="og:image"       content="https://tarotcardgenerator.online/assets/og-image.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:url"         content="https://tarotcardgenerator.online/contact-us.html">
+  <meta name="twitter:title"       content="Contact Us | tarotcardgenerator.online">
+  <meta name="twitter:description" content="Contact tarotcardgenerator.online for support, feedback, and technical questions.">
+  <meta name="twitter:image"       content="https://tarotcardgenerator.online/assets/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/icons/site-icon-32.png" type="image/x-icon">
 
   <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
   />
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="/styles/index.css" />
-
-  <!-- Site Icon / Favicon -->
-  <link rel="icon" href="/assets/icons/site-icon-32.png" type="image/x-icon" />
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QSWHND4TS3"></script>
-  <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-QSWHND4TS3');
-  </script>
-  
+  <!-- Site Stylesheet -->
+  <link rel="stylesheet" href="/styles/homepage.css">
 </head>
+<body>
 
-<body class="bg-gradient-to-br from-gray-900 via-indigo-950 to-black text-white font-playfair">
-  <!-- Animated Background Elements -->
-  <div class="starry-bg" id="starry-bg"></div>
-  <div class="mystical-mist"></div>
-  <div class="crystal-ball top-1/4 left-1/4"></div>
-  <div class="crystal-ball bottom-1/4 right-1/4"></div>
-  <div class="particles" id="particles"></div>
+  <!-- BACKGROUND EFFECTS -->
+  <canvas id="starfield"></canvas>
+  <div class="spotlight"></div>
 
-  <!-- Header -->
-  <header class="main-header mt-6 mb-12">
-    <div class="header-center">
-      <h1 class="text-4xl md:text-5xl font-cinzel shimmer-text main-title">Mystic Tarot</h1>
-    </div>
-    <div class="header-right">
-      <button id="historyButton" class="text-purple-300 hover:text-white" aria-label="View reading history">
-        <i class="fas fa-history text-2xl"></i>
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="/" class="logo">Tarot Card Generator</a>
+    <div class="header-controls">
+      <div class="lang-select-wrapper">
+        <select class="lang-select" aria-label="Select Language">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="de">Deutsch</option>
+          <option value="fr">Français</option>
+        </select>
+      </div>
+      <button class="mute-btn" aria-label="Toggle Sound">
+        <i class="fas fa-volume-mute"></i>
       </button>
-      <button id="settingsButton" class="text-purple-300 hover:text-white" aria-label="Change settings">
-        <i class="fas fa-cog text-2xl"></i>
+      <button class="menu-btn" aria-label="Menu">
+        <i class="fas fa-ellipsis-v"></i>
       </button>
     </div>
   </header>
 
-  <!-- Contact Section -->
-  <main class="max-w-4xl mx-auto px-6 py-10 bg-purple-900 bg-opacity-60 rounded-xl shadow-xl backdrop-blur-lg">
-    <h2 class="font-cinzel text-3xl text-purple-200 mb-6 text-center">Contact Us</h2>
+  <!-- MAIN CONTENT: Contact Us -->
+  <main>
+    <section class="seo-cards-container">
+      <div class="seo-card">
+        <h2>Contact Us</h2>
 
-    <p class="mb-4 text-purple-100">
-      At Mystic Tarot, your trust and experience are sacred to us. If you encounter any disputes, inaccuracies in readings, or issues using our <strong>free tarot card generator</strong>, we welcome you to reach out.
-    </p>
+        <p>We value your trust and your journey. If you encounter any issues, questions, or concerns while using tarotcardgenerator.online, please don’t hesitate to contact us.</p>
 
-    <h3 class="font-cinzel text-xl text-purple-300 mt-6 mb-2">Support & Inquiries</h3>
-    <p class="mb-4 text-purple-100">
-      For concerns regarding technical issues, card interpretations, or general feedback about our website, you can contact our admin team directly.
-    </p>
+        <h3>Support & Inquiries</h3>
+        <p>For feedback, technical issues, or clarifications about card meanings or the experience, please contact our support team. We're always open to improving your experience.</p>
 
-    <h3 class="font-cinzel text-xl text-purple-300 mt-6 mb-2">Dispute Resolution</h3>
-    <p class="mb-4 text-purple-100">
-      Should you believe any reading outcome was incorrect or misleading due to a technical or thematic error, please describe the experience so our team can investigate and assist.
-    </p>
+        <h3>Dispute Resolution</h3>
+        <p>If you believe your tarot reading was misleading or technically flawed, feel free to let us know with full details. We'll investigate and provide a thoughtful response.</p>
 
-    <h3 class="font-cinzel text-xl text-purple-300 mt-6 mb-2">Email Us</h3>
-    <p class="mb-4 text-purple-100">
-      You can reach us anytime at: <br />
-      <a href="mailto:admins@tarotcardgenerator.com" class="text-purple-300 underline hover:text-white">
-        admins@tarotcardgenerator.com
-      </a>
-    </p>
+        <h3>Email Us</h3>
+        <p>
+        You can reach us directly at:<br>
+        <a href="mailto:admins@tarotcardgenerator.com" style="font-size: 1.8rem;color: #fad16f; text-decoration: none;" class="highlight-link">
+            admins@tarotcardgenerator.com
+        </a>
+        </p>
 
-    <p class="text-purple-100">
-      We aim to respond within 48 hours. Thank you for trusting Mystic Tarot with your spiritual journey.
-    </p>
+        <p>We typically respond within 48 hours. Thank you for using tarotcardgenerator.online as your guide through symbolic wisdom.</p>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer Navigation -->
-  <footer class="footer-nav mt-20">
-    <div class="footer-container">
-      <div class="footer-brand">
-        <h2 class="font-cinzel text-2xl mb-4 shimmer-text">Mystic Tarot</h2>
-        <p class="text-purple-200 font-playfair">
-          Discover the ancient wisdom of tarot to illuminate your path and guide your journey through life's mysteries.
-        </p>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <h2>tarotcardgenerator.online</h2>
+      <p>Discover the ancient wisdom of tarot to illuminate your path and guide your journey through life’s mysteries.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Information</h4>
+        <a href="/legal/about-us.html">About Us</a>
+        <a href="/information/how-it-works.html">How It Works</a>
+        <a href="/information/tarot-guide.html">Tarot Guide</a>
+        <a href="/information/testimonials.html">Testimonials</a>
       </div>
-
-      <div class="footer-links">
-        <div class="footer-column">
-          <h3 class="footer-title">Information</h3>
-          <a href="#" class="footer-link">About Us</a>
-          <a href="#" class="footer-link">How It Works</a>
-          <a href="#" class="footer-link">Tarot Guide</a>
-          <a href="#" class="footer-link">Testimonials</a>
-        </div>
-
-        <div class="footer-column">
-          <h3 class="footer-title">Legal</h3>
-          <a href="#" class="footer-link">Terms & Conditions</a>
-          <a href="/privacy-policy.html" class="footer-link">Privacy Policy</a>
-          <a href="#" class="footer-link">Disclaimer</a>
-          <a href="#" class="footer-link">Cookie Policy</a>
-        </div>
-
-        <div class="footer-column">
-          <h3 class="footer-title">Support</h3>
-          <a href="/contact-us.html" class="footer-link">Contact Us</a>
-          <a href="#" class="footer-link">FAQs</a>
-          <a href="#" class="footer-link">Support Us</a>
-          <a href="#" class="footer-link">Feedback</a>
-        </div>
-
-        <div class="footer-column">
-          <h3 class="footer-title">Connect</h3>
-          <a href="#" class="footer-link"><i class="fab fa-facebook mr-2"></i> Facebook</a>
-          <a href="#" class="footer-link"><i class="fab fa-instagram mr-2"></i> Instagram</a>
-          <a href="#" class="footer-link"><i class="fab fa-twitter mr-2"></i> Twitter</a>
-          <a href="#" class="footer-link"><i class="fab fa-pinterest mr-2"></i> Pinterest</a>
-        </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="/legal/terms-and-conditions.html">Terms &amp; Conditions</a>
+        <a href="/legal/privacy-policy.html">Privacy Policy</a>
+        <a href="/legal/disclaimer.html">Disclaimer</a>
+        <a href="/legal/cookie-policy.html">Cookie Policy</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="/legal/contact-us.html">Contact Us</a>
+        <a href="/information/faq.html">FAQs</a>
+        <a href="/legal/support-us.html">Support Us</a>
+        <a href="/legal/feedback.html">Feedback</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="#"><i class="fab fa-pinterest"></i> Pinterest</a>
       </div>
     </div>
-
-    <div class="copyright">
-      <p>© 2023 Mystic Tarot Readings • All spiritual guidance is for reflection and personal growth</p>
-      <p class="mt-2">tarotcardgenerator.online</p>
+    <div class="footer-bottom">
+      <p>© 2025 tarotcardgenerator.online. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- JavaScript for Background Animation -->
+  <script src="/scripts/homepage.js"></script>
 </body>
 </html>

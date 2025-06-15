@@ -1,162 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy | Mystic Tarot - Free Online Tarot Card Readings</title>
-  <meta name="description" content="Read Mystic Tarot's privacy policy to learn how your data is handled during free online tarot card readings. Discover our commitment to your privacy." />
-  <meta name="keywords" content="privacy policy, tarot privacy, online tarot reading, free tarot card reading, mystic tarot website, tarot readings data policy" />
-  <meta name="author" content="Mystic Tarot Team" />
+  <!--───────────────────────────────────────────────────────────────────
+    Page Metadata & SEO
+  ────────────────────────────────────────────────────────────────────-->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Privacy Policy | Mystic Tarot</title>
+  <meta name="description" content="Read Mystic Tarot's privacy policy to learn how your data is handled during free online tarot card readings.">
+  <meta name="keywords" content="privacy policy, tarot privacy, online tarot reading, free tarot card reading, mystic tarot website, tarot readings data policy">
 
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
-    rel="stylesheet"
-  />
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://your-domain.com/privacy-policy.html">
+  <meta property="og:title"       content="Privacy Policy | Mystic Tarot">
+  <meta property="og:description" content="Read Mystic Tarot's privacy policy to learn how your data is handled during free online tarot card readings.">
+  <meta property="og:image"       content="https://your-domain.com/assets/og-image.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:url"         content="https://your-domain.com/privacy-policy.html">
+  <meta name="twitter:title"       content="Privacy Policy | Mystic Tarot">
+  <meta name="twitter:description" content="Read Mystic Tarot's privacy policy to learn how your data is handled during free online tarot card readings.">
+  <meta name="twitter:image"       content="https://your-domain.com/assets/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/icons/site-icon-32.png" type="image/x-icon">
 
   <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-…"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
   />
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="/styles/index.css" />
-  
-  <!-- Site Icon / Favicon -->
-  <link rel="icon" href="/assets/icons/site-icon-32.png" type="image/x-icon" />
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QSWHND4TS3"></script>
-  <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-QSWHND4TS3');
-  </script>
-  
+  <!-- Site Stylesheet -->
+  <link rel="stylesheet" href="/styles/homepage.css">
 </head>
+<body>
 
-<body class="bg-gradient-to-br from-gray-900 via-indigo-950 to-black text-white font-playfair">
-  <!-- Animated Background Elements -->
-  <div class="starry-bg" id="starry-bg"></div>
-  <div class="mystical-mist"></div>
-  <div class="crystal-ball top-1/4 left-1/4"></div>
-  <div class="crystal-ball bottom-1/4 right-1/4"></div>
-  <div class="particles" id="particles"></div>
+    <!-- BACKGROUND EFFECTS -->
+    <canvas id="starfield"></canvas>
+    <div class="spotlight"></div>
 
-  <!-- Header -->
-  <header class="main-header mt-6 mb-12">
-    <div class="header-center">
-      <h1 class="text-4xl md:text-5xl font-cinzel shimmer-text main-title">Mystic Tarot</h1>
-    </div>
-    <div class="header-right">
-      <button id="historyButton" class="text-purple-300 hover:text-white" aria-label="View reading history">
-        <i class="fas fa-history text-2xl"></i>
-      </button>
-      <button id="settingsButton" class="text-purple-300 hover:text-white" aria-label="Change settings">
-        <i class="fas fa-cog text-2xl"></i>
-      </button>
-    </div>
-  </header>
-
-  <!-- Privacy Policy Section -->
-  <main class="max-w-4xl mx-auto px-6 py-10 bg-purple-900 bg-opacity-60 rounded-xl shadow-xl backdrop-blur-lg">
-    <h2 class="font-cinzel text-3xl text-purple-200 mb-6 text-center">Privacy Policy</h2>
-
-    <p class="mb-4 text-purple-100">
-      At our free tarot card generator online, your privacy is important to us. This Privacy Policy outlines how we collect and manage your information during your experience with our <strong>free online tarot card readings</strong> and other mystic features.
-    </p>
-
-    <h3 class="font-cinzel text-xl text-purple-300 mt-6 mb-2">1. Information We Collect</h3>
-    <p class="mb-4 text-purple-100">
-      We collect anonymous, non-personal data including session details, user interactions, and preferences. When using features such as reading history, questions are stored locally within your browser for your convenience.
-    </p>
-
-    <h3 class="font-cinzel text-xl text-purple-300 mt-6 mb-2">2. How We Use Information</h3>
-    <p class="mb-4 text-purple-100">
-      Your information is used to enhance your user experience, deliver personalized tarot readings online, and allow access to your history. We never sell, share, or distribute your data to third parties.
-    </p>
-
-    <h3 class="font-cinzel text-xl text-purple-300 mt-6 mb-2">3. Cookies & Local Storage</h3>
-    <p class="mb-4 text-purple-100">
-      We use browser-based local storage to save your session preferences and reading history. This enhances the tarot reading journey. You may clear this data anytime via the history panel or your browser settings.
-    </p>
-
-    <h3 class="font-cinzel text-xl text-purple-300 mt-6 mb-2">4. External Services</h3>
-    <p class="mb-4 text-purple-100">
-      We integrate services like Google Fonts, Tailwind CSS, and Font Awesome. These providers may use cookies or analytics to collect general usage statistics.
-    </p>
-
-    <h3 class="font-cinzel text-xl text-purple-300 mt-6 mb-2">5. Security</h3>
-    <p class="mb-4 text-purple-100">
-      While we strive to secure your data on our <strong>free tarot card generator tarot website</strong>, no system is completely risk-free. Please refrain from entering highly sensitive or personally identifying information.
-    </p>
-
-    <h3 class="font-cinzel text-xl text-purple-300 mt-6 mb-2">6. Changes to This Policy</h3>
-    <p class="mb-4 text-purple-100">
-      This Privacy Policy may be revised periodically. We encourage regular review to stay informed of updates to our privacy practices for your online tarot reading experience.
-    </p>
-
-    <h3 class="font-cinzel text-xl text-purple-300 mt-6 mb-2">7. Contact</h3>
-    <p class="mb-4 text-purple-100">
-      If you have questions or feedback regarding this policy or your data usage during tarot card readings, feel free to contact us through our support page.
-    </p>
-  </main>
-
-  <!-- Footer Navigation -->
-  <footer class="footer-nav mt-20">
-    <div class="footer-container">
-      <div class="footer-brand">
-        <h2 class="font-cinzel text-2xl mb-4 shimmer-text">Mystic Tarot</h2>
-        <p class="text-purple-200 font-playfair">
-          Discover the ancient wisdom of tarot to illuminate your path and guide your journey through life's mysteries.
-        </p>
-      </div>
-
-      <div class="footer-links">
-        <div class="footer-column">
-          <h3 class="footer-title">Information</h3>
-          <a href="#" class="footer-link">About Us</a>
-          <a href="#" class="footer-link">How It Works</a>
-          <a href="#" class="footer-link">Tarot Guide</a>
-          <a href="#" class="footer-link">Testimonials</a>
+    <!-- HEADER (same as homepage) -->
+    <header class="site-header">
+    <a href="/" class="logo">Tarot Card Generator</a>
+    <div class="header-controls">
+        <div class="lang-select-wrapper">
+        <select class="lang-select" aria-label="Select Language">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Français</option>
+        </select>
         </div>
-
-        <div class="footer-column">
-          <h3 class="footer-title">Legal</h3>
-          <a href="#" class="footer-link">Terms & Conditions</a>
-          <a href="/privacy-policy.html" class="footer-link">Privacy Policy</a>
-          <a href="#" class="footer-link">Disclaimer</a>
-          <a href="#" class="footer-link">Cookie Policy</a>
-        </div>
-
-        <div class="footer-column">
-          <h3 class="footer-title">Support</h3>
-          <a href="#" class="footer-link">Contact Us</a>
-          <a href="#" class="footer-link">FAQs</a>
-          <a href="#" class="footer-link">Support Us</a>
-          <a href="#" class="footer-link">Feedback</a>
-        </div>
-
-        <div class="footer-column">
-          <h3 class="footer-title">Connect</h3>
-          <a href="#" class="footer-link"><i class="fab fa-facebook mr-2"></i> Facebook</a>
-          <a href="#" class="footer-link"><i class="fab fa-instagram mr-2"></i> Instagram</a>
-          <a href="#" class="footer-link"><i class="fab fa-twitter mr-2"></i> Twitter</a>
-          <a href="#" class="footer-link"><i class="fab fa-pinterest mr-2"></i> Pinterest</a>
-        </div>
-      </div>
+        <button class="mute-btn" aria-label="Toggle Sound">
+        <i class="fas fa-volume-mute"></i>
+        </button>
+        <button class="menu-btn" aria-label="Menu">
+        <i class="fas fa-ellipsis-v"></i>
+        </button>
     </div>
+    </header>
 
-    <div class="copyright">
-      <p>© 2024 Mystic Tarot Readings • All spiritual guidance is for reflection and personal growth</p>
-      <p class="mt-2">tarotcardgenerator.online</p>
-    </div>
-  </footer>
-</body>
+    <!-- MAIN CONTENT: Privacy Policy -->
+    <main>
+        <section class="seo-cards-container">
+            <div class="seo-card">
+                <h2>Privacy Policy</h2>
+
+                <p>At our free tarot card generator online, your privacy is important to us. This Privacy Policy outlines how we collect and manage your information during your experience with our free online tarot card readings and other mystic features.</p>
+
+                <h3>1. Information We Collect</h3>
+                <p>We collect anonymous, non-personal data including session details, user interactions, and preferences. When using features such as reading history, questions are stored locally within your browser for your convenience.</p>
+
+                <h3>2. How We Use Information</h3>
+                <p>Your information is used to enhance your user experience, deliver personalized tarot readings online, and allow access to your history. We never sell, share, or distribute your data to third parties.</p>
+
+                <h3>3. Cookies & Local Storage</h3>
+                <p>We use browser-based local storage to save your session preferences and reading history. This enhances the tarot reading journey. You may clear this data anytime via the history panel or your browser settings.</p>
+
+                <h3>4. External Services</h3>
+                <p>We integrate services like Google Fonts and Font Awesome. These providers may use cookies or analytics to collect general usage statistics.</p>
+
+                <h3>5. Security</h3>
+                <p>While we strive to secure your data on our free tarot card generator website, no system is completely risk-free. Please refrain from entering highly sensitive or personally identifying information.</p>
+
+                <h3>6. Changes to This Policy</h3>
+                <p>This Privacy Policy may be revised periodically. We encourage regular review to stay informed of updates to our privacy practices for your online tarot reading experience.</p>
+
+                <h3>7. Contact</h3>
+                <p>If you have questions or feedback regarding this policy or your data usage during tarot card readings, feel free to contact us through our support page.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (same as homepage) -->
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <h2>Mystic Tarot</h2>
+            <p>Discover the ancient wisdom of tarot to illuminate your path and guide your journey through life’s mysteries.</p>
+        </div>
+        <div class="footer-links">
+            <div class="footer-col">
+            <h4>Information</h4>
+            <a href="/legal/about-us.html">About Us</a>
+            <a href="/information/how-it-works.html">How It Works</a>
+            <a href="/information/tarot-guide.html">Tarot Guide</a>
+            <a href="/information/testimonials.html">Testimonials</a>
+            </div>
+            <div class="footer-col">
+            <h4>Legal</h4>
+            <a href="/legal/terms-and-conditions.html">Terms &amp; Conditions</a>
+            <a href="/legal/privacy-policy.html">Privacy Policy</a>
+            <a href="/legal/disclaimer.html">Disclaimer</a>
+            <a href="/legal/cookie-policy.html">Cookie Policy</a>
+            </div>
+            <div class="footer-col">
+            <h4>Support</h4>
+            <a href="/legal/contact-us.html">Contact Us</a>
+            <a href="/information/faq.html">FAQs</a>
+            <a href="/legal/support-us.html">Support Us</a>
+            <a href="/legal/feedback.html">Feedback</a>
+            </div>
+            <div class="footer-col">
+            <h4>Connect</h4>
+            <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#"><i class="fab fa-pinterest"></i> Pinterest</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Mystic Tarot. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!--JavaScript: Starfield Animation-->
+    <script src="/scripts/homepage.js"></script>
+    </body>
 </html>

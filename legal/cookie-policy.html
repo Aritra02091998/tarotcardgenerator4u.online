@@ -1,155 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cookie Policy - Mystic Tarot Card Generator</title>
+  <!--───────────────────────────────────────────────────────────────────
+    Page Metadata & SEO
+  ────────────────────────────────────────────────────────────────────-->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Cookie Policy | tarotcardgenerator.online</title>
+  <meta name="description" content="Learn how tarotcardgenerator.online uses cookies to enhance your tarot reading experience. We respect your privacy while offering the best free AI tarot generator.">
+  <meta name="keywords" content="cookie policy, tarot site cookies, tarotcardgenerator.online cookies, tarot privacy, free online tarot generator cookies">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://tarotcardgenerator.online/cookie-policy.html">
+  <meta property="og:title"       content="Cookie Policy | tarotcardgenerator.online">
+  <meta property="og:description" content="Learn how tarotcardgenerator.online uses cookies to enhance your tarot reading experience. We respect your privacy while offering the best free AI tarot generator.">
+  <meta property="og:image"       content="https://tarotcardgenerator.online/assets/og-image.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:url"         content="https://tarotcardgenerator.online/cookie-policy.html">
+  <meta name="twitter:title"       content="Cookie Policy | tarotcardgenerator.online">
+  <meta name="twitter:description" content="Learn how tarotcardgenerator.online uses cookies to enhance your tarot reading experience.">
+  <meta name="twitter:image"       content="https://tarotcardgenerator.online/assets/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/icons/site-icon-32.png" type="image/x-icon">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="/styles/index.css" />
-  <meta name="description" content="Learn about how Mystic Tarot's tarot card generator uses cookies to enhance your free online tarot card reading experience. Discover how the best AI tarot card generator protects your privacy." />
-  
-  <!-- Site Icon / Favicon -->
-  <link rel="icon" href="/assets/icons/site-icon-32.png" type="image/x-icon" />
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QSWHND4TS3"></script>
-  <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-QSWHND4TS3');
-  </script>
-
+  <!-- Site Stylesheet -->
+  <link rel="stylesheet" href="/styles/homepage.css">
 </head>
+<body>
 
-<body class="bg-gradient-to-br from-gray-900 via-indigo-950 to-black text-white font-playfair">
-  <!-- Animated Background Elements -->
-  <div class="starry-bg" id="starry-bg"></div>
-  <div class="mystical-mist"></div>
-  <div class="crystal-ball top-1/4 left-1/4"></div>
-  <div class="crystal-ball bottom-1/4 right-1/4"></div>
-  <div class="particles" id="particles"></div>
+  <!-- BACKGROUND EFFECTS -->
+  <canvas id="starfield"></canvas>
+  <div class="spotlight"></div>
 
-  <!-- Header -->
-  <header class="main-header mt-6 mb-12">
-    <div class="header-center">
-      <h1 class="text-4xl md:text-5xl font-cinzel shimmer-text main-title">Mystic Tarot</h1>
-    </div>
-    <div class="header-right">
-      <button id="historyButton" class="text-purple-300 hover:text-white" aria-label="View reading history">
-        <i class="fas fa-history text-2xl"></i>
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="/" class="logo">Tarot Card Generator</a>
+    <div class="header-controls">
+      <div class="lang-select-wrapper">
+        <select class="lang-select" aria-label="Select Language">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="de">Deutsch</option>
+          <option value="fr">Français</option>
+        </select>
+      </div>
+      <button class="mute-btn" aria-label="Toggle Sound">
+        <i class="fas fa-volume-mute"></i>
       </button>
-      <button id="settingsButton" class="text-purple-300 hover:text-white" aria-label="Change settings">
-        <i class="fas fa-cog text-2xl"></i>
+      <button class="menu-btn" aria-label="Menu">
+        <i class="fas fa-ellipsis-v"></i>
       </button>
     </div>
   </header>
 
-  <!-- Cookie Policy Section -->
-  <main class="max-w-4xl mx-auto px-6 py-10 bg-purple-900 bg-opacity-60 rounded-xl shadow-xl backdrop-blur-lg">
-    <h2 class="font-cinzel text-3xl text-purple-200 mb-6 text-center">Cookie Policy</h2>
+  <!-- MAIN CONTENT: Cookie Policy -->
+  <main>
+    <section class="seo-cards-container">
+      <div class="seo-card">
+        <h2>Cookie Policy</h2>
 
-    <p class="mb-4 text-purple-100">
-      Welcome to Mystic Tarot — your trusted <strong>tarot card generator free online</strong> for insightful and mystical readings. This Cookie Policy outlines how cookies and similar technologies enhance your experience while using our <strong>random tarot card generator</strong>, 3-card spreads, and other personalized features.
-    </p>
+        <p>Welcome to <strong>tarotcardgenerator.online</strong> — your trusted AI tarot card generator for mystical insights. This Cookie Policy explains how cookies and similar technologies are used to improve your experience while using our tarot readings and features.</p>
 
-    <h3 class="font-cinzel text-xl text-purple-300 mt-6 mb-2">1. What Are Cookies?</h3>
-    <p class="mb-4 text-purple-100">
-      Cookies are small text files placed on your browser that help our <strong>tarot card generator</strong> remember user preferences. They allow us to deliver tailored features like reverse meanings in our <strong>tarot card generator with reversals</strong> and save reading history for reflection.
-    </p>
+        <h3>1. What Are Cookies?</h3>
+        <p>Cookies are small text files saved in your browser to help websites remember you. At tarotcardgenerator.online, cookies help power features like reversed tarot readings, deck selection, and saving your reading history.</p>
 
-    <h3 class="font-cinzel text-xl text-purple-300 mt-6 mb-2">2. How We Use Cookies</h3>
-    <p class="mb-4 text-purple-100">
-      Our <strong>best AI tarot card generator</strong> uses local storage and session-based cookies to:
-      <ul class="list-disc pl-6 mt-2 text-purple-100">
-        <li>Support accurate and non-repetitive card draws in our <strong>random tarot card generator</strong></li>
-        <li>Store your questions for deeper <strong>tarot card generator reading</strong></li>
-        <li>Save selected decks or spread styles in <strong>3 tarot card generator</strong> mode</li>
-        <li>Enhance user experience for those exploring <strong>generate tarot card</strong> tools online</li>
-      </ul>
-    </p>
+        <h3>2. How We Use Cookies</h3>
+        <p>We use local storage and session cookies to:</p>
+        <ul>
+          <li>Enable accurate random card draws</li>
+          <li>Store your past questions for reflection</li>
+          <li>Save spread layouts or deck preferences</li>
+          <li>Enhance your experience across sessions</li>
+        </ul>
 
-    <h3 class="font-cinzel text-xl text-purple-300 mt-6 mb-2">3. No Third-Party Tracking</h3>
-    <p class="mb-4 text-purple-100">
-      Mystic Tarot respects your privacy. Our platform avoids third-party cookies, advertising trackers, and intrusive analytics. Your sessions with the <strong>tarot card generator with meaning</strong> are sacred, private, and intended solely for your spiritual journey.
-    </p>
+        <h3>3. No Third-Party Tracking</h3>
+        <p>We respect your privacy. This site does not use third-party tracking cookies or advertising analytics. Your tarot sessions remain private and anonymous.</p>
 
-    <h3 class="font-cinzel text-xl text-purple-300 mt-6 mb-2">4. Your Control Over Cookies</h3>
-    <p class="mb-4 text-purple-100">
-      You may reset your reading history and preferences at any time through the History Panel or by clearing your browser's cache. This includes removing cookies related to your <strong>online free tarot card reading</strong> experience.
-    </p>
+        <h3>4. Your Control Over Cookies</h3>
+        <p>You can clear your tarot history and cookies anytime via the History Panel or your browser settings. You’re always in control of your spiritual data.</p>
 
-    <h3 class="font-cinzel text-xl text-purple-300 mt-6 mb-2">5. Updates to This Policy</h3>
-    <p class="mb-4 text-purple-100">
-      We may occasionally update this Cookie Policy to reflect platform changes or enhancements in our <strong>free tarot reading online free</strong> features. Continued use of Mystic Tarot implies your agreement to the latest version.
-    </p>
+        <h3>5. Updates to This Policy</h3>
+        <p>This Cookie Policy may be updated as we improve tarotcardgenerator.online. Continued use of the platform implies your agreement with the latest version.</p>
 
-    <h3 class="font-cinzel text-xl text-purple-300 mt-6 mb-2">6. Contact Us</h3>
-    <p class="mb-4 text-purple-100">
-      For inquiries about cookies, your data, or our <strong>random tarot card generator yes or no</strong> feature, please use the Contact form available on the website.
-    </p>
+        <h3>6. Contact Us</h3>
+        <p>For any questions regarding cookies or data usage, please reach out via our Contact Us page.</p>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer Navigation -->
-  <footer class="footer-nav mt-20">
-    <div class="footer-container">
-      <div class="footer-brand">
-        <h2 class="font-cinzel text-2xl mb-4 shimmer-text">Mystic Tarot</h2>
-        <p class="text-purple-200 font-playfair">
-          Experience a journey into your intuition with the <strong>best AI tarot card generator</strong>. Mystic Tarot combines ancient wisdom with modern tools to <strong>generate tarot cards</strong> tailored to your energy.
-        </p>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <h2>tarotcardgenerator.online</h2>
+      <p>Discover the ancient wisdom of tarot to illuminate your path and guide your journey through life’s mysteries.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Information</h4>
+        <a href="/legal/about-us.html">About Us</a>
+        <a href="/information/how-it-works.html">How It Works</a>
+        <a href="/information/tarot-guide.html">Tarot Guide</a>
+        <a href="/information/testimonials.html">Testimonials</a>
       </div>
-
-      <div class="footer-links">
-        <div class="footer-column">
-          <a href="/" class="footer-link">Home</a>
-          <h3 class="footer-title">Information</h3>
-          <a href="#" class="footer-link">About Us</a>
-          <a href="/information/how-it-works.html" class="footer-link">How It Works</a>
-          <a href="#" class="footer-link">Tarot Guide</a>
-        </div>
-
-        <div class="footer-column">
-          <h3 class="footer-title">Legal</h3>
-          <a href="/terms.html" class="footer-link">Terms & Conditions</a>
-          <a href="/privacy-policy.html" class="footer-link">Privacy Policy</a>
-          <a href="/disclaimer.html" class="footer-link">Disclaimer</a>
-          <a href="/cookie-policy.html" class="footer-link">Cookie Policy</a>
-        </div>
-
-        <div class="footer-column">
-          <h3 class="footer-title">Support</h3>
-          <a href="#" class="footer-link">Contact Us</a>
-          <a href="#" class="footer-link">FAQs</a>
-          <a href="#" class="footer-link">Support Us</a>
-          <a href="#" class="footer-link">Feedback</a>
-        </div>
-
-        <div class="footer-column">
-          <h3 class="footer-title">Connect</h3>
-          <a href="#" class="footer-link"><i class="fab fa-facebook mr-2"></i> Facebook</a>
-          <a href="#" class="footer-link"><i class="fab fa-instagram mr-2"></i> Instagram</a>
-          <a href="#" class="footer-link"><i class="fab fa-twitter mr-2"></i> Twitter</a>
-          <a href="#" class="footer-link"><i class="fab fa-pinterest mr-2"></i> Pinterest</a>
-        </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="/legal/terms-and-conditions.html">Terms &amp; Conditions</a>
+        <a href="/legal/privacy-policy.html">Privacy Policy</a>
+        <a href="/legal/disclaimer.html">Disclaimer</a>
+        <a href="/legal/cookie-policy.html">Cookie Policy</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="/legal/contact-us.html">Contact Us</a>
+        <a href="/information/faq.html">FAQs</a>
+        <a href="/legal/support-us.html">Support Us</a>
+        <a href="/legal/feedback.html">Feedback</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="#"><i class="fab fa-pinterest"></i> Pinterest</a>
       </div>
     </div>
-
-    <div class="copyright">
-      <p>© 2023 Mystic Tarot Readings • Embrace spiritual guidance through your personal <strong>tarot card generator</strong> experience.</p>
-      <p class="mt-2">tarotcardgenerator.online</p>
+    <div class="footer-bottom">
+      <p>© 2025 tarotcardgenerator.online. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- JavaScript for Background Animation -->
+  <script src="/scripts/homepage.js"></script>
 </body>
 </html>
