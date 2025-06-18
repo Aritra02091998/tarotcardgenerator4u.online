@@ -123,9 +123,10 @@ header button:hover {
   transform-style: preserve-3d;
   cursor: pointer;
   /*transition: transform .55s ease, box-shadow .35s, opacity .35s;*/
-  transition: transform .9s cubic-bezier(.25,.7,.3,1),
-            width    1.8s cubic-bezier(.25,.7,.3,1),
-            height   1.8s cubic-bezier(.25,.7,.3,1),
+  transition: 
+            transform .9s cubic-bezier(.25,.7,.3,1),
+            width 1.8s cubic-bezier(.25,.7,.3,1),
+            height 1.8s cubic-bezier(.25,.7,.3,1),
             box-shadow .35s,
             opacity .35s;
 }
@@ -142,7 +143,7 @@ header button:hover {
 .face {
   position: absolute;
   inset: 0;
-  border-radius: 8px;
+  border-radius: 10px;
   backface-visibility: hidden;
   overflow: hidden;
 }
@@ -167,15 +168,18 @@ header button:hover {
   opacity: .18;
 }
 
+/* Container in which the image resides*/
 .front {
-  background: #fff;
-  transform: rotateY(180deg);
+    padding-top: 5px;
+    padding-left: 5px;
+    background: #fff;
+    transform: rotateY(180deg);
 }
 
+/*Controls the zooming of the image in the card*/
 .front img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 108%;
 }
 
 #prompt {
@@ -236,6 +240,7 @@ header button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 1.5rem;
 }
 
 .view .card {
@@ -252,10 +257,12 @@ header button:hover {
 
 .card-title {
   font-family: 'Cinzel Decorative', serif;
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   color: var(--accent);
   margin-top: .8rem;
   text-align: center;
+  text-shadow: 0 0 10px var(--accent);
+
 }
 
 @keyframes dock {
