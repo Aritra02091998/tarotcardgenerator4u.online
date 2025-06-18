@@ -97,61 +97,67 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function buildFan () {
 
-    const mobile = innerWidth < 768,
-        // only take 11 on small screens, otherwise 21
-        picks  = [...DECK]
-                .sort(() => 0.5 - Math.random())
-                .slice(0, mobile ? 11 : 21),
+        const mobile = innerWidth < 768,
+        // Controls the number of cards 11 on small screens, otherwise 21.
+        picks  = [...DECK].sort(() => 0.5 - Math.random()).slice(0, mobile ? 11 : 19),
         total  = picks.length,
-        r      = fan.clientWidth * 0.83 / 2, 
-        cx     = fan.clientWidth / 2,
-        cy     = 60;
 
-    picks.forEach((card, i) => {
+        // r is the radius of the deck fan circle.
+        r = fan.clientWidth * 0.95 / 2, 
+        cx = fan.clientWidth / 2,
+        cy = 60;
 
-        /* ---------- final position depends on screen size ---------- */
-        let final, z = 0;
+        picks.forEach((card, i) => {
 
-        if (mobile) {                            /* stacked concertina */
-        const mid   = Math.floor(total / 2),
+            let final, z = 0;
+
+            // arcSpread controls the total degrees the deck fan covers.
+            // startOffset controls where the deck fan will start in the circle
+            const arcSpread  = 120;   
+            const startOffset = 30; 
+
+            if (mobile) {                            /* stacked concertina */
+                const mid = Math.floor(total / 2),
                 step  = 26,                      // horizontal gap
-                x     = (i - mid) * step + cx - 59,
-                y     = cy,
+                x = (i - mid) * step + cx - 59,
+                y = cy,
                 scale = 1 - Math.abs(i - mid) * 0.05;
 
-        final = `translate(${x}px,${y}px) scale(${scale})`;
-        z     = 100 - Math.abs(i - mid);       // middle card on top
-        }
-        else {                                   /* original arc fan  */
-        const ang = (180 / (total - 1)) * i,
-                rad = ang * Math.PI / 180,
-                x   = cx + Math.cos(rad) * r - 59,
-                y   = cy + Math.sin(rad) * r - 85;
+                final = `translate(${x}px,${y}px) scale(${scale})`;
+                z = 100 - Math.abs(i - mid);       // middle card on top
+            }
+            else {            
+                // Original arc fan for Desktop screens.                     
+                const ang = startOffset + (arcSpread / (total - 1)) * i,
 
-        final = `translate(${x}px,${y}px) rotateZ(${ang - 90}deg)`;
-        }
+                        rad = ang * Math.PI / 180,
+                        x   = cx + Math.cos(rad) * r - 59,
+                        y   = cy + Math.sin(rad) * r - 85;
 
-        /* ---------- element creation (unchanged) ---------- */
-        const el = document.createElement('div');
-        el.className      = 'card init';
-        el.style.zIndex   = z;
-        el.style.transform= final + ' scale(.05)';
-        el.style.opacity  = 0;
-        el.innerHTML      = `
-        <div class="face back"></div>
-        <div class="face front"><img alt=""></div>`;
-        el._data = card;
-        el.addEventListener('click', onPick);
-        fan.appendChild(el);
+                final = `translate(${x}px,${y}px) rotateZ(${ang - 90}deg)`;
+            }
 
-        /* stagger-in animation */
-        setTimeout(() => {
-        el.classList.add('show');
-        el.style.transition = 'transform .9s ease, opacity .9s ease';
-        el.style.transform  = final;
-        el.style.opacity    = 1;
-        }, i * 70);
-    });
+            /* ---------- element creation (unchanged) ---------- */
+            const el = document.createElement('div');
+            el.className      = 'card init';
+            el.style.zIndex   = z;
+            el.style.transform= final + ' scale(.05)';
+            el.style.opacity  = 0;
+            el.innerHTML      = `
+            <div class="face back"></div>
+            <div class="face front"><img alt=""></div>`;
+            el._data = card;
+            el.addEventListener('click', onPick);
+            fan.appendChild(el);
+
+            /* stagger-in animation */
+            setTimeout(() => {
+            el.classList.add('show');
+            el.style.transition = 'transform .9s ease, opacity .9s ease';
+            el.style.transform  = final;
+            el.style.opacity    = 1;
+            }, i * 70);
+        });
     }
 
   /* ---------- click-to-draw (same as previous answer) ---------- */

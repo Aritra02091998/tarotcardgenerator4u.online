@@ -97,8 +97,7 @@ header button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 30px;
-  padding-bottom: 200px;
+  padding-bottom: 280px;
 }
 
 #fanWrap {
@@ -107,6 +106,7 @@ header button:hover {
   max-width: 900px;
   height: 340px;
   transition: opacity .6s ease;
+  margin-top: -8rem;
 }
 
 #fan {
@@ -155,9 +155,9 @@ header button:hover {
   box-shadow: 0 0 4px rgba(0, 0, 0, .6);
   background-image:
     linear-gradient(135deg, transparent 45%, rgba(0, 0, 0, .1) 46%, rgba(0, 0, 0, .1) 53%, transparent 54%),
-    radial-gradient(circle at center, #0d0430 0 10%, transparent 11%),
-    radial-gradient(circle at center, #0d0430 0 15%, transparent 16%),
-    repeating-radial-gradient(circle at center, transparent 0 8%, rgba(255, 215, 138, .3) 9% 10%);
+    radial-gradient(circle at center, #BFA46F 0 10%, transparent 11%),
+    radial-gradient(circle at center, #D4AF37 0 15%, transparent 16%),
+    repeating-radial-gradient(circle at center, transparent 0 40%, #D4AF37 9% 10%);
   background-size: 200% 200%, 100%, 100%, 8px 8px;
 }
 
@@ -165,8 +165,9 @@ header button:hover {
   content: '';
   position: absolute;
   inset: 0;
-  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='122' height='174' viewBox='0 0 122 174' fill='none' stroke='%23f8c96d' stroke-width='1.2'><path d='M61 20v134M21 87h80'/><circle cx='61' cy='87' r='40'/><path d='M61 47a40 40 0 110 80 40 40 0 010-80z' opacity='.6'/><path d='M61 55a32 32 0 110 64 32 32 0 010-64z' opacity='.4'/></svg>") center/contain no-repeat;
-  opacity: .18;
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='122' height='174' viewBox='0 0 122 174' fill='none' stroke='%23FFD700' stroke-width='1.2'><path d='M61 20v134M21 87h80'/><circle cx='61' cy='87' r='40'/><path d='M61 47a40 40 0 110 80 40 40 0 010-80z' opacity='.6'/><path d='M61 55a32 32 0 110 64 32 32 0 010-64z' opacity='.4'/></svg>") center/contain no-repeat;
+  opacity: 0.22;
+  pointer-events: none;
 }
 
 /* Container in which the image resides*/
@@ -191,7 +192,11 @@ header button:hover {
   font-family: 'Cinzel Decorative', serif;
   font-size: 1.6rem;
   color: var(--accent);
-  text-shadow: 0 0 8px var(--accent);
+  text-shadow:
+    0 0 8px var(--accent),
+    0 0 16px var(--accent),
+    0 0 24px var(--accent),
+    0 0 32px var(--accent);
 }
 
 /* Animation Classes */
@@ -495,9 +500,14 @@ header button:hover {
     /*end of responsive header*/
 
     .hero {
-        padding-top: 10px;
         padding-bottom: 30px;
     }
+
+    #fanWrap {
+        margin-top: 1.8rem;
+        margin-left: 8.5%;
+    }
+
 
     /* Start of responsive footer */
     .site-footer {
