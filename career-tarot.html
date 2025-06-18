@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Daily Tarot Card | Mystic Tarot</title>
+
+  <!-- ── SEO META ── (copied from homepage) -->
+  <meta name="description" content="Discover our powerful tarot card generator, designed to provide you with instant, meaningful readings.">
+  <meta name="keywords" content="tarot card generator, random tarot generator, free tarot, AI tarot">
+
+  <!-- Facebook -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://your-domain.com/">
+  <meta property="og:title"       content="Daily Tarot Card | Mystic Tarot">
+  <meta property="og:description" content="Discover our powerful tarot card generator, designed to provide you with instant, meaningful readings.">
+  <meta property="og:image"       content="https://your-domain.com/assets/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:url"         content="https://your-domain.com/">
+  <meta name="twitter:title"       content="Daily Tarot Card | Mystic Tarot">
+  <meta name="twitter:description" content="Discover our powerful tarot card generator, designed to provide you with instant, meaningful readings.">
+  <meta name="twitter:image"       content="https://your-domain.com/assets/og-image.jpg">
+
+  <link rel="icon" href="/assets/icons/site-icon-32.png" type="image/x-icon" />
+
+  <!-- Font Awesome & Fonts -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@300;400;600&display=swap"
+        rel="stylesheet" />
+
+  <!-- Your tarot-page CSS (unchanged) -->
+  <link rel="stylesheet" href="/styles/daily-tarot-card-draw.css" />
+</head>
+
+<body>
+    <!-- BACKGROUND (untouched) -->
+    <canvas id="star"></canvas>
+    <div class="sweep"></div>
+
+    <!-- HEADER (exactly from homepage) -->
+    <header class="site-header">
+    <a href="/" class="logo">Tarot Card Generator</a>
+        <div class="header-controls">
+            <div class="lang-select-wrapper">
+            <select class="lang-select" aria-label="Select Language">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="de">Deutsch</option>
+                <option value="fr">Français</option>
+            </select>
+            </div>
+            <button class="mute-btn" aria-label="Toggle Sound"><i class="fas fa-volume-mute"></i></button>
+            <button class="menu-btn" aria-label="Menu"><i class="fas fa-ellipsis-v"></i></button>
+        </div>
+    </header>
+
+    <!-- HERO (your existing tarot-fan markup) -->
+    <section class="hero">
+        <div id="fanWrap">
+        <div id="fan"></div>
+            <p id="prompt-before">Think of YOUR Question</p>
+            <p id="prompt">Select a card for today</p>
+            <p id="prompt-after">Let the UNIVERSE Answer YOU</p>
+        </div>
+        <div id="result">
+        <div class="view" id="view"></div>
+        <div class="info" id="details"></div>
+        </div>
+    </section>
+
+    <div class="psychic-help">
+        <div class="psychic-help__inner">
+            <h2>
+                <i class="fa-solid fa-moon-stars"></i>
+                Get Advice from Gifted Psychics
+            </h2>
+            <p>
+                Feeling lost or stuck? Searching for your soulmate or clarity in life?<br>
+                Receive the guidance you need from gifted psychics, spiritual advisors, and tarot experts.
+            </p>
+            <p class="psychic-help__price">✨ COMING SOON !! ✨</p>
+            <a href="#" class="psychic-help__btn">GET YOUR READING NOW!</a>
+        </div>
+    </div>
+
+    <!-- DIVIDER & SEO (homepage style + content) -->
+    <hr class="section-divider" />
+
+    <section class="seo-cards-container">
+        <div class="seo-card">
+            <h2>The Wisdom of Tarot</h2>
+            <p>Tarot cards have been used for centuries as a tool for introspection, guidance, and divination. Each
+                card in the deck holds symbolic imagery and meaning, offering insights into our lives and the challenges
+                we face. Whether you're seeking clarity on a specific issue or looking for general guidance, the tarot
+                can help illuminate your path.</p>
+            <p>Our AI-powered tarot readings combine ancient wisdom with modern technology to provide you with
+                personalized insights that resonate with your unique situation. The cards you draw are not random—they're
+                selected based on your energy and the questions you bring to the reading.</p>
+        </div>
+        <div class="seo-card">
+            <h2>Tarot Card Generator</h2>
+            <p>Discover our powerful tarot card generator, designed to provide you with instant, meaningful readings.
+                Whether you're a beginner or an experienced reader, the Mystic Tarot card generator delivers clarity and
+                insight. Easily generate a personalized tarot card reading that helps unveil hidden messages and guide
+                your path.</p>
+        </div>
+        <div class="seo-card">
+            <h2>Random Tarot Card Generator</h2>
+            <p>Our random tarot card generator offers spontaneous readings at the click of a button. Perfect for yes-or-no
+                questions and quick insights, this tool draws cards at random and interprets their meanings, providing
+                you with immediate guidance. Use it for daily reflections, journaling prompts, or decision making.</p>
+        </div>
+        <div class="seo-card">
+            <h2>Tarot Card Generator Online</h2>
+            <p>Access our tarot card generator online anytime, anywhere. No downloads or sign-ups required—just visit Mystic
+                Tarot and begin your reading. Get free tarot card readings online on any device, and explore the ancient
+                wisdom of the cards to gain insight into your past, present, and future.</p>
+        </div>
+        <div class="seo-card">
+            <h2>Tarot Card Generator Free</h2>
+            <p>Enjoy our tarot card generator free of charge. Mystic Tarot provides unlimited readings, allowing you to
+                explore various spreads, interpretations, and reversals without spending a dime. Dive into your personal
+                journey with our completely free tarot card reading experience.</p>
+        </div>
+        <div class="seo-card">
+            <h2>Best AI Tarot Card Generator</h2>
+            <p>Experience the best AI tarot card generator with Mystic Tarot. Our advanced AI algorithms interpret card
+                meanings, provide contextual insights, and offer personalized guidance. Combining traditional tarot
+                knowledge with modern AI, we deliver accurate, intuitive readings that resonate with your unique situation.</p>
+        </div>
+    </section>
+    <!-- ▲ SEO from homepage.html :contentReference[oaicite:1]{index=1} -->
+
+    <!-- FOOTER (exactly from homepage) -->
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <h2>Mystic Tarot</h2>
+            <p>Discover the ancient wisdom of tarot to illuminate your path and guide your journey through life’s mysteries.</p>
+        </div>
+        <div class="footer-links">
+            <div class="footer-col">
+                <h4>Information</h4>
+                <a href="/legal/about-us.html">About Us</a>
+                <a href="/information/how-it-works.html">How It Works</a>
+                <a href="/information/tarot-guide.html">Tarot Guide</a>
+                <a href="/information/testimonials.html">Testimonials</a>
+            </div>
+            <div class="footer-col">
+            <h4>Legal</h4>
+                <a href="/legal/terms-and-conditions.html">Terms &amp; Conditions</a>
+                <a href="/legal/privacy-policy.html">Privacy Policy</a>
+                <a href="/legal/disclaimer.html">Disclaimer</a>
+                <a href="/legal/cookie-policy.html">Cookie Policy</a>
+            </div>
+            <div class="footer-col">
+            <h4>Support</h4>
+                <a href="/legal/contact-us.html">Contact Us</a>
+                <a href="/information/faq.html">FAQs</a>
+                <a href="/legal/support-us.html">Support Us</a>
+                <a href="/legal/feedback.html">Feedback</a>
+            </div>
+            <div class="footer-col">
+            <h4>Connect</h4>
+                <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#"><i class="fab fa-pinterest"></i> Pinterest</a>
+            </div>
+        </div>
+    <div class="footer-bottom">
+        <p>© 2025 Mystic Tarot. All rights reserved.</p>
+    </div>
+    </footer>
+
+  <script src="/scripts/career-tarot.js"></script>
+</body>
+</html>
