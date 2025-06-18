@@ -320,83 +320,122 @@ header button:hover {
   box-shadow: 0 0 12px var(--accent);
 }
 
-/* DIVIDER, SEO, FOOTER */
-.divider {
-  width: 82%;
+
+/*SECTION DIVIDER & SEO CARDS (from homepage.css)*/
+.section-divider {
   border: none;
   border-top: 1px solid var(--accent);
-  margin: 0 auto 3rem;
+  margin: 3rem auto;
+  width: 80%;
+  position: relative;
+  z-index: 1;
 }
 
-.seo {
-  padding: 0 1rem 4rem;
+.seo-cards-container {
+  padding: 0 1rem 3rem;
+  position: relative;
+  z-index: 1;
 }
-
-.seo-box {
+.seo-card {
   max-width: 800px;
   margin: 2rem auto;
-  background: rgba(255, 255, 255, .05);
-  border: 1px solid rgba(255, 255, 255, .16);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.2);
   border-radius: 12px;
   padding: 2rem;
 }
-
-.seo-box h2 {
+.seo-card h2 {
   font-family: 'Cinzel Decorative', serif;
   font-size: 1.75rem;
   color: var(--accent);
   text-align: center;
   margin-bottom: 1rem;
 }
-
-.seo-box p {
+.seo-card p {
   font-size: 1rem;
   color: var(--txt-faint);
   line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
-footer {
-  background: var(--footer-bg);
-  color: #999;
-  padding: 2.4rem 2rem 1.4rem;
-  margin-top: auto;
-  font-size: .95rem;
-}
-
-footer .wrap {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
+/*─────────────────────────────────────────────────────────────────────────
+  FOOTER – homepage.css styles
+──────────────────────────────────────────────────────────────────────────*/
+.site-footer {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
   gap: 2rem;
+  background: var(--footer-bg);
+  color: var(--txt-faint);
+  padding: 2.5rem 2rem 1rem;
+  position: relative;
+  z-index: 1;
 }
 
-footer h2 {
+.footer-brand {
+  margin-bottom: 2rem;
+}
+.footer-brand h2 {
   font-family: 'Cinzel Decorative', serif;
   font-size: 1.5rem;
   color: var(--txt);
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
-
-footer a {
-  color: #999;
-  text-decoration: none;
+.footer-brand p {
+  max-width: 400px;
+  line-height: 1.4;
+  color: var(--txt-faint);
+}
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.footer-col {
+  flex: 1;
+  min-width: 140px;
+}
+.footer-col h4 {
+  position: relative;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.1rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -4px;
+  width: 40px; height: 2px;
+  background: var(--accent);
+}
+.footer-col a {
   display: block;
-  margin-bottom: .5rem;
+  color: var(--txt-faint);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s, text-shadow 0.3s;
 }
-
-footer a:hover {
+.footer-col a:hover {
   color: var(--accent);
   text-shadow: 0 0 6px var(--accent);
 }
-
-footer .bottom {
-  width: 100%;
-  border-top: 1px solid rgba(255, 255, 255, .1);
-  text-align: center;
-  padding-top: 1rem;
-  margin-top: 1rem;
+.footer-col a i {
+  margin-right: 0.5rem;
 }
+.footer-bottom {
+  grid-column: 1 / -1;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 1rem;
+  text-align: center;
+}
+.footer-bottom p {
+  font-size: 1.1rem;
+  color: var(--txt-faint);
+}
+
 
 /* RESPONSIVE */
 @media (max-width: 768px){
