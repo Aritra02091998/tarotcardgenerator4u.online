@@ -470,18 +470,19 @@ header button:hover {
         box-shadow: 0 0 12px 4px var(--accent);
     }
 
-  /* make the details panel appear below the card */
-  #result {
-    /* preserve the flex container but switch to vertical stacking */
-    flex-direction: column;
-  }
+    /* make the details panel appear below the card */
+    #result {
+        /* preserve the flex container but switch to vertical stacking */
+        flex-direction: column;
+    }
 
-  .info {
-    /* opt out of flex:1 so width:100% actually takes effect */
-    flex: none;
-    width: 100%;
-  }
-      /*Controls responsive behaviour of header only*/
+    .info {
+        /* opt out of flex:1 so width:100% actually takes effect */
+        flex: none;
+        width: 100%;
+    }
+    
+    /*Controls responsive behaviour of header only*/
     .logo {
         font-family: 'Cinzel Decorative', serif;
         font-size: 1.4rem;
@@ -493,13 +494,13 @@ header button:hover {
     }
     /*end of responsive header*/
 
-
     .hero {
         padding-top: 10px;
         padding-bottom: 30px;
     }
 
-        .site-footer {
+    /* Start of responsive footer */
+    .site-footer {
         display: block;
     }
     .footer-links {
@@ -515,4 +516,6 @@ header button:hover {
         left: 50%;
         transform: translateX(-50%);
     }
+    /* End of footer */
+
 }
