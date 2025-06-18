@@ -201,6 +201,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function showResult(card, mobile) {
     result.style.display = 'flex';
+    document.querySelector('.hero').style.paddingBottom = '0px';
+
 
     requestAnimationFrame(() => {
       const first = card.getBoundingClientRect(),
@@ -243,7 +245,9 @@ document.addEventListener('DOMContentLoaded', () => {
       <p><strong>Meaning:</strong> ${(rev ? c.meanings.shadow : c.meanings.light).join(', ')}</p>
       <p><strong>Fortune Telling:</strong> ${c.fortune_telling.join(', ')}</p>
       <p><strong>Focus&nbsp;On:</strong> ${c.keywords.join(', ')}</p>
-      <button id="again">Draw Again</button>`;
+        <div class="draw-again">
+            <button id="again">Draw Again</button>
+        </div>`;
     details.querySelector('#again').addEventListener('click', () => location.reload());
   }
 
