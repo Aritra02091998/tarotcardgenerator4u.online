@@ -1,131 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- META -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Daily Tarot Card | Mystic Tarot</title>
 
-  <!--  FONTS & ICONS  -->
-  <link rel="icon" href="/assets/icons/site-icon-32.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!--  CORE STYLES  -->
-  <style>
-/*  RESET & VARS  */
-:root{
-  --bg-a:#210044; --bg-b:#56088e;
-  --accent:#f8c96d; --txt:#fff; --txt-faint:#ccc;
-  --footer-bg:#0b091c;
-}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-
-/*  GLOBAL  */
-body{
-  font-family:'Cormorant Garamond',serif;min-height:100vh;display:flex;flex-direction:column;
-  color:var(--txt);background:linear-gradient(135deg,var(--bg-a),var(--bg-b) 50%,var(--bg-a));
-  overflow-x:hidden;
-}
-canvas#star{position:fixed;inset:0;z-index:-2}
-.sweep{position:fixed;top:-30%;left:-25%;width:160vw;height:160vh;pointer-events:none;z-index:-1;
-  background:radial-gradient(circle at 50% 25%,rgba(255,255,255,.13),transparent 60%);
-  animation:sweep 14s ease-in-out infinite}
-@keyframes sweep{0%{transform:translateX(0) rotate(-18deg)}50%{transform:translateX(38vw) rotate(18deg)}100%{transform:translateX(0) rotate(-18deg)}}
-
-/*  HEADER (unchanged)  */
-header{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;font-family:'Cinzel Decorative',serif;z-index:3}
-header a{font-size:1.8rem;color:var(--txt);text-decoration:none}
-header .ctl{display:flex;align-items:center}
-header select{background:transparent;border:1px solid var(--txt);color:var(--txt);padding:.25rem .6rem;border-radius:4px;margin-right:1rem}
-header button{background:none;border:none;color:var(--txt-faint);font-size:1.2rem;margin-left:.7rem;cursor:pointer}
-header button:hover{color:var(--txt)}
-
-/*  HERO & DECK  */
-.hero{
-  position:relative;display:flex;flex-direction:column;align-items:center;
-  padding-top:60px;padding-bottom:380px; /* bottom padding = arc height to avoid overlap */
-}
-#fanWrap{position:relative;width:100%;max-width:900px;height:340px}
-#fan{position:relative;width:100%;height:340px}
-.card{
-  --w:118px;--h:170px;
-  width:var(--w);height:var(--h);position:absolute;transform-style:preserve-3d;cursor:pointer;
-  transition:transform .55s ease,box-shadow .35s,opacity .35s
-}
-.card:hover{transform:translateY(-26px) scale(1.12) rotateY(var(--hoverTilt,0deg));box-shadow:0 0 12px 4px var(--accent)}
-.card.fade{opacity:.05;pointer-events:none}
-.face{position:absolute;inset:0;border-radius:8px;backface-visibility:hidden;overflow:hidden}
-/* back artwork retained from previous file */
-.back{
-  background:#2e1b53;border:1px solid #4f3a75;box-shadow:0 0 4px rgba(0,0,0,.6);
-  background-image:
-    linear-gradient(135deg,transparent 45%,rgba(0,0,0,.1) 46%,rgba(0,0,0,.1) 53%,transparent 54%),
-    radial-gradient(circle at center,#0d0430 0 10%,transparent 11%),
-    radial-gradient(circle at center,#0d0430 0 15%,transparent 16%),
-    repeating-radial-gradient(circle at center,transparent 0 8%,rgba(255,215,138,.3) 9% 10%);
-  background-size:200% 200%,100%,100%,8px 8px;
-}
-.back::after{content:'';position:absolute;inset:0;
-  background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='122' height='174' viewBox='0 0 122 174' fill='none' stroke='%23f8c96d' stroke-width='1.2'><path d='M61 20v134M21 87h80'/><circle cx='61' cy='87' r='40'/><path d='M61 47a40 40 0 110 80 40 40 0 010-80z' opacity='.6'/><path d='M61 55a32 32 0 110 64 32 32 0 010-64z' opacity='.4'/></svg>") center/contain no-repeat;
-  opacity:.18}
-.front{background:#fff;transform:rotateY(180deg)}
-.front img{width:100%;height:100%;object-fit:cover}
-
-/* prompt centred in the semi-circle */
-#prompt{position:absolute;top:62%;left:50%;transform:translate(-50%,-50%);
-        font-family:'Cinzel Decorative',serif;font-size:1.6rem;color:var(--accent);text-shadow:0 0 8px var(--accent);transition:opacity .4s}
-
-/* sparkle */
-@keyframes spark{0%{opacity:0;transform:scale(.2)}50%{opacity:1}100%{opacity:0;transform:scale(1.8)}}
-.spark{position:absolute;inset:0;border-radius:8px;pointer-events:none;background:radial-gradient(circle,var(--accent) 0 20%,transparent 22%);animation:spark .8s ease-out}
-
-/*  RESULT  */
-#result{display:none;max-width:1200px;margin:4rem auto 0;padding:0 1rem;gap:2rem;align-items:flex-start}
-#result.show{display:flex}
-.view{flex:0 0 30%;display:flex;justify-content:center}
-.view .card{--w:238px;--h:344px;cursor:default;animation:dock .9s cubic-bezier(.25,.7,.3,1) forwards}
-.view .card:hover{box-shadow:0 0 12px 4px var(--accent)}   /* still glows */
-@keyframes dock{from{transform:scale(.8) rotateY(180deg)}to{transform:scale(1) rotateY(180deg)}}
-.info{flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.2);padding:2rem;border-radius:12px;font-size:1.2rem;line-height:1.55;opacity:0;animation:fade .9s .4s forwards}
-@keyframes fade{to{opacity:1}}
-.info h2{font-family:'Cinzel Decorative',serif;font-size:2.55rem;color:var(--accent);margin-bottom:.4rem}
-.info h3{font-family:'Cinzel Decorative',serif;font-size:1.55rem;margin-bottom:1rem}
-.info strong{color:var(--accent)}
-.info button{margin-top:1.8rem;padding:.72rem 1.5rem;border:2px solid var(--accent);background:transparent;color:var(--accent);
-             font-family:'Cinzel Decorative',serif;font-size:1rem;cursor:pointer;transition:box-shadow .3s}
-.info button:hover{box-shadow:0 0 12px var(--accent)}
-
-/*  DIVIDER + SEO  */
-.divider{width:82%;border:none;border-top:1px solid var(--accent);margin:0 auto 3rem}
-.seo{padding:0 1rem 4rem}
-.seo-box{max-width:800px;margin:2rem auto;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:2rem}
-.seo-box h2{font-family:'Cinzel Decorative',serif;font-size:1.75rem;color:var(--accent);text-align:center;margin-bottom:1rem}
-.seo-box p{font-size:1rem;color:var(--txt-faint);line-height:1.6}
-
-/*  FOOTER (untouched)  */
-footer{background:var(--footer-bg);color:#999;padding:2.4rem 2rem 1.4rem;margin-top:auto;font-size:.95rem}
-footer .wrap{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:2rem}
-footer h2{font-family:'Cinzel Decorative',serif;font-size:1.5rem;color:var(--txt);margin-bottom:.5rem}
-footer a{color:#999;text-decoration:none;display:block;margin-bottom:.5rem}
-footer a:hover{color:var(--accent);text-shadow:0 0 6px var(--accent)}
-footer .bottom{width:100%;border-top:1px solid rgba(255,255,255,.1);text-align:center;padding-top:1rem;margin-top:1rem}
-
-/*  RESPONSIVE  */
-@media(max-width:768px){
-  #result{flex-direction:column}
-  .view{margin-bottom:2rem}
-  .info{animation:none;opacity:1}
-}
-  </style>
+  <!-- styles -->
+  <link rel="icon" href="/assets/icons/site-icon-32.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />  <!-- ★ animate.css -->
+  <link rel="stylesheet" href="/styles/test.css" />
 </head>
-<body>
 
-  <!-- background -->
+<body>
+  <!-- BACKGROUND -->
   <canvas id="star"></canvas>
   <div class="sweep"></div>
 
-  <!-- header -->
+  <!-- HEADER -->
   <header>
     <a href="/">Tarot Card Generator</a>
     <div class="ctl">
@@ -134,22 +27,22 @@ footer .bottom{width:100%;border-top:1px solid rgba(255,255,255,.1);text-align:c
     </div>
   </header>
 
-  <!-- hero -->
+  <!-- HERO -->
   <section class="hero">
     <div id="fanWrap">
       <div id="fan"></div>
       <p id="prompt">Select a card for today</p>
     </div>
 
-    <!-- result (in hero, replaces deck) -->
+    <!-- RESULT -->
     <div id="result">
       <div class="view" id="view"></div>
       <div class="info" id="details"></div>
     </div>
   </section>
 
-  <!-- divider + SEO -->
-  <hr class="divider">
+  <!-- DIVIDER & SEO -->
+  <hr class="divider" />
   <section class="seo">
     <div class="seo-box"><h2>SEO Block One</h2><p>Dummy text – replace later.</p></div>
     <div class="seo-box"><h2>SEO Block Two</h2><p>Dummy text – replace later.</p></div>
@@ -158,7 +51,7 @@ footer .bottom{width:100%;border-top:1px solid rgba(255,255,255,.1);text-align:c
     <div class="seo-box"><h2>SEO Block Five</h2><p>Dummy text – replace later.</p></div>
   </section>
 
-  <!-- footer -->
+  <!-- FOOTER -->
   <footer>
     <div class="wrap">
       <div style="flex:1 1 240px"><h2>Mystic Tarot</h2><p>Ancient wisdom for the modern seeker.</p></div>
@@ -167,78 +60,7 @@ footer .bottom{width:100%;border-top:1px solid rgba(255,255,255,.1);text-align:c
     <div class="bottom">© 2025 Mystic Tarot – All rights reserved.</div>
   </footer>
 
-  <!--  SCRIPT  -->
-  <script>
-/*  STARFIELD  */
-const cv=document.getElementById('star'),ctx=cv.getContext('2d');
-function size(){cv.width=innerWidth;cv.height=innerHeight}size();addEventListener('resize',size);
-const stars=[...Array(160)].map(()=>({x:Math.random()*cv.width,y:Math.random()*cv.height,r:Math.random()*1.2+.3,vx:(Math.random()-.5)*.05,vy:(Math.random()-.5)*.05,a:Math.random(),da:Math.random()*.015+.005}));
-(function loop(){ctx.clearRect(0,0,cv.width,cv.height);for(const s of stars){s.x+=s.vx;s.y+=s.vy;if(s.x<0||s.x>cv.width)s.vx*=-1;if(s.y<0||s.y>cv.height)s.vy*=-1;s.a+=s.da;if(s.a<=0||s.a>=1)s.da*=-1;ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,2*Math.PI);ctx.fillStyle=`rgba(255,255,255,${s.a})`;ctx.shadowBlur=s.r*4;ctx.shadowColor='#fff';ctx.fill()}requestAnimationFrame(loop)})();
-
-/*  TAROT DECK  */
-const fan=document.getElementById('fan'),promptTxt=document.getElementById('prompt');
-const resultBox=document.getElementById('result'),view=document.getElementById('view'),details=document.getElementById('details');
-let DECK=[];
-fetch('tarot-details.json').then(r=>r.json()).then(d=>{DECK=d.cards;buildFan()});
-
-function buildFan(){
-  const set=[...DECK].sort(()=>.5-Math.random()).slice(0,21),
-        tot=set.length,rad=fan.clientWidth*0.68/2,cx=fan.clientWidth/2,cy=60;
-  set.forEach((c,i)=>{
-    const ang=(180/(tot-1))*i,ra=ang*Math.PI/180,
-          x=cx+Math.cos(ra)*rad-59,y=cy+Math.sin(ra)*rad-85;
-    const el=document.createElement('div');
-    el.className='card';el.style.transform=`translate(${x}px,${y}px) rotateZ(${ang-90}deg)`;
-    el.innerHTML=`<div class="face back"></div><div class="face front"><img alt=""></div>`;
-    el._data=c;el.addEventListener('click',select);fan.appendChild(el);
-  });
-}
-
-function select(e){
-  const sel=e.currentTarget;
-  fan.querySelectorAll('.card').forEach(c=>{if(c!==sel)c.classList.add('fade')});
-  fan.style.pointerEvents='none';promptTxt.style.opacity=0;
-  sel.querySelector('.front img').src=`assets/cards/${sel._data.img}`;
-  sel.appendChild(Object.assign(document.createElement('div'),{className:'spark'}));
-
-  /* freeze element, animate to target */
-  const rect=sel.getBoundingClientRect();const mobile=innerWidth<768;
-  sel.style.position='fixed';sel.style.top=rect.top+'px';sel.style.left=rect.left+'px';sel.style.margin=0;sel.style.zIndex=5;
-  sel.style.transform='rotateY(180deg) scale(1)';
-  const dest=view.getBoundingClientRect();
-  requestAnimationFrame(()=>{
-    sel.style.transition='top 1s ease,left 1s ease,transform 1s ease';
-    if(mobile){
-      sel.style.top=`${resultBox.getBoundingClientRect().top}px`;
-      sel.style.left='50%';sel.style.transform='translateX(-50%) rotateY(180deg) scale(1.25)';
-    }else{
-      sel.style.top=`${dest.top}px`;sel.style.left=`${dest.left}px`;sel.style.transform='rotateY(180deg) scale(1.4)';
-    }
-  });
-
-  sel.addEventListener('transitionend',()=>{
-    sel.style.position='relative';sel.style.top=0;sel.style.left=0;sel.style.transform='rotateY(180deg)';
-    view.appendChild(sel);
-    sel.style.pointerEvents='none';    /* disable clicks but keep hover glow */
-    resultBox.classList.add('show');
-    document.getElementById('fanWrap').remove();   /* remove deck & prompt */
-  },{once:true});
-
-  populateDetails(sel._data);
-}
-
-function populateDetails(card){
-  const rev=Math.random()>.5;
-  details.innerHTML=`
-    <h2>${card.name}</h2>
-    <h3>${card.arcana}</h3>
-    <p><strong>Orientation:</strong> ${rev?'Reversed':'Upright'}</p>
-    <p><strong>Meaning:</strong> ${(rev?card.meanings.shadow:card.meanings.light).join(', ')}</p>
-    <p><strong>Fortune Telling:</strong> ${card.fortune_telling.join(', ')}</p>
-    <p><strong>Focus On:</strong> ${card.keywords.join(', ')}</p>
-    <button id="again">Draw Again</button>`;
-  details.querySelector('#again').addEventListener('click',()=>location.reload());
-}
-  </script>
+  <!-- SCRIPT -->
+  <script src="/scripts/test.js"></script>
 </body>
 </html>
