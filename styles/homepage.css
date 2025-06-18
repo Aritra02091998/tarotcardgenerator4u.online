@@ -327,6 +327,25 @@ body {
         left: 50%;
         transform: translateX(-50%);
     }
+        .hero {
+        text-align: center;
+        padding: 1rem 1rem 1rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    /*Controls responsive behaviour of header only*/
+    .logo {
+        font-family: 'Cinzel Decorative', serif;
+        font-size: 1.4rem;
+        color: var(--text-light);
+        text-decoration: none;
+    }
+    .menu-btn, .mute-btn{
+        display: none;
+    }
+    /*end of responsive header*/
+
     .hero-title {
         font-size: 2rem;
     }
@@ -336,23 +355,7 @@ body {
         margin-bottom: 1.3rem; /* increased gap */
         text-shadow: 0 0 6px var(--accent);
     }
-    .hero {
-        text-align: center;
-        padding: 1rem 1rem 1rem;
-        position: relative;
-        z-index: 1;
-    }
 
-    .logo {
-        font-family: 'Cinzel Decorative', serif;
-        font-size: 1.4rem;
-        color: var(--text-light);
-        text-decoration: none;
-    }
-
-    .menu-btn, .mute-btn{
-        display: none;
-    }
 
     .after-menu-header-1{
         font-size: 1.5rem;

@@ -450,7 +450,7 @@ header button:hover {
     position: static;
     transform: none;
     margin-top: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-align: center;
     }
 
@@ -481,9 +481,38 @@ header button:hover {
     flex: none;
     width: 100%;
   }
+      /*Controls responsive behaviour of header only*/
+    .logo {
+        font-family: 'Cinzel Decorative', serif;
+        font-size: 1.4rem;
+        color: var(--text-light);
+        text-decoration: none;
+    }
+    .menu-btn, .mute-btn{
+        display: none;
+    }
+    /*end of responsive header*/
+
 
     .hero {
         padding-top: 10px;
         padding-bottom: 30px;
+    }
+
+        .site-footer {
+        display: block;
+    }
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .footer-col {
+        width: 100%;
+        text-align: center;
+    }
+    .footer-col h4::after {
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
