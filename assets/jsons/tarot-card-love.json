@@ -1,0 +1,2087 @@
+{
+    "description": "tarot cards and basic information about them, as well as references to corresponding scans",
+    "cards": [
+        {
+            "name": "The Fool",
+            "number": "0",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m00.jpg",
+            "fortune_telling": "Watch for new romantic connections or a fresh start in an existing relationship, Prepare to take a chance on love or a new friendship, An unexpected emotional bond comes your way; open your heart to it",
+            "keywords": [
+                "freedom",
+                "faith",
+                "inexperience",
+                "innocence"
+            ],
+            "meanings": {
+                "light": "Freeing yourself from old relationship patterns, Bringing joyful spontaneity into your emotional bonds, Being open-minded about different forms of love, Taking a courageous leap of faith in a new connection, Trusting your intuition about a romantic prospect, Approaching love with genuine curiosity and excitement, Exploring new depths of emotional connection, Embracing positive change and growth within relationships",
+                "shadow": "Being overly trusting or naive in romantic matters, Taking impulsive and unnecessary risks with your heart, Avoiding commitment or not taking a partner's feelings seriously, Being emotionally distracted or inconsiderate in a relationship, Lacking maturity or experience in handling romantic dynamics, Disregarding established boundaries or expectations in love, Behaving disrespectfully or inappropriately within a connection"
+            },
+            "Archetype": "The Divine Madman",
+            "Hebrew Alphabet": "Aleph/Ox/1",
+            "Numerology": "0 (off the scale; pure potential)",
+            "Elemental": "Air",
+            "Mythical/Spiritual": "Adam before the fall. Christ as a wandering holy madman. Deity wrapped in human flesh. The Holy Spirit.",
+            "Questions to Ask": [
+                "What would I do if I felt free to take a leap?",
+                "How willing am I to be vulnerable and open?",
+                "How might past experiences help in this new situation?"
+            ]
+        },
+        {
+            "name": "The Magician",
+            "number": "1",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m01.jpg",
+            "fortune_telling": "A confident and influential person, possibly masculine energy, is poised to enter or significantly impact your romantic or friendship journey, bringing new possibilities, Your current romantic or friendship dynamics are but a single, crucial thread in the larger tapestry of your emotional growth and destiny, unfolding exactly as it should",
+            "keywords": [
+                "capability",
+                "empowerment",
+                "activity"
+            ],
+            "meanings": {
+                "light": "Proactively taking mindful steps to nurture your emotional connections or pursue new romantic opportunities, Attuning to your inner wisdom and universal signs regarding the right path for your heart and relationships, Allowing pure love and understanding to flow through you, enriching your bonds and inspiring others, Embracing your confident and initiating qualities to build strong, supportive, and balanced partnerships, Fully expressing your true, authentic self within your relationships, fostering deep trust and genuine connection",
+                "shadow": "An inflated sense of self-importance that overshadows the needs and feelings of your partner or friends, Misusing your charm or abilities to control or dominate others in your emotional sphere, Engaging in deceptive tactics or emotional manipulation within your romantic or platonic bonds, An overly assertive or confrontational approach that creates tension and distance in your relationships, Presenting a false or superficial image to attract or impress others, leading to shallow connections, A reluctance to put in the necessary emotional work and dedication to truly nurture and grow your relationships, Opting for easy answers or avoiding difficult but necessary conversations to maintain superficial peace in your emotional life"
+            },
+            "Archetype": "The Ego/The Self",
+            "Hebrew Alphabet": "Beth/House/2",
+            "Numerology": "1 (origins, unity, seeds)",
+            "Elemental": "The Sun/Mercury",
+            "Mythical/Spiritual": "Thoth, the Egyptian god of wisdom, known to the Greeks as Hermes and to the Romans as Mercury. Christ working miracles. Brahma, the Creator.",
+            "Questions to Ask": [
+                "What am I empowered to do?",
+                "How might my abilities come into play?",
+                "To what extent am I making the most of my talents?"
+            ]
+        },
+        {
+            "name": "The High Priestess",
+            "number": "2",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m02.jpg",
+            "fortune_telling": "A new, intriguing connection enters your emotional landscape, Hidden desires or unspoken truths in a relationship might soon come to light, A partner or friend is holding back significant feelings or information",
+            "keywords": [
+                "intuition",
+                "reflection",
+                "purity",
+                "initiation"
+            ],
+            "meanings": {
+                "light": "Trusting your inner wisdom about a romantic partner or friendship dynamics, Deepening your bond through shared inner exploration or unique emotional understanding, Honoring the privacy and sacred space within your relationship, Openly receiving love and emotional support from others, Taking time to deeply understand your feelings before making relationship decisions, Gaining deeper insights into your partner's or friend's true nature through quiet observation, Maintaining the integrity and sanctity of your most intimate connections",
+                "shadow": "Emotional distance or detachment from loved ones, Unhealthy fixation on hidden aspects or perceived deceptions in a relationship, Ignoring your inner voice about a connection, leading to misunderstandings, Over-sharing intimate details prematurely, damaging trust or boundaries, Dismissing crucial intuitive insights about a person or relationship situation, Hesitating to commit or engage meaningfully in relationships when it's needed"
+            },
+            "Archetype": "The Virgin/The Maiden",
+            "Hebrew Alphabet": "Gimel/Camel/3",
+            "Numerology": "2 (division, debate, duality)",
+            "Elemental": "The Moon",
+            "Mythical/Spiritual": "The feminine aspect of divinity, particularity when expressed through virginity, as with the Virgin Mary or Isis.",
+            "Questions to Ask": [
+                "What might a rebel against tradition do?",
+                "What isn't being said or revealed?",
+                "What could be achieved by observing and reflecting?"
+            ]
+        },
+        {
+            "name": "The Empress",
+            "number": "3",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m03.jpg",
+            "fortune_telling": "The blossoming of new love or a new phase of intimacy is on the horizon, potentially involving new family beginnings, Expect a time of heightened sensuality and deep, fulfilling intimacy within your connections, Be mindful of developing unhealthy emotional dependencies or obsessions in your relationships",
+            "keywords": [
+                "fertility",
+                "productivity",
+                "ripeness",
+                "nurturing"
+            ],
+            "meanings": {
+                "light": "Cultivating a deeply supportive and caring atmosphere for yourself and your loved ones, Witnessing your relationships flourish and bring forth beautiful, tangible results, Embracing self-love and finding comfort and joy in physical intimacy, The potential for creating new life, whether literal family or a shared vision/project with a partner, Indulging in the richness and pleasure of shared moments and emotional abundance, Offering profound emotional support and unconditional love to your beloveds, Experiencing fulfilling and joyful sexual expression within your intimate bonds, Actively manifesting and bringing forth positive developments in your love life",
+                "shadow": "Excessive emotional demands or an imbalance in giving and receiving within relationships, A tendency towards selfishness or emotional possessiveness, hindering mutual growth, Overwhelming a partner or friend with excessive affection, leading to a feeling of suffocation, Undermining a loved one's independence through overprotective or controlling behaviors, Becoming overly focused on the 'status' or 'progression' of a relationship, preventing natural connection and joy, Struggling with codependency or unhealthy emotional attachments that drain your energy"
+            },
+            "Archetype": "The Mother",
+            "Hebrew Alphabet": "Daleth/Door/4",
+            "Numerology": "3 (expression, productivity, output)",
+            "Elemental": "Venus",
+            "Mythical/Spiritual": "Gaia, Mother Earth, Ishtar, Demeter\u00d1mature, reproductive female divinity in every form. Also Aphrodite and Turan. ",
+            "Questions to Ask": [
+                "What would a concerned and capable mother do?",
+                "What can I do that would emphasize growth?",
+                "How can I celebrate my own sensuality and sexuality?"
+            ]
+        },
+        {
+            "name": "The Emperor",
+            "number": "4",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m04.jpg",
+            "fortune_telling": "A stable and guiding figure may enter your emotional life, offering protection and structure, You might encounter a partner or friend who provides a sense of dependable authority or mentorship, A relationship may call for establishing clear boundaries and disciplined commitment for mutual growth",
+            "keywords": [
+                "authority",
+                "regulation",
+                "direction",
+                "structure"
+            ],
+            "meanings": {
+                "light": "Taking healthy initiative and responsibility within your connections, Establishing clear and respectful boundaries in your relationships, Providing a stable and guiding presence for your loved ones, Communicating your needs and expectations with directness and clarity, Cultivating self-control and emotional composure that benefits your bonds, Using wisdom and experience to create a secure and loving foundation",
+                "shadow": "Being overly controlling or attempting to micromanage your partner or friends, Stifling the individuality or freedom of expression within your relationships, Stubbornly insisting on your own way without considering others' needs, Adopting an inflexible or dictatorial attitude towards loved ones, Using emotional pressure or coercion to maintain control in your bonds"
+            },
+            "Archetype": "The Father",
+            "Hebrew Alphabet": "He[as]/Window/5, or in some decks, Tzaddi/Fish hook/90",
+            "Numerology": "4 (stability, equality, persistence)",
+            "Elemental": "Mars/Aries",
+            "Mythical/Spiritual": "Masculine gods, including the Hebrew God, the Christian God, Allah, and Zeus. Patriarchs (Abraham) and lawgivers (Moses). Vishnu, the Preserver.",
+            "Questions to Ask": [
+                "How does the issue of control or regulation impact this situation?",
+                "What would a compassionate but strict father do?",
+                "What needs more control?"
+            ]
+        },
+        {
+            "name": "The Hierophant",
+            "number": "5",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m05.jpg",
+            "fortune_telling": "Expect a hidden truth or past mistake within a relationship to come to light, requiring honest reflection, Seek reconciliation by genuinely acknowledging and addressing any past missteps in your connections, A wise and nurturing figure may enter your life, offering valuable guidance on your romantic or emotional journey",
+            "keywords": [
+                "guidance",
+                "knowledge",
+                "revelation",
+                "belief"
+            ],
+            "meanings": {
+                "light": "Wisely guiding or supporting your loved ones and friends through their challenges, Honestly seeking deeper understanding and authenticity within your relationships, Finding solace and direction for your love life through spiritual or intuitive wisdom, Respectfully learning from the relationship insights and experiences of trusted mentors or elders, Making meaningful commitments or formalizing a loving bond with deep intention, Creating and cherishing meaningful traditions or rituals that strengthen your emotional connections, Selflessly contributing to the well-being of your relationships or community out of love and shared purpose",
+                "shadow": "Using past relationship experiences or perceived wisdom to control or mislead a partner or friend, Rigidly imposing your beliefs or expectations onto your loved ones, stifling their individuality, Clinging to outdated relationship traditions or expectations that no longer serve your present needs or growth, Performing superficial gestures or maintaining a relationship out of obligation rather than genuine affection, Holding back crucial emotional truths or relationship insights that could benefit your connections, Being emotionally closed off or preventing mutual spiritual or personal growth within your relationships"
+            },
+            "Archetype": "The Guardian/The Church/Faith",
+            "Hebrew Alphabet": "Vau/Nail or Spike/6",
+            "Numerology": "5 (instability, resistance, confrontation, evolution)",
+            "Elemental": "Taurus/Earth",
+            "Mythical/Spiritual": "The Christ, the Apostle Peter, Buddha, Mohammed. Popes, priests, and intercessors of every faith and tradition",
+            "Questions to Ask": [
+                "What role might tradition or religion play in this situation?",
+                "Who authored the rules? Who enforces them? Why?",
+                "How might an experienced guide impact this situation?"
+            ]
+        },
+        {
+            "name": "The Lovers",
+            "number": "6",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m06.jpg",
+            "fortune_telling": "A promising new romantic connection or a significant friendship begins to flourish, Deepening intimacy and passionate connection are on the horizon, An unexpected transition of a friendship into a romantic relationship unfolds",
+            "keywords": [
+                "love",
+                "passion",
+                "unity",
+                "choice"
+            ],
+            "meanings": {
+                "light": "Experiencing profound joy and fulfillment within a loving relationship, Openly expressing affection and devotion to your partner, friends, or loved ones, Confidently sharing your deepest romantic desires and emotional truth, Finding harmonious connections and shared values with your partner or within your social circle, Fostering unity and strengthening bonds within your family, partnership, or friendships, Making conscious and loving choices that benefit your relationships and emotional well-being",
+                "shadow": "Struggling with overwhelming or possessive emotions that feel more burdensome than joyful in a relationship, Letting insecurity or longing lead to actions that harm your relationships or self-worth, Experiencing discord, misunderstandings, or a sense of division in your significant connections, Unintentionally or consciously acting in ways that undermine trust or hurt those who love you, Making impulsive or poorly considered choices that create challenges in your love life or friendships"
+            },
+            "Archetype": "The Lover/Sexual Awakening",
+            "Hebrew Alphabet": "Zain/Sword/7",
+            "Numerology": "6 (cooperation, collaboration, interaction)",
+            "Elemental": "Gemini",
+            "Mythical/Spiritual": "Obviously, Adam and Eve, who are depicted in RWS-influenced decks. Also Venus and Cupid, Aphrodite and Eros.",
+            "Questions to Ask": [
+                "What guides my choices?",
+                "What is my heart leading me to do?",
+                "How might this decision transform me as a person?"
+            ]
+        },
+        {
+            "name": "The Chariot",
+            "number": "7",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m07.jpg",
+            "fortune_telling": "Your dedication to love and connection will surely lead to fulfilling outcomes, Feel empowered to pursue your desires for deep bonds, Be aware of external jealousy that could test your relationships",
+            "keywords": [
+                "advancement",
+                "victory",
+                "triumph",
+                "success"
+            ],
+            "meanings": {
+                "light": "Successfully overcoming obstacles in your path to love or deeper connection, Confidently moving forward in your relationship journey with clear direction, Achieving a significant milestone or deep fulfillment in your emotional bonds, Reveling in the joy and pride of your strong, committed relationships, Skillfully guiding your efforts towards a victorious and harmonious partnership, Demonstrating yourself as a trustworthy and influential presence in your loved ones' lives",
+                "shadow": "Becoming complacent and neglecting to nurture your existing bonds, Unintentionally or intentionally disregarding the feelings and needs of your loved ones, Dwelling on past relationship triumphs instead of building for a shared future, Allowing impulsive actions or words to create instability and regret in your connections"
+            },
+            "Archetype": "The Victorious Hero",
+            "Hebrew Alphabet": "Cheth/Fence/8",
+            "Numerology": "7 (imagination, inner work, psychology)",
+            "Elemental": "Cancer",
+            "Mythical/Spiritual": "Odysseus. Jason. The search for the Holy Grail. Christ's triumphal entry into Jerusalem.",
+            "Questions to Ask": [
+                "To what extent have I arrived? What will my next challenge be?",
+                "How can I use past achievements to their best advantage?",
+                "What would the criteria for real and meaningful success be?"
+            ]
+        },
+        {
+            "name": "Strength",
+            "number": "8",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m08.jpg",
+            "fortune_telling": "Your patience and emotional control will be tested in romantic bonds or friendships, You or someone significant will gently seek to inspire positive change in a loved one, You are a source of powerful inner strength and resilience in your relationships",
+            "keywords": [
+                "discipline",
+                "boldness",
+                "self-discipline",
+                "power",
+                "vitality"
+            ],
+            "meanings": {
+                "light": "Wisely setting boundaries and practicing self-restraint for the health of your relationship, Bringing emotional reactions under control with empathy and reason in your partnerships, Resisting impulsive actions that could harm your romantic or friendly connections, Taking brave and vulnerable steps forward in love and commitment",
+                "shadow": "Indulging in insecurities or unhealthy habits that weaken your emotional bonds, Struggling with codependency or obsessive thoughts in your love life, Allowing unchecked emotions or fears to dominate your relationship dynamics, Failing to assert your needs or set necessary boundaries with loved ones"
+            },
+            "Archetype": "The Law",
+            "Hebrew Alphabet": "Lamed/Outstretched Arms/30 or Theth/Snake/9",
+            "Numerology": "8 (movement, work) or 11 = 1 + 1 = 2 (debate, duality)",
+            "Elemental": "Libra or Leo",
+            "Mythical/Spiritual": "Themis or Justitia. Ma'at. Solomon dividing a baby. The Sword of Damocles. The giving of the Ten Commandments.",
+            "Questions to Ask": [
+                "To what extent is your life (or work) balanced?",
+                "How can you achieve greater objectivity?",
+                "What course of action would be fair to everyone concerned?"
+            ]
+        },
+        {
+            "name": "The Hermit",
+            "number": "9",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m09.jpg",
+            "fortune_telling": "A period of introspection or solitude within your emotional life or relationships is beginning, An emotional distancing or temporary separation from a partner or close friend may occur, Your current search for a new romantic connection or deeper understanding in friendships might feel temporarily unfulfilling",
+            "keywords": [
+                "solitude",
+                "experience",
+                "stillness",
+                "withdrawal"
+            ],
+            "meanings": {
+                "light": "Seeking out wise guidance from a trusted mentor or elder regarding your emotional journey or relationship path, Taking a personal retreat to deeply reflect on your own needs and patterns within love and friendship, Allowing yourself necessary solitude to emotionally recharge and reconnect with your inner wisdom before engaging fully, Gently guiding a loved one or friend through their own emotional challenges with your compassionate understanding, Consciously stepping back from a relationship dynamic or social scene to gain a clearer, more insightful perspective",
+                "shadow": "Excessively isolating yourself from meaningful connections, leading to loneliness in love or friendship, Allowing fear to prevent you from opening up or making genuine emotional contact with others, Insisting on your own emotional truth or understanding without truly listening to your partner or friends, Exaggerating your emotional wisdom or relationship experience, creating a barrier to authentic connection, Holding back your genuine feelings and unique emotional gifts from those you care about, fearing vulnerability or judgment"
+            },
+            "Archetype": "The Holy Man",
+            "Hebrew Alphabet": "Yod/Hand/10",
+            "Numerology": "9 (fullness, readiness, ripeness)",
+            "Elemental": "Virgo",
+            "Mythical/Spiritual": "The Christ, while fasting 40 days in the wilderness. Chronos, the god of time. Father Time. Hermes.",
+            "Questions to Ask": [
+                "What would happen if I simply withdrew and took no action?",
+                "How can I get some perspective on the situation?",
+                "Who has walked this path before me? How can I enlist his or her help?"
+            ]
+        },
+        {
+            "name": "Wheel of Fortune",
+            "number": "10",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m10.jpg",
+            "fortune_telling": "Some turns in your love life are guided by destiny or serendipity, You've encountered similar relationship patterns or emotional cycles before, Reflect on past relationship experiences to understand current romantic shifts",
+            "keywords": [
+                "luck",
+                "randomness",
+                "cycles",
+                "karma",
+                "fate",
+                "revolution"
+            ],
+            "meanings": {
+                "light": "Allowing your relationships to evolve naturally without forcing outcomes, Recognizing recurring themes or lessons within your emotional connections, Trusting that positive romantic opportunities will arise or that things will work out for the best in love, Observing the ebb and flow of closeness and distance in your friendships or relationships, Believing that kindness and effort in love will return to you",
+                "shadow": "Taking unnecessary risks in love that lead to heartbreak or loss, Being unwilling to contribute effort to nurturing a relationship or friendship, Adopting a passive or resigned attitude towards your romantic future or current relationship challenges, Resisting inevitable changes or growth within your emotional bonds"
+            },
+            "Archetype": "The Fates/Destiny",
+            "Hebrew Alphabet": "Koph/Palm/20",
+            "Numerology": "10 (finality, completion) and 10 = 1 + 0 = 1 (seed, opportunity)",
+            "Elemental": "Jupiter",
+            "Mythical/Spiritual": "The God in the Machine. Deus ex Machina. Clotho, Lachesis, and Atropos. Fortuna.",
+            "Questions to Ask": [
+                "How does this challenge fit into a larger pattern?",
+                "What role does luck play in my circumstances?",
+                "What can I control? How should I know when to relinquish control?"
+            ]
+        },
+        {
+            "name": "Justice",
+            "number": "11",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m11.jpg",
+            "fortune_telling": "A clear resolution or understanding in your relationship dynamics is approaching, An important choice regarding your emotional connection or partnership is being made, You need to truly understand the underlying truths and perspectives within your bond",
+            "keywords": [
+                "balance",
+                "law",
+                "fairness",
+                "objectivity"
+            ],
+            "meanings": {
+                "light": "Making balanced and fair decisions that serve both partners or the friendship, Thoughtfully assessing relationship dynamics or potential romantic steps before moving forward, Responding to your loved ones with understanding and a measured approach, Seeking full clarity and honest communication in your emotional exchanges, Considering all perspectives and feelings before forming conclusions about your connection, Mindfully reflecting on the path forward in your relationship or friendship",
+                "shadow": "Unfairly judging or delivering cutting words to a partner or friend, Being overly rigid or dogmatic in relationship expectations, stifling natural connection, Adhering to outdated relationship norms or expectations that harm the bond, Making impulsive relationship choices without considering the long-term impact, Showing bias or unfairness within a social circle or romantic dynamic"
+            },
+            "Archetype": "The Id",
+            "Hebrew Alphabet": "Theth/Snake/9 or Lamed/Outstretched Arms/30",
+            "Numerology": "11 = 1 + 1 = 2 (debate, duality) or 8 (movement, outer work)",
+            "Elemental": "Leo or Libra",
+            "Mythical/Spiritual": "Samson. Hercules. Daniel in the lion's den. The sinless Christ.",
+            "Questions to Ask": [
+                "How can I enhance my self-discipline?",
+                "What behaviors tempt me? How can I resist?",
+                "What instincts do I continue to struggle with today?"
+            ]
+        },
+        {
+            "name": "The Hanged Man",
+            "number": "12",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m12.jpg",
+            "fortune_telling": "A hidden truth about someone close in your life or relationship will come to light, Someone you trust in your circle of friends or a partner might be subtly undermining your emotional well-being, If you resist adapting your approach in love or friendship, you may face emotional difficulties",
+            "keywords": [
+                "enlightenment",
+                "sacrifice",
+                "perspective",
+                "suspension",
+                "reversals"
+            ],
+            "meanings": {
+                "light": "Finding profound opportunities for emotional growth and deeper connection even through challenging relationship moments, Experiencing a profound shift in how you view love, commitment, or your relationships, leading to greater understanding, Gracefully adapting to unexpected shifts in your romantic or social life, turning them into positive experiences, Opening your heart and mind to new relationship possibilities or unconventional connections, letting go of preconceived notions, Selflessly giving of yourself for the well-being of a relationship or the happiness of a loved one",
+                "shadow": "Compromising your true self or core values within a relationship, leading to emotional imbalance, Unwillingness to make necessary compromises or emotional investments for the health of a bond, Struggling to adjust to new relationship dynamics or changes, causing stagnation and friction, Attributing all relationship problems or emotional discomfort solely to your partner or friends instead of taking personal responsibility, Seeking personal gain or emotional comfort from a relationship without considering the well-being or feelings of the other person"
+            },
+            "Archetype": "The Traitor",
+            "Hebrew Alphabet": "Mem/Water/40",
+            "Numerology": "12 = 1 + 2 = 3 (expression, productivity, output)",
+            "Elemental": "Water",
+            "Mythical/Spiritual": "The Crucified Christ. Isaac as a sacrifice. Prometheus bound. Jonah and the whale. Lazarus. Any hanged or sacrificed god. Judas.",
+            "Questions to Ask": [
+                "How can I radically alter my perspective?",
+                "How might being stuck actually be a blessing in disguise?",
+                "How can I help myself see the glass as half full?"
+            ]
+        },
+        {
+            "name": "Death",
+            "number": "13",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m13.jpg",
+            "fortune_telling": "A significant romantic connection or close friendship may experience an abrupt but necessary end, Be mindful of impulsive decisions or emotional risks in your current relationships, Prepare for a period of emotional intensity or profound transformation within your bonds",
+            "keywords": [
+                "ending",
+                "conclusion",
+                "transition",
+                "passage",
+                "departure"
+            ],
+            "meanings": {
+                "light": "Bringing an unhealthy or stagnant phase in a relationship to a decisive close, paving the way for healthier dynamics, Acknowledging and honoring the natural evolution and necessary conclusion of a past romantic chapter or friendship, Releasing detrimental patterns or behaviors that have hindered your emotional intimacy and connection, Evolving into a more authentic and loving version of yourself within your partnerships, Transitioning from an unfulfilling relationship or friendship towards a more aligned and supportive bond, Embracing the freedom and growth that comes from releasing old emotional attachments or expectations",
+                "shadow": "Dwelling excessively on past relationship failures or fearing the end of current connections, preventing you from moving forward, Clinging stubbornly to outdated relationship patterns or holding onto a bond that is no longer serving your highest good, Resisting necessary change or growth within your romantic partnerships or friendships, fearing the natural evolution of bonds, Neglecting your own emotional well-being and needs within a relationship, leading to imbalance and exhaustion"
+            },
+            "Archetype": "Death",
+            "Hebrew Alphabet": "Nun/Fish/50",
+            "Numerology": "13 = 1 + 3 = 4 (stability, persistence)",
+            "Elemental": "Scorpio",
+            "Mythical/Spiritual": "Christ in the tomb. Hades. Hypnos. Thanatos. Stories of journeys into the underworld.",
+            "Questions to Ask": [
+                "What needs to end?",
+                "How might an ending actually be a blessing in this situation?",
+                "What's next?"
+            ]
+        },
+        {
+            "name": "Temperance",
+            "number": "14",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m14.jpg",
+            "fortune_telling": "Someone is experiencing an imbalance in their emotional give-and-take within a relationship, It's time to re-evaluate how you nurture your connections and find a healthier rhythm",
+            "keywords": [
+                "blending",
+                "synthesis",
+                "mediation",
+                "combination",
+                "harmony"
+            ],
+            "meanings": {
+                "light": "Beautifully blending contrasting personalities or needs within a relationship, Skillfully managing your emotional responses to foster harmony in your connections, Successfully navigating disagreements to discover mutually beneficial solutions in love, Willingly making concessions to build a stronger and more equitable bond, Creatively finding shared paths forward that honor everyone's feelings and desires, Integrating past relationship lessons to forge a deeper, more evolved connection",
+                "shadow": "Exhibiting an imbalance or all-or-nothing approach in your romantic endeavors, Creating disharmony or contention within your relationship or social circles, Neglecting essential self-care or the healthy boundaries crucial for enduring bonds, Developing unhealthy emotional dependencies or becoming overly attached in relationships, Demanding excessive emotional input without reciprocating equally in a partnership, Intentionally or unintentionally causing emotional rifts or separation within a bond, Severing important emotional ties or breaking trust with loved ones"
+            },
+            "Archetype": "The Mediator",
+            "Hebrew Alphabet": "Samekh/Foundation/60",
+            "Numerology": "14 = 1 + 4 = 5 (catalyst, instability, confrontation)",
+            "Elemental": "Sagittarius",
+            "Mythical/Spiritual": "The angel seen here may be the goddess Iris. By extension, priests, priesthoods, or the transfigured Christ.",
+            "Questions to Ask": [
+                "How can I avoid extremes?",
+                "What does everyone involved have in common?",
+                "How might combining familiar things help me create something new?"
+            ]
+        },
+        {
+            "name": "The Devil",
+            "number": "15",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m15.jpg",
+            "fortune_telling": "'Watch out for temptation or disloyalty in your romantic connections', 'A period of intense challenges or setbacks in your emotional connections may be approaching', 'Be cautious of manipulative individuals or deceptive influences attempting to harm your relationships'",
+            "keywords": [
+                "shadow",
+                "materialism",
+                "bondage",
+                "delusion"
+            ],
+            "meanings": {
+                "light": "'Cherishing the richness and pleasure found within your loving connections', 'Feeling secure and authentic within your relationships, truly being yourself with loved ones', 'Embracing and expressing a healthy, joyful sexual connection with your partner', 'Generously investing in experiences or gestures that deepen intimacy and shared joy with loved ones', 'Accepting and understanding the complexities and imperfections within yourself and your loved ones, fostering deeper compassion', 'Responsibly managing any possessive or unhealthy tendencies in your relationships, choosing constructive paths for emotional growth'",
+                "shadow": "'Prioritizing superficial aspects or external validation over genuine emotional depth in relationships', 'Feeling insatiable or perpetually dissatisfied in your romantic or friendly bonds, struggling with contentment', 'Placing material wealth or status above the emotional well-being and connection with your loved ones', 'Letting jealousy, obsession, or unchecked desires dictate your actions within relationships, leading to turmoil', 'Engaging in self-centered behaviors that neglect the needs and feelings of your partner or friends', 'Blaming your relationship issues or personal flaws on your partner or friends instead of taking personal responsibility'"
+            },
+            "Archetype": "The Shadow, The Other",
+            "Hebrew Alphabet": "Ayin/Eye/70",
+            "Numerology": "15 = 1 + 5 = 6 (adjustment, collaboration)",
+            "Elemental": "Capricorn",
+            "Mythical/Spiritual": "The Biblical Satan, certainly. Fallen angels, including Lucifer. Bacchus and Pan. Tempters and serpents of every stripe.",
+            "Questions to Ask": [
+                "What enslaves me? How can I set myself free?",
+                "How can I re-evaluate the importance I assign to material things?",
+                "To what extent do my cravings define me?"
+            ]
+        },
+        {
+            "name": "The Tower",
+            "number": "16",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m16.jpg",
+            "fortune_telling": "An impending, sudden disruption or revelation in your love life, you may need to drastically rethink or reverse relationship plans or dynamics, a relationship or friendship might challenge your ego or established roles, don't hold back, express your authentic feelings and truths in your relationships",
+            "keywords": [
+                "demolition",
+                "upheaval",
+                "deconstruction",
+                "disaster",
+                "destruction"
+            ],
+            "meanings": {
+                "light": "Breaking free from old, confining relationship habits or mindsets, clearing the path for profound new growth in your emotional bonds, dispelling the influence of an inflated ego in your partnerships, getting back to the essential foundations of love and connection, stripping away harmful illusions about your relationships or romantic ideals, receiving sudden, transformative insight into your emotional connections",
+                "shadow": "Clinging to outdated relationship traditions that repress personal or shared growth, willfully ignoring glaring truths or red flags in your relationships, rejecting clear evidence that significant change is needed in your love life, ignoring your intuition or inner guidance about a relationship's true state, maliciously engaging in destructive behavior within your partnerships or friendships"
+            },
+            "Archetype": "The Shattered Ego",
+            "Hebrew Alphabet": "Pe[as]/Open Mouth/80",
+            "Numerology": "16 = 1 + 6 = 7 (psychology, imagination, inner work)",
+            "Elemental": "Mars",
+            "Mythical/Spiritual": "The Tower of Babel. The destruction of Sodom and Gomorrah. Shiva's destructive dance. The lightning of Zeus and Thor.",
+            "Questions to Ask": [
+                "How might the current situation dramatically alter my perspective?",
+                "How might this loss open the door for new growth?",
+                "What attitudes need to be struck down before I proceed?"
+            ]
+        },
+        {
+            "name": "The Star",
+            "number": "17",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m17.jpg",
+            "fortune_telling": "Explore your compatibility with a potential partner through shared values and emotional understanding, Be mindful if you or someone you admire is idealizing the relationship or person too much, Feel assured that this significant connection or relationship journey is unfolding as it's meant to be",
+            "keywords": [
+                "hope",
+                "optimism",
+                "openness",
+                "certainty",
+                "faith",
+                "longing",
+                "truth"
+            ],
+            "meanings": {
+                "light": "Holding onto hope for a flourishing romantic future or a deeper friendship, Trusting that genuine kindness and loving intentions will attract positive connections, Interpreting relationship challenges with optimism, seeing opportunities for growth and deeper intimacy, Approaching your partner or friends with an open heart and boundless affection, Finding spiritual guidance or inner wisdom to navigate your love life and connections, Believing in the infinite potential for love, connection, and emotional fulfillment, even against odds",
+                "shadow": "Refusing to acknowledge uncomfortable realities or difficult truths within your relationship or friendships, Avoiding responsibility for your role in relational dynamics, attributing issues to fate instead of effort, Overlooking clear warning signs or intuitive nudges about a connection's true nature or direction, Clinging to a fantasy version of a partner or relationship, rather than facing what truly is, Allowing negativity and emotional withholding to diminish the joy and potential in your bonds"
+            },
+            "Archetype": "The Heavenly Guide",
+            "Hebrew Alphabet": "Tzaddi/Fishhook/90 or, in some decks, He[as]/Window/5",
+            "Numerology": "17 = 1 + 7 = 8 (action, movement, swiftness)",
+            "Elemental": "Aquarius",
+            "Mythical/Spiritual": "The star that guided the Magi. Aphrodite. Venus. The Pleiades. Moses bringing forth water from the rock.",
+            "Questions to Ask": [
+                "What would my higher power direct me to do?",
+                "How can I be less self-conscious and guarded?",
+                "How can I better attune myself to the abundance of life's blessings?"
+            ]
+        },
+        {
+            "name": "The Moon",
+            "number": "18",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m18.jpg",
+            "fortune_telling": "Expect some emotional ambiguity or relationship challenges to surface as the month concludes., A partner or friend may need encouragement to express hidden anxieties or unspoken desires., Be prepared for a shift in perspective from a loved one regarding a key relationship commitment or path.",
+            "keywords": [
+                "mystery",
+                "fantasy",
+                "imagination",
+                "dreams",
+                "uncertainty"
+            ],
+            "meanings": {
+                "light": "Embracing shared romantic dreams and positive future visions with open hearts., Infusing your relationships with creativity, playful spontaneity, and imaginative expressions of affection., Discovering the deep, intuitive, and enchanting connections that make your relationships feel truly sacred., Harmonizing with the natural rhythms of closeness and space within your emotional bonds, trusting the process., Courageously exploring the mysterious and unspoken depths of your connections, allowing love to unfold organically.",
+                "shadow": "Struggling to distinguish between genuine emotional connection and idealistic, unrealistic relationship expectations., Holding onto unfounded suspicions or misinterpretations about a partner\u2019s or friend\u2019s feelings, causing unnecessary distress., Allowing cynicism or past hurts to diminish your belief in the enchantment and wonder of true love., Approaching emotional bonds with an overly analytical or cold detachment, stifling authentic connection and warmth., Resisting the profound, intuitive, or spiritual aspects of love, thereby limiting the potential for deeper intimacy."
+            },
+            "Archetype": "The Holy Feminine/The Crone",
+            "Hebrew Alphabet": "Koph/Back of the Head/100",
+            "Numerology": "18 = 1 + 8 = 9 (fullness, readiness, ripeness)",
+            "Elemental": "Pisces",
+            "Mythical/Spiritual": "Kali, the dark-skinned divine mother associated with time, the eternal night, and the female principle. Hecate, goddess of night and darkness, who, like Anubis, assists others in their travels to the underworld. ",
+            "Questions to Ask": [
+                "How can I face my fears and move forward?",
+                "What helpers can serve me as guides through my personal darkness?",
+                "How can I deal with the unknown in healthy ways?"
+            ]
+        },
+        {
+            "name": "The Sun",
+            "number": "19",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m19.jpg",
+            "fortune_telling": "Your romantic life or friendships are entering a period of radiant happiness and effortless blossoming, It's an ideal time to open your heart, pursue new connections, or deepen existing bonds, as joy and success shine brightly on your path",
+            "keywords": [
+                "joy",
+                "brilliance",
+                "validation",
+                "attention",
+                "energy"
+            ],
+            "meanings": {
+                "light": "Gaining absolute clarity and understanding in your romantic connections and friendships, Experiencing profound joy and warmth shared with loved ones, Celebrating the beautiful moments and shared successes within your relationships, Trusting deeply in your own capacity to give and receive love authentically, Feeling truly seen, cherished, and celebrated for who you are within your most important bonds",
+                "shadow": "Becoming overly fixated on your own needs or perceived perfection within a relationship, Allowing self-admiration or preoccupation with external image to create distance in your emotional connections, Feeling scattered or hurried in your romantic or friendly interactions, Leading to a lack of genuine presence, Giving so much in a relationship that you feel emotionally drained or neglected, Presenting an embellished or inauthentic version of yourself in your relationships, Leading to trust issues or superficiality"
+            },
+            "Archetype": "The Holy Masculine",
+            "Hebrew Alphabet": "Resh/Head/200",
+            "Numerology": "19 = 1 + 9 = 10 (completion, exhaustion) 1 + 0 = 1 (starting point, opportunity)",
+            "Elemental": "The Sun",
+            "Mythical/Spiritual": "God the Father. Sun gods, including Ra, Apollo, and Helios. The moment of baptism. Claiming a new faith as your own.",
+            "Questions to Ask": [
+                "How can I take best advantage of the attention coming my way?",
+                "What are my highest spiritual goals?",
+                "How can I avoid being bedazzled by the energy swirling around me?"
+            ]
+        },
+        {
+            "name": "Judgement",
+            "number": "20",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m20.jpg",
+            "fortune_telling": "'An unresolved past relationship issue or lingering emotional baggage will resurface for healing and resolution', 'Prepare for significant shifts in your relationship dynamics",
+            "keywords": [
+                "revival",
+                "renewal",
+                "resurrection",
+                "evaluation",
+                "invitation"
+            ],
+            "meanings": {
+                "light": "'Receiving a profound revelation or understanding about your relationship patterns or needs', 'Discovering a deeper, more meaningful purpose within your partnership or friendships', 'Embracing true authenticity and vulnerability within your romantic or platonic connections', 'Experiencing a positive breakthrough or well-earned recognition in your emotional bonds', 'Successfully navigating a crucial test or challenge within a relationship, leading to growth', 'Embracing a transformative new chapter in your love life or deep friendships with open arms'",
+                "shadow": "'Feeling inadequate or judged within a relationship, leading to self-doubt', 'Struggling to meet shared expectations or emotional standards within a partnership', 'Facing consequences for inauthentic behavior or emotional avoidance in your connections', 'Neglecting crucial emotional work or difficult conversations within a relationship, leading to future strain', 'Resisting necessary personal growth or a chance to evolve your relationship perspectives'"
+            },
+            "Archetype": "Resurrection",
+            "Hebrew Alphabet": "Sin/Tooth/300",
+            "Numerology": "20 = 2 + 0 = 2 (division, duality)",
+            "Elemental": "Fire",
+            "Mythical/Spiritual": "The resurrected Christ. The Last Judgment of Revelation. The phoenix, which rises to new life from its own ashes.",
+            "Questions to Ask": [
+                "What is the main thing I need to realize about myself?",
+                "In what way might the universe be trying to get my attention?",
+                "If I were to reinvent myself, what would I become?"
+            ]
+        },
+        {
+            "name": "The World",
+            "number": "21",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m21.jpg",
+            "fortune_telling": "Experiencing a profound stroke of luck in your romantic life, attaining the deep emotional connection or ideal partnership you've longed for, achieving a sense of complete fulfillment and contentment in your relationships.",
+            "keywords": [
+                "wholeness",
+                "integration",
+                "totality",
+                "completeness",
+                "fullness"
+            ],
+            "meanings": {
+                "light": "Feeling utterly complete and fulfilled within your relationships, embracing self-love and self-acceptance that allows for healthier connections, recognizing the beautiful tapestry of shared experiences in your relationships, gaining profound insights into the nature of love and human connection, experiencing vibrant and enriching relationships that make life feel expansive and joyful, discovering deeper purpose and fulfillment through the profound bonds you share with loved ones.",
+                "shadow": "Letting comparison or jealousy sour the beautiful connections you already have, missing the deeper significance or divine timing in your relationship journey, struggling to appreciate the intangible magic and spiritual depth of true connection, not recognizing the inherent worth, beauty, or spiritual connection in your partners or friends."
+            },
+            "Archetype": "Enlightenment",
+            "Hebrew Alphabet": "Tau/Cross/400",
+            "Numerology": "21 = 2 + 1 = 3 (expression, result)",
+            "Elemental": "Saturn",
+            "Mythical/Spiritual": "The ascended Christ. The Buddha attaining enlightenment. The alpha and the omega. The completion of the alchemist's great work.",
+            "Questions to Ask": [
+                "For me, what would having it all mean?",
+                "How aware am I of my own connectedness to the world around me?",
+                "What keeps me from having it all right now, today?"
+            ]
+        },
+        {
+            "name": "Ace of Cups",
+            "number": "1",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c01.jpg",
+            "fortune_telling": "A new romantic chapter or blossoming emotional connection is on the horizon, A significant new relationship, perhaps a soulmate connection, or a deepening commitment like engagement or marriage, is approaching, Your heartfelt desires for love, connection, or a deeper bond are being manifested",
+            "keywords": [
+                "intuition",
+                "spirituality",
+                "affection",
+                "motivation"
+            ],
+            "meanings": {
+                "light": "Embracing and trusting your authentic emotions within a relationship, allowing your heart to guide you, Being open to a divinely inspired connection or a deeply spiritual bond with another, Freely giving and receiving love, care, and emotional support in your relationships, Understanding your deepest emotional needs and desires in love, leading to more fulfilling connections, Seizing moments to openly share your affection and compassion with loved ones, Honoring your intuition and inner wisdom when navigating romantic or platonic bonds",
+                "shadow": "Suppressing your true emotions in a relationship, leading to emotional distance or misunderstanding, Hesitating to embrace new romantic possibilities or closing yourself off from receiving affection, Disconnecting from your deepest emotional or spiritual needs in love, perhaps due to past hurt, Ignoring your emotional intuition or genuine feelings, leading to choices that don't serve your well-being in love, Allowing overwhelming emotions to control your actions in relationships, leading to instability or drama, Experiencing intense, irrational emotional states like jealousy, possessiveness, or excessive fixation in love"
+            },
+            "Numerology": "1 (The Origin: the starting point, the seed, opportunity)",
+            "Astrology": "Cancer, Scorpio, Pisces",
+            "Affirmation": "\"I listen to the counsel of my heart.\"",
+            "Questions to Ask": [
+                "What am I feeling right now?",
+                "How would I go about opening myself to spiritual guidance?",
+                "What motivates me the most - pleasure or pain? Why?"
+            ]
+        },
+        {
+            "name": "Two of Cups",
+            "number": "2",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c02.jpg",
+            "fortune_telling": "Someone holds a special, secret affection for you, Ensure your relationships are balanced in giving and receiving; release connections that drain your emotional energy",
+            "keywords": [
+                "union",
+                "attraction",
+                "combination",
+                "affection"
+            ],
+            "meanings": {
+                "light": "Feeling a strong, heartfelt pull towards another, a magnetic attraction, A deep yearning for a significant romantic bond or a closer friendship, Taking courageous steps to express your love or strengthen a connection, The joyous revelation that your romantic or platonic feelings are fully reciprocated, Nurturing connections that bring genuine happiness and emotional fulfillment, A beautiful union of souls, merging lives in deep partnership or friendship, Successfully mending past disagreements and restoring harmony in relationships, Gracefully accepting diverging paths in love or friendship, moving forward with peace",
+                "shadow": "Severing crucial romantic or friendship ties in a way that's difficult to repair, Becoming entrapped in an unhealthy, imbalanced emotional reliance on another, Closing yourself off to new potential romantic or friendship connections, Fixating on an individual who does not return your romantic or emotional interest, Feeling profound hopelessness or anxiety about ever finding a true soulmate or companion, Being in denial or confused about your authentic romantic or relational needs and desires"
+            },
+            "Numerology": "2 (The Other: duality, division, debate)",
+            "Astrology": "Venus in Cancer",
+            "Affirmation": "\"I am attuned to what my heart truly desires.\"",
+            "Questions to Ask": [
+                "How can I make sure that what I'm feeling is mutual?\",\"When was the last time I felt \"in love\" with someone or something?",
+                "What do you need in order to feel emotionally stable?"
+            ]
+        },
+        {
+            "name": "Three of Cups",
+            "number": "3",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c03.jpg",
+            "fortune_telling": "Unconventional romance is blossoming for you, perhaps with someone you've overlooked, bringing unexpected joy and connection",
+            "keywords": [
+                "celebration",
+                "expression",
+                "community",
+                "friendliness"
+            ],
+            "meanings": {
+                "light": "Joyfully celebrating shared emotions and deep bonds within your relationships, Expressing affection and happiness through shared activities, laughter, and tender gestures with loved ones, Collaborating harmoniously with partners or friends who resonate with your emotional world, Showing love and care through thoughtful actions and selfless support in your closest relationships, Openly accepting and flourishing within unique or non-traditional relationship structures",
+                "shadow": "Confusing superficial excitement or infatuation with genuine, lasting emotional connection, Allowing intense, overwhelming emotions to control your romantic choices or interactions, Struggling with empathy, assuming your loved ones should always share your feelings or perspectives, Placing excessive or unrealistic demands for emotional or practical support on your partners or friends, Seeking distractions or escaping relationship challenges through excessive socializing or avoidance"
+            },
+            "Numerology": "3 (The Result: expression, productivity, output)",
+            "Astrology": "Mercury in Cancer",
+            "Affirmation": "\"I allow my actions to reflect my true emotions.\"",
+            "Questions to Ask": [
+                "What's worth celebrating in my life?",
+                "How can I demonstrate my feelings in appropriate ways?",
+                "What can I do to show my partner how I really feel?"
+            ]
+        },
+        {
+            "name": "Four of Cups",
+            "number": "4",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c04.jpg",
+            "fortune_telling": "A significant other or close friend may be feeling emotionally restless or unfulfilled, It's a call to deeply understand their needs and desires, as neglecting them could lead them to seek connection or excitement elsewhere",
+            "keywords": [
+                "boredom",
+                "listlessness",
+                "lethargy",
+                "stability",
+                "ingratitude"
+            ],
+            "meanings": {
+                "light": "Achieving inner emotional stability within your relationships, fostering calm and peace, Wisely managing powerful emotions in love, allowing for healthy expression without disruption, Deeply appreciating the love and connection you have, nurturing it with gratitude, Valuing the security and depth of long-term commitment in love and friendship",
+                "shadow": "Feeling bored or emotionally disengaged within your romantic or platonic relationships, Escaping into fantasies about love, rather than actively engaging with your real-life connections, Hesitating to embrace new opportunities for connection or intimacy in relationships, Taking the love, affection, and presence of your partner or friends for granted, Overlooking genuine romantic interests or chances to deepen spiritual bonds, Resisting fresh ideas or unique ways to bond, preferring familiar but stagnant patterns, A reluctance to allow change or growth in your relationship, desiring things to remain exactly as they are"
+            },
+            "Numerology": "4 (The Status Quo: stability, equality, persistence)",
+            "Astrology": "Moon in Cancer",
+            "Affirmation": "\"I appreciate what I've been given.\"",
+            "Questions to Ask": [
+                "How can I use this \"downtime\" to my best advantage?",
+                "How can I show my partner that I don't take him or her for granted?",
+                "To what extent is my mood blinding me to new opportunities?"
+            ]
+        },
+        {
+            "name": "Five of Cups",
+            "number": "5",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c05.jpg",
+            "fortune_telling": "A significant relationship change or parting may be on the horizon, Release regret over past romantic missteps or lost connections, Embrace the lessons from heartbreak and prepare to love again",
+            "keywords": [
+                "loss",
+                "despair",
+                "re-evaluation",
+                "regret",
+                "uncertainty",
+                "repentance"
+            ],
+            "meanings": {
+                "light": "Accepting the reality of a relationship's end and finding the courage to transition, Recognizing the love and friendship that still bless your life, despite recent difficulties, Discovering unexpected growth and blessings within the challenges of a past connection, Embracing the understanding that all relationships evolve, and sometimes gracefully end, Allowing yourself compassionate space to process the true feelings of a breakup or loss, Gaining profound wisdom and clarity from the trials faced in romantic bonds or friendships",
+                "shadow": "Becoming consumed by sorrow or self-reproach over a past relationship, preventing healing, Resisting closure and holding onto the pain of a dissolved romantic or friendly bond, Holding tightly to nostalgic ideals of past loves, making it hard to appreciate present connections, Being excessively preoccupied with former partners or friendships, distracting from new possibilities, Failing to cherish current relationships by dwelling on past romantic disappointments, Engaging in self-criticism and guilt over past errors in love or friendship, hindering self-worth, Allowing anxieties about future rejection or failure to stifle new romantic pursuits or deepen bonds"
+            },
+            "Numerology": "5 (The Catalyst: instability, resistance, confrontation)",
+            "Astrology": "Mars in Scorpio",
+            "Affirmation": "\"I learn from my losses and move on.\"",
+            "Questions to Ask": [
+                "How do I tend to deal with loss?",
+                "What life lesson might I be learning now?",
+                "How can I shift my attention from the past to the future?"
+            ]
+        },
+        {
+            "name": "Six of Cups",
+            "number": "6",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c06.jpg",
+            "fortune_telling": "A withholding heart is dimming the joy in your connections, Open your heart and embrace giving to your loved ones without expectation",
+            "keywords": [
+                "charity",
+                "sharing",
+                "sacrifice",
+                "cooperation",
+                "fairness"
+            ],
+            "meanings": {
+                "light": "Generously sharing your time and unique qualities to nurture your relationships, Finding deep fulfillment in supporting and uplifting your partner or friends, Cultivating relationships where both partners feel cherished and benefit equally, Offering love and support unconditionally, without expecting anything in return, Inspired to show acts of kindness and affection to strengthen your bonds",
+                "shadow": "Allowing your self-esteem to be overly dependent on a partner\u2019s validation or others\u2019 opinions of your relationship, Exaggerating your emotional needs to gain attention or sympathy within a relationship, Accepting emotional support or favors in a relationship when you haven't genuinely contributed, Boasting about your sacrifices or kindnesses in a relationship, diminishing their sincere value, Taking advantage of a loved one\u2019s vulnerability or emotional struggles for personal gain, Hesitating to offer emotional support or share responsibilities with a partner or friend during challenging times"
+            },
+            "Numerology": "6 (The Adjustment: cooperation, collaboration, interaction)",
+            "Astrology": "Sun in Scorpio",
+            "Affirmation": "\"I freely give myself to others, expecting nothing in return.\"",
+            "Questions to Ask": [
+                "What gifts do I possess? How freely do I give them?",
+                "How can I practice unconditional giving?",
+                "How would things change if I became a more charitable person?"
+            ]
+        },
+        {
+            "name": "Seven of Cups",
+            "number": "7",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c07.jpg",
+            "fortune_telling": "You might be encountering insincere romantic declarations, Instead of being swayed by superficial charm, seek genuine actions and a deeper connection",
+            "keywords": [
+                "imagination",
+                "dreams",
+                "illusions",
+                "goals"
+            ],
+            "meanings": {
+                "light": "Envisioning a beautiful and fulfilling future with your beloved or in your friendships, Using positive visualization to foster deeper emotional intimacy and growth, Approaching relationship dilemmas with innovative solutions and understanding, Bringing your heartfelt desires for love and connection into reality, Receiving intuitive guidance about your relationship path and emotional needs",
+                "shadow": "Becoming consumed by imagined worst-case scenarios in your love life or friendships, Allowing emotional pressure or insecurities to control your relationship decisions, Spending too much time fantasizing about ideal relationships rather than nurturing real ones, Failing to consider how your choices might impact your emotional bonds or a loved one's feelings, Being paralyzed by the fear of vulnerability, heartbreak, or conflict in relationships"
+            },
+            "Numerology": "7 (The Motive: imagination, inner work, psychology)",
+            "Astrology": "Venus in Scorpio",
+            "Affirmation": "\"I use inner vision as a tool for growth.\"",
+            "Questions to Ask": [
+                "What do you want most? What do you fear most? How are these related?",
+                "How is your imagination working for you? Against you?",
+                "How might a clearer personal vision help you choose a single cup from the many available?"
+            ]
+        },
+        {
+            "name": "Eight of Cups",
+            "number": "8",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c08.jpg",
+            "fortune_telling": "A sense of emotional withdrawal or detachment from a significant other or friend may be present or approaching, Perhaps it's time to stop replaying old relationship narratives and bravely step into a new emotional chapter",
+            "keywords": [
+                "longing",
+                "dissatisfaction",
+                "quest",
+                "departure",
+                "withdrawal"
+            ],
+            "meanings": {
+                "light": "Desiring a deeper, more authentic, or fulfilling connection in love or friendship, Courageously defining your own path in love, even if it means stepping away from conventional expectations, Realizing that genuine emotional fulfillment extends beyond a single relationship or current dynamic, inspiring a search for more, Wisely choosing to release yourself from an emotionally draining or unhealthy romantic connection or friendship, Embracing self-sufficiency and building a stronger sense of self, which positively impacts future connections, Taking necessary space for emotional introspection or a period of solo reflection to heal and understand your heart's desires, Tuning into your inner wisdom and intuition for guidance on matters of the heart and emotional choices",
+                "shadow": "An inability to compromise or a stubborn refusal to meet a loved one halfway, leading to stagnation, Excessively focusing on the flaws or shortcomings of a partner or friend, eroding trust and affection, Becoming overly critical of small details in a relationship, creating unnecessary tension and distance, A deep-seated reluctance to commit emotionally or settle into a stable, nurturing relationship, Avoiding essential conversations or emotionally withdrawing when faced with relationship challenges, Imposing ultimatums or demanding that your emotional needs be met exclusively, without compromise, Continually rehashing past relationship mistakes or disappointments, preventing true healing and progress, Using the threat of ending a relationship or emotional withdrawal as a manipulative tactic to gain control"
+            },
+            "Numerology": "8 (The Action: movement, outer work, swiftness)",
+            "Astrology": "Saturn in Pisces",
+            "Affirmation": "\"I am always open to opportunities for growth.\"",
+            "Questions to Ask": [
+                "What do I need to leave behind once and for all?",
+                "If I left in search of \"more,\" what would I be looking for, exactly?",
+                "How might a retreat enhance my perspective?"
+            ]
+        },
+        {
+            "name": "Nine of Cups",
+            "number": "9",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c09.jpg",
+            "fortune_telling": "Your deepest desires in love and connection are within reach, expect fulfilling relationships to manifest, whatever you truly wish for in your romantic or friendship life will come to pass",
+            "keywords": [
+                "satisfaction",
+                "sensuality",
+                "luxury",
+                "pleasure"
+            ],
+            "meanings": {
+                "light": "Feeling deeply content with the loving connections you've nurtured, acknowledging your own worth and attractiveness within relationships, savoring the joy and abundance within your romantic or platonic bonds, allowing yourself to fully enjoy the pleasures of companionship and affection, finding peace and comfort in the security of a loving relationship, experiencing true emotional fulfillment within your most cherished connections",
+                "shadow": "Becoming overly self-satisfied and complacent in a relationship, prioritizing your own desires to the detriment of your partner's or friends' needs, exhibiting self-centeredness that strains emotional connections, seeking excessive pleasure or attention in relationships without giving back proportionately, neglecting necessary effort or difficult conversations required to maintain healthy relationships, presenting a false image of yourself in relationships leading to inauthenticity, experiencing an insatiable longing in love always seeking more despite abundant connection"
+            },
+            "Numerology": "9 (The Completion: fullness, readiness, ripeness)",
+            "Astrology": "Jupiter in Pisces",
+            "Affirmation": "\"I have everything I need to be happy.\"",
+            "Questions to Ask": [
+                "What is true happiness?",
+                "If I could have anything, what would I have?",
+                "What is my attitude toward luxury? Do I deserve it?"
+            ]
+        },
+        {
+            "name": "Ten of Cups",
+            "number": "10",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c10.jpg",
+            "fortune_telling": "A deeply committed relationship or marriage leading to a harmonious family life is on your path, Expect a cherished friendship to transform into a profound and lasting romance",
+            "keywords": [
+                "joy",
+                "fulfillment",
+                "overwhelming emotion",
+                "giddiness"
+            ],
+            "meanings": {
+                "light": "Experiencing a relationship that exceeds your deepest desires and brings unexpected joy, Feeling profound gratitude for the loving connections and emotional bonds in your life, Recognizing the divine guidance and perfect alignment bringing you fulfilling relationships, Achieving a state of transcendent bliss and harmony within your most cherished relationships, Creating a home environment filled with peace, emotional security, and loving connection",
+                "shadow": "Comparing your romantic connections or friendships to unattainable ideals, allowing unrealistic expectations to cause dissatisfaction, Feeling so overwhelmed by intense emotions in a relationship that it affects your ability to see clearly or communicate effectively, Feeling burdened or suffocated by the demands or complexities of a significant relationship, Struggling with envy or inadequacy when observing the seemingly perfect relationships of others"
+            },
+            "Numerology": "10 (The End: finality, completion, exhaustion)",
+            "Astrology": "Mars in Pisces",
+            "Affirmation": "\"I take time to appreciate what I've been given.\"",
+            "Questions to Ask": [
+                "Who gets to define what \"joy\" consists of?",
+                "What course of action is available when you feel overwhelmed?",
+                "How might vows or promises play a role in achieving a greater level of joy in your life?"
+            ]
+        },
+        {
+            "name": "Page of Cups",
+            "number": "11",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c11.jpg",
+            "fortune_telling": "This card suggests a sweet new emotional connection is emerging, perhaps with someone sensitive and imaginative, ready to explore a fresh romantic or friendship journey with you",
+            "keywords": [
+                "enthusiasm",
+                "first impressions",
+                "romanticism",
+                "superficiality"
+            ],
+            "meanings": {
+                "light": "Openly expressing your heartfelt feelings to someone special, embracing a new romantic adventure with joyful abandon, gently nurturing a tender new affection for someone, allowing yourself to dream sweetly about romantic possibilities, embarking on a fresh and exciting romantic partnership or deep friendship, revisiting fond memories of innocent, foundational love experiences, discovering the pure, thrilling essence of new love or a profound bond, experiencing a profound shift in your understanding of love and connection",
+                "shadow": "Confusing fleeting infatuation with genuine, lasting love, misinterpreting casual gestures as deep romantic interest, leading to potential misunderstanding, feeling insecure and overcompensating to gain romantic or friendly approval, becoming lost in unrealistic romantic idealism, avoiding real emotional depth, presenting an inauthentic version of yourself in relationships, fearing true vulnerability"
+            },
+            "Elemental": "Earth of Water.",
+            "Affirmation": "\"I am ready to embrace love and Spirit.\"",
+            "Questions to Ask": [
+                "How worried are you that others will see you as foolish or inexperienced?",
+                "To what extent can you be honest about your lack of experience in love and faith?",
+                "How can you maintain enthusiasm over time?"
+            ]
+        },
+        {
+            "name": "Knight of Cups",
+            "number": "12",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c12.jpg",
+            "fortune_telling": "This card often signifies a romantic, sensitive individual, perhaps an emotionally expressive partner or friend, entering your life or already present, who is eager for you to embrace their heartfelt dreams or share in a profound emotional journey with them.",
+            "keywords": [
+                "fervor",
+                "zeal",
+                "moodiness",
+                "illumination"
+            ],
+            "meanings": {
+                "light": "Deeply committing to a loving relationship or a cherished friendship, dedicating yourself to its growth, Embracing the rich tapestry of emotions within your connections, from joyous highs to tender moments of vulnerability, Trusting your heart's intuitive guidance when navigating romantic feelings or friendships, Intuitively understanding and gently resolving emotional challenges within your bonds, Approaching love with an open heart and idealistic vision, seeking a deep, soul-stirring connection, Infusing your romantic and platonic interactions with heartfelt passion and profound emotional insight.",
+                "shadow": "Becoming overly idealized or obsessive in your affections, potentially smothering a connection, Dismissing important signals or well-meaning advice that challenges your romantic notions or emotional perceptions, Allowing volatile emotions to dictate your actions, leading to instability or drama in relationships, Struggling with jealousy, unproductive confrontations, or letting external pressures strain your bonds, Suppressing your genuine feelings or ignoring crucial intuitive nudges about a relationship's true nature."
+            },
+            "Elemental": "Air of Water.",
+            "Affirmation": "\"I translate my passions into actions.\"",
+            "Questions to Ask": [
+                "How prone to emotional extremes are you?",
+                "What's the difference in driving passion and blind zeal?",
+                "How can you inspire others without inciting a riot?"
+            ]
+        },
+        {
+            "name": "Queen of Cups",
+            "number": "13",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c13.jpg",
+            "fortune_telling": "This card represents a deeply empathetic, intuitive, and spiritually connected individual in your love life or friendships, possibly someone who influences others through genuine emotional understanding and kindness, or highlights the need for such qualities in your romantic or platonic bonds, someone who prioritizes emotional depth and spiritual connection.",
+            "keywords": [
+                "insightfulness",
+                "spirituality",
+                "compassion",
+                "empathy",
+                "instinct"
+            ],
+            "meanings": {
+                "light": "Being deeply compassionate and supportive of your partner's or friend's emotional journey, Experiencing profound and authentic emotions within your relationships, Having an innate ability to understand and empathize with your loved ones' unspoken feelings, Trusting your intuition and emotional wisdom to guide your romantic and platonic connections, Developing a strong, almost telepathic emotional bond with someone special, Finding deep spiritual connection and fulfillment through a loving relationship or friendship",
+                "shadow": "Becoming emotionally distant or detached from your partner or friends due to being overwhelmed or overly idealistic, Allowing a partner's or friend's emotions to overwhelm you, leading to inaction or emotional burnout, Using emotional sensitivity or intuition to subtly manipulate or control dynamics within a relationship or friendship, Indulging in excessive emotional drama, sentimentality, or self-pity that strains your romantic or platonic bonds"
+            },
+            "Elemental": "Water of Water.",
+            "Affirmation": "\"I choose to be enabled, not disabled, by my strong emotions.\"",
+            "Questions to Ask": [
+                "How do I handle strong emotions?",
+                "To what extent am I a victim of my own feelings?",
+                "How can I move from reflection to action?"
+            ]
+        },
+        {
+            "name": "King of Cups",
+            "number": "14",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c14.jpg",
+            "fortune_telling": "This card suggests the presence or influence of a gentle, sensitive, and emotionally mature individual in your love life or friendships, offering fairness and tolerance, or it indicates you are embodying these qualities yourself within your relationships.",
+            "keywords": [
+                "wisdom",
+                "diplomacy",
+                "restraint",
+                "composure"
+            ],
+            "meanings": {
+                "light": "Maintaining emotional composure and resilience in relationship challenges, Facing romantic difficulties or friendship issues with courage and clear communication, Comforting loved ones by sharing your wisdom and lived experiences, Making relationship decisions with deep empathy and fairness for all involved, Approaching relationship agreements and boundaries with compassion, valuing understanding over rigid rules.",
+                "shadow": "Becoming emotionally detached or inflexible in your romantic or platonic connections, Making biased relationship choices influenced by hidden motives or insecurities, Acting in relationships without considering the emotional pain or feelings of your partner or friends, Misusing your emotional influence or perceived wisdom in a relationship, Manipulating or controlling loved ones through emotional pressure or guilt."
+            },
+            "Elemental": "Fire of Water.",
+            "Affirmation": "\"I strive to be stable and fair-minded.\"",
+            "Questions to Ask": [
+                "What wise person could be consulted for good advice?",
+                "How can I make sure I'm being as objective and fair as possible?",
+                "To what extent am I capable of keeping a \"stiff upper lip?\""
+            ]
+        },
+        {
+            "name": "Ace of Swords",
+            "number": "1",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s01.jpg",
+            "fortune_telling": "A moment of clear decision regarding your romantic path or a friendship is at hand, It's time to be decisive in your relationships, trusting your inner wisdom about what truly serves your heart",
+            "keywords": [
+                "logic",
+                "objectivity",
+                "intellect",
+                "choice"
+            ],
+            "meanings": {
+                "light": "Approaching relationship choices with honest and clear thought, Applying gentle reason to navigate emotional situations with grace, Finding intelligent solutions to romantic or friendship challenges through open dialogue, Skillfully unraveling misunderstandings in your connections, Thoughtfully considering the depth and future of your emotional bonds, Basing your relationship understanding on mutual truth and open communication, Achieving mental peace and a fresh perspective within your relationships, Seeking and embracing genuine clarity and understanding in your most cherished connections",
+                "shadow": "Using words to hurt or manipulate, creating emotional distance, Allowing intellectual pride to overshadow empathy and true intimacy, Employing cleverness to avoid honest conversations or mislead a loved one, Mistaking impulsive judgments for genuine insight in your relationships, Making significant emotional decisions without truly considering the heartfelt consequences for everyone involved"
+            },
+            "Numerology": "1 (The Origin: the starting point, the seed, opportunity)",
+            "Astrology": "Libra, Aquarius, Gemini",
+            "Affirmation": "\"I take the time to think things through.\"",
+            "Questions to Ask": [
+                "If I made my decision purely based on reason and logic, what would my decision be?",
+                "What do I think about my own problem-solving ability?",
+                "Who can supply me with the pure and simple facts?"
+            ]
+        },
+        {
+            "name": "Two of Swords",
+            "number": "2",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s02.jpg",
+            "fortune_telling": "Sometimes, finding peace in your relationship means choosing not to engage in every disagreement, allowing calm to prevail over conflict, You might feel at an impasse in your connection; allow things to settle and clarity to emerge before making any significant moves",
+            "keywords": [
+                "denial",
+                "debate",
+                "impasse",
+                "truce"
+            ],
+            "meanings": {
+                "light": "Thoughtfully considering all aspects of a romantic or emotional situation before making a commitment or judgment, Genuinely seeking to understand and validate both your own feelings and those of your loved one in a discussion, Standing firmly and lovingly for your truth or the well-being of your bond, even amidst differing opinions, Carefully evaluating the complexities and choices within your romantic life or friendships to find the most balanced path forward, Fostering a space where you and your loved ones can openly share thoughts and feelings without fear of judgment, Engaging in calm, respectful conversations about sensitive topics with your partner or friends, maintaining emotional harmony",
+                "shadow": "Stubbornly refusing to acknowledge truths or perspectives from your loved one that challenge your comfort zone or preconceived notions, Engaging in needless arguments or creating conflict in your relationships out of habit or a desire for control rather than a genuine issue, Becoming overly critical or fixated on minor flaws in your partner or friends, eroding the warmth of the connection, Postponing crucial decisions or conversations in your love life or friendships due to a fear of the potential outcomes or difficult emotions, Withholding emotional truth or essential information from your loved ones, making it difficult for them to fully understand or navigate the relationship dynamics"
+            },
+            "Numerology": "2 (The Other: duality, division, debate)",
+            "Astrology": "Moon in Libra",
+            "Affirmation": "\"I strive to see all sides of every issue.\"",
+            "Questions to Ask": [
+                "What information do I need to get past this impasse?",
+                "How can I get past being defensive and see the facts?",
+                "What viewpoints, other than my own, play a role in this situation?"
+            ]
+        },
+        {
+            "name": "Three of Swords",
+            "number": "3",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s03.jpg",
+            "fortune_telling": "Navigating painful partings or unexpected betrayals within your most intimate connections, The sorrow you feel now in love or friendship is a profound catalyst for future growth and deeper understanding",
+            "keywords": [
+                "variance",
+                "difference",
+                "dissatisfaction",
+                "heartache",
+                "rejection"
+            ],
+            "meanings": {
+                "light": "Courageously accepting the unvarnished truth about a romantic bond or friendship, even if it's difficult, Wisely discerning the true dynamics and patterns within your relationships, Compassionately evaluating your own role and needs within your emotional connections, Acknowledging that love stories and friendships don't always follow the script you imagined, Finding the strength to move through heartache, embracing a difficult relational truth as a path to healing",
+                "shadow": "Lingering in deep emotional sadness, unable to move forward from a relationship wound, Feeling utterly overwhelmed and broken by the words or actions of a loved one or friend, Unfairly blaming yourself for relationship challenges or endings, Setting impossible standards for yourself or your partner/friends within a connection, Being overly exposed emotionally in relationships while simultaneously harboring resentment or defensiveness"
+            },
+            "Numerology": "3 (The Result: expression, productivity, output)",
+            "Astrology": "Saturn in Libra",
+            "Affirmation": "\"I learn from failures and setbacks.\"",
+            "Questions to Ask": [
+                "How can I get past my depression?",
+                "To what extent are my emotions a matter of choice?",
+                "How can I learn from the mistakes of the past?"
+            ]
+        },
+        {
+            "name": "Four of Swords",
+            "number": "4",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s04.jpg",
+            "fortune_telling": "Pause before making any major romantic decisions now, Take a breath, and you'll be grateful for the clarity it brings to your love life",
+            "keywords": [
+                "meditation",
+                "contemplation",
+                "perspective",
+                "mindset"
+            ],
+            "meanings": {
+                "light": "Thoughtfully considering your desires and intentions for a relationship before taking action, Taking a necessary break to gain emotional clarity about your feelings or a bond, Daring to truly understand your partner's or friend's perspective before judging, Allowing yourself or a relationship to rest and recover from recent emotional strain, Finding positive and calming ways to disengage from romantic worries, allowing perspective to form",
+                "shadow": "Rushing into romantic decisions without truly considering the emotional consequences, Avoiding necessary conversations or commitments in a relationship by pretending you're 'thinking it over', Stubbornly holding onto preconceived notions about a partner or friend, refusing to see their true self, Allowing erratic emotions or fleeting infatuations to dictate your approach to stable romantic connections"
+            },
+            "Numerology": "4 (The Status Quo: stability, equality, persistence)",
+            "Astrology": "Jupiter in Libra",
+            "Affirmation": "\"I think before taking action.\"",
+            "Questions to Ask": [
+                "How long has it been since you deliberately took a \"time out?\"",
+                "How difficult is it for you to meditate?",
+                "What would happen if you simply refused to make a decision today?"
+            ]
+        },
+        {
+            "name": "Five of Swords",
+            "number": "5",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s05.jpg",
+            "fortune_telling": "A connection might feel imbalanced, as if someone is taking more than they give, emotionally or romantically, Be cautious of friends who betray your trust or spread gossip about your relationships",
+            "keywords": [
+                "selfishness",
+                "hostility",
+                "irrationality",
+                "self-preservation"
+            ],
+            "meanings": {
+                "light": "Honoring your own emotional needs within a relationship or friendship, Courageously asserting your boundaries and values in romantic or platonic bonds, Engaging in honest, constructive discussions to resolve relational conflicts, Firmly advocating for what you believe is right within your emotional connections, Maintaining your integrity and refusing to participate in harmful relationship dynamics, Flexibly adapting to a partner's or friend's needs while maintaining your core values",
+                "shadow": "Exploiting a partner's or friend's vulnerability for personal gain, Using dominance or emotional pressure to control someone you care about, Behaving dishonestly or manipulatively within your romantic or platonic ties, Instigating arguments or creating unnecessary drama in your emotional connections, Using hurtful or provocative language to escalate conflict and cause emotional distress, Disregarding boundaries or agreements made within a relationship, leading to broken trust, Prioritizing your own desires to the detriment of a loved one's well-being, Relishing a relational \"win\" at the expense of your partner's or friend's feelings, causing resentment"
+            },
+            "Numerology": "5 (The Catalyst: instability, resistance, confrontation)",
+            "Astrology": "Venus in Aquarius",
+            "Affirmation": "\"Even as I care for myself, I am mindful of the needs of others.\"",
+            "Questions to Ask": [
+                "How do I behave when I win? What does that say about me?",
+                "How can I do what's necessary without making others feel defeated?",
+                "What's the difference between selfish action and acting in my own best interest?"
+            ]
+        },
+        {
+            "name": "Six of Swords",
+            "number": "6",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s06.jpg",
+            "fortune_telling": "A significant transition or emotional journey in your relationships is on the horizon, Be mindful that your romantic or relational choices will lead to unforeseen developments, so prepare your heart",
+            "keywords": [
+                "adaptation",
+                "adjustments",
+                "science",
+                "travel"
+            ],
+            "meanings": {
+                "light": "Finding resilience and strength within a challenging romantic period, Healing from past heartbreaks or relational setbacks, Adjusting your romantic expectations to be more aligned with current realities, Embracing flexibility and understanding when relationships take unforeseen turns, Offering support and compassion to loved ones navigating their own emotional struggles, A relationship or friendship transforming your perspective on connection and life, Deepening your understanding of love and others through new experiences together or personal growth",
+                "shadow": "Struggling to acknowledge necessary shifts or endings in a relationship, Adopting a passive role in your relationships, blaming others for your emotional state, Failing to take responsibility for how your behavior impacts your romantic bonds or friendships, Overthinking emotional connections or trying to rationalize feelings that require empathy, Imposing your narrow view or expectations onto your partners or friends, rather than appreciating their individuality"
+            },
+            "Numerology": "6 (The Adjustment: cooperation, collaboration, interaction)",
+            "Astrology": "Mercury in Aquarius",
+            "Affirmation": "\"I keep an open mind.\"",
+            "Questions to Ask": [
+                "What assumptions govern my thinking?",
+                "How willing am I to lend aid to others? To request it when I need it?",
+                "How prepared am I to deal with change? With unexpected outcomes?"
+            ]
+        },
+        {
+            "name": "Seven of Swords",
+            "number": "7",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s07.jpg",
+            "fortune_telling": "Don't assume everyone in your romantic circle or friend group is entirely transparent or trustworthy, proceed with gentle awareness, Gently inquire about your partner's or friends' recent activities or emotional landscape if something feels amiss, fostering open communication",
+            "keywords": [
+                "dishonesty",
+                "presumption",
+                "sneakiness",
+                "assumptions"
+            ],
+            "meanings": {
+                "light": "Choosing complete honesty and integrity within your relationship, even when secrecy seems easy, building deep trust, Navigating sensitive romantic or friendship challenges with grace and thoughtful diplomacy, preserving harmony, Gently bringing to light misunderstandings or unspoken expectations within your connections, fostering clarity, Consistently embodying respect and kindness in all your interactions, both privately and in public, strengthening bonds, Conducting yourself in all your relationships with impeccable sincerity and unwavering loyalty, earning profound respect",
+                "shadow": "Experiencing deception or dishonesty in your romantic life or friendships, leading to broken trust, Someone in your connection acting deceptively or taking advantage of others' vulnerability because they believe they can get away with it, Attempting to avoid accountability or sidestep the emotional repercussions of one's actions within a relationship, Rationalizing hurtful behavior in your relationships by blaming your partner's or friends' perceived flaws, rather than taking responsibility, A reluctance to truly understand your own emotional triggers, insecurities, or biases that are impacting your connections"
+            },
+            "Numerology": "7 (The Motive: imagination, inner work, psychology)",
+            "Astrology": "Moon in Aquarius",
+            "Affirmation": "\"I hold myself to the highest ethical standards.\"",
+            "Questions to Ask": [
+                "What assumptions am I making?",
+                "How well-defined is my sense of ethics?",
+                "How should I respond when I know others are breaking the rules?"
+            ]
+        },
+        {
+            "name": "Eight of Swords",
+            "number": "8",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s08.jpg",
+            "fortune_telling": "Release the tendency to feel like a victim in your romantic story, as true empowerment begins with you, Understand that often, your own self-doubt or limiting beliefs are the greatest barriers to deep connection and loving relationships.",
+            "keywords": [
+                "restriction",
+                "limitation",
+                "confinement",
+                "helplessness"
+            ],
+            "meanings": {
+                "light": "Respecting healthy boundaries within your relationships, Acknowledging the unspoken agreements or commitments that build trust and stability in a partnership, Consciously choosing to nurture the emotional well-being of your relationship by letting go of what doesn't serve it, Accepting that you cannot control another's feelings or the outcome of every romantic situation, fostering a sense of surrender, Clearly seeing the internal or external challenges preventing deeper intimacy or connection, Committing to healthy and ethical choices in love, avoiding pathways that could harm yourself or others, Braving yourself to seek guidance or support from trusted friends, a therapist, or your partner when navigating relationship complexities.",
+                "shadow": "Feeling confined or suffocated within a relationship or by your own fears about love, Feeling overwhelmed by societal expectations or rigid beliefs about how love 'should' be, hindering genuine connection, Succumbing to hopelessness regarding your romantic future or the possibility of finding true connection, Blaming others for your relationship struggles without taking personal accountability, Letting the opinions or desires of others define your love life or choices within a partnership, rather than your own authentic needs, Feeling utterly powerless to change challenging relationship dynamics or break free from a painful emotional cycle, Perceiving a severe lack of choices or avenues for growth within your current relationship situation, Resigning yourself to discomfort or unhappiness in a relationship, without actively seeking solutions or alternatives."
+            },
+            "Numerology": "8 (The Action: movement, outer work, swiftness)",
+            "Astrology": "Jupiter in Gemini",
+            "Affirmation": "\"I know my own limits.\"",
+            "Questions to Ask": [
+                "Who's empowered to cut through the red tape?",
+                "What, exactly, are the obstacles? What resources, exactly, are needed to move them?",
+                "To what extent is your powerlessness a matter of attitude?"
+            ]
+        },
+        {
+            "name": "Nine of Swords",
+            "number": "9",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s09.jpg",
+            "fortune_telling": "If you act on your current anxieties or fears within your relationship, you might find yourself regretting it later, causing deeper emotional distress.",
+            "keywords": [
+                "remorse",
+                "worry",
+                "distraught",
+                "conclusion"
+            ],
+            "meanings": {
+                "light": "Finding peace by accepting aspects of your relationship or another's feelings that are beyond your control, Releasing unfounded worries and anxieties that plague your romantic connections, Treating yourself with understanding and compassion regarding your role in past or present relationships, Cultivating inner calm to soothe emotional turmoil about your love life or friendships, Courageously facing deep-seated fears about intimacy, commitment, or heartbreak within relationships, Achieving clarity and closure on a romantic or platonic issue, allowing you to release it from your thoughts",
+                "shadow": "Allowing past relationship regrets to consume your thoughts and bring you unnecessary pain, Constantly doubting your decisions and actions within your romantic or platonic bonds, Harshly criticizing yourself for any missteps or perceived failures in your connections, Struggling with profound emotional lows due to romantic or friendship difficulties, Over-analyzing every tiny flaw or misunderstanding in your relationships, magnifying minor issues, Coping with relationship stress in unproductive or detrimental ways, harming your emotional well-being, Letting past heartbreaks or negative experiences prevent you from fully enjoying present love and companionship, Obsessing over relationship choices that are already made and cannot be undone, leading to endless anguish"
+            },
+            "Numerology": "9 (The Completion: fullness, readiness, ripeness)",
+            "Astrology": "Mars in Gemini",
+            "Affirmation": "\"I do not worry about what I cannot control.\"",
+            "Questions to Ask": [
+                "What role does worry play in your current situation?",
+                "To what other ends might you devote the energy you're giving to anxiety?",
+                "How can you know when it's time to stop thinking and start acting?"
+            ]
+        },
+        {
+            "name": "Ten of Swords",
+            "number": "10",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s10.jpg",
+            "fortune_telling": "A significant relationship ending or profound heartbreak, postpone major relationship decisions or new romantic pursuits until emotional healing and clarity emerge",
+            "keywords": [
+                "exhaustion",
+                "ruin",
+                "disaster",
+                "stamina",
+                "obsession"
+            ],
+            "meanings": {
+                "light": "Recognizing you've reached your emotional limits within a relationship or friendship, attuning to your deepest emotional and intuitive signals regarding a connection, embracing the necessity for emotional rest, healing, and self-renewal after a difficult period in love, honestly acknowledging the complete breakdown or end of a difficult romantic or platonic bond, making a profound commitment to emotional recovery and positive change after a painful experience, finding solace in the understanding that the most challenging phase of a romantic or platonic hardship has concluded",
+                "shadow": "Giving up on a relationship or friendship too soon, before fully exploring all avenues, pushing yourself to emotional and mental exhaustion trying to fix or endure a struggling connection, experiencing significant emotional distress or a breakdown due to romantic or interpersonal turmoil, unhealthily fixating on relationship problems or past hurts, leading to emotional strain, a complete emotional surrender to despair or cynicism regarding future love and connection, an inability to translate the need for change in a relationship into concrete action, remaining stuck, harboring deeply self-defeating or negative thoughts about your capacity for love or happiness in relationships"
+            },
+            "Numerology": "10 (The End: finality, completion, exhaustion)",
+            "Astrology": "Sun in Gemini",
+            "Affirmation": "\"When my limits are exceeded, I take action on my own behalf.\"",
+            "Questions to Ask": [
+                "What are the signs that the time for debate is over?",
+                "How can you tell when interest has given way to obsession?",
+                "When your own limits are reached, where can you turn for aid?"
+            ]
+        },
+        {
+            "name": "Page of Swords",
+            "number": "11",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s11.jpg",
+            "fortune_telling": "This card may indicate a new person entering your life, perhaps a friend or romantic interest, who possesses an insightful, communicative spirit, eager to engage in deep discussions or learn more about you",
+            "keywords": [
+                "student",
+                "apprentice",
+                "scholarship",
+                "information"
+            ],
+            "meanings": {
+                "light": "Actively seeking to understand your partner's inner world or a friend's perspectives, Engaging in curious, open-ended conversations that deepen emotional intimacy, Committing to learn new communication skills or ways to nurture your connection, Exploring different relationship dynamics or seeking information to better support your loved ones, Continuously discovering new facets of your partner, friends, or your shared journey, Initiating an honest exploration into what you truly desire in a relationship or friendship, Clearly defining your emotional needs and boundaries within a connection, Seeking insightful guidance from trusted elders or relationship experts",
+                "shadow": "Faking emotional maturity or intellectual understanding to impress a potential partner or friend, Being dishonest about your true intentions or feelings, perhaps playing mind games in a relationship, Pretending genuine interest in someone's life purely to manipulate or gain their affection, Refusing to acknowledge your partner's or friend's perspective, clinging only to your own biased views during disagreements, Dismissing valuable advice from trusted friends or therapists regarding your relationship challenges, leading to repeated patterns"
+            },
+            "Elemental": "Earth of Air.",
+            "Affirmation": "\"I am ready to make good decisions.\"",
+            "Questions to Ask": [
+                "How comfortable are you with revealing your own ignorance?",
+                "What are the marks of a good student?",
+                "To what extent are you open to new information?"
+            ]
+        },
+        {
+            "name": "Knight of Swords",
+            "number": "12",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s12.jpg",
+            "fortune_telling": "['A moment of impulsiveness causes a regrettable comment in a cherished connection', 'If you were the one, be ready to offer a heartfelt apology and allow the bond to heal']",
+            "keywords": [
+                "bluntness",
+                "intelligence",
+                "incisiveness",
+                "investigation"
+            ],
+            "meanings": {
+                "light": "['Openly expressing your feelings and needs to your partner or friends', 'Clearly communicating your desires and boundaries in a relationship', 'Gently offering helpful feedback to strengthen a bond', 'Generously sharing your wisdom and insights with those you care for', 'Noticing the subtle dynamics and unspoken needs within your relationships', 'Skillfully identifying the core issue causing tension between loved ones', 'Bringing clarity and understanding to a misunderstanding between hearts', 'Providing supportive and clear guidance to a loved one navigating challenges', 'Honestly seeking and revealing the true nature of a romantic or platonic situation']",
+                "shadow": "['Imposing your views on a loved one without considering their perspective', 'Provoking unnecessary conflict within a relationship', 'Initiating heated disputes that damage emotional harmony', 'Using sharp words or sarcasm to chip away at a partner\\'s or friend\\'s self-esteem', 'Allowing emotions to override rational thought in a significant discussion', 'Communicating insensitively, hurting the feelings of those you cherish', 'Unfairly blaming or targeting a partner or friend based on suspicion', 'Misrepresenting shared memories or conversations to justify a viewpoint']"
+            },
+            "Elemental": "Air of Air.",
+            "Affirmation": "\"I temper my insights with tact.\"",
+            "Questions to Ask": [
+                "What do I really need to know?",
+                "To what extent have I investigated the facts behind my situation?",
+                "How can I share what I know without alienating others?"
+            ]
+        },
+        {
+            "name": "Queen of Swords",
+            "number": "13",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s13.jpg",
+            "fortune_telling": "This card often points to a partner or a significant friendship that thrives on intellectual connection and clear, supportive communication, someone who uses their words to build understanding and positive bonds",
+            "keywords": [
+                "grace",
+                "skill",
+                "wit",
+                "charm",
+                "aptitude"
+            ],
+            "meanings": {
+                "light": "Exercising mindful communication and gentle diplomacy in matters of the heart, Skillfully de-escalating conflicts or easing tension in a relationship, Expressing feelings and thoughts clearly and empathetically to a loved one, Creating a supportive and secure environment for your partner or friends, Inspiring mutual growth and encouraging the best in each other, Communicating affection and understanding with genuine warmth, Sharing laughter and lighthearted moments that strengthen your bond, Finding common ground and deepening connection through shared intellectual or creative pursuits",
+                "shadow": "Using words as a weapon during disagreements, causing deep emotional pain, Concealing important truths, leading to distrust and misunderstanding between partners, Speaking with harshness or constant criticism that damages emotional intimacy, Relying on biting sarcasm that creates emotional distance or hurt feelings, Unkindly mocking or belittling a loved one, or engaging in harmful gossip, Showing a lack of empathy or trivializing a partner's or friend's emotional struggles, Disregarding the feelings, boundaries, or opinions of those you care about, Neglecting to apply your inherent wisdom or communication skills to nurture your bonds"
+            },
+            "Elemental": "Water of Air.",
+            "Affirmation": "\"I make the truth easier to hear.\"",
+            "Questions to Ask": [
+                "What do I have a knack for? How might my special gift prove useful now?",
+                "To what extent am I capable of saying what needs to be said?",
+                "What is the best possible way to say what I want to say?"
+            ]
+        },
+        {
+            "name": "King of Swords",
+            "number": "14",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s14.jpg",
+            "fortune_telling": "This card represents a mature, insightful, and honest individual in your love life or friendships, someone whose integrity and clear communication bring stability and wise decisions to your shared emotional landscape.",
+            "keywords": [
+                "genius",
+                "expertise",
+                "decision",
+                "verdict"
+            ],
+            "meanings": {
+                "light": "Clearly and kindly communicating your needs and boundaries in a relationship, Making a clear, thoughtful choice about a relationship path or commitment, Seeking wise, objective counsel for relationship challenges from a trusted, neutral source, Inviting open, honest discussions with trusted friends or a couple's counselor to gain perspective on your relationship, Reaching a clear understanding or resolution within a relationship issue, Establishing fair and well-thought-out agreements that benefit both partners in a relationship.",
+                "shadow": "Dominating conversations or always needing to be right in arguments, hindering genuine connection, Using your intelligence to intimidate or belittle a partner or friend rather than connecting on an emotional level, Communicating in a way that feels condescending or dismissive, creating emotional distance, Indecisiveness regarding commitment or crucial relationship choices, causing uncertainty for your partner, Inconsistent communication or wavering on relationship agreements, leading to confusion and mistrust, Avoiding necessary but difficult decisions in love that would ultimately lead to personal or relational growth, Regretting harsh, thoughtless, or overly critical words spoken in anger or without consideration, causing lingering hurt."
+            },
+            "Elemental": "Fire of Air.",
+            "Affirmation": "\"My word is my bond.\"",
+            "Questions to Ask": [
+                "What would your decision be if you had to render a binding verdict right now?",
+                "How comfortable are you saying exactly what you mean? How often do you temper what you have to say for fear of offending others?",
+                "If you were to ask others, \"What's my area of expertise?\" what would they say?"
+            ]
+        },
+        {
+            "name": "Ace of Wands",
+            "number": "1",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w01.jpg",
+            "fortune_telling": "Someone feels a strong, passionate attraction towards you, A fresh romantic beginning or a significant new friendship is on the horizon, Approach new love opportunities with gentle wisdom and inner strength",
+            "keywords": [
+                "desire",
+                "inspiration",
+                "vision",
+                "creation",
+                "invention"
+            ],
+            "meanings": {
+                "light": "Feeling deeply inspired to pursue new romantic adventures or to rekindle passion in an existing connection, Clearly recognizing what you truly desire in a relationship or with a particular person, Receiving a wonderful opportunity to shape your love life or a relationship exactly as you envision it, Providing encouraging guidance to a loved one or receiving vital support that helps your relationship flourish, Discovering a clear path forward or a creative resolution to a relationship challenge, Embarking on a new romantic chapter, fostering a deeper bond, or initiating a meaningful friendship, Experiencing a powerful surge of romantic passion and creative energy within your connections",
+                "shadow": "Hesitating to embrace a promising romantic connection or missing a chance to strengthen a bond, Lacking the necessary energy or initiative to nurture your important relationships or friendships, Not investing enough emotional commitment or practical effort into building a strong connection, Feeling stuck in your relationship aspirations, perhaps lacking the emotional tools or drive to progress, Pursuing unrealistic ideals in love or focusing on connections that don't truly align with your well-being, Struggling to assert your needs, set boundaries, or clearly communicate your feelings within a relationship"
+            },
+            "Numerology": "1 (The Origin: the starting point, the seed, opportunity)",
+            "Astrology": "Aries, Leo, Sagittarius",
+            "Affirmation": "\"I jump at the opportunity to pursue my heart's desire.\"",
+            "Questions to Ask": [
+                "What do I really want, more than anything else?",
+                "What happens if I let this opportunity pass me by?",
+                "How clearly have I defined my directions, values, and goals?"
+            ]
+        },
+        {
+            "name": "Two of Wands",
+            "number": "2",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w02.jpg",
+            "fortune_telling": "Be discerning about who truly holds your best romantic interests at heart, Speak your deepest truths and desires openly in matters of the heart, acting authentically on your romantic path",
+            "keywords": [
+                "conflict",
+                "decision",
+                "option",
+                "individuality"
+            ],
+            "meanings": {
+                "light": "Recognizing you have genuine choices and empowering paths in your romantic life, Being offered beautiful new romantic possibilities or extending a heartfelt invitation to connection, Deeply valuing and understanding your partner's or friend's unique perspective, enriching your shared emotional journey, Discovering flexible and creative ways to nurture your relationships and deepen emotional bonds, Skillfully balancing your affection and attention across meaningful connections or life's demands, Feeling confident and empowered to make significant, heart-led decisions about your love life or relational commitments",
+                "shadow": "Being unclear or perhaps misleading about your true romantic intentions, causing confusion, Acting in ways that don't align with your genuine emotional desires, leading to inner turmoil, Abruptly changing course in a relationship or emotional commitment without clear justification, potentially unsettling others, Holding onto a romantic ideal or relationship path that is no longer healthy or realistic, despite loving intuition advising otherwise, Dismissing the valuable feelings or insights from those you care about, potentially creating distance in your connections"
+            },
+            "Numerology": "2 (The Other: division, debate, duality)",
+            "Astrology": "Mars in Aries",
+            "Affirmation": "\"With my goals in mind, I make confident choices.\"",
+            "Questions to Ask": [
+                "In a conflict, how do you decide who wins?",
+                "What values govern your decision-making process?",
+                "What choice will you make if you make no choice at all?"
+            ]
+        },
+        {
+            "name": "Three of Wands",
+            "number": "3",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w03.jpg",
+            "fortune_telling": "You'll be envisioning a new phase in your relationship soon, perhaps a shared adventure or deepening commitment, Be open and ready, as a significant romantic opportunity or desired connection is on its way to you",
+            "keywords": [
+                "implementation",
+                "action",
+                "exploration"
+            ],
+            "meanings": {
+                "light": "Taking active steps to nurture your connection or pursue a desired romantic path, Bravely initiating a new romantic connection or advancing an existing bond, Actively co-creating beautiful shared experiences and fostering a harmonious connection, Expanding your emotional boundaries and reaching new heights in your relationships, Venturing into uncharted emotional territory with courage and optimism in your relationships, Experiencing rapid progress and positive momentum in a new or existing relationship, Witnessing your relationship aspirations and heartfelt efforts manifest beautifully",
+                "shadow": "Hesitating or delaying crucial conversations or actions needed to advance your connection, Aware of what's needed for your relationship but resisting the necessary effort or change, Entering a romantic or friendship bond without clear understanding or shared expectations, leading to potential confusion, Closing yourself off to new ways of relating or exploring different facets of your emotional connections, Not following through on promises or abandoning efforts in your emotional relationships, leaving things unresolved"
+            },
+            "Numerology": "3 (The Result: expression, productivity, output)",
+            "Astrology": "Sun in Aries",
+            "Affirmation": "\"I take the steps necessary to put my plans in action.\"",
+            "Questions to Ask": [
+                "How can you make a habit of breaking your habits?",
+                "How can you be a decisive leader in this circumstance?",
+                "What's your action plan for the next week, month, year, or decade?"
+            ]
+        },
+        {
+            "name": "Four of Wands",
+            "number": "4",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w04.jpg",
+            "fortune_telling": "Someone close is noticing and appreciating your efforts in the relationship or friendship, A significant relationship milestone or celebration, like an engagement or commitment ceremony, may be on the horizon",
+            "keywords": [
+                "celebration",
+                "jubilation",
+                "community",
+                "teamwork",
+                "completion"
+            ],
+            "meanings": {
+                "light": "Celebrating a joyous milestone in your relationship or friendship, Feeling a collective sense of accomplishment and harmony with your loved ones, Anticipating a delightful gathering with your partner or friends, Collaborating effectively with your partner or friends to build a strong future together, Receiving heartfelt recognition or appreciation from those you care about",
+                "shadow": "Overworking or neglecting your emotional connections due to constant demands, Feeling that your efforts in a relationship are met with more expectations rather than appreciation, Feeling excluded or unable to fully participate in a shared joyful experience with loved ones, Allowing jealousy or resentment to overshadow happy moments in your relationships, Hesitating to contribute your fair share to maintaining a balanced and healthy relationship or friendship"
+            },
+            "Numerology": "4 (The Status Quo: stability, equality, persistence)",
+            "Astrology": "Venus in Aries",
+            "Affirmation": "\"My contributions are worthy of celebration.\"",
+            "Questions to Ask": [
+                "To what extent am I doing my part?",
+                "What kind of recognition would be most meaningful?",
+                "How might a celebration now impact community morale?"
+            ]
+        },
+        {
+            "name": "Five of Wands",
+            "number": "5",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w05.jpg",
+            "fortune_telling": "Prepare for a spirited discussion or minor disagreement with a cherished friend or romantic partner, Remember",
+            "keywords": [
+                "confrontation",
+                "disruption",
+                "distinction",
+                "objection",
+                "strife"
+            ],
+            "meanings": {
+                "light": "Calmly and respectfully expressing a differing viewpoint to a partner or friend, Allowing your loved one the freedom to approach shared challenges in their unique way, Creating an open and honest space for discussion and debate within your relationship, Reflecting together on the journey and growth of your emotional connection",
+                "shadow": "Disregarding or belittling a loved one's feelings or opinions, Instigating arguments or unnecessary conflict within a relationship, Delivering harsh or unconstructive criticism that hurts your bond, Using hurtful or sarcastic remarks to provoke a partner or friend, Allowing trivial disputes or constant negativity to hinder the natural progress of your relationship or friendship"
+            },
+            "Numerology": "5 (The Catalyst: instability, resistance, confrontation)",
+            "Astrology": "Saturn in Leo",
+            "Affirmation": "\"I can express dissent in constructive ways.\"",
+            "Questions to Ask": [
+                "To what extent is your current issue worth fighting for?",
+                "What alternatives are there to outright conflict?",
+                "What happens in a \"fair fight?\" How can you keep this fight fair?"
+            ]
+        },
+        {
+            "name": "Six of Wands",
+            "number": "6",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w06.jpg",
+            "fortune_telling": "Someone in your circle might be celebrating your romantic success or the strength of your bond, but be aware that not everyone is genuinely happy for you, Watch out for friends who may secretly harbor envy over your relationship or emotional contentment",
+            "keywords": [
+                "victory",
+                "achievement",
+                "success",
+                "triumph"
+            ],
+            "meanings": {
+                "light": "Excelling in your romantic connection, finding true compatibility, being recognized and valued by your partner or close friends for your authentic self, experiencing a time when your relationship shines brightly, receiving genuine support and affirmation from your loved ones, feeling deeply cherished and loved by your partner or friends, inspiring others with the strength of your relationship, openly expressing heartfelt appreciation and love to your significant other or dear friends",
+                "shadow": "Becoming boastful about your relationship status or romantic conquests, letting a successful connection inflate your ego to the detriment of others, looking down on others who are single or whose relationships seem less \"perfect,\" constantly seeking validation and attention from your partner or friends, exchanging or receiving compliments that lack sincerity in your bond, feeling jealous or resentful of the happiness or success in others' love lives or friendships"
+            },
+            "Numerology": "6 (The Adjustment: cooperation, collaboration, interaction)",
+            "Astrology": "Jupiter in Leo",
+            "Affirmation": "\"I value sincere praise.\"",
+            "Questions to Ask": [
+                "What kind of recognition do I crave? Why?",
+                "How freely do I praise the achievements of others?",
+                "What happens when the parade is over?"
+            ]
+        },
+        {
+            "name": "Seven of Wands",
+            "number": "7",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w07.jpg",
+            "fortune_telling": "Don't be surprised by misunderstandings or challenges from others regarding your relationship, Prepare to stand up for your love, your partner, or your precious friendships when they are questioned or challenged",
+            "keywords": [
+                "bravery",
+                "resolve",
+                "determination"
+            ],
+            "meanings": {
+                "light": "Having the courage to voice your feelings and needs in a relationship, even when it feels difficult, Persevering through relationship challenges with unwavering commitment and hope, Showing strong dedication and passionate loyalty within your connections, Protecting your emotional well-being and your partner's or friend's happiness from external or internal negativity, Setting healthy boundaries and refusing to tolerate disrespectful behavior in any bond, Staying true to your core beliefs and what you value in love, even when facing external judgments or pressures",
+                "shadow": "Carrying past relationship hurts that make you prone to suspicion or conflict in new connections, Engaging in self-sabotaging behaviors or emotional tests to prove your independence or worth in love, Being overly sensitive and quick to feel slighted by your partner or friends, even over minor issues, Reacting defensively to feedback from loved ones, preventing deeper understanding and growth, Hesitating to assert your needs or communicate your boundaries, leading to feelings of being overwhelmed or misunderstood in your relationships"
+            },
+            "Numerology": "7 (The Motive: imagination, inner work, psychology)",
+            "Astrology": "Mars in Leo",
+            "Affirmation": "\"I am willing to take a stand for what I believe in.\"",
+            "Questions to Ask": [
+                "When do you feel most threatened? When do you get defensive?",
+                "How capable are you of defending yourself?",
+                "What kinds of beliefs are worth defending?"
+            ]
+        },
+        {
+            "name": "Eight of Wands",
+            "number": "8",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w08.jpg",
+            "fortune_telling": "Expect an unexpected message or heartfelt confession from someone special, Prepare for a sudden and exciting shift in your relationship status or dynamics",
+            "keywords": [
+                "speed",
+                "swiftness",
+                "responsiveness",
+                "change"
+            ],
+            "meanings": {
+                "light": "Taking decisive steps towards a romantic interest or deepening a bond, Expediting plans for a future together, like moving in or committing, Infusing your relationships with renewed passion and vitality, Gracefully adjusting to unexpected developments in your love life, perhaps a sudden proposal or change in living situation, Navigating relationship challenges with resilience and a positive outlook, Understanding that relationships evolve and embracing growth and transformation within your partnerships, Responding promptly and constructively to misunderstandings or issues with your loved ones",
+                "shadow": "Allowing anxiety to overwhelm your romantic decisions or interactions, Feeling stuck in repetitive arguments or unproductive relationship patterns, Resisting necessary changes in a relationship, clinging to outdated expectations, Creating drama or conflict in your relationships for attention or out of boredom, Pressuring a partner or friend to commit or move faster than they are ready for, Being unwilling to adjust your relationship routines or expectations even when they are clearly causing strain"
+            },
+            "Numerology": "8 (The Action: movement, outer work, swiftness)",
+            "Astrology": "Mercury in Sagittarius",
+            "Affirmation": "\"I adapt quickly to change.\"",
+            "Questions to Ask": [
+                "How quickly to you adapt to change?",
+                "What would your response be to overwhelming, sudden change?",
+                "What changes are on your horizon? How well have you prepared for them?"
+            ]
+        },
+        {
+            "name": "Nine of Wands",
+            "number": "9",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w09.jpg",
+            "fortune_telling": "Don't assume your romantic journey or friendship challenges are over yet; there might be another hurdle or deeper emotional work ahead, The current difficulties in your relationship or friendships are revealing who truly stands by you and offers unwavering support",
+            "keywords": [
+                "toughness",
+                "persistence",
+                "stamina",
+                "loyalty",
+                "release"
+            ],
+            "meanings": {
+                "light": "Committing to your partner or friends through all seasons, showing true staying power in love, Honoring your vows, commitments, and the trust placed in you within a relationship, Navigating intense emotional challenges or relationship pressures with remarkable strength and resilience, Pushing through the final difficult stages of a relationship test, emerging stronger together, Finding your inner strength to heal and rebuild a connection, even after setbacks, Demonstrating unwavering loyalty and refusing to abandon a valuable relationship when things get tough, Feeling a sense of accomplishment and peace about the effort and love you've invested in your bonds",
+                "shadow": "Allowing yourself to be perpetually victimized or sacrificing excessively in a relationship without reciprocation, Withdrawing emotionally or physically from your partner or friends when they need you most, Giving up on a relationship or friendship too quickly at the first sign of disagreement or difficulty, Feeling unable to uphold your commitments or promises in love due to external or internal obstacles, Struggling with consistency or reliability, letting down loved ones when they depend on you, Clinging to past hurts, resentment, or a relationship that has clearly run its course, hindering new growth, Persisting in a relationship or emotional pattern that is no longer serving anyone, exhausting all involved"
+            },
+            "Numerology": "9 (The Completion: fullness, readiness, ripeness)",
+            "Astrology": "Moon in Sagittarius",
+            "Affirmation": "\"When the going gets tough, I stay the course.\"",
+            "Questions to Ask": [
+                "How do you cope when things get really tough?",
+                "When you get low, what encourages you to go on?",
+                "At what point should you be able to let this situation go?"
+            ]
+        },
+        {
+            "name": "Ten of Wands",
+            "number": "10",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w10.jpg",
+            "fortune_telling": "You're feeling emotionally overwhelmed or burdened in your relationships, It's time to step back, create space, and allow others to contribute or take responsibility in your connections",
+            "keywords": [
+                "exhaustion",
+                "resistance",
+                "burden",
+                "oppression"
+            ],
+            "meanings": {
+                "light": "Steadfastly managing relationship challenges with resilience and grace, Offering genuine support and empathy to a partner or friend carrying heavy emotional loads, Standing up for loved ones or within relationships where one party is unfairly burdened, Openly communicating your emotional boundaries and capacity within a relationship, Wisely understanding when a particular relationship dynamic or friendship expectation is not healthy or suitable for your well-being",
+                "shadow": "Assuming too many emotional responsibilities or sacrificing too much for a relationship, beyond your sustainable capacity, Struggling to set boundaries or decline requests from loved ones, even when you're emotionally drained, Consistently putting in excessive effort or emotional labor in a relationship without reciprocation or balance, Protecting a partner or friend from the natural outcomes of their actions, enabling unhealthy patterns, Regularly depleting your emotional energy by constantly giving more than you have in your connections"
+            },
+            "Numerology": "10 (The End: finality, completion, exhaustion)",
+            "Astrology": "Saturn in Sagittarius",
+            "Affirmation": "\"I respect my own limits.\"",
+            "Questions to Ask": [
+                "How will you know when you reach the end of your rope?",
+                "How easily do you say no to new projects and requests?",
+                "What projects could you delegate...or eliminate?"
+            ]
+        },
+        {
+            "name": "Page of Wands",
+            "number": "11",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w11.jpg",
+            "fortune_telling": "This card suggests the arrival of a new romantic or significant friendship interest, someone brimming with fresh, enthusiastic energy, ready to explore a vibrant connection with you, this person might be a Cancer, Leo, or Virgo, eager to initiate something meaningful.",
+            "keywords": [
+                "enthusiasm",
+                "eagerness",
+                "confidence",
+                "validation",
+                "affirmation"
+            ],
+            "meanings": {
+                "light": "Embracing a beautiful new romantic or friendship opportunity with an open heart, passionately supporting your loved one's dreams and aspirations, truly believing in the profound potential of your emotional bond, finding personal strength and growth within your loving connections, trusting your innate capacity for deep affection, openly inviting honest communication and feedback from those you care about.",
+                "shadow": "Allowing external opinions to dictate your relationship choices or self-worth in love, impulsively chasing new romantic interests without deep reflection or commitment, closing off your heart to the vital insights and feelings of your partner or friends, unintentionally creating distance in relationships by struggling to accept help or vulnerability."
+            },
+            "Elemental": "Earth of Fire.",
+            "Affirmation": "\"I can do this.\"",
+            "Questions to Ask": [
+                "How easily do you admit your own inexperience?",
+                "How can you be a better student or employee?",
+                "What qualities would make a total beginner's voyage of discovery easier?"
+            ]
+        },
+        {
+            "name": "Knight of Wands",
+            "number": "12",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w12.jpg",
+            "fortune_telling": "This card hints at the arrival of a vibrant, passionate individual who might sweep you off your feet romantically, or a new friendship blossoming with exciting, adventurous energy.",
+            "keywords": [
+                "boldness",
+                "bravado",
+                "passion",
+                "persuasion",
+                "advocacy"
+            ],
+            "meanings": {
+                "light": "Charging ahead with bold enthusiasm into a new romantic connection or deepening an existing one, Experiencing rapid growth and exciting developments in your emotional bonds, Embracing boundless possibilities and refusing to let past experiences limit your capacity for love and joy, Effortlessly charming your way into new hearts or captivating your partner and friends with your magnetic personality, Inspiring confidence and a sense of shared adventure within your relationships, Encouraging loved ones to embrace new experiences and embark on exciting journeys together, Becoming the vibrant force that ignites positive transformation and adventure within your emotional connections.",
+                "shadow": "Rushing impulsively into romantic situations without considering the emotional landscape or consequences, Carelessly overlooking or disregarding the feelings of your partner or friends in your pursuit of personal excitement, Employing charm or allure to control emotional interactions rather than fostering genuine, heartfelt connection, Dominating conversations or insisting on your way in a relationship, stifling your partner's or friends' voices, Starting many romantic connections or friendships but struggling to commit and deepen any of them into lasting bonds."
+            },
+            "Elemental": "Air of Fire.",
+            "Affirmation": "\"I can lead the way to success.\"",
+            "Questions to Ask": [
+                "To what extent have you defined your ultimate goal?",
+                "What's the fastest way to get the job done? Is this necessarily the best way?",
+                "How long has it been since you looked back to see if others really are following your lead?"
+            ]
+        },
+        {
+            "name": "Queen of Wands",
+            "number": "13",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w13.jpg",
+            "fortune_telling": "This card often points to a captivating and charismatic individual in your love life or social circle, someone with a magnetic personality who skillfully influences situations to their desired outcome within relationships",
+            "keywords": [
+                "attention",
+                "attraction",
+                "unification",
+                "collaboration"
+            ],
+            "meanings": {
+                "light": "Being deeply present and attentive to your partner's or friend's needs and feelings, Skillfully guiding conversations and helping your loved ones focus on resolving relationship challenges with clarity, Inspiring harmonious collaboration within your romantic partnership or social circle, Beautifully discovering shared values and common interests that strengthen your bonds, Masterfully uniting diverse personalities and perspectives within your relationships, fostering understanding despite differences, Gently and cleverly influencing situations to encourage positive outcomes in your emotional connections",
+                "shadow": "Feeling emotionally distracted or using your magnetic charm to evade genuine intimacy and avoid facing relationship challenges, Seeking attention in romantic or platonic relationships through dramatic or unhealthy behaviors, creating imbalance, Disrupting harmony within your relationships or social gatherings due to an inflated ego, causing friction and emotional distance"
+            },
+            "Elemental": "Water of Fire.",
+            "Affirmation": "\"I use my influence to promote unity.\"",
+            "Questions to Ask": [
+                "How attentive am I?",
+                "How can I draw people's attention to what we have in common?",
+                "To what extent am I able to convince people to do what I want them to do?"
+            ]
+        },
+        {
+            "name": "King of Wands",
+            "number": "14",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w14.jpg",
+            "fortune_telling": "This card suggests the presence of a mature, confident, and perhaps older individual in your romantic sphere or close friendships, someone who naturally takes the lead and inspires those around them, a guiding force in your emotional journey, expect them to be charismatic and decisive in their connections.",
+            "keywords": [
+                "creativity",
+                "ingenuity",
+                "achievement",
+                "direction"
+            ],
+            "meanings": {
+                "light": "Rediscovering exciting new facets in an established relationship or friendship, ingeniously finding fresh ways to resolve emotional misunderstandings, wisely applying past relational experiences to nurture stronger bonds, successfully achieving your heartfelt desires within love or friendship, lovingly guiding and empowering your partner or friends towards shared emotional growth.",
+                "shadow": "Using charm or cleverness to avoid genuine emotional labor in a relationship, actively evading responsibility or commitment in romantic or platonic connections, boasting about romantic potential or past conquests without truly investing in present emotional bonds, dominating or being overly controlling towards a partner or friend."
+            },
+            "Elemental": "Fire of Fire",
+            "Affirmation": "\"I use my authority and experience to get things done faster.\"",
+            "Questions to Ask": [
+                "How confident a leader am I?",
+                "How can I project more confidence?",
+                "How can I offer my expertise in ways that inspire others to follow me?"
+            ]
+        },
+        {
+            "name": "Ace of Pentacles",
+            "number": "1",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p01.jpg",
+            "fortune_telling": "Your emotional well-being within your relationships is about to see a positive shift, finding a healthier balance, The deep connection or commitment you've been hoping for is genuinely on its way to you",
+            "keywords": [
+                "health",
+                "wealth",
+                "practicality",
+                "receiving"
+            ],
+            "meanings": {
+                "light": "Crafting a clear vision for a stable and fulfilling relationship future, laying down solid roots with a loved one, Discovering beautiful new opportunities to nurture and deepen your emotional bonds or find a truly compatible connection, Realizing that within your heart or your current relationship, you already possess all the love and support you truly need, Feeling profound gratitude for the love, connections, and companionship that grace your life, acknowledging these blessings, Experiencing a perfectly timed and meaningful gesture of affection, a new romantic beginning, or the blossoming of a cherished friendship",
+                "shadow": "Continuously seeking new romantic conquests or superficial connections without truly investing in emotional depth, Feeling perpetually unsatisfied in your relationships, always believing there's something \"more\" out there, Over-analyzing the give-and-take in relationships, focusing on what you get rather than the shared emotional journey, Allowing unfounded fears or insecurities to create imaginary problems within your loving connections, Taking your partner or friends for granted, failing to acknowledge and appreciate their care and presence in your life, Pursuing your own desires in a relationship without genuine consideration for the feelings or needs of your loved ones"
+            },
+            "Numerology": "1 (The Origin: the starting point, the seed, opportunity)",
+            "Astrology": "Capricorn, Taurus, Virgo",
+            "Affirmation": "\"I am open to and thankful for my blessings.\"",
+            "Questions to Ask": [
+                "If I made my decision based solely on practical concerns, what would my decision be?",
+                "What resources are available to me?",
+                "What will be the physical and financial impact of my decisions?"
+            ]
+        },
+        {
+            "name": "Two of Pentacles",
+            "number": "2",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p02.jpg",
+            "fortune_telling": "It's a moment to find harmony in your relational give-and-take, Be mindful not to squander emotional resources on superficial connections",
+            "keywords": [
+                "evaluation",
+                "decision",
+                "budgeting",
+                "diagnosis"
+            ],
+            "meanings": {
+                "light": "thoughtfully considering your romantic or relational paths, assessing compatibility and the emotional investment involved, discerning the true worth of different relational choices, skillfully managing time and energy between various relationships or commitments, making discerning choices that honor your emotional well-being and the health of your connections, focusing on the core needs and long-term viability of a bond, seeking wise counsel or perspectives from trusted loved ones about your relationships",
+                "shadow": "endless indecision or comparison in matters of the heart, leading to stagnation, hesitating to commit due to a fear of missing out on a potentially 'better' connection, entering into superficial connections without considering genuine emotional value or depth, draining your emotional energy on trivial or unfulfilling relationships, engaging in emotional behaviors without considering the impact on your well-being or the health of your relationships"
+            },
+            "Numerology": "2 (The Other: duality, division, debate)",
+            "Astrology": "Jupiter in Capricorn",
+            "Affirmation": "\"Before taking action, I consider costs.\"",
+            "Questions to Ask": [
+                "What values govern my decisions?",
+                "How willing am I to sacrifice a little pleasure now in order to have more pleasure later on?",
+                "Given my current situation, which course of action will give me more of what I really need?"
+            ]
+        },
+        {
+            "name": "Three of Pentacles",
+            "number": "3",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p03.jpg",
+            "fortune_telling": "A significant and valuable deepening of emotional commitment or understanding is on the horizon for you, Dedicated effort and mutual investment will lead to truly fulfilling and successful relationships and friendships",
+            "keywords": [
+                "expression",
+                "production",
+                "work",
+                "contribution"
+            ],
+            "meanings": {
+                "light": "Successfully navigating a challenging phase in a relationship or completing a shared emotional journey, Establishing healthy boundaries and expectations within your connections and consistently upholding them, Meeting your partner\u2019s or friend\u2019s emotional needs and expectations with care and intention, Bringing something truly cherished and meaningful to your connections, making others feel deeply appreciated and seen, Building a new and exciting romantic connection or evolving an existing bond into something deeper and more profound, Actively contributing your fair share and unique strengths to foster a balanced and thriving partnership or friendship, Understanding and lovingly fulfilling the specific desires and unspoken needs of your loved ones, strengthening your bond",
+                "shadow": "Compromising your true self or values just to please others in a relationship, losing your authenticity, Not following through on promises or commitments made to a partner or friend, leading to trust issues and disappointment, Becoming emotionally distant or unengaged unless constantly prompted or monitored by your loved ones, Disregarding or breaking the unspoken or explicit agreements and trust built with those who deeply care for you, Reluctance to contribute equally to the emotional labor, support, or responsibilities within a partnership or friendship, Struggling to uphold mutual understandings or personal boundaries, causing instability or disappointment in relationships"
+            },
+            "Numerology": "3 (The Result: expression, productivity, output)",
+            "Astrology": "Mars in Capricorn",
+            "Affirmation": "\"My work produces results.\"",
+            "Questions to Ask": [
+                "How can I get more done?",
+                "What's expected of me? How large a role do I play in controlling those expectations?",
+                "What's been agreed to? How well has that agreement been followed?"
+            ]
+        },
+        {
+            "name": "Four of Pentacles",
+            "number": "4",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p04.jpg",
+            "fortune_telling": "Prepare your heart for a deeper commitment ahead, nurturing the bonds you cherish",
+            "keywords": [
+                "protection",
+                "conservation",
+                "preservation",
+                "safety"
+            ],
+            "meanings": {
+                "light": "Building emotional reserves and a strong foundation for your relationship's future, practicing emotional discipline and self-restraint for the well-being of your connection, committing to personal growth and self-improvement to enrich your partnership, honoring personal boundaries and commitments within your intimate relationships, being emotionally prudent and investing wisely in your connections, creating a secure and trusting emotional space within your relationships, beginning to accumulate shared experiences and emotional capital for future happiness",
+                "shadow": "Being emotionally distant or unwilling to share your feelings freely, hesitating to invest the necessary time, effort, or emotional energy into your relationship, withholding affection or emotional intimacy from your partner, focusing solely on your own emotional needs without considering those of your loved ones, sacrificing long-term relational health for minor, immediate comforts or control, neglecting to nurture and appreciate the beautiful emotional connections you already possess"
+            },
+            "Numerology": "4 (The Status Quo: stability, equality, persistence)",
+            "Astrology": "Sun in Capricorn",
+            "Affirmation": "\"I use my resources wisely.\"",
+            "Questions to Ask": [
+                "What factors determine how conservative or generous you are?",
+                "What kinds of things must be preserved at all costs?",
+                "When is greediness or stinginess a good trait to have? When might generosity work against you?"
+            ]
+        },
+        {
+            "name": "Five of Pentacles",
+            "number": "5",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p05.jpg",
+            "fortune_telling": "Emotional connections might feel strained or distant, Prepare for a period of challenge or a temporary rift in a relationship",
+            "keywords": [
+                "poverty",
+                "destitution",
+                "need",
+                "crisis"
+            ],
+            "meanings": {
+                "light": "Recognizing your emotional needs within a relationship and seeking healthy ways to meet them, Making the most of the emotional resources you have, even during difficult times in a connection, Being vulnerable enough to admit when you need emotional support from a partner or friend, Graciously accepting the love, comfort, or understanding offered by those who care for you, Focusing on the love, support, and positive aspects you currently have in a relationship, rather than dwelling on perceived lacks, Holding onto hope and actively seeking solutions to bring warmth and renewed connection back into your relationships",
+                "shadow": "Exaggerating your emotional needs or the difficulties in your relationships to gain sympathy or attention, Adopting a scarcity mindset in love, believing you are undeserving of deep connection or happiness, Neglecting your own emotional well-being and expecting a partner or friend to be solely responsible for your happiness, Pushing away genuine offers of love, comfort, or practical support from caring individuals, Playing the victim in your relationships, making excessive sacrifices while secretly resenting it, or seeking pity rather than connection, Turning down opportunities to heal misunderstandings, improve communication, or strengthen bonds, Allowing yourself to get stuck in a cycle of sadness or resentment about past relationship struggles, preventing new connections or growth"
+            },
+            "Numerology": "5 (The Catalyst: instability, resistance, confrontation)",
+            "Astrology": "Mercury in Taurus",
+            "Affirmation": "\"I have faith that what I need will appear.\"",
+            "Questions to Ask": [
+                "What critical resources do I lack?",
+                "What people or groups would come to my aid if I asked?",
+                "How might an impoverished spirit be impacting my physical or financial condition?"
+            ]
+        },
+        {
+            "name": "Six of Pentacles",
+            "number": "6",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p06.jpg",
+            "fortune_telling": "If you're feeling vulnerable or needing support, this is a gentle reminder to open up and ask for help from your loved ones, Reflect on the emotional investments you've made; the love and support you receive are often a reflection of what you've generously given.",
+            "keywords": [
+                "charity",
+                "fairness",
+                "cooperation",
+                "sharing"
+            ],
+            "meanings": {
+                "light": "Generously giving your time, emotional energy, or practical support to your partner or friends, Harmoniously working together with your loved one towards shared relationship goals or a common vision for your future, Selflessly offering support and care within your relationships, without expecting immediate returns, Ensuring fairness, equity, and mutual respect in all emotional exchanges and contributions within your bonds, Collaborating intimately with your partner or friends, aligning your efforts for collective happiness and growth, Thoughtfully distributing your affection, attention, and resources to ensure all cherished relationships feel equally valued, Devoting yourself wholeheartedly to nurturing your emotional connections, investing deeply in their well-being, Sharing credit and celebrating successes as a team, acknowledging how each person contributes to the love and joy you create together.",
+                "shadow": "Using acts of kindness or gestures of affection as a means to manipulate or exert control over a partner or friend, Performing grand romantic or friendly deeds primarily for public admiration or ego gratification, rather than genuine connection, An unfair distribution of emotional labor, responsibilities, or affection within a relationship, leading to imbalance, Shirking your responsibilities or failing to pull your weight in a partnership or friendship, leaving others burdened, Disregarding important agreements, promises, or emotional commitments made to your loved ones, causing distrust and strain."
+            },
+            "Numerology": "6 (The Adjustment: cooperation, collaboration, interaction)",
+            "Astrology": "Moon in Taurus",
+            "Affirmation": "\"Knowing I will receive more, I share my resources freely.\"",
+            "Questions to Ask": [
+                "How do I feel about charity? About giving it? About receiving it?",
+                "How can I know if I'm treating others fairly?",
+                "What could I give that no one else can?"
+            ]
+        },
+        {
+            "name": "Seven of Pentacles",
+            "number": "7",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p07.jpg",
+            "fortune_telling": "A romantic endeavor or friendship might not unfold exactly as you envisioned, It's a moment to gently acknowledge what has been cultivated in your relationships and prepare your heart for the next phase of emotional connection",
+            "keywords": [
+                "assessment",
+                "evaluation",
+                "re-evaluation",
+                "reflection"
+            ],
+            "meanings": {
+                "light": "Reflecting on the growth and progress in your loving relationships, Thoughtfully assessing how your emotional efforts are blossoming and how to nurture even deeper bonds, Gently checking in with your heart to see if your current connections truly bring you joy and fulfillment, Discovering creative ways to enhance the emotional well-being and shared prosperity within your partnerships or friendships, Realizing it's time for a loving shift or evolution in a relationship dynamic for continued happiness, Candidly sharing your feelings and truths with someone you care about, fostering deeper trust",
+                "shadow": "Becoming lost in wistful or sad reflections about past romantic experiences or friendships, Idealizing past relationships, making it challenging to fully embrace present connections, Harshly judging yourself for missed chances in love or friendship, leading to unnecessary self-blame, Being overly critical of your own emotional contributions or efforts within a relationship, Placing unrealistic or demanding expectations on a partner or friend, causing strain and disappointment, Withdrawing from actively engaging in a relationship then feeling resentful when it doesn't meet your unspoken hopes"
+            },
+            "Numerology": "7 (The Motive: imagination, inner work, psychology)",
+            "Astrology": "Saturn in Taurus",
+            "Affirmation": "\"To stay on target, I measure my progress.\"",
+            "Questions to Ask": [
+                "To what extent have I fulfilled my own expectations?",
+                "What are the terms of success?",
+                "How can I be happier with the progress I've made?"
+            ]
+        },
+        {
+            "name": "Eight of Pentacles",
+            "number": "8",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p08.jpg",
+            "fortune_telling": "Stop overthinking and over-analyzing your relationships, just be present in them, Dedicate yourself to actively nurturing your emotional connections",
+            "keywords": [
+                "effort",
+                "work diligence",
+                "skill"
+            ],
+            "meanings": {
+                "light": "Consistently putting your best self forward in your relationships, Approaching your connections with genuine enthusiasm and positive energy, Actively working on personal growth to become a better partner or friend, Discovering and committing to the type of relationship or emotional bond that truly fulfills you, Paying close attention to the little gestures and nuances that strengthen a bond, Developing deep emotional intelligence and communication skills within your relationships, Co-creating a strong, lasting relationship foundation through shared effort, Expressing genuine affection and care through thoughtful, personalized actions for your loved ones",
+                "shadow": "Over-extending yourself or becoming emotionally drained trying to fix everything in a relationship alone, Neglecting your emotional connections or putting in minimal effort into nurturing them, Staying in a relationship or friendship that no longer brings joy or fulfillment, Making superficial gestures without genuine emotional investment, Lacking sincerity or depth in your interactions, leading to fragile connections, Being impatient or not taking the time to truly understand and build intimacy, Refusing to learn from relationship challenges or avoiding personal growth for healthier bonds"
+            },
+            "Numerology": "8 (The Action: movement, outer work, swiftness)",
+            "Astrology": "Sun in Virgo",
+            "Affirmation": "\"I give myself wholeheartedly to the task of the moment.\"",
+            "Questions to Ask": [
+                "How long has it been since you were \"lost in your work?\"",
+                "How can you improve your level of dedication and focus?",
+                "What work do you do best? What about that work appeals to you?"
+            ]
+        },
+        {
+            "name": "Nine of Pentacles",
+            "number": "9",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p09.jpg",
+            "fortune_telling": "Until you truly appreciate the love and connections you currently have, it will be challenging to attract deeper or more fulfilling bonds.",
+            "keywords": [
+                "training",
+                "discipline",
+                "confidence",
+                "enough"
+            ],
+            "meanings": {
+                "light": "Devoting time to deeply understand your partner or friends, or patiently teaching each other how to better connect emotionally, Practicing emotional self-control and respecting boundaries, avoiding overwhelming or extreme demands in your relationships, Making loving compromises or personal adjustments that contribute to the long-term well-being and growth of your relationship, Patiently building intimacy or resolving relationship challenges by taking thoughtful, manageable steps together, Experiencing deep contentment and gratitude for the love and companionship already present in your life, Discerning between genuine emotional needs and superficial desires within your romantic or platonic connections.",
+                "shadow": "Feeling unprepared or emotionally unequipped for the demands and intricacies of a new relationship or deeper connection, Pursuing a relationship dynamic or partner for which you are not truly ready or emotionally suited, Disregarding the unspoken needs, boundaries, or fundamental requirements for a healthy, balanced connection, Failing to dedicate sufficient time or genuine attention to understand a new love interest, friend, or the evolving nuances of your bond, A persistent feeling of dissatisfaction in relationships, always craving more, which prevents true emotional fulfillment."
+            },
+            "Numerology": "9 (The Completion: fullness, readiness, ripeness)",
+            "Astrology": "Venus in Virgo",
+            "Affirmation": "\"I know enough to be confident in my decisions.\"",
+            "Questions to Ask": [
+                "If you could not have what you want, how would you make do?",
+                "Could you make a complex task easier by breaking it down into smaller steps?",
+                "How patient are you during the learning process? With yourself? With others?"
+            ]
+        },
+        {
+            "name": "Ten of Pentacles",
+            "number": "10",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p10.jpg",
+            "fortune_telling": "A significant and lasting emotional legacy or commitment is on the horizon, Expect a profound and deeply satisfying connection to come into your life",
+            "keywords": [
+                "wealth",
+                "abundance",
+                "acquisition",
+                "greed"
+            ],
+            "meanings": {
+                "light": "Celebrating the deep security and comfort found within a loving relationship or family bond, Feeling immensely grateful for the stability, harmony, and joy in your current relationships, Finding profound contentment and fulfillment in the shared life and enduring connections you've built with loved ones, Cherishing and nurturing periods of deep connection, mutual support, and shared happiness in your romantic partnerships or friendships, Savoring joyful family gatherings, heartfelt celebrations, and shared experiences that strengthen your bonds, Expressing love through acts of service, emotional generosity, and creating a secure, welcoming haven for those you care about",
+                "shadow": "Attempting to buy affection or impress loved ones with material displays rather than genuine emotional investment, Placing too much emphasis on superficial appearances or external validation in your relationships, neglecting true intimacy, Using grand gestures or material offerings to manipulate or gain approval in a relationship, rather than fostering authentic connection, Allowing anxieties about practical security or external perceptions to overshadow emotional depth and connection in your romantic or friendly bonds, Approaching relationships with a transactional mindset, seeking personal gain rather than reciprocal love, trust, and shared well-being"
+            },
+            "Numerology": "10 (The End: finality, completion, exhaustion)",
+            "Astrology": "Mercury in Virgo",
+            "Affirmation": "\"I keep physical and financial matters in perspective.\"",
+            "Questions to Ask": [
+                "How much stuff do I really need?",
+                "How do I feel about wealth and abundance? How do I define these terms?",
+                "How might shedding some possessions open room for growth?"
+            ]
+        },
+        {
+            "name": "Page of Pentacles",
+            "number": "11",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p11.jpg",
+            "fortune_telling": "This card suggests a new, grounded influence in your romantic or social circle, someone who encourages you to explore deeper emotional or physical intimacy with practical curiosity.",
+            "keywords": [
+                "practicality",
+                "prosperity",
+                "learning",
+                "growth",
+                "adolescence"
+            ],
+            "meanings": {
+                "light": "Learning the real worth of emotional investment in a connection, Beginning to build a stable emotional foundation for a relationship, Taking initial steps to heal past emotional wounds or relationship conflicts, Discovering new ways to express affection or engage in shared activities, Embracing a deeper understanding of your own intimacy and desires within a connection, Initiating efforts to nurture and strengthen the health of your relationship or emotional bond, Gaining profound relationship insights through direct experience and shared activities",
+                "shadow": "Projecting a false image of emotional maturity or commitment in a relationship, Carelessly expending emotional energy or trust without thought for the future, An unwillingness to commit or consider the future of a relationship, living only for superficial moments, Displaying an immature approach to emotional or physical intimacy, Using superficial charm or status to avoid genuine emotional growth and connection"
+            },
+            "Elemental": "Earth of Earth.",
+            "Affirmation": "\"I am physically and financially responsible.\"",
+            "Questions to Ask": [
+                "How can you get more financial or sexual experience without risking your livelihood or health?",
+                "How might hands-on learning play a role in your situation?",
+                "What's the most practical choice you could make?"
+            ]
+        },
+        {
+            "name": "Knight of Pentacles",
+            "number": "12",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p12.jpg",
+            "fortune_telling": "A partner may criticize your emotional generosity or your commitment style, Be prepared to clearly articulate and defend your needs or choices regarding intimacy and shared life with a loved one",
+            "keywords": [
+                "caution",
+                "focus",
+                "realism",
+                "invention"
+            ],
+            "meanings": {
+                "light": "Investing your time and emotions thoughtfully into a relationship, Building a secure and stable foundation for a lasting emotional connection, Being highly attentive to your partner's practical needs and small gestures of affection, Understanding the emotional give-and-take within your relationship, Practicing healthy, respectful, and safe intimacy, Valuing honesty and practical compatibility over fleeting infatuation, Resourcefully nurturing your bond and overcoming challenges together, Successfully building a durable and deeply stable emotional connection",
+                "shadow": "Being reckless with your emotional investments or commitments, Rushing into a relationship without considering long-term implications, Prioritizing superficial gestures or fleeting excitements over fundamental emotional needs, Using new relationships or intense emotions to avoid deeper personal issues, Becoming overly critical or fixating on minor flaws within a relationship, Constantly seeking new romantic interests, unable to commit, Lacking authenticity in your emotional expression, mimicking others' relationship styles"
+            },
+            "Elemental": "Air of Earth.",
+            "Affirmation": "\"I temper my actions with cautious optimism.\"",
+            "Questions to Ask": [
+                "What's the difference between caution and fear?",
+                "How can I evaluate the practicality of my own ideas and methods?",
+                "How realistic are my goals?"
+            ]
+        },
+        {
+            "name": "Queen of Pentacles",
+            "number": "13",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p13.jpg",
+            "fortune_telling": "This card represents a loving and nurturing presence in your life, perhaps a partner, friend, or even yourself, who embodies warmth, generosity, and a grounded sensuality that deeply enriches emotional connections, they effortlessly create a stable and abundant environment within relationships, fostering a sense of security and deep affection.",
+            "keywords": [
+                "luxury",
+                "comfort",
+                "resourcefulness",
+                "generosity",
+                "prosperity"
+            ],
+            "meanings": {
+                "light": "Cherishing shared comforts and experiences in relationships, delighting in healthy and fulfilling intimacy with your partner, prioritizing self-care and emotional well-being within your bonds, investing thoughtfully in shared pleasures and romantic gestures, showering your loved ones with genuine care and unwavering support, experiencing profound emotional security and abundance in your love life.",
+                "shadow": "Becoming overly possessive or demanding in love, feeling perpetually unfulfilled and insatiable in your emotional needs, taking your partner or the comforts of a relationship for granted, providing only superficial care without addressing deep emotional needs, allowing entitlement to overshadow gratitude for the love and support you receive."
+            },
+            "Elemental": "Water of Earth.",
+            "Affirmation": "\"I relish the best this world has to offer.\"",
+            "Questions to Ask": [
+                "How do I define luxury?",
+                "To what extent am I capable of reveling in sensual pleasure?",
+                "What would I have to give up in order to \"have it all?\""
+            ]
+        },
+        {
+            "name": "King of Pentacles",
+            "number": "14",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p14.jpg",
+            "fortune_telling": "This card might indicate a relationship with a mature, stable, and dependable individual who offers security and follows through on their promises, or it suggests cultivating a grounded, responsible approach to your emotional connections, especially if you seek a partner with traditional values and a strong sense of commitment",
+            "keywords": [
+                "stability",
+                "dependability",
+                "confidence",
+                "intervention"
+            ],
+            "meanings": {
+                "light": "Finding emotional security and freedom in a bond, experiencing abundant support and stability in your connections, consistently investing in the long-term health and future of a relationship, actively working towards deeper intimacy or shared relational goals, committing to the long-term well-being and protection of your bond, feeling confident and mutually satisfied in physical or emotional intimacy, being a strong, protective, and supportive presence for your loved ones",
+                "shadow": "Resisting necessary growth or change in a relationship, clinging rigidly to outdated relationship patterns or expectations, exhibiting arrogance or superiority within your emotional bonds, prioritizing personal gain or fleeting pleasures over the emotional needs of your partner or friends, focusing solely on one's own desires in intimacy without considering the partner's needs, attempting to control or dominate loved ones without their consent"
+            },
+            "Elemental": "Fire of Earth.",
+            "Affirmation": "\"I embody confidence and fairness.\"",
+            "Questions to Ask": [
+                "How can you handle expenses with greater confidence and maturity?",
+                "How dependable are you? How dependable would others say you are?",
+                "To what extent is a conservative viewpoint valuable? At what point does it become more of a burden than a blessing?"
+            ]
+        }
+    ]
+}

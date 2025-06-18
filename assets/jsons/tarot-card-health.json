@@ -1,0 +1,2087 @@
+{
+    "description": "tarot cards and basic information about them, as well as references to corresponding scans",
+    "cards": [
+        {
+            "name": "The Fool",
+            "number": "0",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m00.jpg",
+            "fortune_telling": "New wellness routines or health initiatives are on the horizon, inviting you to begin, Trust your body's healing capacity or a new holistic approach, even if it's unfamiliar, An unexpected opportunity for health improvement or a fresh start in your well-being journey is presenting itself; embrace it fully",
+            "keywords": [
+                "freedom",
+                "faith",
+                "inexperience",
+                "innocence"
+            ],
+            "meanings": {
+                "light": "Liberating yourself from old habits or limiting beliefs that have held back your health, Experiencing renewed energy, vitality, and a joyful approach to your physical well-being, Being receptive to new healing modalities, dietary changes, or perspectives on your health journey, Courageously trying a new treatment, lifestyle change, or a different path towards recovery, trusting the process, Listening deeply to your body's wisdom and inner guidance regarding what it truly needs for healing, Feeling enthusiastic and inquisitive about exploring new avenues for improving your physical or mental health, Unlocking new levels of wellness and discovering untapped reserves of strength and resilience within yourself, Readily adapting to necessary lifestyle adjustments or innovative therapies that support your health and healing",
+                "shadow": "Being overly trusting or naive about unproven health fads, potentially leading to detrimental choices, Engaging in health behaviors that are reckless or expose you to avoidable harm or setbacks, Not taking your symptoms or recovery seriously enough, potentially delaying necessary action, Neglecting your health needs due to a lack of focus, excessive distraction, or trivializing important signals, Approaching a health challenge without adequate knowledge or proper guidance, leading to misguided efforts, Disregarding medical advice, established health protocols, or pushing your physical limits unsafely, Ignoring essential self-care practices or making choices that are not conducive to your overall well-being"
+            },
+            "Archetype": "The Divine Madman",
+            "Hebrew Alphabet": "Aleph/Ox/1",
+            "Numerology": "0 (off the scale; pure potential)",
+            "Elemental": "Air",
+            "Mythical/Spiritual": "Adam before the fall. Christ as a wandering holy madman. Deity wrapped in human flesh. The Holy Spirit.",
+            "Questions to Ask": [
+                "What would I do if I felt free to take a leap?",
+                "How willing am I to be vulnerable and open?",
+                "How might past experiences help in this new situation?"
+            ]
+        },
+        {
+            "name": "The Magician",
+            "number": "1",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m01.jpg",
+            "fortune_telling": "A skilled healthcare professional or a strong inner resolve may play a significant role in your health journey today, Understand that your current health state is an integral part of a much larger healing or wellness plan",
+            "keywords": [
+                "capability",
+                "empowerment",
+                "activity"
+            ],
+            "meanings": {
+                "light": "Proactively engaging in effective treatments or making beneficial lifestyle changes, Accessing inner wisdom or spiritual insight to guide your health choices and healing, Harmonizing your body and mind to manifest optimal health and vitality, Empowering yourself to take constructive charge of your health and well-being, Embracing your authentic self, which supports holistic mental and physical well-being",
+                "shadow": "Overestimating your health knowledge or abilities, leading to neglect of professional advice, Misusing your innate healing capacity or neglecting the self-care your body truly needs, Being dishonest about your symptoms or deceiving yourself about unhealthy habits, Pushing your body beyond its limits during recovery or an overly aggressive approach to healing, Falling for quick fixes or superficial health trends instead of genuine, lasting wellness strategies, Reluctance to commit to the consistent effort and patience required for true healing or fitness, Seeking easy answers or quick fixes that bypass the necessary foundational work for lasting health"
+            },
+            "Archetype": "The Ego/The Self",
+            "Hebrew Alphabet": "Beth/House/2",
+            "Numerology": "1 (origins, unity, seeds)",
+            "Elemental": "The Sun/Mercury",
+            "Mythical/Spiritual": "Thoth, the Egyptian god of wisdom, known to the Greeks as Hermes and to the Romans as Mercury. Christ working miracles. Brahma, the Creator.",
+            "Questions to Ask": [
+                "What am I empowered to do?",
+                "How might my abilities come into play?",
+                "To what extent am I making the most of my talents?"
+            ]
+        },
+        {
+            "name": "The High Priestess",
+            "number": "2",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m02.jpg",
+            "fortune_telling": "A new intuitive insight or a guiding figure specializing in holistic health may emerge, Unacknowledged emotional or intimate health issues may become clear, requiring attention, Your body holds subtle wisdom or a hidden imbalance that is yet to be fully revealed or understood",
+            "keywords": [
+                "intuition",
+                "reflection",
+                "purity",
+                "initiation"
+            ],
+            "meanings": {
+                "light": "Attuning deeply to your body's signals and trusting your intuition regarding your health path, Openness to exploring holistic therapies, alternative healing modalities, or mind-body practices, A period of private healing or quietly nurturing your well-being away from external influences, Being open and receptive to new healing methods, compassionate care, and restorative energies, Taking time for quiet contemplation and self-assessment before making health decisions or seeking active intervention, Gaining insight into your own health by observing subtle changes or learning from others' wellness experiences, Prioritizing detoxification, maintaining a clean environment, and safeguarding your inner peace for holistic well-being",
+                "shadow": "Emotional detachment from your body's needs or an unwillingness to address underlying health issues, Excessive rumination on health fears, conspiracy theories about treatments, or an unhealthy focus on hidden ailments, Dismissing your body's intuitive wisdom or resisting valuable advice that could aid your recovery, Unwisely disclosing sensitive personal health information or oversharing without discretion, hindering private healing, Neglecting crucial warning signs from your body or suppressing strong gut feelings about your health path, A passive stance toward your health, avoiding necessary engagement in your healing process, or neglecting self-care"
+            },
+            "Archetype": "The Virgin/The Maiden",
+            "Hebrew Alphabet": "Gimel/Camel/3",
+            "Numerology": "2 (division, debate, duality)",
+            "Elemental": "The Moon",
+            "Mythical/Spiritual": "The feminine aspect of divinity, particularity when expressed through virginity, as with the Virgin Mary or Isis.",
+            "Questions to Ask": [
+                "What might a rebel against tradition do?",
+                "What isn't being said or revealed?",
+                "What could be achieved by observing and reflecting?"
+            ]
+        },
+        {
+            "name": "The Empress",
+            "number": "3",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m03.jpg",
+            "fortune_telling": "A period of enhanced fertility or the blossoming of a significant healing phase is on the horizon, Opportunities for nurturing sensual well-being and finding comfort in your physical self are emerging, Be mindful of tendencies toward self-soothing behaviors that could become unhelpful habits or addictions",
+            "keywords": [
+                "fertility",
+                "productivity",
+                "ripeness",
+                "nurturing"
+            ],
+            "meanings": {
+                "light": "Embracing self-care practices and fostering a supportive environment for collective well-being, Experiencing tangible positive results in your health journey, a manifestation of vitality, Deeply appreciating and honoring your physical form, embracing body positivity, A time of strong fertility, the successful 'birth' of new health habits, or vital new life, Indulging in healthy pleasures and finding comfort in your environment to support healing, Offering nurturing support and fostering healing spaces for those in your care, Experiencing a healthy and fulfilling connection with your physical and sensual self, Effectively implementing health plans and making productive strides in recovery or wellness goals",
+                "shadow": "Struggling with overconsumption of unhealthy foods or engaging in excessive habits that harm well-being, An imbalance in giving and receiving care, potentially leading to personal depletion or hoarding wellness resources, Overly intrusive care for others that hinders their autonomy in their own healing journey, Hindering someone's recovery or self-sufficiency through excessive worry or overprotection, Experiencing mental stress or burnout due to an obsessive focus on performance metrics, neglecting holistic health needs, Struggling with compulsive behaviors or unhealthy dependencies that undermine health"
+            },
+            "Archetype": "The Mother",
+            "Hebrew Alphabet": "Daleth/Door/4",
+            "Numerology": "3 (expression, productivity, output)",
+            "Elemental": "Venus",
+            "Mythical/Spiritual": "Gaia, Mother Earth, Ishtar, Demeter\u00d1mature, reproductive female divinity in every form. Also Aphrodite and Turan. ",
+            "Questions to Ask": [
+                "What would a concerned and capable mother do?",
+                "What can I do that would emphasize growth?",
+                "How can I celebrate my own sensuality and sexuality?"
+            ]
+        },
+        {
+            "name": "The Emperor",
+            "number": "4",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m04.jpg",
+            "fortune_telling": "'A knowledgeable medical professional or supportive guide will provide essential direction for your well-being', 'New routines or a structured health plan will guide your path to better health', 'You may need to implement strict self-discipline or make necessary adjustments to your lifestyle for improved health'",
+            "keywords": [
+                "authority",
+                "regulation",
+                "direction",
+                "structure"
+            ],
+            "meanings": {
+                "light": "'Taking a proactive and authoritative role in managing your health', 'Establishing healthy boundaries and understanding your body\\'s limits for optimal well-being', 'Structuring your daily routine and treatment plan effectively to promote healing', 'Clearly understanding and following medical advice or personal health protocols', 'Achieving strong self-control and discipline over your health habits and emotional responses', 'Applying wise and experienced strategies to achieve balanced physical and mental strength'",
+                "shadow": "'Excessively obsessing over minor health details or over-controlling aspects of your recovery, hindering natural healing', 'Being overly rigid or unyielding in your health approach, stifling intuition or alternative healing methods', 'Resisting professional medical advice or neglecting necessary changes due to stubbornness in your health journey', 'Adopting an overly strict or inflexible mindset towards your body, leading to burnout or unhealthy expectations', 'Pushing your body beyond its limits or resorting to extreme measures in an unhealthy attempt to control your condition'"
+            },
+            "Archetype": "The Father",
+            "Hebrew Alphabet": "He[as]/Window/5, or in some decks, Tzaddi/Fish hook/90",
+            "Numerology": "4 (stability, equality, persistence)",
+            "Elemental": "Mars/Aries",
+            "Mythical/Spiritual": "Masculine gods, including the Hebrew God, the Christian God, Allah, and Zeus. Patriarchs (Abraham) and lawgivers (Moses). Vishnu, the Preserver.",
+            "Questions to Ask": [
+                "How does the issue of control or regulation impact this situation?",
+                "What would a compassionate but strict father do?",
+                "What needs more control?"
+            ]
+        },
+        {
+            "name": "The Hierophant",
+            "number": "5",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m05.jpg",
+            "fortune_telling": "Expect that ignoring established health practices or advice may lead to noticeable symptoms or consequences, Consider openly addressing unhealthy habits or patterns that contribute to your current condition, An experienced health professional, mentor, or caregiver will provide crucial guidance on your healing path",
+            "keywords": [
+                "guidance",
+                "knowledge",
+                "revelation",
+                "belief"
+            ],
+            "meanings": {
+                "light": "Sharing your health journey and insights to help others on their wellness path, Dedicating yourself to understanding the root causes and best practices for your well-being, Seeking holistic or spiritual support to aid in your recovery and overall balance, Valuing and applying the expertise of doctors, therapists, or holistic practitioners, Committing to a new, beneficial health regimen or lifestyle change, Embracing routines and practices that deeply nourish your body and soul, like mindful eating or meditation, Finding healing and purpose through supporting others in their health challenges",
+                "shadow": "Misusing your health knowledge or past experiences to give harmful advice or mislead others, Rigidly sticking to outdated health beliefs or practices despite new information or personal needs, Prioritizing old methods or conventional treatments when a more innovative or personalized approach is truly needed for your health, Engaging in health routines without genuine intention or belief, leading to little benefit, Withholding important health information or insights from yourself or others, Feeling cut off from beneficial holistic practices, intuitive healing, or your inner wisdom regarding health"
+            },
+            "Archetype": "The Guardian/The Church/Faith",
+            "Hebrew Alphabet": "Vau/Nail or Spike/6",
+            "Numerology": "5 (instability, resistance, confrontation, evolution)",
+            "Elemental": "Taurus/Earth",
+            "Mythical/Spiritual": "The Christ, the Apostle Peter, Buddha, Mohammed. Popes, priests, and intercessors of every faith and tradition",
+            "Questions to Ask": [
+                "What role might tradition or religion play in this situation?",
+                "Who authored the rules? Who enforces them? Why?",
+                "How might an experienced guide impact this situation?"
+            ]
+        },
+        {
+            "name": "The Lovers",
+            "number": "6",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m06.jpg",
+            "fortune_telling": "A new, beneficial connection with a healthcare provider or a support group emerges, aiding your healing journey, Discovering new, positive health practices or a surge in vital energy and well-being, Realizing that a previously overlooked aspect of your lifestyle or a self-care habit is actually key to your health",
+            "keywords": [
+                "love",
+                "passion",
+                "unity",
+                "choice"
+            ],
+            "meanings": {
+                "light": "Feeling a deep sense of self-acceptance and connection with your body\u2019s needs, fostering inner harmony, Actively engaging in self-care practices that nurture your well-being and sharing positive health habits with others, Embracing a vibrant zest for life and activities that energize your physical and mental state, Finding strength and motivation by connecting with support groups or wellness communities, Facilitating a cohesive approach to your health, integrating different therapies or aspects of your lifestyle for optimal benefit, Making conscious, well-researched choices about your diet, exercise, or treatment plans for lasting health",
+                "shadow": "Experiencing an overwhelming emotional state or an unhealthy obsession that drains your vitality, Allowing cravings or unhealthy impulses to dictate choices that harm your physical or mental health, Feeling internal conflict or a disconnect between your mind and body, leading to imbalance, Neglecting professional medical advice or support systems, hindering your recovery or well-being, Making impulsive or poorly researched health decisions that could have adverse consequences"
+            },
+            "Archetype": "The Lover/Sexual Awakening",
+            "Hebrew Alphabet": "Zain/Sword/7",
+            "Numerology": "6 (cooperation, collaboration, interaction)",
+            "Elemental": "Gemini",
+            "Mythical/Spiritual": "Obviously, Adam and Eve, who are depicted in RWS-influenced decks. Also Venus and Cupid, Aphrodite and Eros.",
+            "Questions to Ask": [
+                "What guides my choices?",
+                "What is my heart leading me to do?",
+                "How might this decision transform me as a person?"
+            ]
+        },
+        {
+            "name": "The Chariot",
+            "number": "7",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m07.jpg",
+            "fortune_telling": "Your healing journey or health goals are destined for success, keep pushing forward, It's time to confidently implement your health and wellness plans, trust your strategy, Be mindful of external negativity or comparison that could undermine your personal health progress",
+            "keywords": [
+                "advancement",
+                "victory",
+                "triumph",
+                "success"
+            ],
+            "meanings": {
+                "light": "Overcoming significant health challenges or breakthroughs in a long-standing condition, Taking proactive and empowered steps towards better health and well-being, Achieving peak physical or mental condition, reaching a significant wellness milestone, Feeling strong, vital, and proud of your dedication to health and recovery, Successfully managing your health journey, leading yourself to complete well-being, Becoming a role model for healthy living, demonstrating resilience and self-mastery",
+                "shadow": "Becoming complacent with your health progress, neglecting ongoing self-care, Pushing your body or mind too hard, ignoring warning signs or others\u2019 health advice, Stuck on past health achievements, not adapting to current needs or new wellness paths, Struggling with self-discipline in diet, exercise, or harmful habits, leading to imbalance"
+            },
+            "Archetype": "The Victorious Hero",
+            "Hebrew Alphabet": "Cheth/Fence/8",
+            "Numerology": "7 (imagination, inner work, psychology)",
+            "Elemental": "Cancer",
+            "Mythical/Spiritual": "Odysseus. Jason. The search for the Holy Grail. Christ's triumphal entry into Jerusalem.",
+            "Questions to Ask": [
+                "To what extent have I arrived? What will my next challenge be?",
+                "How can I use past achievements to their best advantage?",
+                "What would the criteria for real and meaningful success be?"
+            ]
+        },
+        {
+            "name": "Strength",
+            "number": "8",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m08.jpg",
+            "fortune_telling": "Your commitment to healthy choices will be tested, A supportive influence may encourage healthier habits in your life, You possess remarkable inner resilience and a strong capacity for healing,",
+            "keywords": [
+                "discipline",
+                "boldness",
+                "self-discipline",
+                "power",
+                "vitality"
+            ],
+            "meanings": {
+                "light": "Consciously setting beneficial boundaries for your health and lifestyle, Harmonizing your desires with wise choices for holistic well-being, Successfully overcoming unhealthy impulses and cravings, Bravely initiating new wellness practices or seeking necessary medical care,",
+                "shadow": "Giving in to self-defeating habits despite knowing they harm your health, Struggling with dependencies that erode your vitality and mental clarity, Feeling overcome by urges or anxieties, hindering your recovery, Hesitating to make crucial decisions or take action for your health"
+            },
+            "Archetype": "The Law",
+            "Hebrew Alphabet": "Lamed/Outstretched Arms/30 or Theth/Snake/9",
+            "Numerology": "8 (movement, work) or 11 = 1 + 1 = 2 (debate, duality)",
+            "Elemental": "Libra or Leo",
+            "Mythical/Spiritual": "Themis or Justitia. Ma'at. Solomon dividing a baby. The Sword of Damocles. The giving of the Ten Commandments.",
+            "Questions to Ask": [
+                "To what extent is your life (or work) balanced?",
+                "How can you achieve greater objectivity?",
+                "What course of action would be fair to everyone concerned?"
+            ]
+        },
+        {
+            "name": "The Hermit",
+            "number": "9",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m09.jpg",
+            "fortune_telling": "A period of necessary quiet and introspection begins for your healing journey, A phase of letting go of old health habits or influences that no longer serve you, A realization that external solutions alone won't provide the deepest healing, prompting an inward search",
+            "keywords": [
+                "solitude",
+                "experience",
+                "stillness",
+                "withdrawal"
+            ],
+            "meanings": {
+                "light": "Seeking wise guidance from a trusted health professional or mentor, Embracing a period of retreat or solitude for deep physical and mental restoration, Recharging your vital energy and emotional reserves through quiet contemplation, Gaining clear insight to illuminate your own path to wellness or recovery, potentially guiding others, Taking a crucial step back to gain a clearer perspective on your overall health and well-being",
+                "shadow": "Withdrawing from necessary support systems, leading to isolation in your health journey, Allowing fear or anxiety to prevent you from seeking essential medical advice or social connection, Becoming overly rigid in your own health beliefs, refusing to consider professional guidance or new approaches, Exaggerating your wellness achievements or misrepresenting your health status to others, Hesitating to fully engage in your healing process due to feelings of inadequacy or fear of confronting your health challenges"
+            },
+            "Archetype": "The Holy Man",
+            "Hebrew Alphabet": "Yod/Hand/10",
+            "Numerology": "9 (fullness, readiness, ripeness)",
+            "Elemental": "Virgo",
+            "Mythical/Spiritual": "The Christ, while fasting 40 days in the wilderness. Chronos, the god of time. Father Time. Hermes.",
+            "Questions to Ask": [
+                "What would happen if I simply withdrew and took no action?",
+                "How can I get some perspective on the situation?",
+                "Who has walked this path before me? How can I enlist his or her help?"
+            ]
+        },
+        {
+            "name": "Wheel of Fortune",
+            "number": "10",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m10.jpg",
+            "fortune_telling": "Some aspects of your health journey, like recovery time or unexpected improvements, are influenced by larger forces beyond your immediate control, Reflect on past health challenges or periods of wellness; similar patterns or lessons might be relevant now, Consider what happened in previous cycles of your health; those insights can guide your current well-being",
+            "keywords": [
+                "luck",
+                "randomness",
+                "cycles",
+                "karma",
+                "fate",
+                "revolution"
+            ],
+            "meanings": {
+                "light": "Embracing the natural flow of healing and trusting your body's wisdom in its journey, Recognizing the broader patterns in your daily health habits and their long-term impact on well-being, Trusting in your body's resilience and finding unexpected positive turns in your health or recovery, Observing the natural cycles of your energy, mood, or symptoms and adapting your self-care accordingly, Understanding that consistent healthy choices and self-care will naturally lead to improved vitality and well-being",
+                "shadow": "Engaging in risky health behaviors or making choices that lead to significant setbacks in your well-being, Failing to take an active role in your own healing process or neglecting essential self-care and medical advice, Adopting a defeatist attitude towards your health, believing improvement is impossible regardless of effort, Resisting necessary lifestyle changes, denying symptoms, or fighting against the natural progression of recovery, potentially prolonging illness"
+            },
+            "Archetype": "The Fates/Destiny",
+            "Hebrew Alphabet": "Koph/Palm/20",
+            "Numerology": "10 (finality, completion) and 10 = 1 + 0 = 1 (seed, opportunity)",
+            "Elemental": "Jupiter",
+            "Mythical/Spiritual": "The God in the Machine. Deus ex Machina. Clotho, Lachesis, and Atropos. Fortuna.",
+            "Questions to Ask": [
+                "How does this challenge fit into a larger pattern?",
+                "What role does luck play in my circumstances?",
+                "What can I control? How should I know when to relinquish control?"
+            ]
+        },
+        {
+            "name": "Justice",
+            "number": "11",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m11.jpg",
+            "fortune_telling": "A clear understanding or diagnosis of your health situation will soon emerge, A significant decision about your health or recovery path is currently being made, You need to thoroughly research and understand all facts related to your symptoms or treatment options",
+            "keywords": [
+                "balance",
+                "law",
+                "fairness",
+                "objectivity"
+            ],
+            "meanings": {
+                "light": "Making a balanced and objective decision about your health or treatment, Carefully weighing all aspects of a health issue before taking action, Appropriately adjusting your lifestyle or recovery efforts to suit your body's needs, Gathering all necessary medical information and personal health facts, Thoughtfully considering all available evidence and expert opinions for your well-being, Deeply contemplating the best path for your holistic health and healing",
+                "shadow": "Being overly critical of your body or health journey, Becoming fixated on rigid health rules or diets to your detriment, Sticking to a health plan strictly even when it's not serving your unique needs, Making hasty health decisions without proper insight or consideration, Neglecting certain aspects of your well-being while overemphasizing others"
+            },
+            "Archetype": "The Id",
+            "Hebrew Alphabet": "Theth/Snake/9 or Lamed/Outstretched Arms/30",
+            "Numerology": "11 = 1 + 1 = 2 (debate, duality) or 8 (movement, outer work)",
+            "Elemental": "Leo or Libra",
+            "Mythical/Spiritual": "Samson. Hercules. Daniel in the lion's den. The sinless Christ.",
+            "Questions to Ask": [
+                "How can I enhance my self-discipline?",
+                "What behaviors tempt me? How can I resist?",
+                "What instincts do I continue to struggle with today?"
+            ]
+        },
+        {
+            "name": "The Hanged Man",
+            "number": "12",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m12.jpg",
+            "fortune_telling": "An underlying health issue or a self-sabotaging pattern that has been undermining your well-being may soon become clear, A habit you consider benign or an external influence you trust might surprisingly be detrimental to your health, or a part of yourself is resisting vital healing, Your current lifestyle choices or mindset are leading to health consequences; a conscious shift is crucial for recovery and preventing further decline",
+            "keywords": [
+                "enlightenment",
+                "sacrifice",
+                "perspective",
+                "suspension",
+                "reversals"
+            ],
+            "meanings": {
+                "light": "Finding profound lessons and pathways to deeper healing even amidst physical discomfort or illness, seeing challenges as opportunities for growth, Experiencing a significant breakthrough in how you perceive your body, mind, or healing journey, leading to transformative insights and positive changes, Skillfully adapting and finding strength in an unexpected health change or limitation, discovering new ways to maintain vitality and embrace your well-being, Being open to and exploring alternative or unconventional healing methods, trusting your intuition and willingness to embrace new approaches to wellness, Making necessary adjustments and self-sacrifices in your lifestyle, diet, or habits, understanding that these choices are vital investments in your long-term health and balance",
+                "shadow": "Ignoring your body's clear signals or neglecting your true health needs, acting in ways that contradict your inner knowing about what supports your well-being, An unwillingness to make necessary lifestyle changes or adjustments for your health, clinging to old habits despite their evident negative impact on your vitality, Resisting adapting your health routine or treatment approach when new information or circumstances arise, holding onto outdated or ineffective methods, Placing blame for your health struggles entirely on external factors or others, avoiding personal accountability for choices that impact your well-being, Prioritizing immediate gratification or external gains (like work or social demands) at the significant expense of your physical, mental, or emotional health"
+            },
+            "Archetype": "The Traitor",
+            "Hebrew Alphabet": "Mem/Water/40",
+            "Numerology": "12 = 1 + 2 = 3 (expression, productivity, output)",
+            "Elemental": "Water",
+            "Mythical/Spiritual": "The Crucified Christ. Isaac as a sacrifice. Prometheus bound. Jonah and the whale. Lazarus. Any hanged or sacrificed god. Judas.",
+            "Questions to Ask": [
+                "How can I radically alter my perspective?",
+                "How might being stuck actually be a blessing in disguise?",
+                "How can I help myself see the glass as half full?"
+            ]
+        },
+        {
+            "name": "Death",
+            "number": "13",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m13.jpg",
+            "fortune_telling": "A period of illness or a difficult health struggle is nearing its definitive end, Exercise caution to avoid physical strain or situations that could compromise your well-being, A sense of exhaustion or feeling overwhelmed may indicate a crucial need for a health reset.",
+            "keywords": [
+                "ending",
+                "conclusion",
+                "transition",
+                "passage",
+                "departure"
+            ],
+            "meanings": {
+                "light": "Successfully concluding a challenging phase of illness or a demanding recovery process, Acknowledging and celebrating a significant milestone in your healing journey or the completion of a health transformation, Consciously letting go of detrimental health habits such as poor diet or lack of exercise, Embracing a revitalized self with improved physical and mental vitality, Transitioning to a new, healthier lifestyle, a beneficial care regimen, or a more supportive environment for your well-being, Releasing chronic pain, emotional burdens, or old beliefs that have hindered your health.",
+                "shadow": "An unhealthy preoccupation with symptoms, a fear of illness, or hypochondria, Stubbornly clinging to self-sabotaging health behaviors or toxic relationships that undermine your well-being, Resisting necessary medical advice, lifestyle changes, or new approaches to your health and healing, Neglecting crucial self-care, postponing vital check-ups, or ignoring your body's warning signs."
+            },
+            "Archetype": "Death",
+            "Hebrew Alphabet": "Nun/Fish/50",
+            "Numerology": "13 = 1 + 3 = 4 (stability, persistence)",
+            "Elemental": "Scorpio",
+            "Mythical/Spiritual": "Christ in the tomb. Hades. Hypnos. Thanatos. Stories of journeys into the underworld.",
+            "Questions to Ask": [
+                "What needs to end?",
+                "How might an ending actually be a blessing in this situation?",
+                "What's next?"
+            ]
+        },
+        {
+            "name": "Temperance",
+            "number": "14",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m14.jpg",
+            "fortune_telling": "A gentle nudge to evaluate if habits or substances are creating imbalance in your health, A clear sign to re-establish a balanced approach to nutrition and self-care",
+            "keywords": [
+                "blending",
+                "synthesis",
+                "mediation",
+                "combination",
+                "harmony"
+            ],
+            "meanings": {
+                "light": "Skillfully blending different health practices for holistic well-being, Achieving calm and control in your health choices and emotional responses, Discovering the optimal balance point for your physical and mental needs, Successfully integrating diverse health advice into a personal, sustainable plan, Developing a unified wellness strategy that supports all aspects of your vitality, Wisely adapting traditional or past health methods for fresh, beneficial approaches",
+                "shadow": "Engaging in overly rigid or excessive health behaviors that disrupt balance, Struggling to work effectively with healthcare providers or support systems, hindering recovery, Neglecting fundamental wellness practices and overlooking your body\u2019s needs, Developing unhealthy dependencies on substances or behaviors that harm your health, Overindulging in habits that detract from your physical and mental vitality, Experiencing internal discord or fragmentation in your overall well-being, Disconnecting from supportive relationships or abandoning beneficial health regimens"
+            },
+            "Archetype": "The Mediator",
+            "Hebrew Alphabet": "Samekh/Foundation/60",
+            "Numerology": "14 = 1 + 4 = 5 (catalyst, instability, confrontation)",
+            "Elemental": "Sagittarius",
+            "Mythical/Spiritual": "The angel seen here may be the goddess Iris. By extension, priests, priesthoods, or the transfigured Christ.",
+            "Questions to Ask": [
+                "How can I avoid extremes?",
+                "What does everyone involved have in common?",
+                "How might combining familiar things help me create something new?"
+            ]
+        },
+        {
+            "name": "The Devil",
+            "number": "15",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m15.jpg",
+            "fortune_telling": "Warning of hidden unhealthy habits or underlying conditions that subtly undermine your well-being, an unfaithful approach to your body's true needs, or a betrayal of your healing path, A challenging period of recurring health issues or a series of setbacks in your physical or mental state is on the horizon, Be vigilant against misleading health information, detrimental fads, or individuals who subtly undermine your health journey disguised as helpful influences",
+            "keywords": [
+                "shadow",
+                "materialism",
+                "bondage",
+                "delusion"
+            ],
+            "meanings": {
+                "light": "Finding genuine pleasure and comfort in a balanced, healthy lifestyle, appreciating the physical joys and ease your well-being affords you, Achieving a deep sense of self-acceptance and comfort with your physical body, embracing your unique health journey without judgment, Embracing and celebrating healthy sexual well-being and vital life force as a natural and positive aspect of your overall health, Making a valuable investment in your health, such as seeking specialized care, high-quality treatments, or beneficial wellness experiences, Acknowledging and integrating challenging aspects of your health or mental state, understanding that everyone has vulnerabilities, which leads to holistic acceptance and healing, Developing conscious and healthy strategies to manage cravings, stress responses, or negative emotional impulses, transforming them into constructive self-care",
+                "shadow": "An unhealthy preoccupation with external physical appearance, potentially neglecting deeper health needs or fostering body image issues, An insatiable desire for more, leading to potential excesses in diet, exercise, or a constant dissatisfaction with your current state of health and progress, Prioritizing material gains or external achievements over your personal well-being, leading to neglect of self-care or strained health-supportive relationships, Allowing unchecked cravings, emotional eating, or addictive patterns to dictate your choices, leading to self-sabotage in your health journey, Either neglecting your own crucial health needs by focusing solely on others or, conversely, being overly self-absorbed in your health struggles, hindering holistic recovery, Denying personal responsibility for your health choices, projecting unhealthy habits or lack of progress onto external circumstances or other individuals"
+            },
+            "Archetype": "The Shadow, The Other",
+            "Hebrew Alphabet": "Ayin/Eye/70",
+            "Numerology": "15 = 1 + 5 = 6 (adjustment, collaboration)",
+            "Elemental": "Capricorn",
+            "Mythical/Spiritual": "The Biblical Satan, certainly. Fallen angels, including Lucifer. Bacchus and Pan. Tempters and serpents of every stripe.",
+            "Questions to Ask": [
+                "What enslaves me? How can I set myself free?",
+                "How can I re-evaluate the importance I assign to material things?",
+                "To what extent do my cravings define me?"
+            ]
+        },
+        {
+            "name": "The Tower",
+            "number": "16",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m16.jpg",
+            "fortune_telling": "Be prepared for a sudden, significant shift in your health, possibly an acute illness or a necessary medical intervention, It's time to pause current routines and re-evaluate lifestyle choices or treatment plans that are not serving your well-being, A health challenge may force you to confront your limitations or humble an overinflated sense of invincibility regarding your body's resilience, Speak up honestly about your symptoms, needs, or emotional state to your healthcare providers or support system",
+            "keywords": [
+                "demolition",
+                "upheaval",
+                "deconstruction",
+                "disaster",
+                "destruction"
+            ],
+            "meanings": {
+                "light": "You are ready to break free from restrictive health habits or limiting beliefs that have held back your vitality, A profound shift is clearing the path for renewed health, innovative healing approaches, or a deeper understanding of well-being, This moment encourages shedding any arrogance about your health, allowing you to embrace necessary changes and guidance, You are being guided to simplify your approach to health, focusing on foundational self-care practices, A sudden revelation is dispelling misconceptions or denial about your health condition, leading to clarity, Expect a sudden, profound understanding of your body's needs or the underlying cause of a health issue",
+                "shadow": "You might be resistant to letting go of outdated health routines or beliefs that are hindering your healing and progress, There's a tendency to ignore glaring health warning signs or deny the reality of a condition that requires attention, You may be actively resisting clear signals or professional advice indicating that significant health changes are essential, There's a risk of overlooking your intuition or inner guidance regarding your overall well-being and recovery path, You might be knowingly engaging in self-sabotaging behaviors that are detrimental to your physical or mental health"
+            },
+            "Archetype": "The Shattered Ego",
+            "Hebrew Alphabet": "Pe[as]/Open Mouth/80",
+            "Numerology": "16 = 1 + 6 = 7 (psychology, imagination, inner work)",
+            "Elemental": "Mars",
+            "Mythical/Spiritual": "The Tower of Babel. The destruction of Sodom and Gomorrah. Shiva's destructive dance. The lightning of Zeus and Thor.",
+            "Questions to Ask": [
+                "How might the current situation dramatically alter my perspective?",
+                "How might this loss open the door for new growth?",
+                "What attitudes need to be struck down before I proceed?"
+            ]
+        },
+        {
+            "name": "The Star",
+            "number": "17",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m17.jpg",
+            "fortune_telling": "Consider a holistic health assessment to understand your innate well-being blueprint, Be mindful of overly idealized recovery expectations that might overlook practical steps, Recognize that your current health journey, including healing or challenges, may be part of a deeper, pre-destined path",
+            "keywords": [
+                "hope",
+                "optimism",
+                "openness",
+                "certainty",
+                "faith",
+                "longing",
+                "truth"
+            ],
+            "meanings": {
+                "light": "Cultivating a hopeful outlook for your recovery and overall well-being, Trusting in the body's inherent capacity to heal and regenerate, Finding silver linings and positive lessons within any health challenge, Approaching your healing journey with self-compassion and an open mind, Listening to your intuition and seeking deeper guidance for your health path, Embracing the possibility of profound healing, even when faced with challenging prognoses",
+                "shadow": "Ignoring uncomfortable health symptoms or medical advice, Attributing all health issues to fate, avoiding personal responsibility for well-being choices, Dismissing early warning signs from your body or mind, Clinging to false hopes or self-deception regarding your true health state, Allowing negativity and hopelessness to hinder your healing process"
+            },
+            "Archetype": "The Heavenly Guide",
+            "Hebrew Alphabet": "Tzaddi/Fishhook/90 or, in some decks, He[as]/Window/5",
+            "Numerology": "17 = 1 + 7 = 8 (action, movement, swiftness)",
+            "Elemental": "Aquarius",
+            "Mythical/Spiritual": "The star that guided the Magi. Aphrodite. Venus. The Pleiades. Moses bringing forth water from the rock.",
+            "Questions to Ask": [
+                "What would my higher power direct me to do?",
+                "How can I be less self-conscious and guarded?",
+                "How can I better attune myself to the abundance of life's blessings?"
+            ]
+        },
+        {
+            "name": "The Moon",
+            "number": "18",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m18.jpg",
+            "fortune_telling": "Watch for health symptoms or emotional shifts that may become clearer or more impactful towards the end of a cycle or month, prompting deeper self-reflection, Encourage someone close to you, or yourself, to express suppressed emotions or release anxieties more openly, perhaps through therapeutic outlets or creative expression, Be aware that someone, possibly yourself, is on the verge of a significant shift in their perspective regarding a health choice or lifestyle change, leading to a new approach",
+            "keywords": [
+                "mystery",
+                "fantasy",
+                "imagination",
+                "dreams",
+                "uncertainty"
+            ],
+            "meanings": {
+                "light": "Allowing for beneficial visualization and positive mental imagery to support healing and well-being, Utilizing creative problem-solving and innovative approaches in your healing journey or health management, Finding wonder and a sense of sacredness in your body's healing processes and the natural flow of wellness, Aligning your health practices with your body's natural rhythms, sleep cycles, and environmental influences, Approaching new treatments or unexplored paths in wellness with an open mind and hopeful acceptance",
+                "shadow": "Struggling to distinguish between genuine health symptoms and anxiety-driven fears or hypochondria, leading to confusion, Experiencing mental fog, distorted perceptions, or unfounded beliefs about your health that hinder effective care, Becoming overly cynical or dismissive of holistic approaches, intuition, or the body's innate healing wisdom, Relying solely on rigid, analytical thought regarding health, overlooking emotional or intuitive signals for balance, Resisting the natural ebb and flow of healing, or dismissing the profound, inexplicable aspects of wellness and recovery"
+            },
+            "Archetype": "The Holy Feminine/The Crone",
+            "Hebrew Alphabet": "Koph/Back of the Head/100",
+            "Numerology": "18 = 1 + 8 = 9 (fullness, readiness, ripeness)",
+            "Elemental": "Pisces",
+            "Mythical/Spiritual": "Kali, the dark-skinned divine mother associated with time, the eternal night, and the female principle. Hecate, goddess of night and darkness, who, like Anubis, assists others in their travels to the underworld. ",
+            "Questions to Ask": [
+                "How can I face my fears and move forward?",
+                "What helpers can serve me as guides through my personal darkness?",
+                "How can I deal with the unknown in healthy ways?"
+            ]
+        },
+        {
+            "name": "The Sun",
+            "number": "19",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m19.jpg",
+            "fortune_telling": "Your health and vitality are flourishing, bringing a sense of warmth and well-being, Trust your intuition regarding your health choices, as this is a favorable time for progress and healing",
+            "keywords": [
+                "joy",
+                "brilliance",
+                "validation",
+                "attention",
+                "energy"
+            ],
+            "meanings": {
+                "light": "Gaining clear insight into your health needs and the path to wellness, Experiencing deep joy and well-being in your physical and emotional state, Celebrating significant progress and milestones in your healing journey or fitness goals, Feeling confident and empowered in your self-care practices and health management, Others recognizing your vibrant energy and positive impact on your well-being",
+                "shadow": "Becoming overly confident in your health, potentially overlooking new symptoms or necessary precautions, Becoming overly focused on external appearance rather than true internal health and balance, Feeling rushed in your healing process, leading to incomplete recovery or neglecting vital self-care, Pushing your body or mind beyond its limits, resulting in burnout or depletion, Minimizing health concerns or denying the need for rest or support in your healing"
+            },
+            "Archetype": "The Holy Masculine",
+            "Hebrew Alphabet": "Resh/Head/200",
+            "Numerology": "19 = 1 + 9 = 10 (completion, exhaustion) 1 + 0 = 1 (starting point, opportunity)",
+            "Elemental": "The Sun",
+            "Mythical/Spiritual": "God the Father. Sun gods, including Ra, Apollo, and Helios. The moment of baptism. Claiming a new faith as your own.",
+            "Questions to Ask": [
+                "How can I take best advantage of the attention coming my way?",
+                "What are my highest spiritual goals?",
+                "How can I avoid being bedazzled by the energy swirling around me?"
+            ]
+        },
+        {
+            "name": "Judgement",
+            "number": "20",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m20.jpg",
+            "fortune_telling": "A past health concern or an unresolved emotional pattern may resurface, prompting you to address it thoroughly this time, Be prepared for significant shifts in your health routine or a sudden realization about your well-being, which may feel unsettling but ultimately leads to necessary adjustments, Your body or mind is sending strong signals about something that needs your immediate attention regarding your health or well-being; listen carefully",
+            "keywords": [
+                "revival",
+                "renewal",
+                "resurrection",
+                "evaluation",
+                "invitation"
+            ],
+            "meanings": {
+                "light": "Receiving a clear signal or insight about what your body truly needs for healing and vitality, Finding renewed motivation and clarity for a healthier lifestyle, or discovering new wellness practices that resonate deeply, Achieving a profound sense of self-acceptance and authenticity that positively impacts your overall well-being and helps you embrace your unique health journey, Experiencing the positive outcomes of consistent health efforts, such as improved energy, pain relief, or mental clarity, a reward for your dedication, Successfully navigating a health challenge, diagnosis, or recovery phase, leading to a significant improvement in your condition, Embracing a fresh chapter of improved health, vitality, and holistic balance, leaving past ailments behind",
+                "shadow": "Feeling depleted or inadequate in managing your health, or noticing that current health practices are not yielding desired results, indicating an imbalance, Struggling to meet your own health goals or feeling overwhelmed by expectations regarding your physical or mental well-being, Ignoring crucial health signals, neglecting self-care, or indulging in habits detrimental to your well-being, leading to potential setbacks, Avoiding necessary health screenings, delaying critical treatments, or not adequately addressing known health risks, which could lead to complications, Resisting significant lifestyle changes or emotional shifts that are essential for true healing and long-term well-being, holding onto old patterns"
+            },
+            "Archetype": "Resurrection",
+            "Hebrew Alphabet": "Sin/Tooth/300",
+            "Numerology": "20 = 2 + 0 = 2 (division, duality)",
+            "Elemental": "Fire",
+            "Mythical/Spiritual": "The resurrected Christ. The Last Judgment of Revelation. The phoenix, which rises to new life from its own ashes.",
+            "Questions to Ask": [
+                "What is the main thing I need to realize about myself?",
+                "In what way might the universe be trying to get my attention?",
+                "If I were to reinvent myself, what would I become?"
+            ]
+        },
+        {
+            "name": "The World",
+            "number": "21",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m21.jpg",
+            "fortune_telling": "Experiencing a profound and positive health breakthrough, Achieving your ultimate wellness goals and vibrant vitality, Realizing a state of complete physical and mental harmony",
+            "keywords": [
+                "wholeness",
+                "integration",
+                "totality",
+                "completeness",
+                "fullness"
+            ],
+            "meanings": {
+                "light": "Experiencing complete physical, mental, and emotional well-being, Deeply understanding and embracing self-care for your body and mind, Recognizing the intricate connection between all aspects of your lifestyle and your overall health, Gaining a holistic and empowering perspective on your health journey, Living with abundant energy and full physical capability, Finding deep meaning and fulfillment through optimal health and balance",
+                "shadow": "Focusing on health imperfections or comparing your wellness to others, Overlooking subtle bodily signals or missing the underlying patterns in your health, Over-relying on only quantifiable health metrics and ignoring intuitive or emotional aspects of wellness, Feeling disconnected from your support system during health challenges or neglecting community healing"
+            },
+            "Archetype": "Enlightenment",
+            "Hebrew Alphabet": "Tau/Cross/400",
+            "Numerology": "21 = 2 + 1 = 3 (expression, result)",
+            "Elemental": "Saturn",
+            "Mythical/Spiritual": "The ascended Christ. The Buddha attaining enlightenment. The alpha and the omega. The completion of the alchemist's great work.",
+            "Questions to Ask": [
+                "For me, what would having it all mean?",
+                "How aware am I of my own connectedness to the world around me?",
+                "What keeps me from having it all right now, today?"
+            ]
+        },
+        {
+            "name": "Ace of Cups",
+            "number": "1",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c01.jpg",
+            "fortune_telling": "Emotional peace and healing are emerging, a significant positive shift in your well-being or a new, beneficial health practice is beginning, your body's natural healing abilities are activating, or desired health outcomes are manifesting.",
+            "keywords": [
+                "intuition",
+                "spirituality",
+                "affection",
+                "motivation"
+            ],
+            "meanings": {
+                "light": "Honoring your body's subtle signals and intuition regarding your health, embracing holistic healing approaches and connecting with your inner wisdom for wellness, allowing yourself to receive care and support while extending compassion to your own body and mind, discovering the deep, inner drive for self-care and vibrant health, finding healing through acts of kindness and fostering supportive connections which benefits your own well-being, attuning to your body's innate wisdom and guidance for optimal health choices.",
+                "shadow": "Suppressing emotions that are impacting your physical or mental health, resisting help or closing off from beneficial self-care practices and supportive relationships, disregarding your inner emotional or spiritual needs leading to imbalance, ignoring clear signs from your body or intuition about your health, allowing emotional overwhelm to negatively dictate your health choices or behaviors, experiencing anxiety, excessive worry, or fixations that are detrimental to your mental or physical health."
+            },
+            "Numerology": "1 (The Origin: the starting point, the seed, opportunity)",
+            "Astrology": "Cancer, Scorpio, Pisces",
+            "Affirmation": "\"I listen to the counsel of my heart.\"",
+            "Questions to Ask": [
+                "What am I feeling right now?",
+                "How would I go about opening myself to spiritual guidance?",
+                "What motivates me the most - pleasure or pain? Why?"
+            ]
+        },
+        {
+            "name": "Two of Cups",
+            "number": "2",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c02.jpg",
+            "fortune_telling": "Your body is sending subtle positive signals about healing, or a beneficial natural remedy is quietly working for you, True healing requires balance; release anything that drains your energy or prevents your well-being",
+            "keywords": [
+                "union",
+                "attraction",
+                "combination",
+                "affection"
+            ],
+            "meanings": {
+                "light": "Feeling a natural inclination towards healthy choices or a specific healing modality, A strong desire for wellness and balance that motivates positive actions, Actively pursuing practices that support your physical and mental health, Recognizing that your mind and body are in harmony, or finding a therapy that deeply resonates, Engaging in self-care activities that genuinely nourish your spirit and body, Achieving a holistic integration of mind, body, and spirit for complete well-being, Successfully repairing internal imbalances or mending emotional wounds for better health, Accepting limitations or differences within your health journey and finding a balanced path forward",
+                "shadow": "Disrupting positive health routines or severing beneficial connections vital for recovery, Allowing others' health habits or emotional states to negatively dictate your own well-being, Isolating yourself from support systems or professional guidance crucial for healing, Fixating on an ideal of health or a specific cure that remains out of reach, leading to frustration, Feeling hopeless about ever achieving optimal health or finding the right treatment path, Ignoring clear signals from your body or denying your true needs regarding your health"
+            },
+            "Numerology": "2 (The Other: duality, division, debate)",
+            "Astrology": "Venus in Cancer",
+            "Affirmation": "\"I am attuned to what my heart truly desires.\"",
+            "Questions to Ask": [
+                "How can I make sure that what I'm feeling is mutual?\",\"When was the last time I felt \"in love\" with someone or something?",
+                "What do you need in order to feel emotionally stable?"
+            ]
+        },
+        {
+            "name": "Three of Cups",
+            "number": "3",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c03.jpg",
+            "fortune_telling": "An unexpected and beneficial path to healing or a new wellness approach, previously overlooked, is coming your way.",
+            "keywords": [
+                "celebration",
+                "expression",
+                "community",
+                "friendliness"
+            ],
+            "meanings": {
+                "light": "Celebrating the joy and healing found in genuine social connections and emotional expression, Discovering therapeutic benefits through joyful movement, creative arts, or comforting physical touch, Finding strength and progress by collaborating with those who truly understand your health journey or share wellness goals, Prioritizing self-care and compassionate actions that deeply nourish your physical and mental well-being, Embracing unique or unconventional holistic approaches that contribute to your overall health and balance",
+                "shadow": "Mistaking superficial relief or fleeting highs for true, sustainable healing, Struggling with emotional imbalances, manic energy, or burnout that negatively impacts physical health, Difficulty empathizing with others' health experiences or expecting uniform approaches to wellness, Demanding excessive or unsustainable support from your network, hindering your own health autonomy, Engaging in overly indulgent or self-destructive behaviors that compromise your health and recovery journey"
+            },
+            "Numerology": "3 (The Result: expression, productivity, output)",
+            "Astrology": "Mercury in Cancer",
+            "Affirmation": "\"I allow my actions to reflect my true emotions.\"",
+            "Questions to Ask": [
+                "What's worth celebrating in my life?",
+                "How can I demonstrate my feelings in appropriate ways?",
+                "What can I do to show my partner how I really feel?"
+            ]
+        },
+        {
+            "name": "Four of Cups",
+            "number": "4",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c04.jpg",
+            "fortune_telling": "Your current health routine may be becoming stagnant, indicating a need for change, Pay close attention to your body's subtle signals or you might miss valuable new approaches to healing and wellness.",
+            "keywords": [
+                "boredom",
+                "listlessness",
+                "lethargy",
+                "stability",
+                "ingratitude"
+            ],
+            "meanings": {
+                "light": "Maintaining inner calm and emotional equilibrium even amidst health challenges, Actively resisting the pull of overwhelming stress or anxiety about your condition, Appreciating your current state of health and actively nurturing your well-being, Recognizing the profound value of consistent, long-term commitment to your physical and mental health.",
+                "shadow": "Feeling apathetic or disengaged from your health journey, allowing complacency to hinder progress, Being overly preoccupied with abstract ideas or worries instead of taking concrete steps for your well-being, Dismissing promising new therapies or wellness approaches out of hand, Neglecting your physical and mental needs, taking good health for granted, Overlooking vital signs from your body or missing beneficial opportunities for healing, Resisting fresh perspectives or guidance that could aid your recovery, A stubborn refusal to adapt or make necessary lifestyle changes for improved health."
+            },
+            "Numerology": "4 (The Status Quo: stability, equality, persistence)",
+            "Astrology": "Moon in Cancer",
+            "Affirmation": "\"I appreciate what I've been given.\"",
+            "Questions to Ask": [
+                "How can I use this \"downtime\" to my best advantage?",
+                "How can I show my partner that I don't take him or her for granted?",
+                "To what extent is my mood blinding me to new opportunities?"
+            ]
+        },
+        {
+            "name": "Five of Cups",
+            "number": "5",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c05.jpg",
+            "fortune_telling": "A period of emotional healing or physical recovery is on the horizon, Let go of what can no longer be changed about your health, Accept recent health challenges and begin your path to renewed well-being",
+            "keywords": [
+                "loss",
+                "despair",
+                "re-evaluation",
+                "regret",
+                "uncertainty",
+                "repentance"
+            ],
+            "meanings": {
+                "light": "Accepting a health diagnosis or physical limitation and actively pursuing adaptation or recovery, Appreciating remaining physical strengths or mental resilience despite challenges, Discovering newfound strength or wisdom from a challenging health journey, Understanding that health fluctuations and physical changes are a natural part of life's progression, Allowing yourself to process sadness or frustration related to health changes in a constructive way, Gaining valuable insights from past health setbacks to inform healthier choices moving forward",
+                "shadow": "Indulging in excessive self-pity or despair over a health condition, hindering recovery, Refusing to accept a new health reality or let go of old habits that impede healing, Obsessing over a past state of health or grieving the loss of previous physical abilities, Dwelling excessively on past health failures or missed opportunities for prevention, Neglecting current health needs by constantly looking back at a healthier time or fixating on future fears, Self-blaming for past health choices or perceived failures, leading to guilt or stagnation, Allowing fear of not fully recovering or fear of trying new wellness approaches to paralyze progress"
+            },
+            "Numerology": "5 (The Catalyst: instability, resistance, confrontation)",
+            "Astrology": "Mars in Scorpio",
+            "Affirmation": "\"I learn from my losses and move on.\"",
+            "Questions to Ask": [
+                "How do I tend to deal with loss?",
+                "What life lesson might I be learning now?",
+                "How can I shift my attention from the past to the future?"
+            ]
+        },
+        {
+            "name": "Six of Cups",
+            "number": "6",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c06.jpg",
+            "fortune_telling": "A reluctance to embrace self-care or release old emotional burdens is diminishing your vital energy and zest for life, Shift your focus from self-preoccupation to acts of kindness or connection, as this communal spirit supports your holistic recovery",
+            "keywords": [
+                "charity",
+                "sharing",
+                "sacrifice",
+                "cooperation",
+                "fairness"
+            ],
+            "meanings": {
+                "light": "Generously offering your understanding and support to those facing similar health challenges, finding shared healing, Deriving genuine peace from nurturing your body and mind, understanding these efforts are a foundational gift to your future self, Establishing mutually beneficial relationships in your healing journey, where giving and receiving support creates balanced well-being, Offering compassionate understanding and gentle care to your body and spirit, without the expectation of immediate or perfect results, Feeling a natural inclination to engage in nurturing self-care practices and to foster positive health habits",
+                "shadow": "Allowing external validation or others' opinions about your health to undermine your innate sense of self-worth or healing progress, Unconsciously exaggerating your symptoms or health challenges to garner excessive attention or avoid personal accountability in your healing, Seeking unnecessary external health interventions or support when inner strength and self-discipline are required for true wellness, Broadcasting your health achievements or wellness practices for ego gratification rather than genuine motivation or shared learning, Exploiting others' health vulnerabilities or distress for personal benefit, or allowing your own health challenges to be used as an excuse, Struggling to accept necessary help from others during a health challenge, or isolating yourself and not sharing your emotional or physical burden"
+            },
+            "Numerology": "6 (The Adjustment: cooperation, collaboration, interaction)",
+            "Astrology": "Sun in Scorpio",
+            "Affirmation": "\"I freely give myself to others, expecting nothing in return.\"",
+            "Questions to Ask": [
+                "What gifts do I possess? How freely do I give them?",
+                "How can I practice unconditional giving?",
+                "How would things change if I became a more charitable person?"
+            ]
+        },
+        {
+            "name": "Seven of Cups",
+            "number": "7",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c07.jpg",
+            "fortune_telling": "Be wary of health fads or quick fixes that promise too much without solid evidence, Instead of being swayed by enticing but unproven remedies, seek out evidence-based approaches and tangible improvements for your well-being",
+            "keywords": [
+                "imagination",
+                "dreams",
+                "illusions",
+                "goals"
+            ],
+            "meanings": {
+                "light": "Motivating yourself by vividly imagining a future of vibrant health and wellness, Utilizing visualization and positive affirmations to support your body's healing process and progress, Approaching health challenges with an open mind, exploring creative and holistic solutions for balance, Actively working towards making your health and wellness goals a tangible reality, Gaining profound insights into your body's needs and healing path through intuition or deep self-reflection",
+                "shadow": "Dwelling excessively on hypothetical health fears or uncertain prognoses, hindering recovery, Feeling overwhelmed or manipulated by health anxieties, media scares, or conflicting advice, Daydreaming about improved health without taking concrete steps or consistent action towards it, Neglecting to consider the long-term health consequences of current lifestyle choices or unhealthy habits, Allowing fear, whether of illness or treatment, to dictate your health decisions and prevent necessary action"
+            },
+            "Numerology": "7 (The Motive: imagination, inner work, psychology)",
+            "Astrology": "Venus in Scorpio",
+            "Affirmation": "\"I use inner vision as a tool for growth.\"",
+            "Questions to Ask": [
+                "What do you want most? What do you fear most? How are these related?",
+                "How is your imagination working for you? Against you?",
+                "How might a clearer personal vision help you choose a single cup from the many available?"
+            ]
+        },
+        {
+            "name": "Eight of Cups",
+            "number": "8",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c08.jpg",
+            "fortune_telling": "Your body or a current health routine may be signaling a need for change or departure, perhaps due to a growing imbalance, It might be time to stop overthinking a health concern and take decisive action towards healing or lifestyle changes.",
+            "keywords": [
+                "longing",
+                "dissatisfaction",
+                "quest",
+                "departure",
+                "withdrawal"
+            ],
+            "meanings": {
+                "light": "Desiring improved vitality and holistic well-being, Initiating a personalized path to recovery or wellness that suits your unique needs, Realizing that true healing extends beyond physical symptoms to encompass mental and emotional balance, Successfully moving away from unhealthy habits, environments, or toxic mindsets that were impacting your health, Taking proactive ownership of your self-care practices and well-being journey, Seeking a dedicated period of rest, rejuvenation, or specialized healing to restore balance, Listening intently to your body's subtle cues and inner wisdom for guidance on your health journey.",
+                "shadow": "Stubbornly resisting necessary changes in diet or lifestyle for your health, Continuously fault-finding with your body's current condition or blaming external factors for your ailments, Obsessively focusing on minor discomforts or health anxieties without seeking a broader perspective, An inability to commit to a consistent health regimen or finding yourself constantly seeking new, fleeting solutions, Avoiding necessary medical appointments, uncomfortable diagnoses, or important conversations about your well-being, Rigidly adhering to outdated or unhelpful health beliefs, rejecting professional guidance, Dwelling excessively on past health setbacks or perceived failures in your wellness journey, Using health complaints or the threat of illness to avoid responsibilities or gain sympathy."
+            },
+            "Numerology": "8 (The Action: movement, outer work, swiftness)",
+            "Astrology": "Saturn in Pisces",
+            "Affirmation": "\"I am always open to opportunities for growth.\"",
+            "Questions to Ask": [
+                "What do I need to leave behind once and for all?",
+                "If I left in search of \"more,\" what would I be looking for, exactly?",
+                "How might a retreat enhance my perspective?"
+            ]
+        },
+        {
+            "name": "Nine of Cups",
+            "number": "9",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c09.jpg",
+            "fortune_telling": "\"Your deepest health desires are within reach, whether it's recovery, increased vitality, or peace of mind.\"",
+            "keywords": [
+                "satisfaction",
+                "sensuality",
+                "luxury",
+                "pleasure"
+            ],
+            "meanings": {
+                "light": "\"Feeling proud of your health progress and milestones in recovery\", \"Acknowledging your inner strength and resilience in overcoming health challenges\", \"Savoring the simple joys that contribute to your well-being, like a nutritious meal or a peaceful walk\", \"Allowing yourself healthy pleasures and self-care that nourish your body and spirit\", \"Experiencing deep calm and stress reduction, essential for healing\", \"Feeling holistically balanced, content, and well-resourced in your health journey\"",
+                "shadow": "\"Overconfidence in your health, leading to neglect of necessary precautions\", \"Prioritizing personal desires over healthy boundaries or shared well-being, potentially impacting caregivers or family\", \"Neglecting crucial health advice or support for short-term gratification\", \"Excessive habits or unhealthy coping mechanisms that detract from well-being\", \"Procrastinating on necessary treatments, preventative measures, or lifestyle changes\", \"Misrepresenting your health status or abilities, hindering honest assessment and progress\", \"A constant feeling of dissatisfaction with your health, even when making progress, leading to anxiety or burnout\""
+            },
+            "Numerology": "9 (The Completion: fullness, readiness, ripeness)",
+            "Astrology": "Jupiter in Pisces",
+            "Affirmation": "\"I have everything I need to be happy.\"",
+            "Questions to Ask": [
+                "What is true happiness?",
+                "If I could have anything, what would I have?",
+                "What is my attitude toward luxury? Do I deserve it?"
+            ]
+        },
+        {
+            "name": "Ten of Cups",
+            "number": "10",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c10.jpg",
+            "fortune_telling": "Your healing journey finds deep comfort and completion, leading to profound physical and emotional well-being, Expect a gentle but powerful shift towards inner peace and vitality.",
+            "keywords": [
+                "joy",
+                "fulfillment",
+                "overwhelming emotion",
+                "giddiness"
+            ],
+            "meanings": {
+                "light": "Reaching a state of vibrant health and well-being beyond your expectations, Feeling deep gratitude for your body's healing capacity and the support you've received, Recognizing the profound interconnectedness and positive flow in your health journey, Experiencing immense joy and profound contentment in your physical and mental state, Achieving a harmonious and balanced state of holistic well-being.",
+                "shadow": "Setting unrealistic expectations for your health recovery or physical appearance, Feeling overwhelmed by intense emotions that hinder your ability to address health challenges, Experiencing a profound sense of being swamped by health concerns or a recovery process, Envying the physical vitality or wellness progress of others, leading to self-doubt."
+            },
+            "Numerology": "10 (The End: finality, completion, exhaustion)",
+            "Astrology": "Mars in Pisces",
+            "Affirmation": "\"I take time to appreciate what I've been given.\"",
+            "Questions to Ask": [
+                "Who gets to define what \"joy\" consists of?",
+                "What course of action is available when you feel overwhelmed?",
+                "How might vows or promises play a role in achieving a greater level of joy in your life?"
+            ]
+        },
+        {
+            "name": "Page of Cups",
+            "number": "11",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c11.jpg",
+            "fortune_telling": "This card suggests a gentle, intuitive individual or a sensitive new approach entering your health journey, perhaps signaling a need for emotional care, or a fresh perspective on your well-being, indicating the start of a new healing path for you.",
+            "keywords": [
+                "enthusiasm",
+                "first impressions",
+                "romanticism",
+                "superficiality"
+            ],
+            "meanings": {
+                "light": "Openly expressing your health concerns and emotional needs, enthusiastically embracing a new self-care routine, quietly exploring new healing modalities, visualizing optimal health and well-being, embarking on a new treatment or wellness journey, reconnecting with foundational health habits, experiencing a profound new appreciation for your body, adopting a new holistic approach to health.",
+                "shadow": "Confusing temporary relief with genuine long-term healing, misinterpreting minor bodily sensations as serious issues, obsessively trying to conform to external health ideals, becoming overly sentimental or passive regarding necessary health changes, pretending to a level of wellness or health knowledge you don't truly possess."
+            },
+            "Elemental": "Earth of Water.",
+            "Affirmation": "\"I am ready to embrace love and Spirit.\"",
+            "Questions to Ask": [
+                "How worried are you that others will see you as foolish or inexperienced?",
+                "To what extent can you be honest about your lack of experience in love and faith?",
+                "How can you maintain enthusiasm over time?"
+            ]
+        },
+        {
+            "name": "Knight of Cups",
+            "number": "12",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c12.jpg",
+            "fortune_telling": "This card suggests a time when your emotional state profoundly influences your physical well-being, or points to an empathetic healthcare professional or advocate who is deeply passionate about your healing journey.",
+            "keywords": [
+                "fervor",
+                "zeal",
+                "moodiness",
+                "illumination"
+            ],
+            "meanings": {
+                "light": "Being deeply committed to your health and recovery goals, allowing yourself to fully experience and process emotions as part of your healing, trusting your body's intuitive wisdom and inner guidance for wellness, intuitively finding the right solutions for your health challenges, holding onto an idealistic vision of complete well-being even when faced with difficulties, bringing your deep passion and intuitive insights to the forefront of your health journey.",
+                "shadow": "Becoming overly rigid or obsessive about specific health regimens to your detriment, stubbornly rejecting valuable medical advice or insights that contradict your own (perhaps flawed) intuitive beliefs about your health, allowing overwhelming emotions to dictate unhealthy coping mechanisms or hinder your progress, letting negative social pressures or interpersonal conflicts adversely impact your mental and physical health, suppressing or outright ignoring your body's crucial intuitive signals about its needs."
+            },
+            "Elemental": "Air of Water.",
+            "Affirmation": "\"I translate my passions into actions.\"",
+            "Questions to Ask": [
+                "How prone to emotional extremes are you?",
+                "What's the difference in driving passion and blind zeal?",
+                "How can you inspire others without inciting a riot?"
+            ]
+        },
+        {
+            "name": "Queen of Cups",
+            "number": "13",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c13.jpg",
+            "fortune_telling": "This card highlights that your emotional and spiritual state profoundly impacts your physical health, suggesting healing and balance stem from nurturing your inner world. It may also indicate a compassionate influence in your health journey, such as a caregiver or healer deeply attuned to your well-being.",
+            "keywords": [
+                "insightfulness",
+                "spirituality",
+                "compassion",
+                "empathy",
+                "instinct"
+            ],
+            "meanings": {
+                "light": "Experiencing deep empathy for those in healing or needing support, which can fuel your own journey or motivate healthy behaviors, Experiencing emotions intensely as a vital part of your healing process, indicating a healthy emotional release and engagement with your recovery, An innate ability to understand and connect with your body's signals and emotional needs, fostering intuitive self-care and healing, Relying on your intuition and emotional wisdom to make the best health choices for your body and mind, guiding you toward true well-being, Tapping into an intuitive understanding of your body's subtle energy and needs, guiding you toward optimal health practices or preventive measures, Finding deep inner peace and spiritual connection that significantly supports your physical healing and overall holistic balance.",
+                "shadow": "Detachment from your physical body's needs due to an overemphasis on purely spiritual or abstract concepts, potentially neglecting tangible health care, Being overwhelmed by the suffering of others or your own condition, leading to inaction, burnout, or difficulty in taking necessary steps for healing, Misusing intuitive health insights for self-manipulation or to avoid professional medical advice, leading to poor health decisions, Getting stuck in cycles of overwhelming emotions, sentimentality, or self-pity regarding your health, hindering progress and true recovery."
+            },
+            "Elemental": "Water of Water.",
+            "Affirmation": "\"I choose to be enabled, not disabled, by my strong emotions.\"",
+            "Questions to Ask": [
+                "How do I handle strong emotions?",
+                "To what extent am I a victim of my own feelings?",
+                "How can I move from reflection to action?"
+            ]
+        },
+        {
+            "name": "King of Cups",
+            "number": "14",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c14.jpg",
+            "fortune_telling": "This card can signify a wise, compassionate health professional or caregiver, someone with a gentle, emotionally mature presence who offers balanced and tolerant guidance on your healing journey, it may also point to finding inner emotional stability and wisdom in your own health approach.",
+            "keywords": [
+                "wisdom",
+                "diplomacy",
+                "restraint",
+                "composure"
+            ],
+            "meanings": {
+                "light": "Maintaining emotional composure and resilience during health challenges, facing illness with courage and clarity to make informed decisions about your well-being, offering empathetic support and comfort to others based on your health experiences, making balanced health choices that consider both your physical and emotional needs, embracing holistic health approaches and understanding the deeper emotional or spiritual roots of your physical state.",
+                "shadow": "Becoming emotionally detached from your health needs or rigidly ignoring symptoms, making self-sabotaging health decisions driven by unacknowledged emotional issues, neglecting self-care which negatively impacts the emotional well-being of those around you, misusing spiritual or alternative health practices in a way that harms your physical or mental health, using health issues to manipulate or control others, or being unduly influenced by another's health anxieties."
+            },
+            "Elemental": "Fire of Water.",
+            "Affirmation": "\"I strive to be stable and fair-minded.\"",
+            "Questions to Ask": [
+                "What wise person could be consulted for good advice?",
+                "How can I make sure I'm being as objective and fair as possible?",
+                "To what extent am I capable of keeping a \"stiff upper lip?\""
+            ]
+        },
+        {
+            "name": "Ace of Swords",
+            "number": "1",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s01.jpg",
+            "fortune_telling": "The critical moment for a health decision is upon you, embrace it now, Stop hesitating and commit to the health actions you know are vital for your well-being",
+            "keywords": [
+                "logic",
+                "objectivity",
+                "intellect",
+                "choice"
+            ],
+            "meanings": {
+                "light": "Making clear-headed decisions about your treatment or lifestyle, Applying logic to understand symptoms and wellness strategies, Reasoning your way through health challenges to find optimal solutions, Solving the mysteries of your body's needs and achieving balance, Thinking deeply about your healing process and wellness goals, Focusing on factual information and evidence for your health choices, Achieving mental clarity to understand your physical and emotional state, Seeking precise understanding of your condition or recovery path",
+                "shadow": "Applying rigid or distorted thinking that impedes healing, Displaying intellectual arrogance about your health knowledge, Using cleverness to rationalize unhealthy habits or mislead about your condition, Making impulsive health decisions based on superficial understanding, Choosing paths without considering the full health consequences"
+            },
+            "Numerology": "1 (The Origin: the starting point, the seed, opportunity)",
+            "Astrology": "Libra, Aquarius, Gemini",
+            "Affirmation": "\"I take the time to think things through.\"",
+            "Questions to Ask": [
+                "If I made my decision purely based on reason and logic, what would my decision be?",
+                "What do I think about my own problem-solving ability?",
+                "Who can supply me with the pure and simple facts?"
+            ]
+        },
+        {
+            "name": "Two of Swords",
+            "number": "2",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s02.jpg",
+            "fortune_telling": "Sometimes, the best way to regain health is to release internal struggle or unnecessary resistance, allowing natural healing processes to unfold, You might be in a period of stagnation or uncertainty regarding your health, and it's best to allow time for clarity or a natural progression before making significant changes",
+            "keywords": [
+                "denial",
+                "debate",
+                "impasse",
+                "truce"
+            ],
+            "meanings": {
+                "light": "Carefully researching all available information and options before deciding on a health treatment or lifestyle change, Openly exploring different approaches or perspectives regarding your well-being, such as considering various therapies or lifestyle adjustments, Passionately advocating for your own health needs or for the best possible care for yourself or others, Thoughtfully evaluating the implications of different health choices, symptoms, or treatment paths to find the most balanced solution, Fostering open communication with healthcare professionals or support networks to gain comprehensive insights into your health, Approaching discussions about your health or well-being with a calm and clear mind, even when faced with challenging information",
+                "shadow": "Denying clear medical advice or evidence because it contradicts your preconceived notions about your health, Engaging in unproductive arguments about your health, creating unnecessary stress and hindering your healing process, Becoming overly critical or fixated on minor health concerns, potentially fueling anxiety or overlooking the bigger picture of your well-being, Delaying crucial health decisions, such as seeking medical advice or starting a necessary treatment, due to fear of what might be discovered or the effort involved, Intentionally or unintentionally hindering access to essential health information for yourself or loved ones, preventing informed choices"
+            },
+            "Numerology": "2 (The Other: duality, division, debate)",
+            "Astrology": "Moon in Libra",
+            "Affirmation": "\"I strive to see all sides of every issue.\"",
+            "Questions to Ask": [
+                "What information do I need to get past this impasse?",
+                "How can I get past being defensive and see the facts?",
+                "What viewpoints, other than my own, play a role in this situation?"
+            ]
+        },
+        {
+            "name": "Three of Swords",
+            "number": "3",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s03.jpg",
+            "fortune_telling": "Experiencing a sudden, painful health setback or the realization that certain habits are deeply harmful to your well-being, Enduring a period of intense physical or emotional difficulty that, while painful now, is a crucial step towards long-term healing and healthier patterns.",
+            "keywords": [
+                "variance",
+                "difference",
+                "dissatisfaction",
+                "heartache",
+                "rejection"
+            ],
+            "meanings": {
+                "light": "Bravely facing a difficult diagnosis or the true extent of a health challenge without denial, Diligently assessing your symptoms and lifestyle, critically evaluating treatment options, and understanding your body's signals, Honestly evaluating your habits and mental patterns to identify areas for health improvement or self-care, Accepting that your healing journey or recovery path may not be linear or as initially expected, Processing deep emotional pain related to a health setback, allowing yourself to embrace a new truth about your physical or mental state to heal.",
+                "shadow": "Succumbing to profound hopelessness or despair over a health issue, making it difficult to engage in self-care or treatment, Allowing external negative opinions, medical pronouncements, or others' perceptions to overwhelm your sense of agency in your healing journey, Engaging in excessive self-blame or harsh self-criticism regarding your health condition or perceived shortcomings in your wellness efforts, Imposing an unsustainable or perfectionist standard on your healing process, leading to burnout or dissatisfaction with your recovery, Exhibiting extreme emotional vulnerability to health-related news or comments while simultaneously holding onto resentment or anger about your condition or circumstances."
+            },
+            "Numerology": "3 (The Result: expression, productivity, output)",
+            "Astrology": "Saturn in Libra",
+            "Affirmation": "\"I learn from failures and setbacks.\"",
+            "Questions to Ask": [
+                "How can I get past my depression?",
+                "To what extent are my emotions a matter of choice?",
+                "How can I learn from the mistakes of the past?"
+            ]
+        },
+        {
+            "name": "Four of Swords",
+            "number": "4",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s04.jpg",
+            "fortune_telling": "Do not make any major health decisions or changes right now, Allow yourself time to truly rest and recover, and you will be grateful for the outcome.",
+            "keywords": [
+                "meditation",
+                "contemplation",
+                "perspective",
+                "mindset"
+            ],
+            "meanings": {
+                "light": "Carefully assessing your health choices and treatment paths, Finding mental clarity and peace through quiet reflection or meditation, Taking the time to fully understand your body's needs and signals, Prioritizing deep and restorative rest for healing, Engaging in calm, healthy activities to soothe your mind and spirit.",
+                "shadow": "Rushing into health decisions without proper consideration, Confusing necessary rest with avoidance of crucial health steps, Stubbornly holding onto health beliefs despite clear signs or advice to adapt, Allowing anxiety or impulsive health choices to disrupt your well-being."
+            },
+            "Numerology": "4 (The Status Quo: stability, equality, persistence)",
+            "Astrology": "Jupiter in Libra",
+            "Affirmation": "\"I think before taking action.\"",
+            "Questions to Ask": [
+                "How long has it been since you deliberately took a \"time out?\"",
+                "How difficult is it for you to meditate?",
+                "What would happen if you simply refused to make a decision today?"
+            ]
+        },
+        {
+            "name": "Five of Swords",
+            "number": "5",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s05.jpg",
+            "fortune_telling": "Be mindful of situations or habits that are subtly draining your energy or vital resources, Pay attention to underlying anxieties or unexpressed resentments that might be impacting your well-being",
+            "keywords": [
+                "selfishness",
+                "hostility",
+                "irrationality",
+                "self-preservation"
+            ],
+            "meanings": {
+                "light": "Making deliberate choices that truly serve your highest well-being and health goals, Courageously advocating for your own physical and emotional needs, setting healthy boundaries, Confronting persistent health issues or uncomfortable truths about your lifestyle with resolve, Taking a firm stand for a healthier way of life, committing to proactive self-care, Discerningly rejecting fads or advice that doesn't resonate with your body's wisdom or ethical health principles, Wisely adapting your health routines or seeking alternative approaches when a rigid path isn't serving your progress",
+                "shadow": "Feeling depleted due to overexertion or allowing others to drain your physical or emotional reserves, Allowing fear, frustration, or a sense of defeat to dictate your health choices or interactions with caregivers, Engaging in self-destructive behaviors or unhealthy coping mechanisms that undermine your well-being, Experiencing chronic internal conflict, resisting necessary changes for healing, or constantly battling your own body, Succumbing to negative self-talk or listening to discouraging voices that fuel despair about your health, Ignoring crucial medical advice or neglecting self-care practices you know are essential for your recovery, Prioritizing short-term gratification or individual desires over sustainable health or the well-being of your support system, Becoming overly boastful or complacent about health improvements, leading to potential backslides or a lack of empathy"
+            },
+            "Numerology": "5 (The Catalyst: instability, resistance, confrontation)",
+            "Astrology": "Venus in Aquarius",
+            "Affirmation": "\"Even as I care for myself, I am mindful of the needs of others.\"",
+            "Questions to Ask": [
+                "How do I behave when I win? What does that say about me?",
+                "How can I do what's necessary without making others feel defeated?",
+                "What's the difference between selfish action and acting in my own best interest?"
+            ]
+        },
+        {
+            "name": "Six of Swords",
+            "number": "6",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s06.jpg",
+            "fortune_telling": "\"You are likely embarking on a significant transition in your health or healing journey, possibly involving deep emotional shifts or a new environment\", \"Be mindful that your health choices and actions will have notable, perhaps unforeseen, effects on your well-being, so prepare thoughtfully\"",
+            "keywords": [
+                "adaptation",
+                "adjustments",
+                "science",
+                "travel"
+            ],
+            "meanings": {
+                "light": "\"Finding resilience and making the best of a challenging health situation, adapting positively to new realities\", \"Successfully navigating a period of recovery, making steady progress after a physical or mental setback\", \"Adjusting your health expectations to be more realistic and empowering, fostering inner peace with your current state\", \"Flexibly adapting your self-care or treatment plans to accommodate unexpected physical or emotional developments\", \"Offering support and compassion to others facing similar health challenges, finding purpose in shared experiences\", \"Gaining profound new insights into your body's needs and overall wellness, shifting your perspective on health entirely\", \"Expanding your knowledge of healing modalities or seeking restorative environments through a change of pace or dedicated learning\"",
+                "shadow": "\"Resisting acceptance of a new health diagnosis or significant changes required for your well-being, leading to stagnation\", \"Feeling powerless and allowing your health circumstances to define you, rather than actively participating in your recovery\", \"Disregarding the direct impact of your lifestyle choices or treatment adherence on your physical and mental health outcomes\", \"Struggling to find balance between logical medical approaches and intuitive or holistic healing, potentially undermining overall progress\", \"Being rigid in your health beliefs, unwilling to explore diverse wellness strategies or acknowledge the varied needs of different bodies and minds\""
+            },
+            "Numerology": "6 (The Adjustment: cooperation, collaboration, interaction)",
+            "Astrology": "Mercury in Aquarius",
+            "Affirmation": "\"I keep an open mind.\"",
+            "Questions to Ask": [
+                "What assumptions govern my thinking?",
+                "How willing am I to lend aid to others? To request it when I need it?",
+                "How prepared am I to deal with change? With unexpected outcomes?"
+            ]
+        },
+        {
+            "name": "Seven of Swords",
+            "number": "7",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s07.jpg",
+            "fortune_telling": "Be discerning about health advice from unverified sources, or be wary of those who might not have your best health interests at heart, Diligently investigate the true causes of your symptoms or seek clear explanations for your health condition and treatment options",
+            "keywords": [
+                "dishonesty",
+                "presumption",
+                "sneakiness",
+                "assumptions"
+            ],
+            "meanings": {
+                "light": "Committing fully to your healing path, even when it's challenging or no one is watching, ensuring your long-term well-being, Skillfully managing complex health issues or adapting intelligently to new wellness routines with grace and precision, Challenging preconceived notions about your health or recognizing hidden factors influencing your well-being for a clearer path forward, Consistently upholding healthy habits and making choices that genuinely support your holistic well-being, whether others are observing or not, Cultivating a lifestyle of integrity that promotes sustained vitality and leaves no room for self-sabotage in your health journey",
+                "shadow": "Denying symptoms or actively avoiding necessary medical advice, potentially leading to a worsening of your condition, Engaging in unhealthy behaviors or neglecting self-care simply because immediate consequences aren't apparent, risking future health repercussions, Seeking shortcuts in healing or avoiding uncomfortable but necessary treatments, which may prolong recovery or worsen an ailment, Blaming external factors or others for your health struggles, rather than taking personal responsibility for your well-being choices, A lack of self-reflection about how your own biases or emotional patterns may be contributing to chronic ailments or hindering your healing process"
+            },
+            "Numerology": "7 (The Motive: imagination, inner work, psychology)",
+            "Astrology": "Moon in Aquarius",
+            "Affirmation": "\"I hold myself to the highest ethical standards.\"",
+            "Questions to Ask": [
+                "What assumptions am I making?",
+                "How well-defined is my sense of ethics?",
+                "How should I respond when I know others are breaking the rules?"
+            ]
+        },
+        {
+            "name": "Eight of Swords",
+            "number": "8",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s08.jpg",
+            "fortune_telling": "Stop dwelling on your health challenges and empower yourself to act, Recognizing that your mindset is key to overcoming health barriers will pave the way for true healing",
+            "keywords": [
+                "restriction",
+                "limitation",
+                "confinement",
+                "helplessness"
+            ],
+            "meanings": {
+                "light": "Wisely acknowledging and respecting your body's current physical or mental limits, Diligently following medical advice, treatment protocols, or healthy lifestyle guidelines, Proactively choosing a beneficial lifestyle change for your well-being, like a tailored nutritional plan, Accepting that certain aspects of your health or healing journey are beyond your immediate control, fostering inner peace, Clearly identifying specific mental, emotional, or physical blocks impeding your healing progress, Consciously steering clear of unhealthy coping mechanisms or detrimental health choices, Courageously reaching out for professional medical, therapeutic, or emotional support when needed",
+                "shadow": "Feeling utterly confined by a health condition, diagnosis, or seemingly inescapable limitations, Feeling overwhelmed and disoriented by a maze of complex medical information or restrictive health protocols, Succumbing to overwhelming hopelessness regarding your health outlook or recovery potential, Adopting a self-pitying stance regarding your health, rather than seeking solutions, Passively allowing external pressures or opinions to fully dictate your health and wellness choices, Experiencing profound powerlessness and a sense of being completely debilitated by your condition, Perceiving an extreme lack of viable options or pathways for health improvement or recovery, A complete failure to actively explore new avenues or solutions for health challenges"
+            },
+            "Numerology": "8 (The Action: movement, outer work, swiftness)",
+            "Astrology": "Jupiter in Gemini",
+            "Affirmation": "\"I know my own limits.\"",
+            "Questions to Ask": [
+                "Who's empowered to cut through the red tape?",
+                "What, exactly, are the obstacles? What resources, exactly, are needed to move them?",
+                "To what extent is your powerlessness a matter of attitude?"
+            ]
+        },
+        {
+            "name": "Nine of Swords",
+            "number": "9",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s09.jpg",
+            "fortune_telling": "Be cautious with current health actions, as rash decisions might lead to future physical or mental regret.",
+            "keywords": [
+                "remorse",
+                "worry",
+                "distraught",
+                "conclusion"
+            ],
+            "meanings": {
+                "light": "Finding peace by accepting health limitations you cannot alter, Successfully managing health-related anxieties and their physical manifestations, Treating your body and healing journey with kindness and self-compassion, Actively using mindfulness or calming practices to soothe mental distress impacting your health, Facing health fears and anxieties head-on to improve mental peace and sleep quality, Making peace with a health diagnosis or decision, allowing you to move forward.",
+                "shadow": "Dwelling on past health decisions or 'what-ifs' that hinder present recovery, Obsessively questioning every health choice, leading to paralysis and stress, Excessive self-blame for health setbacks or perceived lifestyle 'failures', Experiencing significant emotional lows that drain your physical energy and health, Compulsively replaying health symptoms or past medical details, causing distress, Avoiding healthy coping mechanisms for health-related stress, worsening conditions, Allowing past health struggles to overshadow current improvements and well-being, Agonizing over health decisions that have already been made or are beyond alteration."
+            },
+            "Numerology": "9 (The Completion: fullness, readiness, ripeness)",
+            "Astrology": "Mars in Gemini",
+            "Affirmation": "\"I do not worry about what I cannot control.\"",
+            "Questions to Ask": [
+                "What role does worry play in your current situation?",
+                "To what other ends might you devote the energy you're giving to anxiety?",
+                "How can you know when it's time to stop thinking and start acting?"
+            ]
+        },
+        {
+            "name": "Ten of Swords",
+            "number": "10",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s10.jpg",
+            "fortune_telling": "A significant health crisis or absolute exhaustion, Postpone any strenuous activities or demanding treatments until a clearer path to recovery emerges",
+            "keywords": [
+                "exhaustion",
+                "ruin",
+                "disaster",
+                "stamina",
+                "obsession"
+            ],
+            "meanings": {
+                "light": "Recognizing your physical or mental breaking point, Actively listening to your body's urgent signals for care, Allowing yourself essential rest and deep rejuvenation for healing, Accepting a complete physical or emotional collapse as a turning point, Embracing a dedicated commitment to full recovery and well-being, Understanding that the most severe health challenges are now behind you",
+                "shadow": "Prematurely surrendering to an illness or condition, Pushing your body and mind to an extreme, risking burnout or collapse, On the verge of or experiencing a significant mental health crisis, Fixating on health anxieties to a detrimental degree, Abandoning all efforts for health improvement or recovery, Struggling to implement necessary health changes despite knowing what's needed, Harboring detrimental thoughts about your health or self-worth"
+            },
+            "Numerology": "10 (The End: finality, completion, exhaustion)",
+            "Astrology": "Sun in Gemini",
+            "Affirmation": "\"When my limits are exceeded, I take action on my own behalf.\"",
+            "Questions to Ask": [
+                "What are the signs that the time for debate is over?",
+                "How can you tell when interest has given way to obsession?",
+                "When your own limits are reached, where can you turn for aid?"
+            ]
+        },
+        {
+            "name": "Page of Swords",
+            "number": "11",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s11.jpg",
+            "fortune_telling": "This card suggests a moment to engage thoughtfully with your health, perhaps by exploring new information, seeking clarity on symptoms, or having open conversations with healthcare providers about your well-being and recovery path.",
+            "keywords": [
+                "student",
+                "apprentice",
+                "scholarship",
+                "information"
+            ],
+            "meanings": {
+                "light": "Actively researching your health conditions or treatment options, Asking insightful questions of your doctors or wellness coaches, Investing time in understanding and practicing new healing techniques, Diligently doing research into the root causes of your symptoms, Making a habit of continually educating yourself on holistic wellness, Starting a thorough investigation into a health concern or imbalance, Clearly outlining what you need to learn for your healing journey, Finding a trusted healthcare professional or wellness mentor to guide you.",
+                "shadow": "Pretending to understand complex medical information you don't grasp, Misrepresenting symptoms or treatment adherence to your doctor, Feigning interest in health advice without genuine commitment to change, Considering only the health information that confirms your existing beliefs, Rejecting the wise counsel of experienced medical or therapeutic professionals."
+            },
+            "Elemental": "Earth of Air.",
+            "Affirmation": "\"I am ready to make good decisions.\"",
+            "Questions to Ask": [
+                "How comfortable are you with revealing your own ignorance?",
+                "What are the marks of a good student?",
+                "To what extent are you open to new information?"
+            ]
+        },
+        {
+            "name": "Knight of Swords",
+            "number": "12",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s12.jpg",
+            "fortune_telling": "An impulsive decision about your health or a sharp comment made during stress may lead to regret, If you've acted hastily regarding your well-being, acknowledge it and proactively seek a better path for healing",
+            "keywords": [
+                "bluntness",
+                "intelligence",
+                "incisiveness",
+                "investigation"
+            ],
+            "meanings": {
+                "light": "Clearly articulating your symptoms and needs to caregivers or practitioners, Confidently advocating for your treatment preferences or health concerns, Providing helpful feedback on a health plan or wellness routine for improvement, Sharing valuable insights or research about a health condition or wellness approach, Making keen observations about subtle shifts in your physical or mental state, Accurately identifying the root cause of a health issue or discomfort, Seeking clarity on medical advice or complex health information, Providing clear guidance to your support system or healthcare team regarding your healing path, Discovering crucial truths about your health journey, leading to breakthroughs",
+                "shadow": "Dogmatically asserting your own health theories without considering professional advice, Engaging in confrontational arguments with healthcare providers or support networks, Instigating unnecessary conflict regarding treatment plans or wellness choices, Discrediting helpful advice or undermining the confidence of those trying to assist your health journey, Making impulsive and irrational health decisions, disregarding sound judgment, Communicating about health issues insensitively, without empathy for others involved, Obsessively seeking blame for health issues or relentlessly pursuing unproven remedies, Misinterpreting medical test results or exaggerating symptoms, leading to skewed perceptions"
+            },
+            "Elemental": "Air of Air.",
+            "Affirmation": "\"I temper my insights with tact.\"",
+            "Questions to Ask": [
+                "What do I really need to know?",
+                "To what extent have I investigated the facts behind my situation?",
+                "How can I share what I know without alienating others?"
+            ]
+        },
+        {
+            "name": "Queen of Swords",
+            "number": "13",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s13.jpg",
+            "fortune_telling": "This card suggests an individual who approaches their health with sharp intellect and clear communication, enabling them to articulate their needs effectively and advocate for their well-being, or someone in your support system who offers precise, insightful guidance on your healing path.",
+            "keywords": [
+                "grace",
+                "skill",
+                "wit",
+                "charm",
+                "aptitude"
+            ],
+            "meanings": {
+                "light": "Approaching health decisions and discussions with careful thought and sensitive communication, successfully easing anxieties or stress related to a health challenge, clearly articulating your symptoms, concerns, or emotional needs to healthcare providers, creating a supportive and reassuring atmosphere for yourself or others embarking on a healing journey, inspiring positive habits and resilience in yourself or others on the path to improved health, using clear and precise language to understand or explain health matters, finding lightheartedness or humor as a positive coping mechanism during challenging health phases, applying a sharp, analytical mind or creative insight to understand health information or find innovative solutions for well-being.",
+                "shadow": "Engaging in overly harsh self-criticism that undermines your well-being or receiving critical, unhelpful health feedback, holding back crucial information about your symptoms or lifestyle from healthcare providers, hindering accurate diagnosis or effective treatment, using sharp or unkind words that negatively impact your own emotional health or discourage others on their healing path, dismissing genuine health concerns with sarcasm or cynicism, preventing open discussion and effective resolution, unkindly judging or mocking others' health challenges, which can also reflect an internal lack of compassion for one's own struggles, underestimating the seriousness of health conditions, especially your own or those of others, leading to neglect or lack of empathy, disregarding professional medical advice or disrespecting your body's clear signals for rest and care, failing to apply your inherent intelligence or analytical skills to understand and manage your own health effectively."
+            },
+            "Elemental": "Water of Air.",
+            "Affirmation": "\"I make the truth easier to hear.\"",
+            "Questions to Ask": [
+                "What do I have a knack for? How might my special gift prove useful now?",
+                "To what extent am I capable of saying what needs to be said?",
+                "What is the best possible way to say what I want to say?"
+            ]
+        },
+        {
+            "name": "King of Swords",
+            "number": "14",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s14.jpg",
+            "fortune_telling": "This card can represent a guiding presence in your health journey, someone with a clear, deliberate approach to well-being, or your own inner wisdom leading to sound health decisions, especially relating to mental clarity and recovery.",
+            "keywords": [
+                "genius",
+                "expertise",
+                "decision",
+                "verdict"
+            ],
+            "meanings": {
+                "light": "Confidently communicating your health needs and advocating for yourself, making a definitive and informed choice about a treatment plan or lifestyle change, seeking professional medical advice or a specialist's opinion, assembling a team of healthcare providers or collaborating with different specialists, reaching a clear understanding of a diagnosis or the best path forward for your health, committing to a well-researched health plan or achieving a good understanding with your healthcare provider.",
+                "shadow": "Being rigid in your health beliefs or refusing to consider new medical information, over-analyzing health details without acting or intellectualizing emotions instead of processing them, using overly complex medical jargon or being dismissive of simpler health solutions, indecision regarding critical health choices or delaying necessary treatments, inconsistency in health habits or frequently altering treatment plans without reason, neglecting self-care or consciously avoiding healthy habits that would benefit you, regretting past health choices or dwelling on missed opportunities for wellness."
+            },
+            "Elemental": "Fire of Air.",
+            "Affirmation": "\"My word is my bond.\"",
+            "Questions to Ask": [
+                "What would your decision be if you had to render a binding verdict right now?",
+                "How comfortable are you saying exactly what you mean? How often do you temper what you have to say for fear of offending others?",
+                "If you were to ask others, \"What's my area of expertise?\" what would they say?"
+            ]
+        },
+        {
+            "name": "Ace of Wands",
+            "number": "1",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w01.jpg",
+            "fortune_telling": "You may feel a surge of vital energy, indicating robust health, A beneficial new treatment, therapy, or wellness approach is presenting itself, Approach your healing journey with gentle awareness, but be firm in maintaining your wellness boundaries",
+            "keywords": [
+                "desire",
+                "inspiration",
+                "vision",
+                "creation",
+                "invention"
+            ],
+            "meanings": {
+                "light": "Feeling a powerful inspiration to embrace healthier habits or a new wellness path, Clearly identifying a crucial health objective, like regaining strength or achieving mental clarity, Being empowered with the capacity and resources to pursue your deepest health and wellness aspirations, Either offering valuable guidance on well-being to others or finding an insightful health practitioner, Gaining sudden insight into a clear solution for a long-standing health challenge, Initiating a transformative new health regimen, dietary change, or mindful practice that truly resonates, Experiencing a powerful reawakening of vitality, zest for life, and a healthy flow of energy within your body",
+                "shadow": "Overlooking or not seizing a timely chance for significant health improvement or prevention, Lacking the consistent drive or motivation to follow through on your health commitments, Approaching your healing or wellness journey with insufficient dedication, hindering progress, Having a health goal in mind but struggling with a lack of necessary support, energy, or internal drive to pursue it effectively, Pursuing health objectives that are unrealistic, unsustainable, or potentially detrimental to your overall well-being, Hesitating to assert your needs for better care, neglecting to set healthy boundaries, or accepting less than optimal health"
+            },
+            "Numerology": "1 (The Origin: the starting point, the seed, opportunity)",
+            "Astrology": "Aries, Leo, Sagittarius",
+            "Affirmation": "\"I jump at the opportunity to pursue my heart's desire.\"",
+            "Questions to Ask": [
+                "What do I really want, more than anything else?",
+                "What happens if I let this opportunity pass me by?",
+                "How clearly have I defined my directions, values, and goals?"
+            ]
+        },
+        {
+            "name": "Two of Wands",
+            "number": "2",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w02.jpg",
+            "fortune_telling": "Be mindful of health fads or advice that sounds too good to be true, and recognize any unhelpful patterns disguised as beneficial, Clearly express your health needs and concerns to your medical team, and bravely pursue the healing path that genuinely resonates with your inner self.",
+            "keywords": [
+                "conflict",
+                "decision",
+                "option",
+                "individuality"
+            ],
+            "meanings": {
+                "light": "Recognizing you have multiple effective pathways for healing and wellness open to you, Being presented with new beneficial treatment options or alternative therapies to explore for your condition, Valuing diverse perspectives on health and integrating various approaches like conventional and holistic care, Understanding that recovery or maintaining health can be achieved through various complementary methods and not just one fixed way, Successfully integrating multiple aspects of your health simultaneously, like diet and exercise or emotional and physical well-being, Feeling confident and empowered to make informed and proactive decisions about your health and treatment plan.",
+                "shadow": "Being dishonest with yourself or others about your health habits, needs, or symptoms, Following a health regimen or diet that you don't truly believe in, leading to lack of commitment or internal conflict, Abruptly abandoning a beneficial health routine or treatment without clear rationale, which could hinder your progress, Stubbornly sticking to a health goal or treatment plan that is clearly not serving your well-being or is causing more harm than good, Ignoring valuable advice and insights from healthcare professionals or loved ones regarding your physical or mental health journey."
+            },
+            "Numerology": "2 (The Other: division, debate, duality)",
+            "Astrology": "Mars in Aries",
+            "Affirmation": "\"With my goals in mind, I make confident choices.\"",
+            "Questions to Ask": [
+                "In a conflict, how do you decide who wins?",
+                "What values govern your decision-making process?",
+                "What choice will you make if you make no choice at all?"
+            ]
+        },
+        {
+            "name": "Three of Wands",
+            "number": "3",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w03.jpg",
+            "fortune_telling": "You'll be mapping out your path to better health soon, Be alert for positive health developments or the arrival of effective treatments",
+            "keywords": [
+                "implementation",
+                "action",
+                "exploration"
+            ],
+            "meanings": {
+                "light": "Actively beginning a new health plan or recovery strategy, Taking the crucial first step towards healing or a healthier lifestyle, Proactively creating positive changes for your health and vitality, Exceeding expectations in your recovery or pushing beyond perceived physical or mental limitations for growth, Discovering innovative approaches to your well-being or forging a new path in your health journey, Commencing a recovery program or new wellness routine with vigor and immediate positive action, Experiencing the tangible positive outcomes of your health and healing efforts",
+                "shadow": "Delaying necessary health interventions or postponing important wellness practices, Being aware of beneficial health practices or treatments but resisting their implementation, Approaching your health goals or recovery without a clear, organized plan or defined steps, Dismissing valuable new therapies, alternative treatments, or different wellness approaches that could aid your healing, Struggling to maintain consistency or abandoning health and wellness routines before seeing them through"
+            },
+            "Numerology": "3 (The Result: expression, productivity, output)",
+            "Astrology": "Sun in Aries",
+            "Affirmation": "\"I take the steps necessary to put my plans in action.\"",
+            "Questions to Ask": [
+                "How can you make a habit of breaking your habits?",
+                "How can you be a decisive leader in this circumstance?",
+                "What's your action plan for the next week, month, year, or decade?"
+            ]
+        },
+        {
+            "name": "Four of Wands",
+            "number": "4",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w04.jpg",
+            "fortune_telling": "Your body or a healing process is undergoing a critical assessment, perhaps by a medical professional or through your own self-awareness, which will lead to important insights about your condition, You may soon receive news or an invitation related to a health milestone, a wellness program, or a collective healing event that brings joy and stability",
+            "keywords": [
+                "celebration",
+                "jubilation",
+                "community",
+                "teamwork",
+                "completion"
+            ],
+            "meanings": {
+                "light": "Celebrating significant progress in your healing journey or reaching a major health milestone, like completing a demanding therapy or achieving a fitness goal, Experiencing a profound sense of well-being and vitality shared within a supportive community, recognizing collective efforts in maintaining health, or group recovery efforts, Actively preparing for a period of robust health and balance, laying foundations for sustained wellness, or anticipating a joyful return to full strength after recovery, Engaging in collaborative efforts for health, such as working with healthcare providers, family, or support groups towards a shared wellness objective, or finding harmony in holistic practices, Acknowledging and being recognized for your dedication to self-care, a successful recovery, or for inspiring others on their health paths, receiving affirmation for your resilience and progress",
+                "shadow": "Overworking yourself to the point of exhaustion, neglecting rest and recovery, or pushing your body beyond its healthy limits, leading to burnout, Feeling pressured to constantly perform or maintain an unrealistic state of health, where past achievements lead to greater self-demands rather than rest, exacerbating stress or illness, Feeling isolated or unable to participate in health-related support networks or communal wellness activities, hindering your healing process due to a lack of connection, Allowing resentment, envy, or negative comparisons to others' health journeys to undermine your own progress and mental well-being, fostering a toxic mindset that impedes recovery, Resisting necessary self-care practices, failing to follow medical advice, or neglecting your role in your own healing process, preventing recovery or worsening a condition"
+            },
+            "Numerology": "4 (The Status Quo: stability, equality, persistence)",
+            "Astrology": "Venus in Aries",
+            "Affirmation": "\"My contributions are worthy of celebration.\"",
+            "Questions to Ask": [
+                "To what extent am I doing my part?",
+                "What kind of recognition would be most meaningful?",
+                "How might a celebration now impact community morale?"
+            ]
+        },
+        {
+            "name": "Five of Wands",
+            "number": "5",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w05.jpg",
+            "fortune_telling": "\"Anticipate a period of internal struggle or a challenge to your physical or mental equilibrium\", \"Understand that persistent negative thoughts or stressful communications can have a lasting impact on your well-being\"",
+            "keywords": [
+                "confrontation",
+                "disruption",
+                "distinction",
+                "objection",
+                "strife"
+            ],
+            "meanings": {
+                "light": "\"Confidently seeking diverse medical opinions to ensure the best path for your healing\", \"Empowering yourself or your caregiver to explore varied wellness strategies that resonate best with your body's needs\", \"Fostering open dialogue with healthcare providers or support networks to fully explore your health choices\", \"Thoughtfully reviewing your healing journey to identify what's working and adjust as needed\"",
+                "shadow": "\"Rejecting sound medical advice or unfairly judging different healing approaches, hindering your own progress\", \"Unnecessarily creating conflict with caregivers or within oneself, leading to increased physical and mental strain\", \"Harshly criticizing your body's healing pace or abilities, creating a detrimental mindset\", \"Using passive-aggressive communication or veiled comments that create tension and hinder a supportive healing atmosphere\", \"Undermining your own health progress through constant, unhelpful resistance or excessive nitpicking of solutions\""
+            },
+            "Numerology": "5 (The Catalyst: instability, resistance, confrontation)",
+            "Astrology": "Saturn in Leo",
+            "Affirmation": "\"I can express dissent in constructive ways.\"",
+            "Questions to Ask": [
+                "To what extent is your current issue worth fighting for?",
+                "What alternatives are there to outright conflict?",
+                "What happens in a \"fair fight?\" How can you keep this fight fair?"
+            ]
+        },
+        {
+            "name": "Six of Wands",
+            "number": "6",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w06.jpg",
+            "fortune_telling": "Celebrating a significant health milestone, but be aware that not everyone around you may fully understand or genuinely support your unique journey to wellness, Be mindful of subtle resentments or comparisons from others regarding your health improvements or successful lifestyle changes",
+            "keywords": [
+                "victory",
+                "achievement",
+                "success",
+                "triumph"
+            ],
+            "meanings": {
+                "light": "Achieving significant personal bests in your physical or mental health, Successfully overcoming a health challenge or reaching a demanding wellness goal, Being acknowledged for your resilience and commitment to your well-being, Experiencing a public moment of triumph or inspiration related to your health journey, Receiving strong encouragement and positive feedback on your recovery or lifestyle changes, Reaching a significant health milestone or experiencing a tangible improvement in your condition, Inspiring others with your dedication to health or your successful healing journey, Acknowledging and celebrating your own progress and small victories in wellness",
+                "shadow": "Becoming overly confident or complacent after a period of good health, leading to neglect of self-care, Letting positive health outcomes inflate your ego, potentially leading to a rigid or judgmental view of others' struggles, Developing a lack of empathy or looking down upon those who are struggling with their health, Excessively seeking attention or validation regarding your health journey or perceived ailments, Experiencing hollow compliments or giving insincere reassurance regarding health matters, Feeling envious or resentful of the health progress and well-being of others"
+            },
+            "Numerology": "6 (The Adjustment: cooperation, collaboration, interaction)",
+            "Astrology": "Jupiter in Leo",
+            "Affirmation": "\"I value sincere praise.\"",
+            "Questions to Ask": [
+                "What kind of recognition do I crave? Why?",
+                "How freely do I praise the achievements of others?",
+                "What happens when the parade is over?"
+            ]
+        },
+        {
+            "name": "Seven of Wands",
+            "number": "7",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w07.jpg",
+            "fortune_telling": "Be mindful of unexpected health challenges or immune system stressors that may arise, such as a sudden illness or a flare-up, Get ready to actively manage your health or advocate for a loved one's well-being, possibly needing to make difficult choices or stand firm on treatment plans",
+            "keywords": [
+                "bravery",
+                "resolve",
+                "determination"
+            ],
+            "meanings": {
+                "light": "Standing firm in your health journey, refusing to let fear or external pressures dictate your healing path or treatment choices, Showing remarkable resilience and perseverance in overcoming a chronic condition, a difficult recovery, or maintaining wellness despite significant challenges, Embracing a strong, determined spirit in tackling health goals, confronting difficult symptoms, or advocating for the best care for yourself, Actively protecting your immune system and emotional boundaries from stress, negative influences, or unhealthy habits that could compromise your well-being, Setting clear boundaries and rejecting anything that harms your physical or mental health, including toxic relationships, unhealthy diets, or excessive demands, Maintaining your commitment to holistic health practices, self-care, and personal wellness beliefs, even when facing skepticism or pressure to deviate",
+                "shadow": "Allowing past health setbacks or resentments to hinder your current healing progress, leading to a negative outlook or resistance to beneficial changes, Engaging in risky behaviors or neglecting necessary precautions that jeopardize your health, perhaps out of denial or a desire to appear invulnerable, Being overly sensitive or resistant to health advice, perceiving constructive feedback from professionals or loved ones as a personal attack rather than help, Reacting poorly to suggestions about lifestyle changes, dietary adjustments, or new therapies, becoming closed off to potentially beneficial health insights, Failing to advocate for your own health needs or express your true feelings about your well-being, leading to unaddressed issues or suppressed emotional distress"
+            },
+            "Numerology": "7 (The Motive: imagination, inner work, psychology)",
+            "Astrology": "Mars in Leo",
+            "Affirmation": "\"I am willing to take a stand for what I believe in.\"",
+            "Questions to Ask": [
+                "When do you feel most threatened? When do you get defensive?",
+                "How capable are you of defending yourself?",
+                "What kinds of beliefs are worth defending?"
+            ]
+        },
+        {
+            "name": "Eight of Wands",
+            "number": "8",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w08.jpg",
+            "fortune_telling": "Anticipate unexpected news regarding your health or a new treatment possibility, Prepare for a sudden and significant shift in your health journey or a rapid breakthrough in your well-being",
+            "keywords": [
+                "speed",
+                "swiftness",
+                "responsiveness",
+                "change"
+            ],
+            "meanings": {
+                "light": "Taking swift action towards improving your health or addressing symptoms, Implementing your wellness plan or treatment protocol with efficiency and dedication, Experiencing a surge of energy and vitality, or proactively boosting your inner strength, Gracefully adapting to sudden shifts in your health status or treatment needs, Handling minor health setbacks with resilience and a positive outlook, Accepting the evolving nature of your health and embracing necessary lifestyle changes, Promptly and effectively responding to unexpected health challenges or symptoms",
+                "shadow": "Succumbing to health anxiety or overwhelming fear about your condition, Feeling overwhelmed and chaotic in your health approach, leading to indecision and distress, Resisting necessary changes to your lifestyle or treatment, hindering recovery or preventing improvement, Engaging in reckless health behaviors or ignoring medical advice out of curiosity or defiance, Impatiently pushing yourself or healthcare providers, potentially leading to errors or burnout, Sticking rigidly to an outdated diet, exercise routine, or treatment plan that is no longer serving your health needs"
+            },
+            "Numerology": "8 (The Action: movement, outer work, swiftness)",
+            "Astrology": "Mercury in Sagittarius",
+            "Affirmation": "\"I adapt quickly to change.\"",
+            "Questions to Ask": [
+                "How quickly to you adapt to change?",
+                "What would your response be to overwhelming, sudden change?",
+                "What changes are on your horizon? How well have you prepared for them?"
+            ]
+        },
+        {
+            "name": "Nine of Wands",
+            "number": "9",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w09.jpg",
+            "fortune_telling": "Maintain your health vigilance, as a full recovery or further steps in your wellness journey are still ahead, Your current health challenge is revealing the true strength of your support system and who genuinely stands by you",
+            "keywords": [
+                "toughness",
+                "persistence",
+                "stamina",
+                "loyalty",
+                "release"
+            ],
+            "meanings": {
+                "light": "Sustaining your commitment to a long-term health plan or recovery process, Diligently following through on treatments, self-care routines, or personal health commitments, Demonstrating immense resilience and strength despite significant health challenges or discomfort, Achieving a significant recovery milestone or enduring a difficult phase of healing, even when feeling utterly depleted, Taking personal responsibility for your well-being and actively pursuing your healing journey, Your unwavering resolve to overcome health obstacles and not give up on your well-being, Recognizing and being content with the progress you've made in your health, knowing you've given it your all",
+                "shadow": "Sacrificing your own health or well-being excessively for others, leading to self-neglect, Neglecting essential self-care, abandoning a treatment plan, or avoiding necessary medical attention, Giving up on your healing journey or beneficial health practices too easily when challenges arise, External obstacles or circumstances preventing you from fully engaging in your healing or maintaining your health, Struggling with consistency in your health routines or unreliable follow-through on medical advice, Clinging to old habits, beliefs, or emotional burdens that are detrimental to your physical or mental health, Exhausting yourself by continuing with health strategies or treatments that are clearly not yielding results"
+            },
+            "Numerology": "9 (The Completion: fullness, readiness, ripeness)",
+            "Astrology": "Moon in Sagittarius",
+            "Affirmation": "\"When the going gets tough, I stay the course.\"",
+            "Questions to Ask": [
+                "How do you cope when things get really tough?",
+                "When you get low, what encourages you to go on?",
+                "At what point should you be able to let this situation go?"
+            ]
+        },
+        {
+            "name": "Ten of Wands",
+            "number": "10",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w10.jpg",
+            "fortune_telling": "Your body and mind are signaling profound fatigue and exhaustion, it's a call for deep rest., It's essential to step back from overwhelming responsibilities, take a significant break, and allow support systems or professionals to assist in your recovery or health management.",
+            "keywords": [
+                "exhaustion",
+                "resistance",
+                "burden",
+                "oppression"
+            ],
+            "meanings": {
+                "light": "Demonstrating remarkable resilience in managing chronic conditions or overcoming severe health challenges., Offering compassionate care and support to others in their healing process without sacrificing your own well-being., Advocating effectively for your own health needs or championing wellness for those who are vulnerable., Possessing a clear and honest understanding of your physical and emotional limits, respecting your capacity for energy and exertion., Astutely recognizing when a particular diet, exercise routine, or treatment plan is not truly serving your unique health and body.",
+                "shadow": "Willfully taking on more physical or emotional strain than your health can sustain, risking severe burnout or breakdown., An inability to decline additional commitments or demands, even when your health is already compromised by overload., Establishing a detrimental pattern of chronic overexertion, leading to a consistent state of depletion and potential illness., Absorbing the health consequences of others' poor choices or lack of self-care, to your own detriment., Continuously pushing past your physical and mental reserves, creating an unsustainable and damaging health imbalance."
+            },
+            "Numerology": "10 (The End: finality, completion, exhaustion)",
+            "Astrology": "Saturn in Sagittarius",
+            "Affirmation": "\"I respect my own limits.\"",
+            "Questions to Ask": [
+                "How will you know when you reach the end of your rope?",
+                "How easily do you say no to new projects and requests?",
+                "What projects could you delegate...or eliminate?"
+            ]
+        },
+        {
+            "name": "Page of Wands",
+            "number": "11",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w11.jpg",
+            "fortune_telling": "This card signals a new burst of energy or a fresh, enthusiastic perspective emerging within you, ready to initiate a transformative phase in your health journey, or the emergence of a new, vital approach to your well-being.",
+            "keywords": [
+                "enthusiasm",
+                "eagerness",
+                "confidence",
+                "validation",
+                "affirmation"
+            ],
+            "meanings": {
+                "light": "Embracing new health opportunities with eagerness, Becoming a passionate advocate for your own healing and well-being, Holding deep conviction in your body's ability to recover and thrive, Taking decisive first steps towards self-managed wellness, Cultivating trust in your inherent healing capacities, Actively seeking valuable feedback and guidance for your health path.",
+                "shadow": "Allowing external opinions to overly influence your health decisions or self-perception, Impulsively adopting unverified health trends or remedies without discernment, Consistently dismissing professional advice or valuable insights regarding your well-being, Hindering your own healing progress by refusing necessary support or expert guidance."
+            },
+            "Elemental": "Earth of Fire.",
+            "Affirmation": "\"I can do this.\"",
+            "Questions to Ask": [
+                "How easily do you admit your own inexperience?",
+                "How can you be a better student or employee?",
+                "What qualities would make a total beginner's voyage of discovery easier?"
+            ]
+        },
+        {
+            "name": "Knight of Wands",
+            "number": "12",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w12.jpg",
+            "fortune_telling": "This card suggests a surge of vital energy and a strong, determined approach to your well-being, indicating a period where you feel robust and ready to tackle health goals.",
+            "keywords": [
+                "boldness",
+                "bravado",
+                "passion",
+                "persuasion",
+                "advocacy"
+            ],
+            "meanings": {
+                "light": "Embracing proactive health strategies, Experiencing swift improvement in health conditions, Breaking through physical or mental health barriers, Radiating vitality and inspiring wellness in your environment, Taking decisive control over your healing journey, Motivating others towards healthier choices through your example, Initiating transformative changes for holistic well-being",
+                "shadow": "Making impulsive health choices without proper research or guidance, Neglecting emotional needs or support systems in your health pursuits, Prioritizing superficial aspects over genuine holistic well-being, Imposing your health views or practices rigidly on others, Starting numerous wellness initiatives without sustained commitment"
+            },
+            "Elemental": "Air of Fire.",
+            "Affirmation": "\"I can lead the way to success.\"",
+            "Questions to Ask": [
+                "To what extent have you defined your ultimate goal?",
+                "What's the fastest way to get the job done? Is this necessarily the best way?",
+                "How long has it been since you looked back to see if others really are following your lead?"
+            ]
+        },
+        {
+            "name": "Queen of Wands",
+            "number": "13",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w13.jpg",
+            "fortune_telling": "This card suggests a vibrant, inspiring energy within you that naturally draws you towards wellness, or an influential presence guiding you positively in your health journey and encouraging holistic balance.",
+            "keywords": [
+                "attention",
+                "attraction",
+                "unification",
+                "collaboration"
+            ],
+            "meanings": {
+                "light": "Deeply listening to your body's intuitive signals, inspiring others to prioritize their wellness, successfully collaborating with healthcare providers and support systems, finding common ground in wellness practices, integrating diverse healing approaches, wisely motivating healthier choices.",
+                "shadow": "Allowing distractions to derail your health goals, engaging in self-sabotaging or attention-seeking unhealthy behaviors, undermining collective wellness efforts or medical advice for personal validation."
+            },
+            "Elemental": "Water of Fire.",
+            "Affirmation": "\"I use my influence to promote unity.\"",
+            "Questions to Ask": [
+                "How attentive am I?",
+                "How can I draw people's attention to what we have in common?",
+                "To what extent am I able to convince people to do what I want them to do?"
+            ]
+        },
+        {
+            "name": "King of Wands",
+            "number": "14",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w14.jpg",
+            "fortune_telling": "This card suggests the emergence of a strong, experienced figure in your health journey, perhaps a specialist or a wise guide whose advice will be pivotal, It can also signify an awakening of your inner strength and resolve, empowering you to take decisive control over your well-being and direct your healing path effectively.",
+            "keywords": [
+                "creativity",
+                "ingenuity",
+                "achievement",
+                "direction"
+            ],
+            "meanings": {
+                "light": "Creatively integrating various healing modalities or lifestyle changes for optimal health, Discovering innovative and effective solutions for persistent health challenges, Leveraging your past health experiences and accumulated wisdom to navigate current wellness issues, Successfully committing to and achieving your health and fitness goals, Inspiring and guiding others towards healthier habits or coordinating effective care for your well-being",
+                "shadow": "Finding elaborate excuses to avoid necessary health routines or self-care practices, Expending significant energy in denying or neglecting important health responsibilities, Talking extensively about wellness or health knowledge without genuinely implementing it into your life, Imposing your personal health beliefs or judgments on others, creating tension or resistance in wellness discussions"
+            },
+            "Elemental": "Fire of Fire",
+            "Affirmation": "\"I use my authority and experience to get things done faster.\"",
+            "Questions to Ask": [
+                "How confident a leader am I?",
+                "How can I project more confidence?",
+                "How can I offer my expertise in ways that inspire others to follow me?"
+            ]
+        },
+        {
+            "name": "Ace of Pentacles",
+            "number": "1",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p01.jpg",
+            "fortune_telling": "Your journey towards better health is beginning now, filled with renewed energy and vitality, A crucial piece of information or resource for your healing, such as a diagnosis, treatment plan, or support, is on its way",
+            "keywords": [
+                "health",
+                "wealth",
+                "practicality",
+                "receiving"
+            ],
+            "meanings": {
+                "light": "Developing a clear and practical plan to enhance your physical and mental well-being, Recognizing significant opportunities to boost your vitality, pursue effective treatments, or adopt healthier habits, Understanding that you possess all the inner resources and support needed for your healing journey, Feeling deep gratitude for your body's resilience, the healing processes at work, and the support systems in your life, Experiencing a timely breakthrough in your health, receiving the right diagnosis, or finding the perfect healing modality precisely when needed",
+                "shadow": "Excessively focusing on quick fixes or external remedies without addressing underlying health issues, Constantly feeling that your health isn't enough, regardless of improvements, leading to dissatisfaction, Becoming overly preoccupied with every minor symptom or health statistic, leading to anxiety and unnecessary worry, Struggling with excessive health anxiety or an irrational fear of illness, even in the absence of real symptoms, Failing to acknowledge or appreciate the progress and natural healing abilities your body already possesses, Neglecting self-care or pushing your body beyond its limits, ignoring its true needs in pursuit of other goals"
+            },
+            "Numerology": "1 (The Origin: the starting point, the seed, opportunity)",
+            "Astrology": "Capricorn, Taurus, Virgo",
+            "Affirmation": "\"I am open to and thankful for my blessings.\"",
+            "Questions to Ask": [
+                "If I made my decision based solely on practical concerns, what would my decision be?",
+                "What resources are available to me?",
+                "What will be the physical and financial impact of my decisions?"
+            ]
+        },
+        {
+            "name": "Two of Pentacles",
+            "number": "2",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p02.jpg",
+            "fortune_telling": "It's time to find equilibrium in your health routine, whether through diet, rest, or activity, Resist distractions or unhealthy indulgences that drain your vital energy or compromise your healing process",
+            "keywords": [
+                "evaluation",
+                "decision",
+                "budgeting",
+                "diagnosis"
+            ],
+            "meanings": {
+                "light": "Thoughtfully assessing different treatment paths or wellness strategies, Carefully evaluating the benefits and drawbacks of various health choices, Wisely discerning which health approach offers the most sustainable benefit for your body and mind, Skillfully managing your energy levels, time, and attention to maintain overall well-being despite competing demands, Prioritizing choices that genuinely support your physical and mental health, even if they require discipline, Focusing on the essential foundations for lasting health and recovery, Seeking diverse perspectives and expert advice to make informed decisions about your healing journey",
+                "shadow": "Overthinking or indecisiveness regarding health decisions, leading to inaction, Delaying essential health interventions or lifestyle changes out of fear of making the 'wrong' choice or missing a 'perfect' solution, Making impulsive health choices without considering their long-term impact or true benefit, Over-committing to too many health fads or draining your energy on non-essential activities, leading to burnout, Neglecting your body's signals or engaging in self-destructive habits without concern for the toll on your physical or mental health"
+            },
+            "Numerology": "2 (The Other: duality, division, debate)",
+            "Astrology": "Jupiter in Capricorn",
+            "Affirmation": "\"Before taking action, I consider costs.\"",
+            "Questions to Ask": [
+                "What values govern my decisions?",
+                "How willing am I to sacrifice a little pleasure now in order to have more pleasure later on?",
+                "Given my current situation, which course of action will give me more of what I really need?"
+            ]
+        },
+        {
+            "name": "Three of Pentacles",
+            "number": "3",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p03.jpg",
+            "fortune_telling": "A valuable collaboration for your healing is on the horizon, Dedicated effort in your wellness journey will bring success",
+            "keywords": [
+                "expression",
+                "production",
+                "work",
+                "contribution"
+            ],
+            "meanings": {
+                "light": "Successfully completing a health goal or treatment phase, Diligently adhering to healthy habits and medical recommendations, Your body responding well to care, or a treatment plan performing optimally, Inspiring others through your commitment to well-being, or finding value in your recovery efforts, Innovating your self-care routines or embracing new pathways to vitality, Actively engaging with your healthcare team and support network, Your body responding positively to care, or meeting the demands of a healthy lifestyle",
+                "shadow": "Compromising your health choices to please others or fit in, Struggling to follow through on personal health commitments or treatment plans, Lacking self-motivation in your health journey, needing constant external accountability, Disregarding professional medical advice or neglecting the support from your care team, Passive resistance to participating in your own healing or recovery process, Inconsistency in adhering to personal wellness goals or agreed-upon health strategies"
+            },
+            "Numerology": "3 (The Result: expression, productivity, output)",
+            "Astrology": "Mars in Capricorn",
+            "Affirmation": "\"My work produces results.\"",
+            "Questions to Ask": [
+                "How can I get more done?",
+                "What's expected of me? How large a role do I play in controlling those expectations?",
+                "What's been agreed to? How well has that agreement been followed?"
+            ]
+        },
+        {
+            "name": "Four of Pentacles",
+            "number": "4",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p04.jpg",
+            "fortune_telling": "It's a time to build your health reserves and fortify your well-being, preparing for potential future challenges.",
+            "keywords": [
+                "protection",
+                "conservation",
+                "preservation",
+                "safety"
+            ],
+            "meanings": {
+                "light": "Proactively building physical and mental resilience, ensuring you have reserves for challenges, Engaging in disciplined health practices like intermittent fasting or mindful eating for detoxification and clarity, Committing to a focused nutritional plan to support and enhance your physical vitality, Practicing self-discipline in lifestyle choices to conserve energy and promote holistic well-being, Wisely managing your health resources, avoiding unnecessary risks or depletion, Making long-term investments in your health, securing a foundation for future wellness, Initiating foundational health habits that will accumulate benefits over time.",
+                "shadow": "Resisting necessary medical care or emotional support, holding onto unhealthy patterns, Neglecting essential health treatments or beneficial self-care practices due to a rigid mindset, Emotional rigidity or isolation hindering open communication and support vital for mental health, An overly self-absorbed focus on personal health to the exclusion of social well-being or shared support, Making short-sighted health choices that ultimately create larger issues down the line, Failing to appreciate or wisely manage your innate physical and mental health resources, taking them for granted."
+            },
+            "Numerology": "4 (The Status Quo: stability, equality, persistence)",
+            "Astrology": "Sun in Capricorn",
+            "Affirmation": "\"I use my resources wisely.\"",
+            "Questions to Ask": [
+                "What factors determine how conservative or generous you are?",
+                "What kinds of things must be preserved at all costs?",
+                "When is greediness or stinginess a good trait to have? When might generosity work against you?"
+            ]
+        },
+        {
+            "name": "Five of Pentacles",
+            "number": "5",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p05.jpg",
+            "fortune_telling": "Your vitality or energy levels may be feeling strained, Be prepared for a period requiring focused attention on your health or a temporary setback in your recovery",
+            "keywords": [
+                "poverty",
+                "destitution",
+                "need",
+                "crisis"
+            ],
+            "meanings": {
+                "light": "Acknowledging your body's or mind's needs and actively seeking appropriate care, Making the most of your current physical or mental capacities during a challenging time, Finding the courage to ask for professional medical or emotional support, Graciously accepting help and resources offered for your well-being, Focusing on your current health strengths rather than dwelling on limitations, Maintaining hope and looking for progress on your healing journey",
+                "shadow": "Exaggerating or denying your true health needs, Adopting a defeatist mindset about your health and recovery, Neglecting self-care or essential medical advice, Rejecting valuable offers of help or support for your well-being, Using health issues to gain sympathy or avoid responsibility, Turning down beneficial opportunities for health improvement, Becoming consumed by despair or misery related to your physical or mental state"
+            },
+            "Numerology": "5 (The Catalyst: instability, resistance, confrontation)",
+            "Astrology": "Mercury in Taurus",
+            "Affirmation": "\"I have faith that what I need will appear.\"",
+            "Questions to Ask": [
+                "What critical resources do I lack?",
+                "What people or groups would come to my aid if I asked?",
+                "How might an impoverished spirit be impacting my physical or financial condition?"
+            ]
+        },
+        {
+            "name": "Six of Pentacles",
+            "number": "6",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p06.jpg",
+            "fortune_telling": "When your well-being calls for support, reach out and accept the assistance offered, Reflect on your past investments in self-care and community health, as this can influence the support you now attract",
+            "keywords": [
+                "charity",
+                "fairness",
+                "cooperation",
+                "sharing"
+            ],
+            "meanings": {
+                "light": "Contributing to health initiatives or supporting others on their wellness paths, Actively engaging in support groups or collaborative healing environments, Selflessly sharing your insights or support with someone navigating their own health challenges, Advocating for fair access to healthcare and wellness resources for all, Collaborating effectively with healthcare providers or loved ones for optimal recovery, Wisely allocating your energy and resources towards essential self-care and healing practices, Consistently dedicating time and effort to preventative health and maintaining balance, Acknowledging the valuable support received from others in your journey toward better health",
+                "shadow": "Seeking health support with hidden agendas, or attempts to control a health outcome manipulatively, Exaggerating symptoms or health struggles for undue sympathy or attention, Neglecting your own self-care while disproportionately caring for others, or mismanaging health-related resources, Resisting advice, not adhering to treatment plans, or failing to participate in your own recovery, Neglecting essential follow-ups, skipping vital treatments, or consistently sidelining your health needs"
+            },
+            "Numerology": "6 (The Adjustment: cooperation, collaboration, interaction)",
+            "Astrology": "Moon in Taurus",
+            "Affirmation": "\"Knowing I will receive more, I share my resources freely.\"",
+            "Questions to Ask": [
+                "How do I feel about charity? About giving it? About receiving it?",
+                "How can I know if I'm treating others fairly?",
+                "What could I give that no one else can?"
+            ]
+        },
+        {
+            "name": "Seven of Pentacles",
+            "number": "7",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p07.jpg",
+            "fortune_telling": "Your current health approach may not be yielding the expected results, It's time to re-evaluate your well-being journey and adapt your healing path",
+            "keywords": [
+                "assessment",
+                "evaluation",
+                "re-evaluation",
+                "reflection"
+            ],
+            "meanings": {
+                "light": "Measuring consistent progress toward your health goals and recovery milestones, Assessing your body's responses to improve your overall well-being, Reflecting on your emotional state and its deep connection to your physical vitality, Developing new strategies for improving your physical and mental health, Deciding it's crucial to make a significant change for your health, Clearly communicating your health needs or insights to others",
+                "shadow": "Becoming consumed by thoughts of illness or past health struggles, Longing for a past state of health, making it difficult to embrace your current healing journey, Excessively blaming yourself for health setbacks or missed wellness opportunities, Harshly judging your body's healing pace or your personal health efforts, Holding your caregivers or your own recovery to unrealistic standards, Resisting active participation in your health plan, then feeling frustrated with the lack of improvement"
+            },
+            "Numerology": "7 (The Motive: imagination, inner work, psychology)",
+            "Astrology": "Saturn in Taurus",
+            "Affirmation": "\"To stay on target, I measure my progress.\"",
+            "Questions to Ask": [
+                "To what extent have I fulfilled my own expectations?",
+                "What are the terms of success?",
+                "How can I be happier with the progress I've made?"
+            ]
+        },
+        {
+            "name": "Eight of Pentacles",
+            "number": "8",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p08.jpg",
+            "fortune_telling": "Stop endlessly overthinking or researching your health concerns, it's time to take action, Buckle down and commit to the practical steps of your healing journey",
+            "keywords": [
+                "effort",
+                "work diligence",
+                "skill"
+            ],
+            "meanings": {
+                "light": "Giving your full effort to your healing process, Approaching your wellness with enthusiasm and dedication, Striving for optimal health and continuous self-improvement, Discovering the most effective and personalized health practices for you, Being meticulous about the small, yet crucial, details of your self-care, Developing mastery over your body's needs and self-care routines, Actively engaging in practices that build physical or mental resilience, Investing thoughtfully and lovingly in your own holistic well-being",
+                "shadow": "Overworking yourself to the point of burnout or exhaustion, Approaching your health with a half-hearted or inconsistent effort, Lingering in unhealthy patterns or treatments that no longer serve you, Making thoughtless or impulsive choices that undermine your health, Delivering sloppy or ineffective self-care due to lack of attention, Rushing your recovery process and not allowing natural healing time, Resisting opportunities to learn or adapt new approaches to your well-being"
+            },
+            "Numerology": "8 (The Action: movement, outer work, swiftness)",
+            "Astrology": "Sun in Virgo",
+            "Affirmation": "\"I give myself wholeheartedly to the task of the moment.\"",
+            "Questions to Ask": [
+                "How long has it been since you were \"lost in your work?\"",
+                "How can you improve your level of dedication and focus?",
+                "What work do you do best? What about that work appeals to you?"
+            ]
+        },
+        {
+            "name": "Nine of Pentacles",
+            "number": "9",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p09.jpg",
+            "fortune_telling": "\"Until you genuinely appreciate your current state of health and well-being, it will be challenging to achieve further significant improvements or lasting wellness.\"",
+            "keywords": [
+                "training",
+                "discipline",
+                "confidence",
+                "enough"
+            ],
+            "meanings": {
+                "light": "\"Dedicating time to thoroughly understand your body's needs, a new health regimen, or the nuances of a healing process\", \"Practicing moderation in physical activity and self-care, avoiding extreme diets or overexertion for sustainable well-being\", \"Committing to necessary lifestyle adjustments or dietary changes for the long-term benefit of your health and vitality\", \"Approaching health goals or recovery by patiently breaking them down into manageable, progressive steps\", \"Cultivating deep appreciation for your current physical and mental state, recognizing your innate resilience and strengths\", \"Clearly distinguishing between your body's fundamental health requirements and fleeting desires or external health trends\"",
+                "shadow": "\"Attempting demanding health regimens or recovery methods without proper guidance, knowledge, or preparation, risking setback\", \"Pushing your body or mind beyond its current limits, leading to potential exhaustion, injury, or mental burnout\", \"Ignoring crucial medical advice, neglecting your body's clear warning signs, or disregarding necessary self-care requirements\", \"Failing to invest sufficient time or attention in understanding your health condition, treatment options, or your body's signals\", \"Experiencing persistent dissatisfaction with your health, constantly seeking external fixes rather than finding inner balance and contentment\""
+            },
+            "Numerology": "9 (The Completion: fullness, readiness, ripeness)",
+            "Astrology": "Venus in Virgo",
+            "Affirmation": "\"I know enough to be confident in my decisions.\"",
+            "Questions to Ask": [
+                "If you could not have what you want, how would you make do?",
+                "Could you make a complex task easier by breaking it down into smaller steps?",
+                "How patient are you during the learning process? With yourself? With others?"
+            ]
+        },
+        {
+            "name": "Ten of Pentacles",
+            "number": "10",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p10.jpg",
+            "fortune_telling": "Significant improvements in your physical or mental well-being are on the horizon, A powerful breakthrough or profound sense of holistic wellness is coming into your life",
+            "keywords": [
+                "wealth",
+                "abundance",
+                "acquisition",
+                "greed"
+            ],
+            "meanings": {
+                "light": "Celebrating your robust health and vitality, A deep appreciation for your current state of well-being, Feeling deeply content with your health and progress in your wellness journey, Wisely utilizing periods of good health to build resilience and maintain balance, Nourishing your body and mind through wholesome practices, Sharing your positive energy and wellness insights with loved ones",
+                "shadow": "Neglecting genuine self-care by pursuing superficial health trends or excessive external remedies, Prioritizing external appearance or societal expectations over your true physical and mental needs, Seeking external validation for your health choices instead of what truly supports your well-being, An unhealthy preoccupation with specific health metrics, body image, or potential illnesses, A self-centered approach to health, hindering holistic and long-term well-being efforts"
+            },
+            "Numerology": "10 (The End: finality, completion, exhaustion)",
+            "Astrology": "Mercury in Virgo",
+            "Affirmation": "\"I keep physical and financial matters in perspective.\"",
+            "Questions to Ask": [
+                "How much stuff do I really need?",
+                "How do I feel about wealth and abundance? How do I define these terms?",
+                "How might shedding some possessions open room for growth?"
+            ]
+        },
+        {
+            "name": "Page of Pentacles",
+            "number": "11",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p11.jpg",
+            "fortune_telling": "This card suggests a new, grounded approach to your well-being, often indicating a fresh start in understanding your body's needs and a playful readiness to explore new health practices.",
+            "keywords": [
+                "practicality",
+                "prosperity",
+                "learning",
+                "growth",
+                "adolescence"
+            ],
+            "meanings": {
+                "light": "Understanding the true importance of consistent self-care for long-term well-being, beginning a proactive wellness routine like a fitness plan or meditation practice, taking initial steps to address and reduce health-related stress or unhealthy habits, acquiring new physical skills or healing modalities like gentle exercises or therapeutic movements, embracing a deeper connection with your body and its innate wisdom, initiating a dedicated health journey such as a holistic detox, a new fitness regimen, or a mindful eating plan, gaining insights into your health through practical experience and active participation in your healing.",
+                "shadow": "Projecting an image of perfect health while neglecting underlying issues or feeling unwell internally, neglecting your health by making impulsive and detrimental lifestyle choices, ignoring future health consequences by living excessively in the moment with no consideration for long-term well-being, exhibiting a lack of mature understanding or respect for your body's needs and natural rhythms, using good genetics or a youthful appearance as a reason to avoid healthy habits or ignore symptoms, hindering personal health growth."
+            },
+            "Elemental": "Earth of Earth.",
+            "Affirmation": "\"I am physically and financially responsible.\"",
+            "Questions to Ask": [
+                "How can you get more financial or sexual experience without risking your livelihood or health?",
+                "How might hands-on learning play a role in your situation?",
+                "What's the most practical choice you could make?"
+            ]
+        },
+        {
+            "name": "Knight of Pentacles",
+            "number": "12",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p12.jpg",
+            "fortune_telling": "A cautious voice may advise you against excessive indulgence in your diet or habits, Be prepared to uphold your commitment to a new health regimen or wellness choice",
+            "keywords": [
+                "caution",
+                "focus",
+                "realism",
+                "invention"
+            ],
+            "meanings": {
+                "light": "Making wise choices for your physical and mental nourishment, Building up reserves of energy and resilience for future challenges, Attending diligently to the subtle signals and needs of your body and mind, Understanding fully how your daily habits contribute to your overall well-being, Practicing mindful self-care and taking protective measures for your health, Basing your health decisions on evidence and what truly works, rather than fleeting trends, Resourcefully adapting your wellness routine to fit your current circumstances and available support, Successfully integrating a new, stable, and practical health habit into your life",
+                "shadow": "Neglecting prudent health precautions and taking unnecessary risks with your well-being, Engaging in health habits without considering their long-term impact or repercussions, Prioritizing fleeting pleasures or fads over fundamental needs for stable health and recovery, Using unhealthy coping mechanisms or self-medication to avoid dealing with emotional stress, Becoming overly fixated on minor bodily sensations, leading to health anxiety or hypochondria, Constantly seeking quick-fix solutions or jumping between different unproven health trends, Ignoring your body\u2019s unique needs and blindly adopting health practices that aren\u2019t suitable for you"
+            },
+            "Elemental": "Air of Earth.",
+            "Affirmation": "\"I temper my actions with cautious optimism.\"",
+            "Questions to Ask": [
+                "What's the difference between caution and fear?",
+                "How can I evaluate the practicality of my own ideas and methods?",
+                "How realistic are my goals?"
+            ]
+        },
+        {
+            "name": "Queen of Pentacles",
+            "number": "13",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p13.jpg",
+            "fortune_telling": "This card suggests a time to nurture your body and mind with deep care, perhaps indicating an intuitive connection to natural healing or the influence of a grounding presence guiding you toward holistic well-being.",
+            "keywords": [
+                "luxury",
+                "comfort",
+                "resourcefulness",
+                "generosity",
+                "prosperity"
+            ],
+            "meanings": {
+                "light": "Embracing a holistic approach to health, savoring nourishing foods, and appreciating the beauty of a healthy, functioning body, Cultivating a vibrant and healthy relationship with your physical self and intimacy, promoting overall vitality, Prioritizing acts of self-care and gentle indulgence that truly replenish your energy and soothe your spirit, Wisely investing in quality resources or experiences that genuinely support your health and long-term wellness journey, Offering yourself profound compassion and generosity in your healing process, or receiving exceptional care from others, Achieving a harmonious state of robust physical health, emotional stability, and a profound sense of inner balance.",
+                "shadow": "Grappling with excessive indulgence in habits that undermine your physical well-being, like unhealthy eating or lack of moderation, Feeling a persistent sense of dissatisfaction or an inability to find contentment in your health journey, always seeking more without true fulfillment, Diminishing the effectiveness of beneficial routines or comforts by overusing them, leading to stagnation in your healing, Neglecting crucial emotional or mental health aspects while focusing solely on physical symptoms, hindering true recovery, Taking your health and body's resilience for granted, leading to a lack of proactive care or appreciation for your well-being."
+            },
+            "Elemental": "Water of Earth.",
+            "Affirmation": "\"I relish the best this world has to offer.\"",
+            "Questions to Ask": [
+                "How do I define luxury?",
+                "To what extent am I capable of reveling in sensual pleasure?",
+                "What would I have to give up in order to \"have it all?\""
+            ]
+        },
+        {
+            "name": "King of Pentacles",
+            "number": "14",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p14.jpg",
+            "fortune_telling": "This card suggests a stable and grounded approach to health, emphasizing consistent self-care and practical investment in long-term well-being.",
+            "keywords": [
+                "stability",
+                "dependability",
+                "confidence",
+                "intervention"
+            ],
+            "meanings": {
+                "light": "Achieving complete physical and mental recuperation, experiencing robust health and vitality, consistently building up your physical reserves and investing in preventative health, adopting new beneficial health practices for long-term wellness, proactively securing your well-being through comprehensive health planning, feeling physically vibrant and emotionally secure in your intimacy, disciplined adherence to a health regimen or setting firm boundaries for well-being.",
+                "shadow": "Resisting necessary health interventions or lifestyle changes due to stubbornness, neglecting new beneficial treatments by clinging to outdated beliefs, overconfidence in your health leading to neglect of warning signs, prioritizing material gain or instant gratification over long-term well-being, disregarding your partner's health or emotional needs in intimacy, imposing health beliefs on others without respecting their autonomy."
+            },
+            "Elemental": "Fire of Earth.",
+            "Affirmation": "\"I embody confidence and fairness.\"",
+            "Questions to Ask": [
+                "How can you handle expenses with greater confidence and maturity?",
+                "How dependable are you? How dependable would others say you are?",
+                "To what extent is a conservative viewpoint valuable? At what point does it become more of a burden than a blessing?"
+            ]
+        }
+    ]
+}

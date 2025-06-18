@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /* ---------- 4. Tarot-fan code (unchanged behaviour) ---------- */
     let DECK = [];
 
-    fetch('tarot-details.json')
+    fetch('/assets/jsons/tarot-card-love.json')
         .then(r => r.json())
         .then(d => {
             DECK = d.cards;
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fan.style.pointerEvents = 'none';
         promptTxt.style.opacity = 0;
 
-        card.querySelector('.front img').src = `assets/cards/${card._data.img}`;
+        card.querySelector('.front img').src = `/assets/cards/${card._data.img}`;
 
         const spark = document.createElement('div');
         spark.className = 'spark';
@@ -231,8 +231,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <h2>${c.name}</h2>
             <h3>${c.arcana}</h3>
             <p><strong>Orientation:</strong> ${rev ? 'Reversed' : 'Upright'}</p>
-            <p><strong>Meaning:</strong> ${(rev ? c.meanings.shadow : c.meanings.light).join(', ')}</p>
-            <p><strong>Fortune Telling:</strong> ${c.fortune_telling.join(', ')}</p>
+            <p><strong>Meaning:</strong> ${(rev ? c.meanings.shadow : c.meanings.light).split(',').join(', ')}</p>
+            <p><strong>Fortune Telling:</strong> ${c.fortune_telling.split(',').join(', ')}</p>
             <p><strong>Focus&nbsp;On:</strong> ${c.keywords.join(', ')}</p>
             <div class="draw-again">
                 <button id="again">Draw Again</button>

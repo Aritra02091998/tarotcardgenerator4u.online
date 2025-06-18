@@ -1,0 +1,2087 @@
+{
+    "description": "tarot cards and basic information about them, as well as references to corresponding scans",
+    "cards": [
+        {
+            "name": "The Fool",
+            "number": "0",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m00.jpg",
+            "fortune_telling": "'Anticipate exciting new projects or career paths emerging soon', 'Be ready to embark on a new professional venture with trust and optimism', 'A significant new opportunity is on the horizon; embrace it wholeheartedly'",
+            "keywords": [
+                "freedom",
+                "faith",
+                "inexperience",
+                "innocence"
+            ],
+            "meanings": {
+                "light": "'Breaking free from stagnant career roles or academic constraints', 'Bringing fresh enthusiasm and energy to your professional endeavors or studies', 'Approaching new learning opportunities or job roles with an open mind', 'Confidently pursuing an unconventional career path or bold academic choice', 'Trusting your professional intuition when making important career decisions', 'Displaying genuine curiosity and eagerness in learning new skills or subjects', 'Discovering untapped professional abilities and academic strengths', 'Readily adapting to new industry trends or innovative educational methods'",
+                "shadow": "'Being overly trusting or easily misled in career partnerships or academic advice', 'Engaging in reckless professional ventures or educational choices without proper research', 'Not taking critical professional responsibilities or academic deadlines seriously enough', 'Allowing distractions or a lack of focus to hinder your career or academic progress', 'Entering a new professional role or educational program unprepared or without sufficient background', 'Disregarding crucial industry standards or academic guidelines and norms', 'Exhibiting unprofessional conduct in the workplace or academic environment'"
+            },
+            "Archetype": "The Divine Madman",
+            "Hebrew Alphabet": "Aleph/Ox/1",
+            "Numerology": "0 (off the scale; pure potential)",
+            "Elemental": "Air",
+            "Mythical/Spiritual": "Adam before the fall. Christ as a wandering holy madman. Deity wrapped in human flesh. The Holy Spirit.",
+            "Questions to Ask": [
+                "What would I do if I felt free to take a leap?",
+                "How willing am I to be vulnerable and open?",
+                "How might past experiences help in this new situation?"
+            ]
+        },
+        {
+            "name": "The Magician",
+            "number": "1",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m01.jpg",
+            "fortune_telling": "A significant mentor, leader, or influential figure could emerge and greatly impact your professional path or academic journey, offering crucial guidance or opportunities, Your current professional or academic endeavors are part of a grander, unfolding career trajectory or long-term educational strategy, revealing a deeper purpose",
+            "keywords": [
+                "capability",
+                "empowerment",
+                "activity"
+            ],
+            "meanings": {
+                "light": "Proactively initiating impactful projects, making strategic career moves, or diligently pursuing your academic goals with clear purpose, Discovering profound insights or intuitive direction for your career path or academic specialization, as if guided by an unseen force, Aligning your professional skills and academic pursuits with a higher calling, leading to work that feels divinely inspired and purposeful, Demonstrating strong leadership, decisive action, and effective problem-solving in your professional role or academic projects, fostering growth and progress, Authentically expressing your unique talents, personality, and vision in your work environment or academic pursuits, leading to genuine professional fulfillment",
+                "shadow": "Allowing arrogance to hinder collaboration or learning, believing you know everything without seeking input in your professional or academic life, Misusing your inherent skills or intellectual capabilities for unethical gain, or neglecting to develop them further in your career or studies, Engaging in dishonest practices, office politics, or academic misconduct to gain an unfair advantage in your professional or educational endeavors, Overly asserting dominance, being pushy, or creating conflict in your professional relationships or academic group settings, alienating potential allies, Presenting superficial achievements, exaggerated qualifications, or misleading information to impress colleagues or academic evaluators without substantive work, Neglecting the diligent practice, continuous learning, or deep study required to truly excel in your chosen profession or academic field, Opting for quick fixes, plagiarizing, or circumventing proper procedures in your work or studies, potentially compromising quality and integrity"
+            },
+            "Archetype": "The Ego/The Self",
+            "Hebrew Alphabet": "Beth/House/2",
+            "Numerology": "1 (origins, unity, seeds)",
+            "Elemental": "The Sun/Mercury",
+            "Mythical/Spiritual": "Thoth, the Egyptian god of wisdom, known to the Greeks as Hermes and to the Romans as Mercury. Christ working miracles. Brahma, the Creator.",
+            "Questions to Ask": [
+                "What am I empowered to do?",
+                "How might my abilities come into play?",
+                "To what extent am I making the most of my talents?"
+            ]
+        },
+        {
+            "name": "The High Priestess",
+            "number": "2",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m02.jpg",
+            "fortune_telling": "An enigmatic mentor or influential contact enters your professional sphere, an opportunity with hidden depths emerges, a subtle but significant shift in your career path is unfolding, Confidential information or a hidden aspect of a project may be revealed, a true motive behind a professional decision surfaces, unacknowledged power dynamics in your workplace become apparent, A colleague or competitor possesses crucial unshared knowledge, key insights about a project remain unspoken by others, someone influential is deliberately withholding important information",
+            "keywords": [
+                "intuition",
+                "reflection",
+                "purity",
+                "initiation"
+            ],
+            "meanings": {
+                "light": "Trusting your inner wisdom for career decisions, allowing intuition to guide your academic choices, discerning hidden opportunities through your gut feelings, Discovering innovative and unconventional approaches in your field, pursuing unique paths for professional development, finding meaning and purpose beyond typical career metrics, Skillfully maintaining discretion in confidential projects, strategically holding back information in negotiations, wisely preserving sensitive professional insights, Being open and receptive to new learning opportunities, absorbing valuable feedback from mentors, attracting new career possibilities by being receptive, Engaging in deep contemplation before making major career moves, allowing for thorough research and reflection in academic pursuits, pausing to strategize rather than rushing into action, Learning valuable lessons by observing industry leaders, gaining insights from colleagues' professional journeys, understanding workplace dynamics through careful observation, Upholding your professional integrity and ethical standards, maintaining clarity of purpose in your academic pursuits, protecting the authenticity of your professional brand",
+                "shadow": "Appearing detached or unapproachable in professional settings, isolating yourself from crucial team collaboration, hindering your networking efforts through aloofness, Becoming consumed by office gossip or unfounded suspicions, overthinking hidden agendas instead of focusing on productive work, allowing paranoia to disrupt team trust, Ignoring important intuitive warnings about a job offer, dismissing your gut feelings about a project's viability, failing to trust your inner wisdom in crucial academic decisions, Recklessly disclosing confidential business information, oversharing personal details that compromise your professional image, lacking necessary discretion in sensitive career matters, Overlooking crucial intuitive insights during negotiations, disregarding your instinct about a detrimental career path, failing to acknowledge early warning signs in a project, Avoiding necessary involvement in critical projects, holding back from contributing meaningfully to team efforts, missing opportunities for professional growth due to passivity"
+            },
+            "Archetype": "The Virgin/The Maiden",
+            "Hebrew Alphabet": "Gimel/Camel/3",
+            "Numerology": "2 (division, debate, duality)",
+            "Elemental": "The Moon",
+            "Mythical/Spiritual": "The feminine aspect of divinity, particularity when expressed through virginity, as with the Virgin Mary or Isis.",
+            "Questions to Ask": [
+                "What might a rebel against tradition do?",
+                "What isn't being said or revealed?",
+                "What could be achieved by observing and reflecting?"
+            ]
+        },
+        {
+            "name": "The Empress",
+            "number": "3",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m03.jpg",
+            "fortune_telling": "['A significant project or new venture is about to be launched or come to fruition.', 'Expect an upcoming period of abundant creativity and satisfying professional collaborations.', 'Be mindful of becoming overly fixated on certain aspects of your work or studies.']",
+            "keywords": [
+                "fertility",
+                "productivity",
+                "ripeness",
+                "nurturing"
+            ],
+            "meanings": {
+                "light": "['Nurturing a supportive professional environment and fostering growth in others.', 'Seeing your efforts yield tangible results and successful project completions.', 'Prioritizing your well-being to ensure sustained productivity and professional health.', 'Initiating innovative projects or developing new skills that contribute significantly.', 'Enjoying the comforts and rewards of your professional achievements and a pleasant workspace.', 'Providing constructive mentorship and building a nurturing network among colleagues.', 'Embracing your passion and creativity in your work finding deep professional satisfaction.', 'High productivity in completing tasks and effectively bringing ideas to successful realization.']",
+                "shadow": "['Excessive comfort or complacency leading to stagnation and lack of new initiatives.', 'Seeking unfair personal gain or taking undue credit for the work of others.', 'Micromanaging colleagues or stifling team initiative through overcontrol.', 'Overprotecting team members which hinders their learning and independent growth.', 'Obsessing over metrics or efficiency thereby stifling creativity and genuine progress.', 'Developing unhealthy work habits or relying on patterns that impede real professional advancement.']"
+            },
+            "Archetype": "The Mother",
+            "Hebrew Alphabet": "Daleth/Door/4",
+            "Numerology": "3 (expression, productivity, output)",
+            "Elemental": "Venus",
+            "Mythical/Spiritual": "Gaia, Mother Earth, Ishtar, Demeter\u00d1mature, reproductive female divinity in every form. Also Aphrodite and Turan. ",
+            "Questions to Ask": [
+                "What would a concerned and capable mother do?",
+                "What can I do that would emphasize growth?",
+                "How can I celebrate my own sensuality and sexuality?"
+            ]
+        },
+        {
+            "name": "The Emperor",
+            "number": "4",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m04.jpg",
+            "fortune_telling": "Guidance from a seasoned mentor or established leader will emerge in your professional journey., You may soon report to a new manager or be under the direction of a significant academic authority, setting new expectations., Prepare for a period where structured feedback or a need for greater discipline will shape your work or study habits.",
+            "keywords": [
+                "authority",
+                "regulation",
+                "direction",
+                "structure"
+            ],
+            "meanings": {
+                "light": "Confidently taking charge of projects or leadership roles within your team or academic group., Establishing clear boundaries and expectations in your professional relationships or academic endeavors to ensure productivity., Effectively organizing and guiding tasks or research projects towards successful completion., Providing concise and understandable instructions to colleagues or fellow students, fostering clarity and efficiency., Mastering self-discipline and having a calm, assertive presence that inspires confidence in your professional or academic environment., Applying mature, seasoned judgment to your career decisions, blending ambition with thoughtful strategy and practical understanding.",
+                "shadow": "Being overly controlling in your professional tasks or group projects, hindering others' autonomy and growth., Stifling innovative ideas or creative problem-solving by imposing overly strict rules or an inflexible mindset in your work or studies., Exhibiting stubbornness in professional negotiations or academic collaborations, resisting valuable input from others., Adopting an unyielding or authoritarian stance in your leadership, alienating colleagues or academic peers., Employing aggressive or overly assertive tactics to push your agenda or maintain control, potentially damaging professional relationships or a learning environment."
+            },
+            "Archetype": "The Father",
+            "Hebrew Alphabet": "He[as]/Window/5, or in some decks, Tzaddi/Fish hook/90",
+            "Numerology": "4 (stability, equality, persistence)",
+            "Elemental": "Mars/Aries",
+            "Mythical/Spiritual": "Masculine gods, including the Hebrew God, the Christian God, Allah, and Zeus. Patriarchs (Abraham) and lawgivers (Moses). Vishnu, the Preserver.",
+            "Questions to Ask": [
+                "How does the issue of control or regulation impact this situation?",
+                "What would a compassionate but strict father do?",
+                "What needs more control?"
+            ]
+        },
+        {
+            "name": "The Hierophant",
+            "number": "5",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m05.jpg",
+            "fortune_telling": "Expect to be held accountable for professional missteps or academic shortcuts, It's time to acknowledge and address any professional errors or academic lapses to move forward, A wise mentor, seasoned professional, or academic advisor will soon offer invaluable guidance",
+            "keywords": [
+                "guidance",
+                "knowledge",
+                "revelation",
+                "belief"
+            ],
+            "meanings": {
+                "light": "Mentoring junior colleagues, leading workshops, or sharing expertise within your field, Dedicating yourself to in-depth research, pursuing specialized knowledge, or seeking clarity on your career path, Seeking expert advice from industry leaders, consulting career coaches, or relying on established professional networks for direction, Respecting the seasoned professionals in your industry, valuing institutional knowledge, or learning from experienced academics, Committing to professional development programs, upholding ethical standards in your workplace, or formally pursuing a degree or certification, Actively participating in professional associations, consistently engaging in beneficial training, or adhering to proven successful methodologies, Taking on leadership roles in professional organizations, contributing to open-source projects, or offering pro bono services in your field",
+                "shadow": "Exploiting your expertise to mislead colleagues, unfairly influence decisions, or monopolize information for personal gain, Rigidly adhering to outdated practices, refusing to adapt to new methodologies, or imposing your beliefs on a team or academic group, Prioritizing outdated corporate policies or academic norms over innovation, efficiency, or necessary progress, Engaging in superficial professional networking, attending required but meaningless training sessions, or performing duties without genuine commitment, Hoarding critical knowledge, failing to train successors, or intentionally making information inaccessible to others in your field, Creating unnecessary barriers to career advancement, limiting access to educational resources, or hindering a team's learning and development"
+            },
+            "Archetype": "The Guardian/The Church/Faith",
+            "Hebrew Alphabet": "Vau/Nail or Spike/6",
+            "Numerology": "5 (instability, resistance, confrontation, evolution)",
+            "Elemental": "Taurus/Earth",
+            "Mythical/Spiritual": "The Christ, the Apostle Peter, Buddha, Mohammed. Popes, priests, and intercessors of every faith and tradition",
+            "Questions to Ask": [
+                "What role might tradition or religion play in this situation?",
+                "Who authored the rules? Who enforces them? Why?",
+                "How might an experienced guide impact this situation?"
+            ]
+        },
+        {
+            "name": "The Lovers",
+            "number": "6",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m06.jpg",
+            "fortune_telling": "A new professional partnership or mentor-mentee relationship blossoms, Opportunities for creative collaboration or passionate pursuit of a project are plentiful, A colleague or professional acquaintance surprisingly becomes a valuable collaborator or business partner",
+            "keywords": [
+                "love",
+                "passion",
+                "unity",
+                "choice"
+            ],
+            "meanings": {
+                "light": "Feeling passionately engaged with your work or studies, Collaborating effectively and contributing positively to team projects, Demonstrating strong enthusiasm and dedication in your chosen field or academic subject, Successfully networking and finding valuable connections within your industry or academic discipline, Facilitating teamwork or fostering productive group dynamics in a professional setting, Making crucial career or academic choices with careful consideration and clarity",
+                "shadow": "Allowing overwhelming ambition or personal interests to negatively impact professional judgment, Making poor career choices due to an unhealthy need for approval or a specific outcome, Causing conflict or disunity within a team or professional environment, Pursuing career paths or making decisions that conflict with the collective goals of your colleagues or mentors, Making impulsive or poorly researched decisions regarding your career path or academic future"
+            },
+            "Archetype": "The Lover/Sexual Awakening",
+            "Hebrew Alphabet": "Zain/Sword/7",
+            "Numerology": "6 (cooperation, collaboration, interaction)",
+            "Elemental": "Gemini",
+            "Mythical/Spiritual": "Obviously, Adam and Eve, who are depicted in RWS-influenced decks. Also Venus and Cupid, Aphrodite and Eros.",
+            "Questions to Ask": [
+                "What guides my choices?",
+                "What is my heart leading me to do?",
+                "How might this decision transform me as a person?"
+            ]
+        },
+        {
+            "name": "The Chariot",
+            "number": "7",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m07.jpg",
+            "fortune_telling": "Your career aspirations are on track for success, Proceed confidently with your professional and academic plans, Be mindful of competitive colleagues or envy in your professional circle",
+            "keywords": [
+                "advancement",
+                "victory",
+                "triumph",
+                "success"
+            ],
+            "meanings": {
+                "light": "Overcoming significant professional or academic hurdles, Advancing in your career or studies with strong self-assurance and authority, Achieving peak performance or recognition in your field, Enjoying the well-deserved success of your hard work and dedication, Steering a project or team towards a triumphant outcome, Solidifying your reputation as a competent and respected professional or academic",
+                "shadow": "Becoming complacent after past professional successes, hindering future growth, Pushing your agenda without considering colleagues or team dynamics, leading to workplace conflict, Dwelling on former achievements instead of pursuing new professional challenges or learning, Making hasty career decisions or acting without proper academic planning"
+            },
+            "Archetype": "The Victorious Hero",
+            "Hebrew Alphabet": "Cheth/Fence/8",
+            "Numerology": "7 (imagination, inner work, psychology)",
+            "Elemental": "Cancer",
+            "Mythical/Spiritual": "Odysseus. Jason. The search for the Holy Grail. Christ's triumphal entry into Jerusalem.",
+            "Questions to Ask": [
+                "To what extent have I arrived? What will my next challenge be?",
+                "How can I use past achievements to their best advantage?",
+                "What would the criteria for real and meaningful success be?"
+            ]
+        },
+        {
+            "name": "Strength",
+            "number": "8",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m08.jpg",
+            "fortune_telling": "Your professional discipline and resilience will be truly tested, A female leader or mentor may significantly influence or redefine your professional relationships, You possess the inherent strength and capability to master any professional or academic challenge.",
+            "keywords": [
+                "discipline",
+                "boldness",
+                "self-discipline",
+                "power",
+                "vitality"
+            ],
+            "meanings": {
+                "light": "Strategically imposing professional boundaries or self-discipline for long-term career advantage, Skillfully channeling your professional ambitions and creativity with logical planning, Resisting impulsive career choices or distractions that work against your best interests, Confidently taking bold steps to advance your career or educational goals.",
+                "shadow": "Indulging in professional complacency or academic laziness, leading to setbacks in your growth, Languishing in unproductive work habits or professional burnout, Allowing fear or hesitation to dictate your career path instead of assertive action, Failing to advocate for your ideas or take a necessary stand in your professional environment."
+            },
+            "Archetype": "The Law",
+            "Hebrew Alphabet": "Lamed/Outstretched Arms/30 or Theth/Snake/9",
+            "Numerology": "8 (movement, work) or 11 = 1 + 1 = 2 (debate, duality)",
+            "Elemental": "Libra or Leo",
+            "Mythical/Spiritual": "Themis or Justitia. Ma'at. Solomon dividing a baby. The Sword of Damocles. The giving of the Ten Commandments.",
+            "Questions to Ask": [
+                "To what extent is your life (or work) balanced?",
+                "How can you achieve greater objectivity?",
+                "What course of action would be fair to everyone concerned?"
+            ]
+        },
+        {
+            "name": "The Hermit",
+            "number": "9",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m09.jpg",
+            "fortune_telling": "A period of solitary project work or independent study begins, A key colleague or project partner may depart, Initial job searches or funding attempts may not immediately succeed",
+            "keywords": [
+                "solitude",
+                "experience",
+                "stillness",
+                "withdrawal"
+            ],
+            "meanings": {
+                "light": "Seeking mentorship or becoming a respected expert in your field, Taking a dedicated sabbatical for deep learning or skill development, Recharging from professional demands to regain clarity and inspiration, Mentoring junior colleagues or guiding new talent, Stepping back to gain a broader strategic perspective on your career path",
+                "shadow": "Isolating yourself professionally and avoiding teamwork, Fearing networking or presenting your work to others, Becoming overly rigid or a 'know-it-all' unwilling to learn, Exaggerating your skills or misrepresenting professional achievements, Hiding your valuable talents and qualifications due to self-doubt"
+            },
+            "Archetype": "The Holy Man",
+            "Hebrew Alphabet": "Yod/Hand/10",
+            "Numerology": "9 (fullness, readiness, ripeness)",
+            "Elemental": "Virgo",
+            "Mythical/Spiritual": "The Christ, while fasting 40 days in the wilderness. Chronos, the god of time. Father Time. Hermes.",
+            "Questions to Ask": [
+                "What would happen if I simply withdrew and took no action?",
+                "How can I get some perspective on the situation?",
+                "Who has walked this path before me? How can I enlist his or her help?"
+            ]
+        },
+        {
+            "name": "Wheel of Fortune",
+            "number": "10",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m10.jpg",
+            "fortune_telling": "Some career shifts or academic breakthroughs are influenced by unforeseen circumstances or timing, You may be encountering a professional or academic cycle you've experienced before, Reflect on past career challenges or academic phases to inform your current path",
+            "keywords": [
+                "luck",
+                "randomness",
+                "cycles",
+                "karma",
+                "fate",
+                "revolution"
+            ],
+            "meanings": {
+                "light": "Embracing the natural progression of your career path or academic journey, letting opportunities emerge organically, Recognizing significant trends or long-term impacts within your daily work tasks or academic studies, Having confidence in favorable job market conditions or unexpected academic advantages, Observing recurring patterns in professional projects, industry trends, or educational phases to prepare effectively, Understanding that professional integrity and hard work will lead to future career rewards or academic recognition",
+                "shadow": "Taking unnecessary financial risks in career ventures or making poor investment choices in education, Failing to contribute adequately to a team project or not following through on academic commitments, hindering progress, Adopting a passive attitude towards professional setbacks or academic challenges, believing you have no control, Resisting necessary career changes, fighting against industry shifts, or struggling with required academic adjustments"
+            },
+            "Archetype": "The Fates/Destiny",
+            "Hebrew Alphabet": "Koph/Palm/20",
+            "Numerology": "10 (finality, completion) and 10 = 1 + 0 = 1 (seed, opportunity)",
+            "Elemental": "Jupiter",
+            "Mythical/Spiritual": "The God in the Machine. Deus ex Machina. Clotho, Lachesis, and Atropos. Fortuna.",
+            "Questions to Ask": [
+                "How does this challenge fit into a larger pattern?",
+                "What role does luck play in my circumstances?",
+                "What can I control? How should I know when to relinquish control?"
+            ]
+        },
+        {
+            "name": "Justice",
+            "number": "11",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m11.jpg",
+            "fortune_telling": "A significant professional evaluation or academic assessment is approaching, Key stakeholders or mentors are deliberating on your next career step or academic path, Before making a crucial career move or educational choice, gather all necessary information",
+            "keywords": [
+                "balance",
+                "law",
+                "fairness",
+                "objectivity"
+            ],
+            "meanings": {
+                "light": "Making fair and unbiased decisions regarding your career path or academic specialization, Thoughtfully evaluating job offers, project proposals, or academic programs before committing, Responding to workplace challenges or academic setbacks with measured and balanced judgment, Thoroughly researching career opportunities, educational requirements, or industry trends, Basing your professional development plans or academic strategies on solid data and proven methods, Engaging in careful consideration and strategic planning for long-term career growth or academic success",
+                "shadow": "Receiving unfair or overly critical feedback in a professional or academic setting, or giving it out without empathy, Becoming overly rigid and bureaucratic in your approach to work or studies, hindering innovation, Adhering strictly to outdated procedures or academic protocols, even when it harms productivity or learning, Making impulsive career changes or academic choices without proper foresight, mistaking haste for efficiency, Experiencing or being accused of favoritism in promotions, project assignments, or academic grading"
+            },
+            "Archetype": "The Id",
+            "Hebrew Alphabet": "Theth/Snake/9 or Lamed/Outstretched Arms/30",
+            "Numerology": "11 = 1 + 1 = 2 (debate, duality) or 8 (movement, outer work)",
+            "Elemental": "Leo or Libra",
+            "Mythical/Spiritual": "Samson. Hercules. Daniel in the lion's den. The sinless Christ.",
+            "Questions to Ask": [
+                "How can I enhance my self-discipline?",
+                "What behaviors tempt me? How can I resist?",
+                "What instincts do I continue to struggle with today?"
+            ]
+        },
+        {
+            "name": "The Hanged Man",
+            "number": "12",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m12.jpg",
+            "fortune_telling": "A challenging work dynamic or hidden competitor in your field will come to light, A colleague or academic peer may not be supporting your progress as you assumed, You must adapt your professional approach or learning methods to avoid stagnation or setbacks",
+            "keywords": [
+                "enlightenment",
+                "sacrifice",
+                "perspective",
+                "suspension",
+                "reversals"
+            ],
+            "meanings": {
+                "light": "Discovering valuable lessons and career advancement opportunities even during challenging or stagnant projects, Gaining a profound new perspective on your career path or academic discipline that reshapes your goals, Successfully leveraging unexpected shifts in your job role, industry, or academic program to your advantage, Being open to unconventional strategies or innovative solutions in your professional development or research, Wisely making necessary short-term concessions or taking a temporary pause for long-term professional or academic gain",
+                "shadow": "Compromising your professional integrity or core values for career advancement that feels misaligned, Unwillingness to invest time, effort, or temporary setbacks necessary for significant career or academic growth, Struggling to adjust to new workplace dynamics, industry changes, or evolving academic requirements, Attributing professional or academic failures solely to external factors rather than taking personal responsibility, Advancing your career through exploitative practices or at the detriment of colleagues and collaborators"
+            },
+            "Archetype": "The Traitor",
+            "Hebrew Alphabet": "Mem/Water/40",
+            "Numerology": "12 = 1 + 2 = 3 (expression, productivity, output)",
+            "Elemental": "Water",
+            "Mythical/Spiritual": "The Crucified Christ. Isaac as a sacrifice. Prometheus bound. Jonah and the whale. Lazarus. Any hanged or sacrificed god. Judas.",
+            "Questions to Ask": [
+                "How can I radically alter my perspective?",
+                "How might being stuck actually be a blessing in disguise?",
+                "How can I help myself see the glass as half full?"
+            ]
+        },
+        {
+            "name": "Death",
+            "number": "13",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m13.jpg",
+            "fortune_telling": "A major project or professional phase concludes abruptly, or a significant academic pursuit reaches an unexpected end, Exercise caution in making drastic career shifts or taking on high-risk educational ventures, Anticipate a period of intense and transformative professional change or academic upheaval.",
+            "keywords": [
+                "ending",
+                "conclusion",
+                "transition",
+                "passage",
+                "departure"
+            ],
+            "meanings": {
+                "light": "Successfully bringing a challenging or unproductive career phase to a decisive end, Recognizing and embracing the completion of a significant academic milestone or professional project, Effectively shedding outdated work habits, skills, or professional mindsets to foster growth, Undergoing a profound transformation in your professional identity or skill set, Making a deliberate transition from one job, company, or academic path to a more suitable one, Releasing attachment to past career setbacks or unfulfilling roles to move forward.",
+                "shadow": "Becoming overly fixated on past career failures or the fear of professional obsolescence, Stubbornly refusing to adapt to new industry trends, learn new skills, or change ineffective work habits, Resisting necessary career transitions or academic shifts, leading to stagnation or missed opportunities, Neglecting your professional well-being, leading to burnout or an inability to progress in your career or studies."
+            },
+            "Archetype": "Death",
+            "Hebrew Alphabet": "Nun/Fish/50",
+            "Numerology": "13 = 1 + 3 = 4 (stability, persistence)",
+            "Elemental": "Scorpio",
+            "Mythical/Spiritual": "Christ in the tomb. Hades. Hypnos. Thanatos. Stories of journeys into the underworld.",
+            "Questions to Ask": [
+                "What needs to end?",
+                "How might an ending actually be a blessing in this situation?",
+                "What's next?"
+            ]
+        },
+        {
+            "name": "Temperance",
+            "number": "14",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m14.jpg",
+            "fortune_telling": "\"Someone in your professional circle or you yourself might be struggling with work-life balance or unhealthy professional habits\", \"It's a strong hint to reassess your professional routines and seek healthier, more sustainable practices\"",
+            "keywords": [
+                "blending",
+                "synthesis",
+                "mediation",
+                "combination",
+                "harmony"
+            ],
+            "meanings": {
+                "light": "\"Skillfully blending diverse ideas or departments in a project\", \"Applying a balanced and measured approach to your professional tasks and decisions\", \"Successfully identifying common ground for effective collaboration in your work or studies\", \"Reaching mutually beneficial agreements in professional negotiations\", \"Crafting comprehensive solutions that align with the interests of all stakeholders\", \"Innovatively leveraging existing knowledge or past experiences to develop new approaches and insights\"",
+                "shadow": "\"Adopting imbalanced or extreme approaches to your work or studies\", \"Causing disruption or discord within team projects or collaborative efforts\", \"Neglecting personal well-being or ethical considerations in your professional pursuits\", \"Developing an unhealthy dependency on work or external validation\", \"Taking on an excessive workload or hoarding resources detrimentally\", \"Engaging in destructive criticism or dismantling productive professional structures\", \"Experiencing fractured professional relationships or broken collaborative agreements\""
+            },
+            "Archetype": "The Mediator",
+            "Hebrew Alphabet": "Samekh/Foundation/60",
+            "Numerology": "14 = 1 + 4 = 5 (catalyst, instability, confrontation)",
+            "Elemental": "Sagittarius",
+            "Mythical/Spiritual": "The angel seen here may be the goddess Iris. By extension, priests, priesthoods, or the transfigured Christ.",
+            "Questions to Ask": [
+                "How can I avoid extremes?",
+                "What does everyone involved have in common?",
+                "How might combining familiar things help me create something new?"
+            ]
+        },
+        {
+            "name": "The Devil",
+            "number": "15",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m15.jpg",
+            "fortune_telling": "Be wary of unethical dealings or disloyalty within your professional network, prepare for a period of significant professional challenges or academic hurdles, be cautious of manipulative individuals or deceptive opportunities in your career path",
+            "keywords": [
+                "shadow",
+                "materialism",
+                "bondage",
+                "delusion"
+            ],
+            "meanings": {
+                "light": "Appreciating the material rewards and comforts that your professional achievements bring, embracing your unique professional identity and unconventional strengths with confidence, harnessing your raw ambition and passion to fuel your professional drive constructively, recognizing and rewarding yourself for hard work with well-deserved professional perks or tools, acknowledging the complex realities and competitive aspects within your professional field, learning to manage intense professional pressures and ambitious urges in balanced ways",
+                "shadow": "Overemphasizing superficial achievements or public image over genuine professional competence, being driven by an insatiable hunger for more recognition, power, or material gain in your career, prioritizing material gain or status symbols above the well-being of colleagues or professional relationships, allowing unchecked ambition, unethical shortcuts, or personal comfort to dictate your professional decisions, exhibiting self-serving behaviors that hinder team collaboration or academic progress, blaming external factors or colleagues for your own professional missteps or ethical compromises"
+            },
+            "Archetype": "The Shadow, The Other",
+            "Hebrew Alphabet": "Ayin/Eye/70",
+            "Numerology": "15 = 1 + 5 = 6 (adjustment, collaboration)",
+            "Elemental": "Capricorn",
+            "Mythical/Spiritual": "The Biblical Satan, certainly. Fallen angels, including Lucifer. Bacchus and Pan. Tempters and serpents of every stripe.",
+            "Questions to Ask": [
+                "What enslaves me? How can I set myself free?",
+                "How can I re-evaluate the importance I assign to material things?",
+                "To what extent do my cravings define me?"
+            ]
+        },
+        {
+            "name": "The Tower",
+            "number": "16",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m16.jpg",
+            "fortune_telling": "Impending career setback or major academic challenge, Urgently re-evaluate and possibly cancel current professional plans or academic choices, A colleague or competitor may try to undermine your professional standing or academic reputation, It's time to speak your truth in your workplace or academic setting, don't hold back.",
+            "keywords": [
+                "demolition",
+                "upheaval",
+                "deconstruction",
+                "disaster",
+                "destruction"
+            ],
+            "meanings": {
+                "light": "Breaking free from confining career paths or outdated academic mindsets, Clearing the way for significant new professional growth or academic advancements, A humbling experience in your career or studies that dispels an inflated ego, Getting back to core professional skills or fundamental academic principles, Stripping away harmful illusions about a job, industry, or academic pursuit, Receiving a sudden, profound insight about your career direction or academic understanding.",
+                "shadow": "Clinging to obsolete professional methods or academic traditions that hinder growth, Willfully ignoring critical red flags about a job, project, or academic program, Rejecting clear evidence that a change in your professional strategy or academic focus is urgently needed, Disregarding valuable mentorship or internal guidance regarding your career path or educational choices, Maliciously engaging in behavior that harms your own career, colleagues, or academic integrity."
+            },
+            "Archetype": "The Shattered Ego",
+            "Hebrew Alphabet": "Pe[as]/Open Mouth/80",
+            "Numerology": "16 = 1 + 6 = 7 (psychology, imagination, inner work)",
+            "Elemental": "Mars",
+            "Mythical/Spiritual": "The Tower of Babel. The destruction of Sodom and Gomorrah. Shiva's destructive dance. The lightning of Zeus and Thor.",
+            "Questions to Ask": [
+                "How might the current situation dramatically alter my perspective?",
+                "How might this loss open the door for new growth?",
+                "What attitudes need to be struck down before I proceed?"
+            ]
+        },
+        {
+            "name": "The Star",
+            "number": "17",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m17.jpg",
+            "fortune_telling": "Consider aligning your professional goals with a grander vision for your life, your career path may be unfolding according to a larger plan, be aware of idealizing certain career paths or industry figures too much.",
+            "keywords": [
+                "hope",
+                "optimism",
+                "openness",
+                "certainty",
+                "faith",
+                "longing",
+                "truth"
+            ],
+            "meanings": {
+                "light": "Maintaining optimism about your career path, trusting that your dedication and integrity will lead to professional success, viewing career challenges as opportunities for growth, generously sharing your expertise with colleagues, seeking higher inspiration and purpose in your work, being open to unconventional and innovative career opportunities.",
+                "shadow": "Avoiding difficult truths about your career performance or necessary skill development, refusing to take responsibility for professional setbacks, ignoring clear signs for a change in your academic or career direction, holding onto unrealistic expectations about your professional ascent, fostering a negative or unsupportive environment in your workplace or academic setting."
+            },
+            "Archetype": "The Heavenly Guide",
+            "Hebrew Alphabet": "Tzaddi/Fishhook/90 or, in some decks, He[as]/Window/5",
+            "Numerology": "17 = 1 + 7 = 8 (action, movement, swiftness)",
+            "Elemental": "Aquarius",
+            "Mythical/Spiritual": "The star that guided the Magi. Aphrodite. Venus. The Pleiades. Moses bringing forth water from the rock.",
+            "Questions to Ask": [
+                "What would my higher power direct me to do?",
+                "How can I be less self-conscious and guarded?",
+                "How can I better attune myself to the abundance of life's blessings?"
+            ]
+        },
+        {
+            "name": "The Moon",
+            "number": "18",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m18.jpg",
+            "fortune_telling": "Be aware of potential uncertainties or shifts in your professional projects or academic deadlines as a phase concludes, Encourage a colleague or peer to voice their true aspirations or concerns in the workplace or academic setting, Expect a significant re-evaluation or change of direction regarding a key career choice, job offer, or academic path from yourself or someone influencing your trajectory",
+            "keywords": [
+                "mystery",
+                "fantasy",
+                "imagination",
+                "dreams",
+                "uncertainty"
+            ],
+            "meanings": {
+                "light": "Embracing visionary thinking and creative problem-solving in your professional role or academic studies, Applying innovative ideas and imaginative approaches to career challenges or complex academic subjects, Recognizing and leveraging the serendipitous opportunities and intuitive insights that emerge in your career or learning journey, Understanding the natural ebbs and flows of project cycles, learning phases, and career development, and adapting accordingly, Confidently navigating new professional territories, unconventional learning methods, or evolving job markets with intuition as your guide",
+                "shadow": "Struggling to distinguish realistic career goals or academic expectations from unattainable pipe dreams, leading to misguided efforts, Operating under false assumptions or misinterpretations about your job performance, academic standing, or professional opportunities, Neglecting your creative intuition or unique talents in your professional work, leading to a feeling of stagnation or lack of inspiration, Over-analyzing or rigid adherence to logic in your career decisions or academic approach, stifling creativity and intuitive breakthroughs, Resisting ambiguous or uncertain professional situations, leading to anxiety or missed growth opportunities due to a need for absolute clarity"
+            },
+            "Archetype": "The Holy Feminine/The Crone",
+            "Hebrew Alphabet": "Koph/Back of the Head/100",
+            "Numerology": "18 = 1 + 8 = 9 (fullness, readiness, ripeness)",
+            "Elemental": "Pisces",
+            "Mythical/Spiritual": "Kali, the dark-skinned divine mother associated with time, the eternal night, and the female principle. Hecate, goddess of night and darkness, who, like Anubis, assists others in their travels to the underworld. ",
+            "Questions to Ask": [
+                "How can I face my fears and move forward?",
+                "What helpers can serve me as guides through my personal darkness?",
+                "How can I deal with the unknown in healthy ways?"
+            ]
+        },
+        {
+            "name": "The Sun",
+            "number": "19",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m19.jpg",
+            "fortune_telling": "Your career path or academic journey is bathed in success; expect peak performance and positive outcomes., This is your moment to confidently pursue new projects, job applications, or challenging studies; success is highly favored.",
+            "keywords": [
+                "joy",
+                "brilliance",
+                "validation",
+                "attention",
+                "energy"
+            ],
+            "meanings": {
+                "light": "Gaining absolute clarity on your career goals or academic direction., Feeling immense satisfaction and fulfillment in your professional or educational achievements., Acknowledging and celebrating significant milestones in your career or academic pursuits., Possessing an unshakeable confidence in your professional skills and intellectual capabilities., Receiving well-deserved accolades and recognition for your unique talents and contributions in your field.",
+                "shadow": "Becoming overly focused on past successes, potentially hindering new growth., Allowing ego to overshadow collaboration or genuine learning in your professional life., Feeling overwhelmed by deadlines or too many commitments, leading to scattered effort in your work or studies., Burning out from excessive work or study demands, neglecting self-care., Exaggerating your professional qualifications or misrepresenting your contributions, leading to potential credibility issues."
+            },
+            "Archetype": "The Holy Masculine",
+            "Hebrew Alphabet": "Resh/Head/200",
+            "Numerology": "19 = 1 + 9 = 10 (completion, exhaustion) 1 + 0 = 1 (starting point, opportunity)",
+            "Elemental": "The Sun",
+            "Mythical/Spiritual": "God the Father. Sun gods, including Ra, Apollo, and Helios. The moment of baptism. Claiming a new faith as your own.",
+            "Questions to Ask": [
+                "How can I take best advantage of the attention coming my way?",
+                "What are my highest spiritual goals?",
+                "How can I avoid being bedazzled by the energy swirling around me?"
+            ]
+        },
+        {
+            "name": "Judgement",
+            "number": "20",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m20.jpg",
+            "fortune_telling": "A past career decision or academic challenge you thought was resolved may re-emerge, requiring your attention and a new perspective, Prepare for significant shifts in your professional path, such as unexpected job offers, changes in team dynamics, or a pivotal academic re-evaluation, There's a strong call to re-evaluate your true professional purpose or academic calling, urging you to align with your deeper aspirations",
+            "keywords": [
+                "revival",
+                "renewal",
+                "resurrection",
+                "evaluation",
+                "invitation"
+            ],
+            "meanings": {
+                "light": "Experiencing a profound realization about your true career calling or an academic path that perfectly aligns with your strengths, Uncovering a powerful new purpose that invigorates your professional journey or inspires a fresh academic pursuit, Embracing your authentic self in your professional role, leading to genuine fulfillment and career decisions that truly reflect who you are, Receiving recognition, a promotion, or a significant academic achievement as a direct result of your dedicated effort and past contributions, Successfully passing a critical professional evaluation, a challenging job interview, or a demanding academic examination, proving your competence, Embracing the exciting commencement of a transformative new phase in your career, a significant academic program, or a major professional project",
+                "shadow": "Feeling inadequately prepared or judged harshly in a professional evaluation or academic assessment, leading to self-doubt, Struggling to meet established professional standards or specific academic requirements, leading to frustration or setbacks, Being exposed for unprofessional conduct, a lack of dedication in your work, or academic dishonesty, impacting your reputation, Neglecting crucial preparation for an upcoming professional challenge, a critical interview, or an important academic milestone, leading to poor outcomes, Resisting essential opportunities for professional upskilling, career redirection, or significant academic reinvention, hindering your potential growth"
+            },
+            "Archetype": "Resurrection",
+            "Hebrew Alphabet": "Sin/Tooth/300",
+            "Numerology": "20 = 2 + 0 = 2 (division, duality)",
+            "Elemental": "Fire",
+            "Mythical/Spiritual": "The resurrected Christ. The Last Judgment of Revelation. The phoenix, which rises to new life from its own ashes.",
+            "Questions to Ask": [
+                "What is the main thing I need to realize about myself?",
+                "In what way might the universe be trying to get my attention?",
+                "If I were to reinvent myself, what would I become?"
+            ]
+        },
+        {
+            "name": "The World",
+            "number": "21",
+            "arcana": "Major Arcana",
+            "suit": "Trump",
+            "img": "m21.jpg",
+            "fortune_telling": "Achieving a major career breakthrough or highly sought-after promotion, Landing your dream job or ideal academic program, Experiencing complete fulfillment and success in your professional or educational journey",
+            "keywords": [
+                "wholeness",
+                "integration",
+                "totality",
+                "completeness",
+                "fullness"
+            ],
+            "meanings": {
+                "light": "Achieving holistic success and fulfillment in your career and educational aspirations, Developing a strong sense of professional identity and confidence in your skills and contributions, Recognizing how your role connects to the larger industry or academic field fostering collaborative success, Broadening your professional outlook and gaining a comprehensive understanding of your field, Maximizing your potential and embracing every opportunity for growth in your professional journey, Finding profound purpose and meaning in your work or studies",
+                "shadow": "Feeling unfulfilled despite achievements due to comparison or desire for more hindering appreciation for current successes, Missing the bigger picture in your career trajectory getting lost in minor tasks instead of strategic growth, Focusing excessively on tangible metrics or immediate results overlooking intangible growth or long-term vision, Failing to acknowledge the value and contributions of colleagues or mentors leading to isolation or missed opportunities"
+            },
+            "Archetype": "Enlightenment",
+            "Hebrew Alphabet": "Tau/Cross/400",
+            "Numerology": "21 = 2 + 1 = 3 (expression, result)",
+            "Elemental": "Saturn",
+            "Mythical/Spiritual": "The ascended Christ. The Buddha attaining enlightenment. The alpha and the omega. The completion of the alchemist's great work.",
+            "Questions to Ask": [
+                "For me, what would having it all mean?",
+                "How aware am I of my own connectedness to the world around me?",
+                "What keeps me from having it all right now, today?"
+            ]
+        },
+        {
+            "name": "Ace of Cups",
+            "number": "1",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c01.jpg",
+            "fortune_telling": "A new professional passion is emerging, A significant new career connection or collaborative opportunity is on the horizon, Your professional goals or academic aspirations are manifesting",
+            "keywords": [
+                "intuition",
+                "spirituality",
+                "affection",
+                "motivation"
+            ],
+            "meanings": {
+                "light": "Trusting your intuition regarding career paths or academic choices, Being open to new creative ideas and inspiration in your work or studies, Embracing opportunities for collaboration and mentorship in your professional life, Discovering what truly motivates your professional purpose or academic passion, Seizing chances to contribute positively and share knowledge in your field, Paying attention to your inner guidance regarding your career calling or educational direction",
+                "shadow": "Suppressing your true professional aspirations or passion, Rejecting valuable professional connections or collaborative ventures, Ignoring your deeper purpose or calling in your career or academic pursuits, Disregarding your true inclinations when making career or academic decisions, Allowing emotional instability or irrational reactions to hinder your professional progress, Becoming overly emotional or obsessive about career outcomes, leading to burnout or poor judgment"
+            },
+            "Numerology": "1 (The Origin: the starting point, the seed, opportunity)",
+            "Astrology": "Cancer, Scorpio, Pisces",
+            "Affirmation": "\"I listen to the counsel of my heart.\"",
+            "Questions to Ask": [
+                "What am I feeling right now?",
+                "How would I go about opening myself to spiritual guidance?",
+                "What motivates me the most - pleasure or pain? Why?"
+            ]
+        },
+        {
+            "name": "Two of Cups",
+            "number": "2",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c02.jpg",
+            "fortune_telling": "A valuable professional connection is forming behind the scenes, All professional collaborations must be reciprocal release any imbalanced connections",
+            "keywords": [
+                "union",
+                "attraction",
+                "combination",
+                "affection"
+            ],
+            "meanings": {
+                "light": "Feeling a strong pull towards a specific career path or area of study, Deeply aspiring to a specific professional role or educational goal, Proactively pursuing your professional aspirations and educational interests, Experiencing mutual understanding and reciprocity in professional partnerships, Engaging in work or study that genuinely aligns with your passions and values, Successfully integrating ideas skills or teams for collective progress, Resolving past professional conflicts and mending important working relationships, Recognizing incompatible professional perspectives and gracefully moving forward",
+                "shadow": "Severely damaging crucial professional relationships or networks, Developing an unhealthy reliance on a colleague mentor or specific project, Limiting your professional network to an exclusive group missing new opportunities, Unproductively fixating on a desired role or opportunity that remains unattainable, Feeling despair or paralysis due to an unrealistic ideal of the \"perfect\" career fit, Misleading yourself about your genuine professional interests or aptitudes"
+            },
+            "Numerology": "2 (The Other: duality, division, debate)",
+            "Astrology": "Venus in Cancer",
+            "Affirmation": "\"I am attuned to what my heart truly desires.\"",
+            "Questions to Ask": [
+                "How can I make sure that what I'm feeling is mutual?\",\"When was the last time I felt \"in love\" with someone or something?",
+                "What do you need in order to feel emotionally stable?"
+            ]
+        },
+        {
+            "name": "Three of Cups",
+            "number": "3",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c03.jpg",
+            "fortune_telling": "An unexpected professional opportunity or academic path is emerging, perhaps from a field or connection you previously overlooked",
+            "keywords": [
+                "celebration",
+                "expression",
+                "community",
+                "friendliness"
+            ],
+            "meanings": {
+                "light": "Celebrating shared successes and strong professional bonds, Experiencing and expressing genuine joy and enthusiasm in your work or studies, Collaborating effectively with colleagues or peers who are aligned with your professional objectives, Demonstrating commitment through helpful contributions and support to your team or academic community, Thriving in unconventional professional roles, project structures, or educational pathways",
+                "shadow": "Confusing superficial connections or fleeting excitement for genuine professional advancement, Allowing emotional highs and lows to significantly disrupt professional focus or decision-making, Insisting on uniformity of thought within a team, stifling diverse ideas and collaborative potential, Unreasonably depending on colleagues or mentors, hindering your own professional growth and accountability, Excessive non-work related activities leading to professional burnout, diminished performance, or missed deadlines"
+            },
+            "Numerology": "3 (The Result: expression, productivity, output)",
+            "Astrology": "Mercury in Cancer",
+            "Affirmation": "\"I allow my actions to reflect my true emotions.\"",
+            "Questions to Ask": [
+                "What's worth celebrating in my life?",
+                "How can I demonstrate my feelings in appropriate ways?",
+                "What can I do to show my partner how I really feel?"
+            ]
+        },
+        {
+            "name": "Four of Cups",
+            "number": "4",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c04.jpg",
+            "fortune_telling": "A colleague or professional relationship is showing signs of disengagement or dissatisfaction, Assess the needs within your current role or team, or compelling external opportunities might attract key talent or divert your own focus",
+            "keywords": [
+                "boredom",
+                "listlessness",
+                "lethargy",
+                "stability",
+                "ingratitude"
+            ],
+            "meanings": {
+                "light": "Maintaining a steady and composed demeanor amidst professional pressures or changes, Resisting the urge to let stress or frustration dictate your career decisions, Recognizing and valuing the current resources, skills, or connections you possess in your professional life, Understanding the importance of consistent effort and dedication in achieving long-term career goals",
+                "shadow": "Experiencing professional stagnation or a lack of engagement in your current role or studies, Allowing distractions or a lack of focus to hinder productivity and academic progress, Dismissing or failing to recognize valuable career advancement prospects or learning experiences, Neglecting important professional relationships or failing to appreciate the contributions of colleagues and mentors, Overlooking crucial networking or mentorship possibilities that could foster significant growth, Resisting innovative ideas or a sudden burst of creativity that could propel your work forward, An unwillingness to adapt to necessary changes in your career path or educational environment"
+            },
+            "Numerology": "4 (The Status Quo: stability, equality, persistence)",
+            "Astrology": "Moon in Cancer",
+            "Affirmation": "\"I appreciate what I've been given.\"",
+            "Questions to Ask": [
+                "How can I use this \"downtime\" to my best advantage?",
+                "How can I show my partner that I don't take him or her for granted?",
+                "To what extent is my mood blinding me to new opportunities?"
+            ]
+        },
+        {
+            "name": "Five of Cups",
+            "number": "5",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c05.jpg",
+            "fortune_telling": "A professional setback or project failure looms, Don't dwell on past career mistakes or lost opportunities, Learn from professional setbacks and quickly get back to pursuing your goals",
+            "keywords": [
+                "loss",
+                "despair",
+                "re-evaluation",
+                "regret",
+                "uncertainty",
+                "repentance"
+            ],
+            "meanings": {
+                "light": "Acknowledging a professional setback and strategically moving forward, Focusing on valuable lessons learned from a difficult professional experience, Discovering growth opportunities even after a career disappointment, Recognizing that career rejections or project failures are part of professional development, Allowing yourself to process disappointment over a lost job or academic opportunity in a constructive way, Gaining crucial insights from challenging professional experiences or academic results",
+                "shadow": "Wallowing in self-pity over a past career failure or academic rejection, Refusing to let go of resentment from a past job or academic experience, Clinging to outdated professional strategies or past academic glories, Obsessing over lost career opportunities or past academic successes, hindering present progress, Failing to focus on current professional tasks or academic studies due to past regrets, Excessively blaming yourself for professional errors or poor academic choices, Allowing the fear of making mistakes to prevent you from pursuing new career paths or academic challenges"
+            },
+            "Numerology": "5 (The Catalyst: instability, resistance, confrontation)",
+            "Astrology": "Mars in Scorpio",
+            "Affirmation": "\"I learn from my losses and move on.\"",
+            "Questions to Ask": [
+                "How do I tend to deal with loss?",
+                "What life lesson might I be learning now?",
+                "How can I shift my attention from the past to the future?"
+            ]
+        },
+        {
+            "name": "Six of Cups",
+            "number": "6",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c06.jpg",
+            "fortune_telling": "An unwillingness to share knowledge or resources is hindering your professional satisfaction, Consider how collaboration and mentorship can enrich your career path and that of your colleagues",
+            "keywords": [
+                "charity",
+                "sharing",
+                "sacrifice",
+                "cooperation",
+                "fairness"
+            ],
+            "meanings": {
+                "light": "Mentoring junior colleagues or sharing expertise within your field, Finding deep fulfillment in projects that contribute to the collective success or benefit the wider community, Successfully negotiating collaborations where all parties achieve their professional goals, Investing in the growth of others or open-sourcing your knowledge without expectation of direct return, Driven by a genuine desire to uplift your team, support academic peers, or contribute positively to your organizational culture",
+                "shadow": "Overly relying on external validation or praise for your professional achievements, leading to self-doubt when unacknowledged, Exaggerating your need for support or resources to avoid taking full responsibility or to gain an unfair advantage, Accepting credit or opportunities that were not earned through your own efforts or merit, Publicly grandstanding about your contributions or mentorship without genuine humility, undermining their impact, Exploiting challenging professional or academic situations for personal gain, disregarding ethical considerations, Unwillingness to take on shared responsibilities or assist colleagues during demanding periods, hindering team cohesion"
+            },
+            "Numerology": "6 (The Adjustment: cooperation, collaboration, interaction)",
+            "Astrology": "Sun in Scorpio",
+            "Affirmation": "\"I freely give myself to others, expecting nothing in return.\"",
+            "Questions to Ask": [
+                "What gifts do I possess? How freely do I give them?",
+                "How can I practice unconditional giving?",
+                "How would things change if I became a more charitable person?"
+            ]
+        },
+        {
+            "name": "Seven of Cups",
+            "number": "7",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c07.jpg",
+            "fortune_telling": "You might be encountering empty promises or superficial opportunities in your professional or academic path, Instead of being swayed by grand claims or attractive job titles, seek tangible value, clear responsibilities, and genuine growth prospects",
+            "keywords": [
+                "imagination",
+                "dreams",
+                "illusions",
+                "goals"
+            ],
+            "meanings": {
+                "light": "Motivating yourself by envisioning your future career achievements or academic milestones, Leveraging visualization techniques to foster professional advancement and project completion, Applying innovative and creative thinking to solve professional challenges or academic dilemmas, Successfully manifesting your career aspirations or educational goals into reality, Gaining valuable clarity and direction for your professional path from your insights and aspirations",
+                "shadow": "Becoming paralyzed by baseless career anxieties or hypothetical negative outcomes in your studies, Succumbing to workplace politics or emotional manipulation that hinders your professional growth, Daydreaming excessively about career success without taking practical steps or action, Neglecting to consider the potential long-term impacts of your career decisions or academic paths, Allowing professional fear to dictate your choices, limiting your potential and opportunities"
+            },
+            "Numerology": "7 (The Motive: imagination, inner work, psychology)",
+            "Astrology": "Venus in Scorpio",
+            "Affirmation": "\"I use inner vision as a tool for growth.\"",
+            "Questions to Ask": [
+                "What do you want most? What do you fear most? How are these related?",
+                "How is your imagination working for you? Against you?",
+                "How might a clearer personal vision help you choose a single cup from the many available?"
+            ]
+        },
+        {
+            "name": "Eight of Cups",
+            "number": "8",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c08.jpg",
+            "fortune_telling": "A key professional relationship or collaboration may be ending soon, or a colleague might be moving on from your team or project, It's time to stop debating a career or academic challenge and take decisive action towards a new path or solution",
+            "keywords": [
+                "longing",
+                "dissatisfaction",
+                "quest",
+                "departure",
+                "withdrawal"
+            ],
+            "meanings": {
+                "light": "A strong desire for a more fulfilling career path, advanced learning, or a role that better aligns with your values, Innovating in your field, creating a unique professional niche, or pursuing an unconventional academic journey, Recognizing the need for a deeper purpose beyond current professional routines, leading to a career pivot or pursuit of further education, Decisively moving away from a toxic work environment, a demotivating academic program, or an unfulfilling job, Taking the entrepreneurial leap, launching a personal venture, or initiating a significant independent project, Embarking on a sabbatical, taking a focused period for professional development, or dedicating time to intensive academic study away from distractions, Listening to your inner wisdom for true career direction, aligning your professional path with your authentic self, or finding intrinsic motivation for your studies",
+                "shadow": "Unwillingness to adapt your career plans, inflexibility in professional collaboration, or rigid adherence to an outdated academic approach, Constantly criticizing your current job, academic institution, or colleagues without offering constructive solutions, Obsessing over minor details in projects, hindering professional progress, or getting bogged down in academic minutiae, Persistent job hopping or changing academic majors without clear purpose, avoiding commitment to a long-term professional path, Avoiding crucial conversations with supervisors, colleagues, or academic advisors, and sidestepping difficult project challenges, Demonstrating an inability to compromise in team settings, demanding your professional terms without considering others, or rigid academic pursuits, Dwelling on previous career setbacks, missed opportunities, or academic failures, preventing future growth, Using the threat of resignation or dropping out as a manipulative tactic to gain leverage in professional or academic situations"
+            },
+            "Numerology": "8 (The Action: movement, outer work, swiftness)",
+            "Astrology": "Saturn in Pisces",
+            "Affirmation": "\"I am always open to opportunities for growth.\"",
+            "Questions to Ask": [
+                "What do I need to leave behind once and for all?",
+                "If I left in search of \"more,\" what would I be looking for, exactly?",
+                "How might a retreat enhance my perspective?"
+            ]
+        },
+        {
+            "name": "Nine of Cups",
+            "number": "9",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c09.jpg",
+            "fortune_telling": "Your career aspirations and academic goals are within reach, You'll achieve significant professional satisfaction and recognition, The job or academic opportunity you desire will manifest",
+            "keywords": [
+                "satisfaction",
+                "sensuality",
+                "luxury",
+                "pleasure"
+            ],
+            "meanings": {
+                "light": "Feeling immense satisfaction with your professional accomplishments or academic milestones, Acknowledging your unique skills and capabilities, leading to confidence in your professional path, Enjoying the successful outcomes of your hard work, like a promotion, a completed project, or academic success, Allowing yourself well-deserved rewards for your professional dedication or academic efforts, Taking necessary breaks to recharge after intense periods of work or study, preventing burnout, Experiencing a sense of professional fulfillment and security in your current role or academic journey",
+                "shadow": "Displaying excessive self-satisfaction about your career or academic status, potentially alienating colleagues or peers, Prioritizing your own professional gain or academic success without considering the impact on your team or classmates, Focusing solely on personal career advancement or academic benefits, neglecting collaborative efforts or team responsibilities, Becoming complacent or taking excessive breaks, leading to a decline in productivity or academic performance, Procrastinating on important professional tasks or academic assignments, potentially missing deadlines, Misrepresenting your professional experience or academic qualifications, which could lead to credibility issues, Constantly seeking more professional accolades or academic qualifications without appreciating your current accomplishments"
+            },
+            "Numerology": "9 (The Completion: fullness, readiness, ripeness)",
+            "Astrology": "Jupiter in Pisces",
+            "Affirmation": "\"I have everything I need to be happy.\"",
+            "Questions to Ask": [
+                "What is true happiness?",
+                "If I could have anything, what would I have?",
+                "What is my attitude toward luxury? Do I deserve it?"
+            ]
+        },
+        {
+            "name": "Ten of Cups",
+            "number": "10",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c10.jpg",
+            "fortune_telling": "Finding your professional or academic 'home,' where you feel deeply connected and supported for the long term, A professional connection evolving into a valuable mentorship or a highly successful collaborative project",
+            "keywords": [
+                "joy",
+                "fulfillment",
+                "overwhelming emotion",
+                "giddiness"
+            ],
+            "meanings": {
+                "light": "Attaining professional or academic success that far exceeds your original aspirations, feeling a sense of complete fulfillment, Experiencing profound gratitude for your career path, the opportunities you've received, and the knowledge you've gained, Recognizing a stroke of luck or divine timing that significantly aids your professional advancement or academic breakthroughs, Experiencing immense joy and contentment from your career accomplishments or reaching a significant academic milestone, Finding complete harmony and deep satisfaction within your chosen profession or academic specialization, a true sense of belonging",
+                "shadow": "Holding your career trajectory or academic achievements to impossible, idealized standards, leading to perpetual dissatisfaction, Allowing intense emotions, such as stress or frustration, to cloud your professional judgment or hinder your academic progress, Feeling swamped by excessive professional demands, academic coursework, or the pressure to perform, leading to burnout, Struggling with professional jealousy or constantly comparing your career progress to the perceived success of others, leading to discontent"
+            },
+            "Numerology": "10 (The End: finality, completion, exhaustion)",
+            "Astrology": "Mars in Pisces",
+            "Affirmation": "\"I take time to appreciate what I've been given.\"",
+            "Questions to Ask": [
+                "Who gets to define what \"joy\" consists of?",
+                "What course of action is available when you feel overwhelmed?",
+                "How might vows or promises play a role in achieving a greater level of joy in your life?"
+            ]
+        },
+        {
+            "name": "Page of Cups",
+            "number": "11",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c11.jpg",
+            "fortune_telling": "This card suggests a new creative or intuitive opportunity emerging in your career, possibly through a young or emotionally insightful colleague or mentor",
+            "keywords": [
+                "enthusiasm",
+                "first impressions",
+                "romanticism",
+                "superficiality"
+            ],
+            "meanings": {
+                "light": "Openly sharing creative or intuitive insights, Passionately immersing yourself in a new project or academic pursuit, Nurturing a budding interest or innovative idea, Visioning ambitious career possibilities, Initiating valuable new professional relationships or learning paths, Rediscovering your foundational passion for your field, Finding genuine excitement in a novel professional or academic experience, Adopting a transformative new perspective or approach in your work",
+                "shadow": "Misjudging the true potential of a professional opportunity, Misinterpreting professional signals or feedback, Desperately seeking validation or approval in your career, Being overly naive or sentimental about workplace realities, Falsely inflating your skills or academic achievements"
+            },
+            "Elemental": "Earth of Water.",
+            "Affirmation": "\"I am ready to embrace love and Spirit.\"",
+            "Questions to Ask": [
+                "How worried are you that others will see you as foolish or inexperienced?",
+                "To what extent can you be honest about your lack of experience in love and faith?",
+                "How can you maintain enthusiasm over time?"
+            ]
+        },
+        {
+            "name": "Knight of Cups",
+            "number": "12",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c12.jpg",
+            "fortune_telling": "Expect an emotionally sensitive colleague or mentor, perhaps a highly intuitive leader, who will inspire you to embrace a new project or academic venture with passion, Look for a career opportunity or educational path that deeply resonates with your personal values and emotional intelligence, Be prepared to rally around a new professional cause or academic initiative that is championed by someone with a strong, empathetic vision",
+            "keywords": [
+                "fervor",
+                "zeal",
+                "moodiness",
+                "illumination"
+            ],
+            "meanings": {
+                "light": "Deep dedication to a professional project or academic pursuit, Embracing the emotional journey of your career with both excitement and resilience, Making insightful career choices guided by your strong intuition, Solving complex professional problems through creative and intuitive thinking, Pursuing academic or career paths that align with your deepest ideals and values, Infusing your work or studies with passion, creativity, and emotional intelligence",
+                "shadow": "Becoming overly dogmatic or fanatical about a single professional approach, Dismissing critical feedback or data that challenges your intuitive career judgments, Allowing personal emotions to severely disrupt your professional demeanor or decisions, Succumbing to office politics, professional jealousy, or unproductive peer pressure, Suppressing valuable intuitive insights or creative ideas in your work or studies"
+            },
+            "Elemental": "Air of Water.",
+            "Affirmation": "\"I translate my passions into actions.\"",
+            "Questions to Ask": [
+                "How prone to emotional extremes are you?",
+                "What's the difference in driving passion and blind zeal?",
+                "How can you inspire others without inciting a riot?"
+            ]
+        },
+        {
+            "name": "Queen of Cups",
+            "number": "13",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c13.jpg",
+            "fortune_telling": "This card represents an individual with an intuitive, empathetic, and emotionally intelligent approach to their career or studies, someone who skillfully uses understanding and compassion to foster collaboration, guide teams, or influence academic discussions effectively, possibly excelling in fields requiring strong interpersonal skills or deep insight into human behavior.",
+            "keywords": [
+                "insightfulness",
+                "spirituality",
+                "compassion",
+                "empathy",
+                "instinct"
+            ],
+            "meanings": {
+                "light": "Deeply understanding and responding to the needs of colleagues, clients, or students, Passionately investing emotional energy into your work or studies, Possessing exceptional ability to empathize with professional situations or academic challenges, Trusting your intuition and emotional intelligence to guide significant career decisions or educational paths, Tapping into deep foresight or instinct in professional matters, Finding profound purpose and alignment between your career and personal values.",
+                "shadow": "Becoming overly idealistic or detached from practical realities in your professional or academic pursuits, Allowing empathy to lead to emotional exhaustion or inaction in the workplace instead of motivating solutions, Unethically using emotional intelligence or insights to manipulate professional situations or influence colleagues, Succumbing to excessive emotionalism, sentimentality, or self-pity that hinders professional growth or academic progress."
+            },
+            "Elemental": "Water of Water.",
+            "Affirmation": "\"I choose to be enabled, not disabled, by my strong emotions.\"",
+            "Questions to Ask": [
+                "How do I handle strong emotions?",
+                "To what extent am I a victim of my own feelings?",
+                "How can I move from reflection to action?"
+            ]
+        },
+        {
+            "name": "King of Cups",
+            "number": "14",
+            "arcana": "Minor Arcana",
+            "suit": "Cups",
+            "img": "c14.jpg",
+            "fortune_telling": "This card suggests the presence of a seasoned professional or mentor with a calm and understanding demeanor, someone who leads with integrity and emotional intelligence in your career or academic sphere, offering balanced guidance and fostering a tolerant environment.",
+            "keywords": [
+                "wisdom",
+                "diplomacy",
+                "restraint",
+                "composure"
+            ],
+            "meanings": {
+                "light": "Demonstrating resilience and composure under professional pressure, bravely articulating your vision amidst challenges, leveraging your expertise to mentor and support colleagues, making balanced and compassionate decisions in team or project leadership, applying principles with wisdom beyond strict rules in your professional conduct.",
+                "shadow": "Becoming inflexible or detached in your professional approach, making biased or self-serving decisions that undermine trust, neglecting the human element and emotional well-being in your leadership or collaborations, misusing your position or influence for personal gain, manipulating team dynamics or academic situations through emotional pressure."
+            },
+            "Elemental": "Fire of Water.",
+            "Affirmation": "\"I strive to be stable and fair-minded.\"",
+            "Questions to Ask": [
+                "What wise person could be consulted for good advice?",
+                "How can I make sure I'm being as objective and fair as possible?",
+                "To what extent am I capable of keeping a \"stiff upper lip?\""
+            ]
+        },
+        {
+            "name": "Ace of Swords",
+            "number": "1",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s01.jpg",
+            "fortune_telling": "It's time to make a crucial career or academic choice now, Stop procrastinating and decisively commit to the professional path or academic endeavor you instinctively know is best for your growth.",
+            "keywords": [
+                "logic",
+                "objectivity",
+                "intellect",
+                "choice"
+            ],
+            "meanings": {
+                "light": "Approaching career dilemmas with clear, unbiased judgment, Applying sound logic to navigate complex professional challenges, Skillfully reasoning your way through intricate work problems or academic coursework, Effectively breaking down and solving complex project puzzles, Thoroughly thinking through your career advancement strategies or academic research plans, Basing professional recommendations or academic arguments on verifiable facts and data, Achieving mental clarity to focus on your most important professional or educational goals, Actively seeking precise understanding and unambiguous answers in your field.",
+                "shadow": "Applying cold, insensitive logic in professional settings, potentially alienating colleagues or classmates, Gloating over your intellectual superiority in academic discussions or team projects, Using quick wit to mislead or confuse others in the workplace or during collaborative learning, Confusing impulsive career decisions or academic shortcuts with genuine quick thinking, Making professional choices or academic commitments without fully considering the long-term repercussions."
+            },
+            "Numerology": "1 (The Origin: the starting point, the seed, opportunity)",
+            "Astrology": "Libra, Aquarius, Gemini",
+            "Affirmation": "\"I take the time to think things through.\"",
+            "Questions to Ask": [
+                "If I made my decision purely based on reason and logic, what would my decision be?",
+                "What do I think about my own problem-solving ability?",
+                "Who can supply me with the pure and simple facts?"
+            ]
+        },
+        {
+            "name": "Two of Swords",
+            "number": "2",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s02.jpg",
+            "fortune_telling": "Sometimes, the wisest professional move is to avoid engaging in unproductive workplace conflicts or competitive battles, You might be facing a professional or academic stalemate; it's wise to allow time for clarity to emerge before committing to a path",
+            "keywords": [
+                "denial",
+                "debate",
+                "impasse",
+                "truce"
+            ],
+            "meanings": {
+                "light": "Thoroughly researching and analyzing all available information before making a significant career or academic choice, Rationally assessing multiple viewpoints and options when confronting professional dilemmas or academic challenges, Confidently and articulately advocating for your professional principles or academic positions, Meticulously weighing the merits and drawbacks of professional choices or academic pursuits, Promoting an open and collaborative environment for sharing diverse ideas in a team or academic setting, Handling challenging discussions about professional ethics or organizational changes with calm objectivity and respect",
+                "shadow": "Stubbornly rejecting new information or constructive feedback that challenges your ingrained professional beliefs or methods, Engaging in unconstructive professional disagreements or academic debates purely for contention, hindering progress, Getting caught up in trivial details or perfectionism in your work or studies, preventing significant progress, Hesitating to make critical career or academic decisions due to fear of the potential outcomes or responsibilities, Withholding essential information from colleagues or collaborators, hindering effective professional or academic decision-making"
+            },
+            "Numerology": "2 (The Other: duality, division, debate)",
+            "Astrology": "Moon in Libra",
+            "Affirmation": "\"I strive to see all sides of every issue.\"",
+            "Questions to Ask": [
+                "What information do I need to get past this impasse?",
+                "How can I get past being defensive and see the facts?",
+                "What viewpoints, other than my own, play a role in this situation?"
+            ]
+        },
+        {
+            "name": "Three of Swords",
+            "number": "3",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s03.jpg",
+            "fortune_telling": "'Expect difficult professional partings or significant project failures ahead', 'While current disappointments may sting, they often pave the way for valuable lessons and better opportunities down the line'",
+            "keywords": [
+                "variance",
+                "difference",
+                "dissatisfaction",
+                "heartache",
+                "rejection"
+            ],
+            "meanings": {
+                "light": "'Courageously confronting difficult truths about your career path or academic standing', 'Applying incisive critical analysis to professional projects or academic research', 'Engaging in honest self-assessment to foster professional improvement', 'Accepting that career plans or academic endeavors may not unfold as initially expected, requiring adaptability', 'Processing professional setbacks or academic disappointments to integrate harsh but necessary truths for growth'",
+                "shadow": "'Lingering excessively in professional disappointment or academic demotivation', 'Being overwhelmed by criticism, negative feedback, or the actions of colleagues/supervisors', 'Engaging in excessive self-criticism that undermines professional confidence or academic potential', 'Striving for unattainable perfection in your work or studies, leading to burnout or stagnation', 'Taking professional feedback or competitive situations too personally while harboring resentment towards others'"
+            },
+            "Numerology": "3 (The Result: expression, productivity, output)",
+            "Astrology": "Saturn in Libra",
+            "Affirmation": "\"I learn from failures and setbacks.\"",
+            "Questions to Ask": [
+                "How can I get past my depression?",
+                "To what extent are my emotions a matter of choice?",
+                "How can I learn from the mistakes of the past?"
+            ]
+        },
+        {
+            "name": "Four of Swords",
+            "number": "4",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s04.jpg",
+            "fortune_telling": "Regarding your career path or academic choices, hold off on making any major decisions right now, Patience in your professional planning or academic pursuits will truly pay off",
+            "keywords": [
+                "meditation",
+                "contemplation",
+                "perspective",
+                "mindset"
+            ],
+            "meanings": {
+                "light": "Carefully strategizing your career moves or academic projects before execution, Taking a necessary break to gain clarity on your professional goals or academic direction, Thoroughly researching a new industry, role, or academic subject before forming a judgment, Allowing yourself a period of recuperation from work or study stress, Engaging in hobbies or activities that refresh your mind, benefiting your professional outlook",
+                "shadow": "Rushing into professional decisions or academic commitments without proper consideration, Delaying important work or study tasks under the guise of deep thinking, Stubbornly clinging to outdated professional strategies or academic theories despite new information, Letting disorganization and impulsiveness derail your career trajectory or academic progress"
+            },
+            "Numerology": "4 (The Status Quo: stability, equality, persistence)",
+            "Astrology": "Jupiter in Libra",
+            "Affirmation": "\"I think before taking action.\"",
+            "Questions to Ask": [
+                "How long has it been since you deliberately took a \"time out?\"",
+                "How difficult is it for you to meditate?",
+                "What would happen if you simply refused to make a decision today?"
+            ]
+        },
+        {
+            "name": "Five of Swords",
+            "number": "5",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s05.jpg",
+            "fortune_telling": "Be wary of credit being stolen for your work or unfair competition, particularly with projects or promotions, Watch out for colleagues or academic peers who might undermine your efforts or speak negatively about you behind your back.",
+            "keywords": [
+                "selfishness",
+                "hostility",
+                "irrationality",
+                "self-preservation"
+            ],
+            "meanings": {
+                "light": "Prioritizing your professional development and advocating for fair opportunities, Asserting your value in salary negotiations or defending your academic work, Engaging directly with disagreements to find better professional solutions, Taking a firm stance on ethical principles in your workplace or academic integrity, Refusing to participate in dishonest or unethical business practices, Innovatively navigating established rules to achieve better project outcomes.",
+                "shadow": "Exploiting colleagues for personal gain or free-riding on team projects, Using aggressive tactics to dominate discussions or stifle team input, Engaging in dishonest academic practices or unethical corporate behavior, Constantly creating conflict and unproductive arguments in your professional environment, Spreading rumors or inciting animosity among team members, Disregarding established company policies or academic regulations you agreed to follow, Prioritizing personal success at the expense of team morale or collective well-being, Displaying excessive arrogance about professional achievements, alienating colleagues."
+            },
+            "Numerology": "5 (The Catalyst: instability, resistance, confrontation)",
+            "Astrology": "Venus in Aquarius",
+            "Affirmation": "\"Even as I care for myself, I am mindful of the needs of others.\"",
+            "Questions to Ask": [
+                "How do I behave when I win? What does that say about me?",
+                "How can I do what's necessary without making others feel defeated?",
+                "What's the difference between selfish action and acting in my own best interest?"
+            ]
+        },
+        {
+            "name": "Six of Swords",
+            "number": "6",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s06.jpg",
+            "fortune_telling": "You'll soon embark on a significant professional or academic transition, Be prepared, as your career decisions may have unforeseen outcomes",
+            "keywords": [
+                "adaptation",
+                "adjustments",
+                "science",
+                "travel"
+            ],
+            "meanings": {
+                "light": "Adapting effectively to challenging professional circumstances, Bouncing back from a career setback or academic disappointment, Adjusting your career goals or academic plans realistically, Flexibly managing unforeseen twists in your career path or studies, Mentoring colleagues or assisting peers in their professional struggles, Transforming your professional mindset or approach to learning, Expanding your expertise or global understanding through advanced learning or professional travel",
+                "shadow": "Resisting necessary changes in your career or academic field, Feeling powerless or blaming external factors for professional challenges, Dismissing the impact of your choices on your career progression or academic reputation, Rigidly applying one methodology where another is more suitable in your studies or work, hindering innovation, Insisting on a narrow professional viewpoint, hindering collaboration or broader understanding"
+            },
+            "Numerology": "6 (The Adjustment: cooperation, collaboration, interaction)",
+            "Astrology": "Mercury in Aquarius",
+            "Affirmation": "\"I keep an open mind.\"",
+            "Questions to Ask": [
+                "What assumptions govern my thinking?",
+                "How willing am I to lend aid to others? To request it when I need it?",
+                "How prepared am I to deal with change? With unexpected outcomes?"
+            ]
+        },
+        {
+            "name": "Seven of Swords",
+            "number": "7",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s07.jpg",
+            "fortune_telling": "Be cautious about who you trust with sensitive information or collaborative projects in your professional or academic sphere, It's wise to verify information and the contributions of others, especially when working on critical projects or academic research.",
+            "keywords": [
+                "dishonesty",
+                "presumption",
+                "sneakiness",
+                "assumptions"
+            ],
+            "meanings": {
+                "light": "Upholding strong ethical standards in all your professional tasks and academic pursuits, even when shortcuts or illicit gains seem tempting and undetectable, Skillfully navigating complex workplace politics or academic challenges with strategic intelligence and diplomacy, Demonstrating keen analytical skills by identifying and challenging unverified assumptions in projects, research, or team discussions, Maintaining consistent integrity and ethical conduct in all professional interactions, both visible and behind the scenes, Cultivating an impeccable professional reputation and academic record that earns respect and trust.",
+                "shadow": "Engaging in academic dishonesty like plagiarism, misrepresenting qualifications, or falsifying data in research or reports, Exploiting loopholes or cutting corners in professional duties or academic assignments, prioritizing personal gain over honest effort, Actively seeking to avoid accountability for professional missteps or academic shortcomings, often by shifting blame, Rationalizing unethical professional or academic conduct by unfairly criticizing the perceived flaws or misdeeds of colleagues or competitors, Neglecting critical self-reflection on your own professional motivations, biases, or contributions to workplace or academic conflicts."
+            },
+            "Numerology": "7 (The Motive: imagination, inner work, psychology)",
+            "Astrology": "Moon in Aquarius",
+            "Affirmation": "\"I hold myself to the highest ethical standards.\"",
+            "Questions to Ask": [
+                "What assumptions am I making?",
+                "How well-defined is my sense of ethics?",
+                "How should I respond when I know others are breaking the rules?"
+            ]
+        },
+        {
+            "name": "Eight of Swords",
+            "number": "8",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s08.jpg",
+            "fortune_telling": "Let go of the narrative that external circumstances are solely hindering your professional progress or academic success, Recognize that your own limiting beliefs or self-doubt are the primary barriers to your career advancement or academic achievement.",
+            "keywords": [
+                "restriction",
+                "limitation",
+                "confinement",
+                "helplessness"
+            ],
+            "meanings": {
+                "light": "Wisely recognizing and respecting your professional or academic limits to avoid burnout, Conscientiously abiding by workplace policies, academic guidelines, or industry regulations, Making conscious choices for your long-term professional well-being, like targeted skill development or setting healthy work-life boundaries, Acknowledging that not every career outcome or academic path can be entirely controlled by you, Clearly identifying specific professional or academic hurdles that are preventing further advancement, Steadfastly refusing to entertain unethical or detrimental professional shortcuts or academic dishonesty, Proactively reaching out for professional guidance, mentorship, or academic support when needed.",
+                "shadow": "Experiencing a suffocating sense of being trapped in your current professional role or academic situation, Feeling overwhelmed and constrained by excessive corporate bureaucracy or rigid academic policies, Succumbing to profound despair concerning your career trajectory or academic aspirations, Attributing all professional setbacks or academic struggles to external factors, avoiding personal responsibility, Passively permitting colleagues, superiors, or academic institutions to overly define your professional capabilities or educational path, Feeling utterly powerless and incapacitated when faced with professional challenges or academic demands, Perceiving a severe lack of viable career alternatives, job prospects, or academic directions, Failing to actively seek solutions or explore alternative paths to overcome professional or academic difficulties."
+            },
+            "Numerology": "8 (The Action: movement, outer work, swiftness)",
+            "Astrology": "Jupiter in Gemini",
+            "Affirmation": "\"I know my own limits.\"",
+            "Questions to Ask": [
+                "Who's empowered to cut through the red tape?",
+                "What, exactly, are the obstacles? What resources, exactly, are needed to move them?",
+                "To what extent is your powerlessness a matter of attitude?"
+            ]
+        },
+        {
+            "name": "Nine of Swords",
+            "number": "9",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s09.jpg",
+            "fortune_telling": "A rash career decision or academic path taken now may lead to future regret.",
+            "keywords": [
+                "remorse",
+                "worry",
+                "distraught",
+                "conclusion"
+            ],
+            "meanings": {
+                "light": "Finding peace by focusing on controllable aspects of your work or studies, Overcoming professional anxiety or academic pressure, Practicing self-compassion when evaluating your professional or academic performance, Utilizing mindfulness or stress-reduction techniques to calm your mind regarding career challenges, Actively confronting career-related fears or academic insecurities, Resolving a persistent work issue or academic problem and finding closure.",
+                "shadow": "Obsessing over past career missteps or academic failures, Constant second-guessing of professional decisions or academic strategies, Excessive self-criticism for errors made in your professional or academic life, Experiencing professional burnout or academic exhaustion leading to low morale, Excessive rumination on minor professional errors or academic oversights, Avoiding healthy strategies for managing career stress or academic pressures, Allowing past professional setbacks to hinder your present career potential or academic engagement, Endless rumination on irreversible career paths or academic choices."
+            },
+            "Numerology": "9 (The Completion: fullness, readiness, ripeness)",
+            "Astrology": "Mars in Gemini",
+            "Affirmation": "\"I do not worry about what I cannot control.\"",
+            "Questions to Ask": [
+                "What role does worry play in your current situation?",
+                "To what other ends might you devote the energy you're giving to anxiety?",
+                "How can you know when it's time to stop thinking and start acting?"
+            ]
+        },
+        {
+            "name": "Ten of Swords",
+            "number": "10",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s10.jpg",
+            "fortune_telling": "Experiencing a complete professional breakdown or academic failure, Postponing major career moves or academic decisions until a more opportune time",
+            "keywords": [
+                "exhaustion",
+                "ruin",
+                "disaster",
+                "stamina",
+                "obsession"
+            ],
+            "meanings": {
+                "light": "Recognizing the clear signs of professional burnout or academic overload, Heeding warnings from your well-being about unsustainable work or study habits, Embracing the necessity for a professional sabbatical or academic break for recovery, Accepting a significant career setback or academic disappointment as a foundation for rebirth, Committing fully to a radical career change or a renewed academic approach, Understanding that the most challenging phase of your professional or academic struggles has concluded",
+                "shadow": "Prematurely abandoning a career ambition or academic pursuit, Pushing yourself to complete mental and professional exhaustion, Suffering a professional or academic mental breakdown, Becoming consumed by an intractable professional problem or academic hurdle, Relinquishing all effort in your career or academic endeavors, Paralysis by analysis in career planning, failing to execute, Harboring profoundly destructive thoughts about your professional value or academic capability"
+            },
+            "Numerology": "10 (The End: finality, completion, exhaustion)",
+            "Astrology": "Sun in Gemini",
+            "Affirmation": "\"When my limits are exceeded, I take action on my own behalf.\"",
+            "Questions to Ask": [
+                "What are the signs that the time for debate is over?",
+                "How can you tell when interest has given way to obsession?",
+                "When your own limits are reached, where can you turn for aid?"
+            ]
+        },
+        {
+            "name": "Page of Swords",
+            "number": "11",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s11.jpg",
+            "fortune_telling": "This card can signify a new, curious colleague, a junior professional eager to learn from your experience, or an individual in your academic sphere looking to engage in intellectual discussion and gain insights from you, particularly if they are driven by a fresh perspective on their career path.",
+            "keywords": [
+                "student",
+                "apprentice",
+                "scholarship",
+                "information"
+            ],
+            "meanings": {
+                "light": "Pursuing a new certification or advanced degree, Asking insightful questions in professional meetings, Dedicating time to master new industry skills, Conducting thorough market research for a project, Consistently seeking out new knowledge for professional growth, Initiating an investigation into a new career path, Clearly defining the skills needed for career advancement, Actively seeking guidance from experienced mentors or academic advisors.",
+                "shadow": "Falsely claiming expertise on your resume or in discussions, Plagiarizing work or misrepresenting data in academic or professional settings, Feigning enthusiasm for a task to impress superiors, Only focusing on information that confirms your existing professional biases, Dismissing valuable advice from experienced colleagues or academic instructors."
+            },
+            "Elemental": "Earth of Air.",
+            "Affirmation": "\"I am ready to make good decisions.\"",
+            "Questions to Ask": [
+                "How comfortable are you with revealing your own ignorance?",
+                "What are the marks of a good student?",
+                "To what extent are you open to new information?"
+            ]
+        },
+        {
+            "name": "Knight of Swords",
+            "number": "12",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s12.jpg",
+            "fortune_telling": "A hasty professional decision or statement might lead to significant regret, If this was you, be prepared to issue a formal apology and strategically re-evaluate your approach.",
+            "keywords": [
+                "bluntness",
+                "intelligence",
+                "incisiveness",
+                "investigation"
+            ],
+            "meanings": {
+                "light": "Articulating your professional insights clearly, Confidently presenting your ideas in meetings or project proposals, Offering valuable constructive criticism on work or academic assignments, Effectively sharing your specialized knowledge with teams or classmates, Making incisive observations that identify core issues in projects or research, Pinpointing the crucial problem hindering progress or learning, Skillfully clarifying complex instructions or academic concepts for others, Providing clear and decisive direction to your team or study group, Conducting thorough research to uncover essential truths or solutions.",
+                "shadow": "Asserting unsubstantiated opinions as absolute facts in professional discussions, Actively seeking out conflicts and arguments with colleagues or academic peers, Initiating divisive debates that disrupt team harmony or collaborative learning, Using sarcasm or clever insults to undermine the confidence of co-workers or classmates, Making impulsive career or academic decisions without logical consideration, Communicating insensitively, disregarding the feelings of team members or mentors, Aggressively pursuing blame or singling out individuals in a professional crisis, Deliberately distorting data or misrepresenting evidence in reports or academic work."
+            },
+            "Elemental": "Air of Air.",
+            "Affirmation": "\"I temper my insights with tact.\"",
+            "Questions to Ask": [
+                "What do I really need to know?",
+                "To what extent have I investigated the facts behind my situation?",
+                "How can I share what I know without alienating others?"
+            ]
+        },
+        {
+            "name": "Queen of Swords",
+            "number": "13",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s13.jpg",
+            "fortune_telling": "This card suggests a professional or academic path influenced by sharp intellect and an innate ability to communicate complex ideas clearly and persuasively, You may encounter a mentor or colleague who embodies intellectual clarity and uses articulate communication to achieve professional consensus, Your career growth will benefit from developing a refined, intellectual approach to problem-solving and honing your communication skills to influence decisions positively",
+            "keywords": [
+                "grace",
+                "skill",
+                "wit",
+                "charm",
+                "aptitude"
+            ],
+            "meanings": {
+                "light": "Applying diplomatic skills in workplace negotiations or academic collaborations, Skillfully resolving professional conflicts or academic disputes, Mastering effective communication for presentations, interviews, or academic papers, Creating an inclusive and supportive environment for colleagues or study groups, Inspiring higher performance and intellectual curiosity in your team or learning community, Excelling in written and verbal communication, crucial for career advancement and academic success, Using humor appropriately to build rapport and ease professional interactions, Demonstrating exceptional aptitude in logical analysis, artistic expression, or scientific inquiry, leading to unique career opportunities or academic breakthroughs",
+                "shadow": "Engaging in destructive criticism or damaging professional relationships through harsh words, Strategically concealing vital data or knowledge, hindering team progress or academic integrity, Creating a hostile work or academic environment through sharp, cutting remarks, Relying excessively on sarcasm that alienates colleagues or instructors, Undermining professional respect or academic credibility through mocking behavior, Showing insensitivity towards colleagues facing challenges or students struggling academically, Exhibiting unprofessional conduct or disregard for academic authority and norms, Neglecting to fully utilize your intellectual abilities or professional skills, leading to stagnation or missed opportunities"
+            },
+            "Elemental": "Water of Air.",
+            "Affirmation": "\"I make the truth easier to hear.\"",
+            "Questions to Ask": [
+                "What do I have a knack for? How might my special gift prove useful now?",
+                "To what extent am I capable of saying what needs to be said?",
+                "What is the best possible way to say what I want to say?"
+            ]
+        },
+        {
+            "name": "King of Swords",
+            "number": "14",
+            "arcana": "Minor Arcana",
+            "suit": "Swords",
+            "img": "s14.jpg",
+            "fortune_telling": "This card suggests the influence of a wise and experienced mentor or leader in your professional life, or that you are embodying a sharp, ethical, and decisive approach in your career.",
+            "keywords": [
+                "genius",
+                "expertise",
+                "decision",
+                "verdict"
+            ],
+            "meanings": {
+                "light": "Confidently leading projects or articulating complex ideas in your field, Making decisive career choices or academic commitments, Seeking expert guidance for professional development or academic challenges, Leveraging specialized knowledge from consultants or senior colleagues, Finalizing a significant project or reaching a definitive career plan, Securing advantageous professional agreements through well-researched insights.",
+                "shadow": "Being overly rigid in professional discussions or unwilling to consider alternative viewpoints, Displaying academic arrogance or intellectual superiority that alienates colleagues, Communicating complex ideas in an overly abstract way, hindering team understanding, Indecision on critical career paths or major academic choices, leading to stagnation, Frequent shifts in professional goals or academic focus, preventing consistent progress, Avoiding necessary tough decisions for your career advancement or academic well-being, Regretting ill-considered statements made in professional or academic settings."
+            },
+            "Elemental": "Fire of Air.",
+            "Affirmation": "\"My word is my bond.\"",
+            "Questions to Ask": [
+                "What would your decision be if you had to render a binding verdict right now?",
+                "How comfortable are you saying exactly what you mean? How often do you temper what you have to say for fear of offending others?",
+                "If you were to ask others, \"What's my area of expertise?\" what would they say?"
+            ]
+        },
+        {
+            "name": "Ace of Wands",
+            "number": "1",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w01.jpg",
+            "fortune_telling": "A key person is very enthusiastic about your potential, Significant new job or project opportunities are on the horizon, Your quiet preparation and solid skills will lead to significant professional impact",
+            "keywords": [
+                "desire",
+                "inspiration",
+                "vision",
+                "creation",
+                "invention"
+            ],
+            "meanings": {
+                "light": "Feeling a burst of inspiration for a new project or study area, Clearly defining a crucial professional or academic goal, Receiving an unparalleled opportunity to pursue your ideal professional path, Providing valuable leadership or receiving clear guidance in your work, Discovering an ingenious solution to a complex professional challenge, Initiating a groundbreaking project or developing innovative solutions, Experiencing a powerful surge of creative energy for your work or studies",
+                "shadow": "Missing out on a significant career or academic opportunity due to hesitation, Struggling with productivity, leading to missed deadlines or underperformance, Not dedicating sufficient effort, impacting the quality of your work or studies, Pursuing a goal but facing a lack of essential resources or personal drive to succeed, Pursuing career or academic goals that are unrealistic or misaligned with your path, Hesitating to assert your ideas or take a definitive stance in professional matters"
+            },
+            "Numerology": "1 (The Origin: the starting point, the seed, opportunity)",
+            "Astrology": "Aries, Leo, Sagittarius",
+            "Affirmation": "\"I jump at the opportunity to pursue my heart's desire.\"",
+            "Questions to Ask": [
+                "What do I really want, more than anything else?",
+                "What happens if I let this opportunity pass me by?",
+                "How clearly have I defined my directions, values, and goals?"
+            ]
+        },
+        {
+            "name": "Two of Wands",
+            "number": "2",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w02.jpg",
+            "fortune_telling": "'Beware of insincere collaborators or mentors in your professional network, as their advice may not serve your best interests.', 'Be direct and assertive in your career aspirations and academic choices; clearly articulate your professional goals and pursue them decisively.'",
+            "keywords": [
+                "conflict",
+                "decision",
+                "option",
+                "individuality"
+            ],
+            "meanings": {
+                "light": "'Recognizing you have significant options regarding your career path or academic specialization.', 'Being presented with appealing job offers or new educational programs, or proactively creating valuable opportunities for others.', 'Appreciating diverse perspectives from colleagues or academic peers, enriching your professional problem-solving.', 'Discovering innovative or alternative strategies to achieve your career objectives or academic milestones.', 'Skillfully managing multiple projects, academic assignments, or career opportunities concurrently with success.', 'Feeling empowered and confident to make pivotal decisions about your professional future or educational trajectory.'",
+                "shadow": "'Presenting a false front about your professional ambitions or academic commitment, leading to mistrust.', 'Engaging in work or studies that do not align with your true career aspirations, causing internal conflict.', 'Abruptly abandoning a career path or academic major without thoughtful consideration, leading to instability.', 'Stubbornly clinging to outdated career goals or academic pursuits despite clear evidence they are no longer viable or beneficial.', 'Ignoring valuable feedback from supervisors, professors, or mentors, hindering your professional or academic development.'"
+            },
+            "Numerology": "2 (The Other: division, debate, duality)",
+            "Astrology": "Mars in Aries",
+            "Affirmation": "\"With my goals in mind, I make confident choices.\"",
+            "Questions to Ask": [
+                "In a conflict, how do you decide who wins?",
+                "What values govern your decision-making process?",
+                "What choice will you make if you make no choice at all?"
+            ]
+        },
+        {
+            "name": "Three of Wands",
+            "number": "3",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w03.jpg",
+            "fortune_telling": "\"You'll be planning a significant career move or educational expansion soon\", \"Be on the lookout",
+            "keywords": [
+                "implementation",
+                "action",
+                "exploration"
+            ],
+            "meanings": {
+                "light": "\"Successfully initiating a new career strategy or major project\", \"Taking the crucial first step in a new job, academic program, or business venture\", \"Proactively driving positive outcomes and advancements in your professional life\", \"Expanding your skills and responsibilities, pushing past your previous career boundaries\", \"Pioneering new approaches or leading innovation within your field or research\", \"Quickly adapting and excelling in a new role, team, or academic challenge\", \"Witnessing your long-term career plans or educational goals materialize successfully\"",
+                "shadow": "\"Delaying critical career decisions or academic responsibilities, leading to missed deadlines\", \"Hesitating to act on known professional necessities or refusing to apply learned skills\", \"Starting professional projects or group assignments without clear roles or strategic direction\", \"Turning down valuable training, new job roles, or promising academic paths due to resistance to change\", \"Leaving career development plans, academic courses, or work projects incomplete\""
+            },
+            "Numerology": "3 (The Result: expression, productivity, output)",
+            "Astrology": "Sun in Aries",
+            "Affirmation": "\"I take the steps necessary to put my plans in action.\"",
+            "Questions to Ask": [
+                "How can you make a habit of breaking your habits?",
+                "How can you be a decisive leader in this circumstance?",
+                "What's your action plan for the next week, month, year, or decade?"
+            ]
+        },
+        {
+            "name": "Four of Wands",
+            "number": "4",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w04.jpg",
+            "fortune_telling": "Your professional efforts are being noticed for potential advancement, Expect an invitation to a significant professional event or opportunity soon",
+            "keywords": [
+                "celebration",
+                "jubilation",
+                "community",
+                "teamwork",
+                "completion"
+            ],
+            "meanings": {
+                "light": "Celebrating a significant career milestone or academic achievement, Experiencing collective success and recognition from a collaborative project or team effort, Anticipating a major project launch, presentation, or career-defining event, Successfully collaborating with colleagues or study groups towards a shared objective, Receiving well-deserved awards, promotions, or academic scholarships",
+                "shadow": "Overworking without taking time to appreciate your achievements or recharge, Feeling overwhelmed by increased demands after a successful period, without adequate appreciation, Isolating yourself from team successes or not engaging in celebratory moments with colleagues, Letting envy or bitterness towards others' success diminish your own accomplishments, Hesitating to contribute fully to team projects or academic group work"
+            },
+            "Numerology": "4 (The Status Quo: stability, equality, persistence)",
+            "Astrology": "Venus in Aries",
+            "Affirmation": "\"My contributions are worthy of celebration.\"",
+            "Questions to Ask": [
+                "To what extent am I doing my part?",
+                "What kind of recognition would be most meaningful?",
+                "How might a celebration now impact community morale?"
+            ]
+        },
+        {
+            "name": "Five of Wands",
+            "number": "5",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w05.jpg",
+            "fortune_telling": "Be prepared for professional disagreements or competitive challenges, even with trusted colleagues, Exercise caution in your professional communications, as words spoken in competitive or challenging environments can have lasting impacts on your career trajectory or academic reputation",
+            "keywords": [
+                "confrontation",
+                "disruption",
+                "distinction",
+                "objection",
+                "strife"
+            ],
+            "meanings": {
+                "light": "Successfully navigating constructive criticism and offering alternative perspectives respectfully in team discussions or academic debates, Embracing diverse methodologies and empowering colleagues or team members to find their unique solutions, fostering innovation, Initiating open and productive discussions or debates to explore complex ideas, leading to stronger outcomes in projects or research, Engaging in critical self-assessment and benchmarking your professional or academic progress against established goals and benchmarks for continuous improvement",
+                "shadow": "Dismissing colleagues' or peers' contributions or ideas with unprofessional disdain, hindering collaborative efforts, Engaging in unconstructive confrontations or creating an overly competitive, hostile work or academic environment, Delivering feedback that is purely critical and unhelpful, undermining morale and hindering project development or academic growth, Using sarcastic or provocative language in professional settings, eroding trust and fostering negativity among colleagues or within academic groups, Impeding team or academic project progress through constant, unsubstantiated objections and resistance to new ideas or initiatives"
+            },
+            "Numerology": "5 (The Catalyst: instability, resistance, confrontation)",
+            "Astrology": "Saturn in Leo",
+            "Affirmation": "\"I can express dissent in constructive ways.\"",
+            "Questions to Ask": [
+                "To what extent is your current issue worth fighting for?",
+                "What alternatives are there to outright conflict?",
+                "What happens in a \"fair fight?\" How can you keep this fight fair?"
+            ]
+        },
+        {
+            "name": "Six of Wands",
+            "number": "6",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w06.jpg",
+            "fortune_telling": "Expect recognition for a significant career or academic milestone, but be aware that some colleagues or classmates might harbor quiet resentment, Be vigilant for professional jealousy or subtle undermining from those who envy your achievements in your career or studies.",
+            "keywords": [
+                "victory",
+                "achievement",
+                "success",
+                "triumph"
+            ],
+            "meanings": {
+                "light": "Excelling beyond expectations in your current role or academic program, showcasing superior performance, Successfully securing a promotion, competitive grant, or a highly sought-after academic position, Earning widespread recognition for your professional competence or academic brilliance among your peers and superiors, Achieving a significant breakthrough or public acclaim in your field, bringing your work into prominence, Receiving strong support and positive feedback from your professional network, team, or academic community, Being honored with a prestigious award, scholarship, or promotion for your contributions and hard work, Inspiring respect and admiration from colleagues, mentors, and students for your professional integrity and achievements, Actively celebrating the successes of your team members or peers, fostering a positive and collaborative professional environment.",
+                "shadow": "Displaying arrogance after a professional success, potentially alienating colleagues or collaborators, Letting a promotion or academic accolade lead to overconfidence, hindering further growth or learning, Developing an elitist attitude towards those less experienced or successful in your professional or academic sphere, Seeking excessive validation or constantly needing to be recognized, distracting from substantive work or collaborative efforts, Engaging in superficial networking or receiving hollow compliments, indicating a lack of genuine professional connection or achievement, Struggling with feelings of envy or resentment towards the career advancements or academic accomplishments of others."
+            },
+            "Numerology": "6 (The Adjustment: cooperation, collaboration, interaction)",
+            "Astrology": "Jupiter in Leo",
+            "Affirmation": "\"I value sincere praise.\"",
+            "Questions to Ask": [
+                "What kind of recognition do I crave? Why?",
+                "How freely do I praise the achievements of others?",
+                "What happens when the parade is over?"
+            ]
+        },
+        {
+            "name": "Seven of Wands",
+            "number": "7",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w07.jpg",
+            "fortune_telling": "Expect to face significant competition or direct challenges in your professional path, Prepare to strongly advocate for your ideas, your projects, or your position within your career or academic setting",
+            "keywords": [
+                "bravery",
+                "resolve",
+                "determination"
+            ],
+            "meanings": {
+                "light": "Standing firm in your professional convictions despite pressure or dissenting opinions, Persevering through significant professional obstacles or competitive environments, Demonstrating strong determination and courage in your career pursuits, Successfully navigating professional criticisms or difficult workplace dynamics, Setting clear boundaries and not tolerating unprofessional behavior in your work environment, Maintaining your professional integrity and ethical standards when faced with difficult choices",
+                "shadow": "Approaching professional situations with an overly confrontational or resentful attitude, Engaging in risky professional ventures solely to prove your capability, potentially jeopardizing your career, Misinterpreting feedback or seeking conflict in academic or professional interactions, Reacting poorly to valuable feedback, hindering professional or academic growth, Failing to advocate for your contributions, needs, or professional boundaries"
+            },
+            "Numerology": "7 (The Motive: imagination, inner work, psychology)",
+            "Astrology": "Mars in Leo",
+            "Affirmation": "\"I am willing to take a stand for what I believe in.\"",
+            "Questions to Ask": [
+                "When do you feel most threatened? When do you get defensive?",
+                "How capable are you of defending yourself?",
+                "What kinds of beliefs are worth defending?"
+            ]
+        },
+        {
+            "name": "Eight of Wands",
+            "number": "8",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w08.jpg",
+            "fortune_telling": "Watch for a surprising job offer or academic acceptance, Your professional world is about to experience a rapid and significant shift",
+            "keywords": [
+                "speed",
+                "swiftness",
+                "responsiveness",
+                "change"
+            ],
+            "meanings": {
+                "light": "Taking swift action on new career opportunities, Moving forward quickly with a professional project or academic plan, Feeling a powerful surge of energy for your work or studies, Adapting seamlessly to sudden changes in your job or academic environment, Taking professional setbacks in stride and learning from them, Embracing the idea that your career path will continuously evolve, Reacting quickly and effectively to unforeseen challenges at work or in school",
+                "shadow": "Giving in to panic when faced with career deadlines or academic pressure, Feeling scattered and running in circles with your professional tasks, Insisting on outdated methods in your career despite changing demands, Stirring unnecessary conflict in the workplace or academic group settings, Rushing colleagues or classmates unnecessarily on projects, Refusing to re-evaluate an ineffective career strategy or academic program"
+            },
+            "Numerology": "8 (The Action: movement, outer work, swiftness)",
+            "Astrology": "Mercury in Sagittarius",
+            "Affirmation": "\"I adapt quickly to change.\"",
+            "Questions to Ask": [
+                "How quickly to you adapt to change?",
+                "What would your response be to overwhelming, sudden change?",
+                "What changes are on your horizon? How well have you prepared for them?"
+            ]
+        },
+        {
+            "name": "Nine of Wands",
+            "number": "9",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w09.jpg",
+            "fortune_telling": "Don't ease up on your efforts; the final push for your career goal or academic milestone is still ahead, The current professional or academic challenge is revealing your true allies and supporters in this journey",
+            "keywords": [
+                "toughness",
+                "persistence",
+                "stamina",
+                "loyalty",
+                "release"
+            ],
+            "meanings": {
+                "light": "Demonstrating sustained dedication in your career path or academic program, Consistently delivering on professional commitments and academic responsibilities, Resilience in navigating demanding projects or overcoming significant academic pressures, Successfully completing a challenging professional assignment or academic endeavor against odds, Self-reliance in recovering from career setbacks or academic difficulties, Unwavering determination to see through a complex project or demanding course of study, Achieving your professional or academic peak and finding contentment in your hard-earned accomplishments",
+                "shadow": "Exhausting yourself by taking on too much responsibility in your role or academic pursuits without proper boundaries, Losing commitment or disengaging from your professional duties or academic projects prematurely, Retreating from a career challenge or academic task at the initial encounter of difficulty, Facing external blocks that hinder your ability to meet professional deadlines or academic requirements, Struggling with reliability in your professional contributions or academic group work, Clinging to an outdated career strategy or an academic path that no longer serves your growth, Persisting with a futile professional endeavor or an unrewarding academic subject, yielding no progress"
+            },
+            "Numerology": "9 (The Completion: fullness, readiness, ripeness)",
+            "Astrology": "Moon in Sagittarius",
+            "Affirmation": "\"When the going gets tough, I stay the course.\"",
+            "Questions to Ask": [
+                "How do you cope when things get really tough?",
+                "When you get low, what encourages you to go on?",
+                "At what point should you be able to let this situation go?"
+            ]
+        },
+        {
+            "name": "Ten of Wands",
+            "number": "10",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w10.jpg",
+            "fortune_telling": "You're experiencing professional burnout or academic fatigue, It's time to delegate tasks, step back from overwhelming responsibilities, or take a much-needed break from your studies",
+            "keywords": [
+                "exhaustion",
+                "resistance",
+                "burden",
+                "oppression"
+            ],
+            "meanings": {
+                "light": "Successfully managing a heavy workload or navigating challenging academic demands, Mentoring junior colleagues, assisting team members with their projects, or supporting classmates in group work, Advocating for fair treatment in the workplace or academic setting, or supporting underrepresented groups in your field, Realistically assessing your capacity and skillset for new professional opportunities or academic programs, Wisely discerning that a particular job role, project, or course is not the right fit for your skills or career aspirations",
+                "shadow": "Agreeing to professional projects or academic commitments beyond your reasonable capacity, leading to stress and inefficiency, Inability to decline additional responsibilities at work or in studies, even when already overwhelmed, Consistently working excessive hours, leading to burnout and impacting work-life balance or academic performance, Taking on the responsibilities or fixing the mistakes of colleagues or group members, hindering their learning or accountability, Chronic overcommitment to professional duties, extracurriculars, or academic pursuits, leading to exhaustion and diminished quality of work"
+            },
+            "Numerology": "10 (The End: finality, completion, exhaustion)",
+            "Astrology": "Saturn in Sagittarius",
+            "Affirmation": "\"I respect my own limits.\"",
+            "Questions to Ask": [
+                "How will you know when you reach the end of your rope?",
+                "How easily do you say no to new projects and requests?",
+                "What projects could you delegate...or eliminate?"
+            ]
+        },
+        {
+            "name": "Page of Wands",
+            "number": "11",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w11.jpg",
+            "fortune_telling": "A new, exciting professional opportunity or academic path is emerging, potentially brought by an enthusiastic new connection or a strong internal drive for something novel, You might find yourself drawn to a field or study that ignites your passion, leading to a significant career pivot or academic pursuit, Expect to hear news or receive an offer that feels like a fresh start in your professional or educational journey.",
+            "keywords": [
+                "enthusiasm",
+                "eagerness",
+                "confidence",
+                "validation",
+                "affirmation"
+            ],
+            "meanings": {
+                "light": "Embracing a promising new job offer or a challenging academic project with enthusiasm, Becoming a passionate advocate for an innovative project or a new learning initiative within your organization or school, Holding unwavering belief in your chosen career path or the value of your ongoing studies, Taking courageous initial steps towards establishing your own professional venture or an independent research project, Developing strong self-confidence in your professional skills and intellectual capabilities, Actively seeking constructive criticism and guidance to refine your work or academic performance.",
+                "shadow": "Allowing external validation or colleagues' opinions to solely define your professional worth or academic success, Indiscriminately pursuing every new idea or trend without proper evaluation, leading to scattered efforts in your career or studies, Consistently dismissing valuable advice or feedback from mentors, peers, or instructors, Insisting on tackling all professional or academic tasks alone, inadvertently slowing your own development and missing collaborative opportunities."
+            },
+            "Elemental": "Earth of Fire.",
+            "Affirmation": "\"I can do this.\"",
+            "Questions to Ask": [
+                "How easily do you admit your own inexperience?",
+                "How can you be a better student or employee?",
+                "What qualities would make a total beginner's voyage of discovery easier?"
+            ]
+        },
+        {
+            "name": "Knight of Wands",
+            "number": "12",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w12.jpg",
+            "fortune_telling": "This card often points to a dynamic and inspiring colleague or leader who brings a bold, passionate energy to your professional environment, or a compelling career opportunity that promises rapid and exciting development.",
+            "keywords": [
+                "boldness",
+                "bravado",
+                "passion",
+                "persuasion",
+                "advocacy"
+            ],
+            "meanings": {
+                "light": "Taking bold initiatives in your career, achieving swift professional advancement, transcending traditional boundaries in your field, impressing colleagues and superiors with your charisma and insightful ideas, establishing your authority and credibility for leadership roles, effectively mobilizing teams towards a shared professional vision, acting as a dynamic force for innovation and progress within your organization or studies.",
+                "shadow": "Proceeding impulsively in your career without sufficient knowledge or preparation, alienating colleagues by disregarding their input or feelings, attempting to exploit personal charm for undue professional advantage, asserting your professional authority or ideas without proper consensus or empathy, starting numerous career or academic projects but failing to see them through to completion."
+            },
+            "Elemental": "Air of Fire.",
+            "Affirmation": "\"I can lead the way to success.\"",
+            "Questions to Ask": [
+                "To what extent have you defined your ultimate goal?",
+                "What's the fastest way to get the job done? Is this necessarily the best way?",
+                "How long has it been since you looked back to see if others really are following your lead?"
+            ]
+        },
+        {
+            "name": "Queen of Wands",
+            "number": "13",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w13.jpg",
+            "fortune_telling": "This card suggests you may encounter a highly influential individual, perhaps a mentor or leader, who inspires innovation and drives projects through their compelling vision and strong personality, or it highlights your own growing ability to lead and inspire colleagues and classmates with your unique approach and persuasive communication skills.,",
+            "keywords": [
+                "attention",
+                "attraction",
+                "unification",
+                "collaboration"
+            ],
+            "meanings": {
+                "light": "demonstrating sharp focus on crucial project details, expertly guiding colleagues to stay aligned with shared objectives, successfully fostering cohesive teamwork on professional projects, adeptly identifying unifying goals among diverse stakeholders, skillfully uniting disparate individuals for common academic or professional pursuits, strategically employing diplomatic influence to achieve desired outcomes.,",
+                "shadow": "struggling with significant distractions hindering professional progress, or unintentionally diverting team focus from critical objectives, seeking attention through unproductive or unprofessional conduct in your workplace or studies, causing disruption in team projects or academic groups solely for personal recognition or ego gratification.'"
+            },
+            "Elemental": "Water of Fire.",
+            "Affirmation": "\"I use my influence to promote unity.\"",
+            "Questions to Ask": [
+                "How attentive am I?",
+                "How can I draw people's attention to what we have in common?",
+                "To what extent am I able to convince people to do what I want them to do?"
+            ]
+        },
+        {
+            "name": "King of Wands",
+            "number": "14",
+            "arcana": "Minor Arcana",
+            "suit": "Wands",
+            "img": "w14.jpg",
+            "fortune_telling": "Expect to encounter a powerful mentor or a senior leader, possibly an older man with a strong, visionary presence, who will play a significant role in guiding your professional path or academic projects",
+            "keywords": [
+                "creativity",
+                "ingenuity",
+                "achievement",
+                "direction"
+            ],
+            "meanings": {
+                "light": "Innovatively applying existing skills and knowledge to create new strategies or academic projects, Developing breakthrough and unconventional solutions to complex professional or academic challenges, Effectively utilizing your vast professional experience or academic background to navigate and resolve intricate issues, Successfully achieving ambitious career objectives or significant academic milestones with determination, Skillfully leading and motivating teams or collaborators in professional endeavors or group academic projects",
+                "shadow": "Employing your ingenuity to bypass genuine professional responsibilities or academic duties, Expending considerable effort to sidestep accountability or avoid important tasks in your career or studies, Exaggerating accomplishments or expertise without demonstrating practical application or delivering tangible results in your field, Displaying an overly domineering or arrogant attitude towards colleagues or peers, hindering collaborative professional or academic environments"
+            },
+            "Elemental": "Fire of Fire",
+            "Affirmation": "\"I use my authority and experience to get things done faster.\"",
+            "Questions to Ask": [
+                "How confident a leader am I?",
+                "How can I project more confidence?",
+                "How can I offer my expertise in ways that inspire others to follow me?"
+            ]
+        },
+        {
+            "name": "Ace of Pentacles",
+            "number": "1",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p01.jpg",
+            "fortune_telling": "Your professional vitality and focus will greatly improve, The anticipated job offer, promotion, or academic recognition is indeed on its way",
+            "keywords": [
+                "health",
+                "wealth",
+                "practicality",
+                "receiving"
+            ],
+            "meanings": {
+                "light": "Crafting a solid, actionable plan for significant career advancement or academic achievement, Becoming acutely aware of valuable new job opportunities, educational pathways, or project collaborations, Realizing you possess all the necessary resources, skills, and support to pursue your professional goals, Deeply appreciating the foundational experiences, knowledge, and mentorship that have contributed to your growth, Receiving a perfectly timed career breakthrough, an ideal job offer, or a crucial scholarship that opens new doors",
+                "shadow": "Unproductive spending on superficial career development or excessive professional networking without substance, A persistent feeling of dissatisfaction with your current career status or academic achievements, always wanting more, An unhealthy fixation on financial compensation or external accolades rather than meaningful work or learning, Experiencing overwhelming anxiety or unfounded fears about your professional competence or job security, Taking opportunities or leveraging support in your career or studies without showing genuine gratitude or reciprocal effort, Pursuing professional success or academic goals solely for personal benefit, neglecting the wider impact or team needs"
+            },
+            "Numerology": "1 (The Origin: the starting point, the seed, opportunity)",
+            "Astrology": "Capricorn, Taurus, Virgo",
+            "Affirmation": "\"I am open to and thankful for my blessings.\"",
+            "Questions to Ask": [
+                "If I made my decision based solely on practical concerns, what would my decision be?",
+                "What resources are available to me?",
+                "What will be the physical and financial impact of my decisions?"
+            ]
+        },
+        {
+            "name": "Two of Pentacles",
+            "number": "2",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p02.jpg",
+            "fortune_telling": "It's time to balance your professional responsibilities and personal life, or academic pursuits and other commitments, Avoid the temptation to invest critical time or energy in non-essential projects or distractions that don't advance your career or studies",
+            "keywords": [
+                "evaluation",
+                "decision",
+                "budgeting",
+                "diagnosis"
+            ],
+            "meanings": {
+                "light": "Carefully evaluating career paths or academic programs, Assessing the pros and cons of different job offers or educational opportunities, Determining which professional development or learning opportunity offers the most long-term value, Skillfully managing multiple projects, deadlines, or academic courses, Making strategic career decisions that prioritize your well-being or financial stability, Focusing on the core outcomes and returns on your professional or educational investments, Seeking expert advice on career direction or academic challenges",
+                "shadow": "Being stuck in endless analysis paralysis regarding career choices or academic paths, Hesitating to commit to a job offer or academic program, fearing a slightly better opportunity might arise, Taking on professional projects or academic courses without considering their true benefit or relevance, Overcommitting your time or resources to non-essential professional tasks or academic distractions, Ignoring the impact of your work habits or study choices on your professional well-being or career longevity"
+            },
+            "Numerology": "2 (The Other: duality, division, debate)",
+            "Astrology": "Jupiter in Capricorn",
+            "Affirmation": "\"Before taking action, I consider costs.\"",
+            "Questions to Ask": [
+                "What values govern my decisions?",
+                "How willing am I to sacrifice a little pleasure now in order to have more pleasure later on?",
+                "Given my current situation, which course of action will give me more of what I really need?"
+            ]
+        },
+        {
+            "name": "Three of Pentacles",
+            "number": "3",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p03.jpg",
+            "fortune_telling": "Your specialized skills will soon attract a highly valuable professional opportunity or a significant academic grant, Consistent dedication and effort in your studies or professional development will directly lead to significant career advancements or academic achievements.",
+            "keywords": [
+                "expression",
+                "production",
+                "work",
+                "contribution"
+            ],
+            "meanings": {
+                "light": "Successfully completing a major work assignment, academic thesis, or research project, Achieving high professional or academic benchmarks and excelling in your performance evaluations, Delivering work or research that precisely meets client requirements, project briefs, or academic guidelines, Producing valuable contributions in your field, whether through innovative work, impactful research, or highly sought-after skills, Innovating within your role, developing new programs, or making original contributions to your academic discipline, Successfully collaborating in a team, contributing effectively to a shared professional goal or academic group project, Meeting expectations with precision, whether for a client, supervisor, or academic assignment, demonstrating competence and reliability.",
+                "shadow": "Compromising your professional integrity or academic standards to gain approval, rather than pursuing genuine excellence, Not meeting deadlines or failing to complete assigned tasks or academic commitments as agreed, A lack of self-motivation or initiative in your professional or academic responsibilities, requiring constant oversight to perform adequately, Disregarding commitments to mentors, sponsors, or institutions that have supported your career or academic journey, Avoiding responsibilities in team projects or not contributing adequately to your professional or academic collective, Struggling to adhere to professional contracts, academic regulations, or personal development plans."
+            },
+            "Numerology": "3 (The Result: expression, productivity, output)",
+            "Astrology": "Mars in Capricorn",
+            "Affirmation": "\"My work produces results.\"",
+            "Questions to Ask": [
+                "How can I get more done?",
+                "What's expected of me? How large a role do I play in controlling those expectations?",
+                "What's been agreed to? How well has that agreement been followed?"
+            ]
+        },
+        {
+            "name": "Four of Pentacles",
+            "number": "4",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p04.jpg",
+            "fortune_telling": "Prepare for future professional challenges by strategically investing in your skills now, Building a strong foundation for long-term career stability",
+            "keywords": [
+                "protection",
+                "conservation",
+                "preservation",
+                "safety"
+            ],
+            "meanings": {
+                "light": "Strategically planning for long-term career stability, Disciplined focus on specific career goals, Engaging in self-improvement initiatives to enhance professional competence, Deep commitment to your chosen professional path, Prudent management of your professional resources and time, Investing in long-term professional assets like certifications or advanced degrees, Initiating steps to build professional security",
+                "shadow": "Being resistant to investing in your professional development, Unwillingness to invest in essential career training or networking opportunities, Refusing to collaborate or share insights with colleagues, Focusing solely on personal gain without supporting team or organizational goals, Making short-sighted career decisions to save minimal effort or resources, Mismanaging valuable career opportunities or academic talents"
+            },
+            "Numerology": "4 (The Status Quo: stability, equality, persistence)",
+            "Astrology": "Sun in Capricorn",
+            "Affirmation": "\"I use my resources wisely.\"",
+            "Questions to Ask": [
+                "What factors determine how conservative or generous you are?",
+                "What kinds of things must be preserved at all costs?",
+                "When is greediness or stinginess a good trait to have? When might generosity work against you?"
+            ]
+        },
+        {
+            "name": "Five of Pentacles",
+            "number": "5",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p05.jpg",
+            "fortune_telling": "Your professional resources or opportunities might feel constrained, Expect a temporary setback in your career path or academic progress",
+            "keywords": [
+                "poverty",
+                "destitution",
+                "need",
+                "crisis"
+            ],
+            "meanings": {
+                "light": "Acknowledging skill gaps or resource limitations in your career and proactively seeking solutions, Maximizing limited professional resources or making the most of current academic circumstances, Humbly reaching out for mentorship, guidance, or academic support when facing professional challenges, Graciously accepting offers of professional development, networking assistance, or educational grants, Appreciating your existing skills and experiences rather than dwelling on perceived career deficiencies, Maintaining a hopeful outlook during a difficult job search or a challenging academic project, knowing improvement is possible",
+                "shadow": "Overstating career hardships or exaggerating academic difficulties to avoid responsibility, Adopting a scarcity mindset about job prospects or believing you're perpetually undervalued in your field, Neglecting to invest in your own professional development or failing to take initiative in your academic pursuits, Stubbornly declining valuable career advice, mentorship, or academic assistance that could help you progress, Unnecessarily suffering through professional difficulties or academic struggles to gain sympathy rather than actively seeking solutions, Dismissing valuable skill-building courses, networking events, or job prospects that could significantly enhance your career path, Lingering in a state of professional dissatisfaction or academic stagnation without actively working towards improvement"
+            },
+            "Numerology": "5 (The Catalyst: instability, resistance, confrontation)",
+            "Astrology": "Mercury in Taurus",
+            "Affirmation": "\"I have faith that what I need will appear.\"",
+            "Questions to Ask": [
+                "What critical resources do I lack?",
+                "What people or groups would come to my aid if I asked?",
+                "How might an impoverished spirit be impacting my physical or financial condition?"
+            ]
+        },
+        {
+            "name": "Six of Pentacles",
+            "number": "6",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p06.jpg",
+            "fortune_telling": "[\"When you encounter professional challenges or academic hurdles, don't hesitate to seek guidance or support from mentors, colleagues, or educators\", \"Remember that your current opportunities for assistance and growth are often a reflection of the knowledge, support, and collaboration you've extended to others in your professional or academic sphere\"]",
+            "keywords": [
+                "charity",
+                "fairness",
+                "cooperation",
+                "sharing"
+            ],
+            "meanings": {
+                "light": "[\"Generously mentoring junior professionals or students, sharing your expertise and insights without seeking immediate personal gain\", \"Actively engaging in collaborative projects, team assignments, or interdisciplinary research, contributing effectively to shared objectives\", \"Sharing valuable professional contacts, research materials, or learning opportunities with peers to foster collective advancement\", \"Advocating for fairness and equity in resource distribution, workload allocation, and recognition within your team or academic environment\", \"Working cooperatively with diverse colleagues or study partners towards a unified professional or educational goal\", \"Strategically allocating time, attention, or resources to support team members, delegate tasks equitably, or uplift emerging talent\", \"Consciously dedicating a portion of your expertise or efforts to industry betterment, professional associations, or nurturing new talent\", \"Openly acknowledging and celebrating the contributions of others who have supported your career achievements or academic successes\"]",
+                "shadow": "[\"Offering professional assistance or opportunities with an underlying agenda to control or manipulate colleagues, projects, or academic outcomes\", \"Engaging in acts of mentorship or professional generosity primarily to garner personal recognition, enhance your reputation, or for superficial resume building\", \"Unfairly distributing workload, hoarding critical resources, or unequally assigning credit within a team or academic group, fostering resentment\", \"Failing to contribute adequately to team projects, neglecting shared responsibilities, or not fulfilling your commitments in collaborative efforts\", \"Disregarding professional duties, missing critical deadlines, or reneging on promises made to colleagues, clients, or academic supervisors\"]"
+            },
+            "Numerology": "6 (The Adjustment: cooperation, collaboration, interaction)",
+            "Astrology": "Moon in Taurus",
+            "Affirmation": "\"Knowing I will receive more, I share my resources freely.\"",
+            "Questions to Ask": [
+                "How do I feel about charity? About giving it? About receiving it?",
+                "How can I know if I'm treating others fairly?",
+                "What could I give that no one else can?"
+            ]
+        },
+        {
+            "name": "Seven of Pentacles",
+            "number": "7",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p07.jpg",
+            "fortune_telling": "Your current professional or academic efforts might not yield the anticipated results, It's time to reassess your career strategy or academic path and prepare for a new direction",
+            "keywords": [
+                "assessment",
+                "evaluation",
+                "re-evaluation",
+                "reflection"
+            ],
+            "meanings": {
+                "light": "Thoughtfully evaluating your progress on a career project or academic endeavor, Analyzing the outcomes of your work or studies to identify areas for professional enhancement, Reflecting on your satisfaction with your current role or educational path, Brainstorming innovative strategies to boost your professional success or academic well-being, Recognizing the need for a significant shift in your career direction or academic focus, Providing candid and constructive feedback in a professional or academic setting",
+                "shadow": "Allowing past professional disappointments to hinder your focus and motivation, Dwelling on previous career successes or academic achievements instead of building for the future, Regretting missed career chances or educational paths excessively, Being overly self-critical of your professional output or academic performance, Imposing unrealistic expectations on colleagues, teammates, or academic peers, Avoiding responsibility in group projects or team tasks, then complaining about the final results"
+            },
+            "Numerology": "7 (The Motive: imagination, inner work, psychology)",
+            "Astrology": "Saturn in Taurus",
+            "Affirmation": "\"To stay on target, I measure my progress.\"",
+            "Questions to Ask": [
+                "To what extent have I fulfilled my own expectations?",
+                "What are the terms of success?",
+                "How can I be happier with the progress I've made?"
+            ]
+        },
+        {
+            "name": "Eight of Pentacles",
+            "number": "8",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p08.jpg",
+            "fortune_telling": "It's time to stop over-analyzing career choices and start taking action, Focus on diligently executing your professional and academic tasks rather than just planning",
+            "keywords": [
+                "effort",
+                "work diligence",
+                "skill"
+            ],
+            "meanings": {
+                "light": "Fully committing to your professional responsibilities and projects, Approaching your work or studies with genuine enthusiasm and dedication, Striving for excellence and continuous improvement in your chosen field, Discovering a career path or academic discipline that truly aligns with your talents, Paying meticulous attention to the details and quality of your professional output, Becoming a highly skilled expert or master in your specific area, Successfully developing tangible results or practical applications in your work, Creating valuable contributions that showcase your unique professional abilities",
+                "shadow": "Experiencing professional burnout or exhaustion from overwork, Delivering superficial or careless work that lacks quality, Remaining trapped in an unfulfilling or disliked job, Making token efforts in your career without genuine engagement, Producing work that demonstrates shoddy craftsmanship or poor attention to detail, Rushing through important tasks leading to errors or oversight, Resisting or ignoring opportunities for professional development and learning"
+            },
+            "Numerology": "8 (The Action: movement, outer work, swiftness)",
+            "Astrology": "Sun in Virgo",
+            "Affirmation": "\"I give myself wholeheartedly to the task of the moment.\"",
+            "Questions to Ask": [
+                "How long has it been since you were \"lost in your work?\"",
+                "How can you improve your level of dedication and focus?",
+                "What work do you do best? What about that work appeals to you?"
+            ]
+        },
+        {
+            "name": "Nine of Pentacles",
+            "number": "9",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p09.jpg",
+            "fortune_telling": "[\"Acknowledge and value your current professional achievements and skills; this appreciation forms the foundation for future career advancement.\"]",
+            "keywords": [
+                "training",
+                "discipline",
+                "confidence",
+                "enough"
+            ],
+            "meanings": {
+                "light": "[\"Dedicating yourself to mastering complex professional skills or effectively mentoring colleagues\", \"Maintaining a balanced professional life, avoiding burnout, and making disciplined financial decisions for long-term career stability\", \"Willingness to make strategic short-term sacrifices for significant long-term career or academic achievements\", \"Applying effective project management by deconstructing large professional goals or academic challenges into manageable steps\", \"Cultivating contentment and pride in your current professional position and the accomplishments you've already earned\", \"Discerning clearly between essential career needs and superficial professional desires to guide your growth path\"]",
+                "shadow": "[\"Feeling overwhelmed or inadequately prepared for new professional responsibilities due to insufficient training or resources\", \"Seeking professional roles or academic programs for which you genuinely lack the necessary qualifications or experience, potentially leading to imposter syndrome\", \"Failing to adhere to critical professional standards, neglecting important job requirements, or disregarding academic prerequisites\", \"A reluctance to invest sufficient time or effort in continuous learning and adapting to new professional demands, hindering growth\", \"A persistent sense of professional dissatisfaction, constantly chasing the next promotion or opportunity without appreciating current successes or building a strong foundation\"]"
+            },
+            "Numerology": "9 (The Completion: fullness, readiness, ripeness)",
+            "Astrology": "Venus in Virgo",
+            "Affirmation": "\"I know enough to be confident in my decisions.\"",
+            "Questions to Ask": [
+                "If you could not have what you want, how would you make do?",
+                "Could you make a complex task easier by breaking it down into smaller steps?",
+                "How patient are you during the learning process? With yourself? With others?"
+            ]
+        },
+        {
+            "name": "Ten of Pentacles",
+            "number": "10",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p10.jpg",
+            "fortune_telling": "A significant financial gain or promotion is on the horizon in your career, signalling long-term stability, Anticipate a major breakthrough or valuable opportunity that will greatly enhance your professional standing or academic journey",
+            "keywords": [
+                "wealth",
+                "abundance",
+                "acquisition",
+                "greed"
+            ],
+            "meanings": {
+                "light": "Celebrating significant career milestones or the successful completion of a major academic endeavor, Recognizing and appreciating the foundational support, resources, or mentorship that have contributed to your professional or educational success, Feeling deeply content and secure with your professional achievements or academic trajectory, Wisely leveraging periods of high demand or abundant resources to advance your career or educational goals, Savoring the well-earned rewards of your hard work, such as a successful project launch or the completion of a demanding course, Actively investing in the development of your team, mentoring junior colleagues, or contributing generously to your professional community",
+                "shadow": "Overspending on superficial career elements or status symbols, neglecting genuine professional development or financial prudence in your career, Excessively focusing on presenting an image of success rather than building authentic professional competence or academic mastery, Engaging in manipulative networking or attempting to gain an unfair advantage through inappropriate professional gestures, Becoming overly fixated on the monetary aspects of your work, neglecting passion, well-being, or intellectual growth, Approaching professional collaborations or academic group work with an exclusively self-serving mindset, hindering true teamwork"
+            },
+            "Numerology": "10 (The End: finality, completion, exhaustion)",
+            "Astrology": "Mercury in Virgo",
+            "Affirmation": "\"I keep physical and financial matters in perspective.\"",
+            "Questions to Ask": [
+                "How much stuff do I really need?",
+                "How do I feel about wealth and abundance? How do I define these terms?",
+                "How might shedding some possessions open room for growth?"
+            ]
+        },
+        {
+            "name": "Page of Pentacles",
+            "number": "11",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p11.jpg",
+            "fortune_telling": "This card represents a young professional or student with a grounded, practical demeanor, who playfully encourages you to take calculated risks in your career path or academic pursuits, It suggests a new beginning in your professional journey",
+            "keywords": [
+                "practicality",
+                "prosperity",
+                "learning",
+                "growth",
+                "adolescence"
+            ],
+            "meanings": {
+                "light": "Understanding the practical value of your skills and efforts, Starting to invest strategically in your professional future, Taking the initial steps to overcome career or academic setbacks, Acquiring new practical skills or professional techniques, Discovering your authentic professional passion or purpose, Initiating a focused personal development plan for career advancement, Gaining valuable experience through hands-on projects and practical application",
+                "shadow": "Presenting an exaggerated image of your professional skills or experience, Wasting resources on unproductive career endeavors, Neglecting long-term career planning with a focus only on immediate gratification, Approaching professional development with a lack of seriousness or commitment, Relying solely on existing success or superficial charm to avoid continuous professional growth and learning"
+            },
+            "Elemental": "Earth of Earth.",
+            "Affirmation": "\"I am physically and financially responsible.\"",
+            "Questions to Ask": [
+                "How can you get more financial or sexual experience without risking your livelihood or health?",
+                "How might hands-on learning play a role in your situation?",
+                "What's the most practical choice you could make?"
+            ]
+        },
+        {
+            "name": "Knight of Pentacles",
+            "number": "12",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p12.jpg",
+            "fortune_telling": "A seasoned mentor might question your practical approach or resource allocation, Be prepared to defend a significant career decision or educational path you have chosen",
+            "keywords": [
+                "caution",
+                "focus",
+                "realism",
+                "invention"
+            ],
+            "meanings": {
+                "light": "Utilizing your professional resources and time effectively, Building a stable foundation for long-term career growth, Applying meticulous attention to detail in your projects or studies, Carefully managing your professional time and energy, Upholding high ethical standards in all your professional dealings, Making data-driven career choices based on solid evidence, Ingeniously finding practical solutions with current resources, Successfully completing a major academic project or professional initiative",
+                "shadow": "Taking impulsive career risks without proper foresight, Neglecting core professional duties or academic commitments, Prioritizing superficial gains over essential skill development, Avoiding stress through unproductive distractions instead of tackling tasks, Becoming overly fixated on minor details, hindering progress, Constantly seeking new opportunities without committing to one path, Engaging in academic or professional misconduct like plagiarism"
+            },
+            "Elemental": "Air of Earth.",
+            "Affirmation": "\"I temper my actions with cautious optimism.\"",
+            "Questions to Ask": [
+                "What's the difference between caution and fear?",
+                "How can I evaluate the practicality of my own ideas and methods?",
+                "How realistic are my goals?"
+            ]
+        },
+        {
+            "name": "Queen of Pentacles",
+            "number": "13",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p13.jpg",
+            "fortune_telling": "This card represents a professional who brings a grounded, nurturing, and resourceful approach to their work, fostering a supportive environment, It might point to a mentor or colleague who influences others through practical wisdom, generosity, and tangible benefits, This person effectively persuades others by demonstrating the real-world value and potential rewards of their ideas or projects",
+            "keywords": [
+                "luxury",
+                "comfort",
+                "resourcefulness",
+                "generosity",
+                "prosperity"
+            ],
+            "meanings": {
+                "light": "Appreciating and creating a high-quality, aesthetically pleasing work environment that fosters well-being, Cultivating a healthy work-life balance that energizes your professional pursuits, Recognizing and investing in your professional development and well-being, valuing your contributions, Making strategic, well-deserved investments in tools or resources that enhance your professional life and output, Acknowledging and generously compensating team members or colleagues for their outstanding contributions and efforts, Achieving a state of integrated success where professional fulfillment aligns with personal well-being and material stability",
+                "shadow": "Excessively accumulating resources or seeking rewards without reciprocal effort or contribution in your career, Constantly desiring more achievements, promotions, or recognition without genuine satisfaction, leading to burnout, Over-relying on superficial perks or external rewards, diminishing their true value and hindering intrinsic motivation, Focusing solely on material compensation or tangible benefits in a role, neglecting team cohesion or professional growth opportunities, Exhibiting a sense of entitlement regarding career advancements or opportunities, failing to appreciate current achievements or mentorship"
+            },
+            "Elemental": "Water of Earth.",
+            "Affirmation": "\"I relish the best this world has to offer.\"",
+            "Questions to Ask": [
+                "How do I define luxury?",
+                "To what extent am I capable of reveling in sensual pleasure?",
+                "What would I have to give up in order to \"have it all?\""
+            ]
+        },
+        {
+            "name": "King of Pentacles",
+            "number": "14",
+            "arcana": "Minor Arcana",
+            "suit": "Pentacles",
+            "img": "p14.jpg",
+            "fortune_telling": "This card suggests the presence of a grounded and successful mentor or leader in your professional life, someone who is practical, financially astute, and dedicated to delivering tangible results. It may also indicate you are embodying these qualities, investing wisely in your career path, and building a solid foundation for future growth and security.",
+            "keywords": [
+                "stability",
+                "dependability",
+                "confidence",
+                "intervention"
+            ],
+            "meanings": {
+                "light": "Achieving significant financial stability in your profession, having abundant resources to support your career goals, diligently investing in your long-term professional development and education, securing a new job that offers substantial advancement opportunities, wisely ensuring your career and well-being through benefits or strategic planning, exuding confident mastery and security in your specialized professional domain, effectively upholding professional standards and ensuring accountability in your leadership role.",
+                "shadow": "Resisting essential professional or academic changes due to an overly rigid adherence to traditional methods, neglecting innovative approaches or new technologies in favor of outdated practices, displaying arrogance or excessive self-satisfaction in your professional achievements, becoming overly focused on personal gain or material wealth at the expense of ethical considerations or team well-being, allowing personal comforts or desires to compromise your professional responsibilities or commitment, attempting to exert undue authority or control over colleagues or projects without proper empowerment."
+            },
+            "Elemental": "Fire of Earth.",
+            "Affirmation": "\"I embody confidence and fairness.\"",
+            "Questions to Ask": [
+                "How can you handle expenses with greater confidence and maturity?",
+                "How dependable are you? How dependable would others say you are?",
+                "To what extent is a conservative viewpoint valuable? At what point does it become more of a burden than a blessing?"
+            ]
+        }
+    ]
+}

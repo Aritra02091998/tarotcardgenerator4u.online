@@ -625,6 +625,12 @@ header button:hover {
     }
     /* End of responsive text around deck */
 
+        /* Start of responsive heading of interpretation box*/
+    .info h2 {
+        font-size: 1.8rem;
+    }
+    /* End of responsive heading of interpretation box*/
+
     /* Start of responsive footer */
     .site-footer {
         display: block;
