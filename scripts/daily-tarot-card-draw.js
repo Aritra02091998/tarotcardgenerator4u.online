@@ -95,41 +95,64 @@ document.addEventListener('DOMContentLoaded', () => {
       buildFan();
     });
 
-  function buildFan() {
-    const picks = [...DECK].sort(() => 0.5 - Math.random()).slice(0, 21),
-      total = picks.length,
-      r = fan.clientWidth * 0.83 / 2,
-      cx = fan.clientWidth / 2,
-      cy = 60;
+    function buildFan () {
+
+    const mobile = innerWidth < 768,
+        // only take 11 on small screens, otherwise 21
+        picks  = [...DECK]
+                .sort(() => 0.5 - Math.random())
+                .slice(0, mobile ? 11 : 21),
+        total  = picks.length,
+        r      = fan.clientWidth * 0.83 / 2, 
+        cx     = fan.clientWidth / 2,
+        cy     = 60;
 
     picks.forEach((card, i) => {
-      const ang = (180 / (total - 1)) * i,
-        rad = ang * Math.PI / 180,
-        x = cx + Math.cos(rad) * r - 59,
-        y = cy + Math.sin(rad) * r - 85,
-        el = document.createElement('div');
 
-      el.className = 'card init';
-      const final = `translate(${x}px,${y}px) rotateZ(${ang - 90}deg)`;
-      el.style.transform = final + ' scale(.05)';
-      el.style.opacity = 0;
+        /* ---------- final position depends on screen size ---------- */
+        let final, z = 0;
 
-      el.innerHTML = `
+        if (mobile) {                            /* stacked concertina */
+        const mid   = Math.floor(total / 2),
+                step  = 26,                      // horizontal gap
+                x     = (i - mid) * step + cx - 59,
+                y     = cy,
+                scale = 1 - Math.abs(i - mid) * 0.05;
+
+        final = `translate(${x}px,${y}px) scale(${scale})`;
+        z     = 100 - Math.abs(i - mid);       // middle card on top
+        }
+        else {                                   /* original arc fan  */
+        const ang = (180 / (total - 1)) * i,
+                rad = ang * Math.PI / 180,
+                x   = cx + Math.cos(rad) * r - 59,
+                y   = cy + Math.sin(rad) * r - 85;
+
+        final = `translate(${x}px,${y}px) rotateZ(${ang - 90}deg)`;
+        }
+
+        /* ---------- element creation (unchanged) ---------- */
+        const el = document.createElement('div');
+        el.className      = 'card init';
+        el.style.zIndex   = z;
+        el.style.transform= final + ' scale(.05)';
+        el.style.opacity  = 0;
+        el.innerHTML      = `
         <div class="face back"></div>
         <div class="face front"><img alt=""></div>`;
-      el._data = card;
-      el.addEventListener('click', onPick);
-      fan.appendChild(el);
+        el._data = card;
+        el.addEventListener('click', onPick);
+        fan.appendChild(el);
 
-      // stagger-in
-      setTimeout(() => {
+        /* stagger-in animation */
+        setTimeout(() => {
         el.classList.add('show');
         el.style.transition = 'transform .9s ease, opacity .9s ease';
-        el.style.transform = final;
-        el.style.opacity = 1;
-      }, i * 70);
+        el.style.transform  = final;
+        el.style.opacity    = 1;
+        }, i * 70);
     });
-  }
+    }
 
   /* ---------- click-to-draw (same as previous answer) ---------- */
   function onPick(e) {
@@ -170,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { once: true });
   }
 
-  function showResult(card) {
+  function showResult(card, mobile) {
     result.style.display = 'flex';
 
     requestAnimationFrame(() => {

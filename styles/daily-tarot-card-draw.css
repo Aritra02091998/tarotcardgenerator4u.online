@@ -398,13 +398,52 @@ footer .bottom {
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
+@media (max-width: 768px){
+
+    /* 1 ▸ deck area & cards shrink */
+    #fanWrap          { height: 260px; }
+    #fan              { height: 200px; overflow: visible; }
+    #fan .card        { --w: 90px;  --h: 130px; }
+
+    /* 2 ▸ prompt moves *below* the deck and uses a smaller font */
+    #prompt{
+    position: static;
+    transform: none;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    }
+
+    /* 3 ▸ result panel centres the drawn card  */
+    .view{
+    flex: 0 0 auto;
+    width: 100%;
+    align-items: center;   /* horizontal centring */
+    }
+    .view .card      { 
+        --w: 180px; 
+        --h: 260px; 
+    }  /* phone-friendly size */
+
+    #fan .card:hover{
+        transform: translateY(-6px) scale(1.08);
+        box-shadow: 0 0 12px 4px var(--accent);
+    }
+
+  /* make the details panel appear below the card */
   #result {
+    /* preserve the flex container but switch to vertical stacking */
     flex-direction: column;
   }
 
   .info {
-    animation: none;
-    opacity: 1;
+    /* opt out of flex:1 so width:100% actually takes effect */
+    flex: none;
+    width: 100%;
   }
+
+    .hero {
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
 }
