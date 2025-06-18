@@ -66,7 +66,7 @@ body {
 }
 .logo {
   font-family: 'Cinzel Decorative', serif;
-  font-size: 1.75rem;
+  font-size: 1.9rem;
   color: var(--text-light);
   text-decoration: none;
 }
@@ -74,6 +74,7 @@ body {
   display: flex;
   align-items: center;
 }
+
 .lang-select-wrapper {
   background: transparent;
   border: 1px solid var(--text-light);
@@ -124,13 +125,13 @@ body {
   text-shadow: 0 0 8px var(--accent);
 }
 .hero-subtitle {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: var(--text-faint);
   margin-bottom: 4rem; /* increased gap */
   text-shadow: 0 0 6px var(--accent);
 }
 .after-menu-header-2 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: var(--text-faint);
   margin-bottom: 1rem; /* increased gap */
   text-shadow: 0 0 6px var(--accent);
@@ -142,7 +143,7 @@ body {
   gap: 1.5rem;
 }
 .tool-card {
-  width: 120px;
+  width: 128px;
   height: 135px;       /* reduced by 5px */
   background: var(--accent);
   border-radius: 8px;
@@ -172,7 +173,7 @@ body {
 }
 .after-menu-header-1 {
   font-family: 'Cinzel Decorative', serif;
-  font-size: 2.75rem;   /* same as hero-title */
+  font-size: 2.0rem;   /* same as hero-title */
   color: var(--accent);
   margin: 3rem 0;       /* ample gap above & below */
   /*text-shadow: 0 0 8px var(--accent); turned off glow effect*/
@@ -302,28 +303,59 @@ body {
   RESPONSIVE – stack footer on mobile
 ──────────────────────────────────────────────────────────────────────────*/
 @media (max-width: 768px) {
-.tool-card {
-  width: 120px;
-  height: 120px;       /* reduced by 5px */
-}
-.after-menu-header-1 {
-    font-size: 1.8rem;   /* same as hero-title */
-    margin-top: 2rem;       /* ample gap above & below */
-}
-  .site-footer {
-    display: block;
-  }
-  .footer-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
-  .footer-col {
-    width: 100%;
-    text-align: center;
-  }
-  .footer-col h4::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
+    .tool-card {
+    width: 120px;
+    height: 120px;       /* reduced by 5px */
+    }
+    .after-menu-header-1 {
+        font-size: 1.8rem;   /* same as hero-title */
+        margin-top: 2rem;       /* ample gap above & below */
+    }
+    .site-footer {
+        display: block;
+    }
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .footer-col {
+        width: 100%;
+        text-align: center;
+    }
+    .footer-col h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .hero-title {
+        font-size: 2rem;
+    }
+    .hero-subtitle {
+        font-size: 1.2rem;
+        color: var(--text-faint);
+        margin-bottom: 1.3rem; /* increased gap */
+        text-shadow: 0 0 6px var(--accent);
+    }
+    .hero {
+        text-align: center;
+        padding: 1rem 1rem 1rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    .logo {
+        font-family: 'Cinzel Decorative', serif;
+        font-size: 1.4rem;
+        color: var(--text-light);
+        text-decoration: none;
+    }
+
+    .menu-btn, .mute-btn{
+        display: none;
+    }
+
+    .after-menu-header-1{
+        font-size: 1.5rem;
+        margin-top: 2rem;
+    }
 }

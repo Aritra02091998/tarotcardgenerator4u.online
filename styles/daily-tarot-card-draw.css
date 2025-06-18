@@ -49,24 +49,25 @@ canvas#star {
 }
 
 /* HEADER */
-header {
+.site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  font-family: 'Cinzel Decorative', serif;
+  position: relative;
+  z-index: 1;
 }
-
-header a {
-  font-size: 1.8rem;
-  color: var(--txt);
+.logo {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.9rem;
+  color: var(--text-light);
   text-decoration: none;
 }
-
-header .ctl {
+.header-controls {
   display: flex;
   align-items: center;
 }
+
 
 header select {
   background: transparent;

@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />  <!-- ★ animate.css -->
-  <link rel="stylesheet" href="/styles/test.css" />
+  <link rel="stylesheet" href="/styles/daily-tarot-card-draw.css" />
 </head>
 
 <body>
@@ -19,13 +19,21 @@
   <div class="sweep"></div>
 
   <!-- HEADER -->
-  <header>
-    <a href="/">Tarot Card Generator</a>
-    <div class="ctl">
-      <select><option>English</option><option>Español</option></select>
-      <button><i class="fas fa-volume-mute"></i></button>
+    <header class="site-header">
+    <a href="/" class="logo">Tarot Card Generator</a>
+    <div class="header-controls">
+        <div class="lang-select-wrapper">
+        <select class="lang-select" aria-label="Select Language">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Français</option>
+        </select>
+        </div>
+        <button class="mute-btn" aria-label="Toggle Sound"><i class="fas fa-volume-mute"></i></button>
+        <button class="menu-btn" aria-label="Menu"><i class="fas fa-ellipsis-v"></i></button>
     </div>
-  </header>
+    </header>
 
   <!-- HERO -->
   <section class="hero">
@@ -61,6 +69,6 @@
   </footer>
 
   <!-- SCRIPT -->
-  <script src="/scripts/test.js"></script>
+  <script src="/scripts/daily-tarot-card-draw.js"></script>
 </body>
 </html>
