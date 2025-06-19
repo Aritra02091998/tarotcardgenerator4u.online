@@ -663,8 +663,8 @@ header button:hover {
     #prompt-before {
         position: absolute;
         top: 8%;
-        left: 50%;
         width: 100%;
+        text-align: center;
         transform: translate(-50%, -50%);
         font-family: 'Cinzel Decorative', serif;
         font-size: 1rem;
@@ -678,7 +678,7 @@ header button:hover {
     #prompt-after {
         position: absolute;
         top: 130%;
-        left: 48%;
+        text-align: center;
         transform: translate(-50%, -50%);
         font-family: 'Cinzel Decorative', serif;
         font-size: 0.8rem;
@@ -689,11 +689,17 @@ header button:hover {
     }
     /* End of responsive text around deck */
 
-        /* Start of responsive heading of interpretation box*/
+    /* Start of responsive heading of interpretation box*/
     .info h2 {
         font-size: 1.8rem;
     }
     /* End of responsive heading of interpretation box*/
+
+    /* Start of responsive FAQ */
+    .faq-section h2 {
+        font-size: 1.2rem;
+    }
+    /* End of responsive FAQ */
 
     /* Start of responsive footer */
     .site-footer {
