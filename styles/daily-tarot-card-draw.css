@@ -530,10 +530,11 @@ header button:hover {
 
 /* ── Collapsible FAQ Section ── */
 .faq-section {
-  margin: 0rem 2rem 2rem 1rem;
-  padding: 0 1rem;
-  color: var(--txt);
-  z-index: 1;
+    align-content: center;
+    margin: 0rem 2rem 2rem 1rem;
+    padding: 0 1rem;
+    color: var(--txt);
+    z-index: 1;
 }
 
 .faq-section h2 {
@@ -557,7 +558,7 @@ header button:hover {
   list-style: none;
   padding: 1rem;
   font-family: 'Cinzel Decorative', serif;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--accent);
   position: relative;
 }
@@ -586,7 +587,7 @@ header button:hover {
 
 .faq-content {
   padding: 0 1rem 1rem 1rem;
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: var(--txt-faint);
   line-height: 1.6;
 }
