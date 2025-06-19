@@ -528,6 +528,71 @@ header button:hover {
 }
 /* end of Pshychic section designs*/
 
+/* ── Collapsible FAQ Section ── */
+.faq-section {
+  margin: 0rem 2rem 2rem 1rem;
+  padding: 0 1rem;
+  color: var(--txt);
+  z-index: 1;
+}
+
+.faq-section h2 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.9rem;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.faq-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 1rem;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.2rem;
+  color: var(--accent);
+  position: relative;
+}
+
+.faq-item summary::marker {
+  /* Hide default marker (for Firefox) */
+  color: transparent;
+}
+
+.faq-item summary::-webkit-details-marker {
+  /* Hide default marker (for WebKit/Blink) */
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '⌄';
+  position: absolute;
+  right: 1rem;
+  transition: transform 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.faq-content {
+  padding: 0 1rem 1rem 1rem;
+  font-size: 1rem;
+  color: var(--txt-faint);
+  line-height: 1.6;
+}
+
+/* ── End of FAQ Section ── */
+
 
 @media (max-width: 768px){
 
@@ -598,7 +663,7 @@ header button:hover {
     #prompt-before {
         position: absolute;
         top: 8%;
-        left: 68%;
+        left: 50%;
         width: 100%;
         transform: translate(-50%, -50%);
         font-family: 'Cinzel Decorative', serif;
@@ -612,12 +677,11 @@ header button:hover {
 
     #prompt-after {
         position: absolute;
-        top: 115%;
-        left: 62%;
-        width: 100%;
+        top: 130%;
+        left: 48%;
         transform: translate(-50%, -50%);
         font-family: 'Cinzel Decorative', serif;
-        font-size: 1.1rem;
+        font-size: 0.8rem;
         color: var(--txt);
         text-shadow:
             0 0 8px var(--accent),
