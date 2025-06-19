@@ -46,69 +46,68 @@
 </head>
 
 <body>
-  <!-- BACKGROUND (untouched) -->
-  <canvas id="star"></canvas>
-  <div class="sweep"></div>
+    <!-- BACKGROUND (untouched) -->
+    <canvas id="star"></canvas>
+    <div class="sweep"></div>
 
-  <!-- HEADER (exactly from homepage) -->
-  <header class="site-header">
+    <!-- HEADER (exactly from homepage) -->
+    <header class="site-header">
     <a href="/" class="logo">Tarot Card Generator</a>
     <div class="header-controls">
-      <div class="lang-select-wrapper">
+        <div class="lang-select-wrapper">
         <select class="lang-select" aria-label="Select Language">
-          <option value="en">English</option>
-          <option value="es">Español</option>
-          <option value="de">Deutsch</option>
-          <option value="fr">Français</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Français</option>
         </select>
-      </div>
-      <button class="mute-btn" aria-label="Toggle Sound"><i class="fas fa-volume-mute"></i></button>
-      <button class="menu-btn" aria-label="Menu"><i class="fas fa-ellipsis-v"></i></button>
+        </div>
+        <button class="mute-btn" aria-label="Toggle Sound"><i class="fas fa-volume-mute"></i></button>
+        <button class="menu-btn" aria-label="Menu"><i class="fas fa-ellipsis-v"></i></button>
     </div>
-  </header>
-  <!-- ▲ header from homepage.html :contentReference[oaicite:0]{index=0} -->
+    </header>
 
     <!-- HERO (three-card spread) -->
     <section class="hero">
-    <div id="fanWrap">
-        <div id="fan"></div>
-        <p id="prompt-before">Think of YOUR Question</p>
-        <!-- updated prompt -->
-        <p id="prompt">Select your PAST card</p>
-        <p id="prompt-after">Let the UNIVERSE Guide YOU</p>
-    </div>
-
-    <!-- Draw-all button for mobile-only -->
-    <button id="draw-all" class="draw-all">Draw 3 Cards</button>
-
-    <!-- three result sections, hidden until the 3rd pick -->
-    <div id="result">
-        <!-- 1) “Your Reading” header -->
-        <div class="reading-header">
-            <h2>
-                <i class="fas fa-moon"></i>
-                Your Message from UNIVERSE
-            </h2>
+        <div id="fanWrap">
+            <div id="fan"></div>
+            <p id="prompt-before">Think of YOUR Question</p>
+            <!-- updated prompt -->
+            <p id="prompt">Select your PAST card</p>
+            <p id="prompt-after">Let the UNIVERSE Guide YOU</p>
         </div>
 
-        <!-- 2) The three pick slots -->
-        <div class="result-section" id="past">
-            <div class="view"></div><div class="info"></div>
-        </div>
-        <div class="result-section" id="present">
-            <div class="view"></div><div class="info"></div>
-        </div>
-        <div class="result-section" id="future">
-            <div class="view"></div><div class="info"></div>
-        </div>
+        <!-- Draw-all button for mobile-only -->
+        <button id="draw-all" class="draw-all">Draw 3 Cards</button>
 
-        <!-- 3) Draw Again button -->
-        <div class="draw-again">
-            <button id="again">Draw Again</button>
-        </div>
+        <!-- three result sections, hidden until the 3rd pick -->
+        <div id="result">
+            <!-- 1) “Your Reading” header -->
+            <div class="reading-header">
+                <h2>
+                    <i class="fas fa-moon"></i>
+                    Your Message from UNIVERSE
+                </h2>
+            </div>
 
-        <!-- 4) Psychic CTA, now INSIDE the result -->
-    </div>
+            <!-- 2) The three pick slots -->
+            <div class="result-section" id="past">
+                <div class="view"></div><div class="info"></div>
+            </div>
+            <div class="result-section" id="present">
+                <div class="view"></div><div class="info"></div>
+            </div>
+            <div class="result-section" id="future">
+                <div class="view"></div><div class="info"></div>
+            </div>
+
+            <!-- 3) Draw Again button -->
+            <div class="draw-again">
+                <button id="again">Draw Again</button>
+            </div>
+
+            <!-- 4) Psychic CTA, now INSIDE the result -->
+        </div>
     </section>
 
     <div class="psychic-help">
@@ -122,7 +121,7 @@
                 Receive the guidance you need from gifted psychics, spiritual advisors, and tarot experts.
             </p>
             <p class="psychic-help__price">✨ COMING SOON !! ✨</p>
-            <a href="#" class="psychic-help__btn">GET YOUR READING NOW!</a>
+            <a href="/sponsored.html" class="psychic-help__btn">GET YOUR READING NOW!</a>
         </div>
     </div>
 

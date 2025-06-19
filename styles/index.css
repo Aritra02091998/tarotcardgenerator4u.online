@@ -119,7 +119,7 @@ body {
 }
 .hero-title {
   font-family: 'Cinzel Decorative', serif;
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
   color: var(--text-light);
   text-shadow: 0 0 8px var(--accent);
@@ -132,8 +132,8 @@ body {
 }
 .after-menu-header-2 {
   font-size: 1.5rem;
-  color: var(--text-faint);
-  margin-bottom: 1rem; /* increased gap */
+  color: var(--accent);
+  margin-top: 4rem; /* increased gap */
   text-shadow: 0 0 6px var(--accent);
 }
 .tools-grid {
@@ -178,6 +178,62 @@ body {
   margin: 3rem 0;       /* ample gap above & below */
   /*text-shadow: 0 0 8px var(--accent); turned off glow effect*/
 }
+
+/* ── Psychic CTA (match page purple) ── */
+.psychic-help {
+    padding: 0rem 1rem;
+    border: 1px solid gray;
+    border-radius: 8px;
+    margin-top: 2rem;
+
+    /* Add these lines to center */
+    max-width: 600px;        /* Optional: controls the width */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;      /* Optional: centers text inside */
+}
+.psychic-help__inner {
+    max-width: 800px;
+    text-align: center;
+    border-radius: 12px;
+    padding: 2rem;
+}
+.psychic-help__inner h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.8rem;
+    color: #fff;
+    text-shadow: 0 0 8px var(--accent);
+}
+.psychic-help__inner p {
+    margin-top: 1rem;
+    line-height: 1.5;
+    color: var(--txt);
+}
+.psychic-help__price {
+    margin: 1.5rem 0;
+    font-size: 1.2rem;
+    color: var(--accent);
+}
+.psychic-help__btn {
+    display: inline-block;
+    padding: .72rem 1.8rem;
+    background: var(--accent);
+    color: var(--bg-dark);
+    border-radius: 6px;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: box-shadow .3s ease;
+}
+.psychic-help__btn:hover {
+    box-shadow: 0 0 12px var(--accent);
+}
+/* end of Pshychic section designs*/
+
 
 /*─────────────────────────────────────────────────────────────────────────
   SECTION DIVIDER
@@ -355,7 +411,6 @@ body {
         margin-bottom: 1.3rem; /* increased gap */
         text-shadow: 0 0 6px var(--accent);
     }
-
 
     .after-menu-header-1{
         font-size: 1.5rem;
