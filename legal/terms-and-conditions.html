@@ -1,153 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Terms and Conditions | Mystic Tarot</title>
-    <meta name="description" content="Read the terms and conditions for using Mystic Tarot — your go-to random tarot card generator for spiritual insight, yes or no readings, and reversed tarot meanings.">
-    <meta name="keywords" content="terms and conditions, tarot usage policy, online tarot terms, mystic tarot website rules, tarot reading disclaimer">
+  <title>Terms &amp; Conditions | Mystic Tarot</title>
+  <meta name="description" content="Read the terms and conditions for using Mystic Tarot’s tarot card generator.">
+  <meta name="keywords" content="Mystic Tarot, terms and conditions, legal">
 
-    <!-- Open Graph -->
-    <meta property="og:type"        content="website">
-    <meta property="og:url"         content="https://your-domain.com/terms-and-conditions.html">
-    <meta property="og:title"       content="Terms and Conditions | Mystic Tarot">
-    <meta property="og:description" content="Read the terms and conditions for using Mystic Tarot — your go-to random tarot card generator for spiritual insight.">
-    <meta property="og:image"       content="https://your-domain.com/assets/og-image.jpg">
+  <!-- Facebook -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://your-domain.com/terms-and-conditions.html">
+  <meta property="og:title"       content="Terms &amp; Conditions | Mystic Tarot">
+  <meta property="og:description" content="Read the terms and conditions for using Mystic Tarot’s tarot card generator.">
+  <meta property="og:image"       content="https://your-domain.com/assets/og-image.jpg">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card"        content="summary_large_image">
-    <meta name="twitter:url"         content="https://your-domain.com/terms-and-conditions.html">
-    <meta name="twitter:title"       content="Terms and Conditions | Mystic Tarot">
-    <meta name="twitter:description" content="Read the terms and conditions for using Mystic Tarot — your go-to random tarot card generator for spiritual insight.">
-    <meta name="twitter:image"       content="https://your-domain.com/assets/og-image.jpg">
+  <!-- Twitter -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:url"         content="https://your-domain.com/terms-and-conditions.html">
+  <meta name="twitter:title"       content="Terms &amp; Conditions | Mystic Tarot">
+  <meta name="twitter:description" content="Read the terms and conditions for using Mystic Tarot’s tarot card generator.">
+  <meta name="twitter:image"       content="https://your-domain.com/assets/og-image.jpg">
 
-    <!-- Favicon -->
-    <link rel="icon" href="/assets/icons/site-icon-32.png" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/site-icon-32.png" type="image/x-icon" />
 
-    <!-- Font Awesome -->
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-    />
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-…" crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@300;400;600&display=swap"
+        rel="stylesheet" />
 
-    <!-- Site Stylesheet -->
-    <link rel="stylesheet" href="/styles/homepage.css">
+  <link rel="stylesheet" href="/styles/index.css">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QSWHND4TS3"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-QSWHND4TS3');
-    </script>
+  <!-- Centered, Readable Terms & Conditions Styles -->
+  <style>
+    .terms-content {
+      max-width: 700px;
+      margin: 2rem auto 4rem;
+      padding: 0 1rem;
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: #ffffff;
+      text-align: left;
+    }
+    .terms-content h2 {
+      font-size: 1.75rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .terms-content p,
+    .terms-content ul {
+      margin: 1rem 0;
+    }
+    .terms-content ul {
+      padding-left: 1.5rem;
+      list-style: disc;
+    }
+    @media (max-width: 480px) {
+      .terms-content {
+        font-size: 1rem;
+        margin: 1.5rem auto 3rem;
+      }
+      .terms-content h2 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-    <!-- BACKGROUND EFFECTS -->
-    <canvas id="starfield"></canvas>
-    <div class="spotlight"></div>
+  <!-- starfield & spotlight -->
+  <canvas id="starfield"></canvas>
+  <div class="spotlight"></div>
 
-    <!-- HEADER (same as homepage) -->
-    <header class="site-header">
-      <a href="/" class="logo">Tarot Card Generator</a>
-      <div class="header-controls">
-        <div class="lang-select-wrapper">
-          <select class="lang-select" aria-label="Select Language">
-            <option value="en">English</option>
-            <option value="es">Español</option>
-            <option value="de">Deutsch</option>
-            <option value="fr">Français</option>
-          </select>
-        </div>
-        <button class="mute-btn" aria-label="Toggle Sound">
-          <i class="fas fa-volume-mute"></i>
-        </button>
-        <button class="menu-btn" aria-label="Menu">
-          <i class="fas fa-ellipsis-v"></i>
-        </button>
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="/" class="logo">Tarot Card Generator</a>
+    <div class="header-controls">
+      <div class="lang-select-wrapper">
+        <select class="lang-select" aria-label="Select Language">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="de">Deutsch</option>
+          <option value="fr">Français</option>
+        </select>
       </div>
-    </header>
+      <button class="mute-btn" aria-label="Toggle Sound"><i class="fas fa-volume-mute"></i></button>
+      <button class="menu-btn" aria-label="Menu"><i class="fas fa-ellipsis-v"></i></button>
+    </div>
+  </header>
 
-    <!-- MAIN CONTENT: Terms and Conditions -->
-    <main>
-      <section class="seo-cards-container">
-        <div class="seo-card">
-          <h2>Terms and Conditions</h2>
+  <main>
+    <!-- HERO -->
+    <section class="hero" style="padding:3rem 1rem 0rem">
+      <h1 class="hero-title">Terms &amp; Conditions</h1>
+      <p class="hero-subtitle">Please read these terms carefully before using our site.</p>
+    </section>
 
-          <p>Welcome to Mystic Tarot. By accessing or using our services, you agree to comply with and be bound by the following terms and conditions. Please read them carefully.</p>
+    <!-- TERMS & CONDITIONS CONTENT -->
+    <section class="terms-content">
+      <h2>1. Acceptance of Terms</h2>
+      <p>
+        By accessing or using Mystic Tarot’s website, you agree to be bound by these Terms &amp; Conditions and all applicable laws and regulations. If you do not agree, you must not use our site.
+      </p>
 
-          <h3>1. Use of Our Services</h3>
-          <p>Mystic Tarot offers free online tarot tools designed for spiritual insight and self-reflection. Our services are intended for entertainment and introspective use only and do not substitute professional advice.</p>
+      <h2>2. Use of the Site</h2>
+      <ul>
+        <li>You may use our tarot card generator for personal, non-commercial purposes only.</li>
+        <li>You agree not to reproduce, duplicate, copy, sell, resell, or exploit any portion of the site without our express written permission.</li>
+        <li>You must not transmit any harmful code or otherwise interfere with the proper working of the site.</li>
+      </ul>
 
-          <h3>2. Age Requirement</h3>
-          <p>You must be at least 16 years of age to access and use Mystic Tarot. By using our site, you affirm that you meet this requirement.</p>
+      <h2>3. Intellectual Property</h2>
+      <p>
+        All content on this site, including text, images, graphics, logos, and software, is the property of Mystic Tarot or its licensors and is protected by copyright, trademark, and other intellectual property laws.
+      </p>
 
-          <h3>3. Intellectual Property</h3>
-          <p>All content on Mystic Tarot, including text, images, tools, and code, is protected by copyright and intellectual property laws. Unauthorized reproduction or distribution is prohibited.</p>
+      <h2>4. User Conduct</h2>
+      <p>
+        You agree to use the site in a lawful manner and not to engage in any conduct that may harm the site, its users, or third parties.
+      </p>
 
-          <h3>4. Reading Disclaimer</h3>
-          <p>Our tarot readings, including reversed meanings and AI-generated content, are symbolic tools meant to guide reflection. They should not be interpreted as absolute truths or relied upon for crucial life decisions.</p>
+      <h2>5. Termination</h2>
+      <p>
+        We reserve the right to terminate or suspend your access to the site, without notice, for any violation of these terms or for any other reason.
+      </p>
 
-          <h3>5. Limitation of Liability</h3>
-          <p>We are not liable for any actions taken based on tarot readings from our platform. Users agree to assume all responsibility for how they interpret and use the content provided.</p>
+      <h2>6. Disclaimer of Warranties</h2>
+      <p>
+        The site and its content are provided “as is” and “as available” without warranty of any kind. We disclaim all warranties, express or implied, including but not limited to merchantability, fitness for a particular purpose, and non-infringement.
+      </p>
 
-          <h3>6. Modifications to Terms</h3>
-          <p>We reserve the right to modify these terms at any time. Continued use of Mystic Tarot indicates your acceptance of the latest version of these terms.</p>
+      <h2>7. Limitation of Liability</h2>
+      <p>
+        Mystic Tarot and its affiliates will not be liable for any direct, indirect, incidental, special, or consequential damages arising from your use of the site or reliance on any content.
+      </p>
 
-          <h3>7. Contact</h3>
-          <p>For questions or concerns regarding these Terms and Conditions, feel free to contact us via our support page.</p>
-        </div>
-      </section>
-    </main>
+      <h2>8. Governing Law</h2>
+      <p>
+        These terms shall be governed by and construed in accordance with the laws of your jurisdiction, without regard to conflict of law principles.
+      </p>
 
-    <!-- FOOTER (same as homepage) -->
-    <footer class="site-footer">
-      <div class="footer-brand">
-        <h2>Mystic Tarot</h2>
-        <p>Discover the ancient wisdom of tarot to illuminate your path and guide your journey through life’s mysteries.</p>
+      <h2>9. Changes to Terms</h2>
+      <p>
+        We may modify these Terms &amp; Conditions at any time. Changes become effective upon posting, and your continued use of the site constitutes acceptance of the revised terms.
+      </p>
+
+      <h2>10. Contact Us</h2>
+      <p>
+        If you have any questions about these Terms &amp; Conditions, please contact us at 
+        <a href="mailto:legal@your-domain.com">legal@your-domain.com</a>.
+      </p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <h2>Mystic Tarot</h2>
+      <p>Discover the ancient wisdom of tarot to illuminate your path and guide your journey through life’s mysteries.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Information</h4>
+        <a href="/legal/about-us.html">About Us</a>
+        <a href="/information/how-it-works.html">How It Works</a>
+        <a href="/information/tarot-guide.html">Tarot Guide</a>
+        <a href="/information/testimonials.html">Testimonials</a>
       </div>
-      <div class="footer-links">
-        <div class="footer-col">
-          <h4>Information</h4>
-          <a href="/legal/about-us.html">About Us</a>
-          <a href="/information/how-it-works.html">How It Works</a>
-          <a href="/information/tarot-guide.html">Tarot Guide</a>
-          <a href="/information/testimonials.html">Testimonials</a>
-        </div>
-        <div class="footer-col">
-          <h4>Legal</h4>
-          <a href="/legal/terms-and-conditions.html">Terms &amp; Conditions</a>
-          <a href="/legal/privacy-policy.html">Privacy Policy</a>
-          <a href="/legal/disclaimer.html">Disclaimer</a>
-          <a href="/legal/cookie-policy.html">Cookie Policy</a>
-        </div>
-        <div class="footer-col">
-          <h4>Support</h4>
-          <a href="/legal/contact-us.html">Contact Us</a>
-          <a href="/information/faq.html">FAQs</a>
-          <a href="/legal/support-us.html">Support Us</a>
-          <a href="/legal/feedback.html">Feedback</a>
-        </div>
-        <div class="footer-col">
-          <h4>Connect</h4>
-          <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
-          <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-          <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
-          <a href="#"><i class="fab fa-pinterest"></i> Pinterest</a>
-        </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="/legal/terms-and-conditions.html">Terms &amp; Conditions</a>
+        <a href="/legal/privacy-policy.html">Privacy Policy</a>
+        <a href="/legal/disclaimer.html">Disclaimer</a>
+        <a href="/legal/cookie-policy.html">Cookie Policy</a>
       </div>
-      <div class="footer-bottom">
-        <p>© 2025 Mystic Tarot. All rights reserved.</p>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="/legal/contact-us.html">Contact Us</a>
+        <a href="/information/faq.html">FAQs</a>
+        <a href="/legal/support-us.html">Support Us</a>
+        <a href="/legal/feedback.html">Feedback</a>
       </div>
-    </footer>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="#"><i class="fab fa-pinterest"></i> Pinterest</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Mystic Tarot. All rights reserved.</p>
+    </div>
+  </footer>
 
-    <!--JavaScript: Starfield Animation-->
-    <script src="/scripts/homepage.js"></script>
+  <!-- JavaScript: Starfield Animation -->
+  <script src="/scripts/index.js"></script>
 </body>
+
 </html>

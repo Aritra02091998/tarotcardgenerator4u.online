@@ -1,56 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Support Us | tarotcardgenerator.online</title>
-    <meta name="description" content="Support tarotcardgenerator.online to help grow and maintain the best free AI tarot card reading experience for all.">
-    <meta name="keywords" content="support tarot, contribute tarot site, tarotcardgenerator donation, tarot reader help, fund tarot project">
-    <meta name="author" content="tarotcardgenerator.online Team">
+  <title>Support Us | Mystic Tarot</title>
+  <meta name="description" content="Learn how you can support Mystic Tarot and help us keep our tarot card generator free and evolving.">
+  <meta name="keywords" content="Mystic Tarot, support us, donate, contribute, free tarot">
 
-    <!-- Open Graph -->
-    <meta property="og:type"        content="website">
-    <meta property="og:url"         content="https://tarotcardgenerator.online/support-us.html">
-    <meta property="og:title"       content="Support Us | tarotcardgenerator.online">
-    <meta property="og:description" content="Support tarotcardgenerator.online to help grow and maintain the best free AI tarot card reading experience for all.">
-    <meta property="og:image"       content="https://tarotcardgenerator.online/assets/og-image.jpg">
+  <!-- Facebook -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://your-domain.com/support-us.html">
+  <meta property="og:title"       content="Support Us | Mystic Tarot">
+  <meta property="og:description" content="Learn how you can support Mystic Tarot and help us keep our tarot card generator free and evolving.">
+  <meta property="og:image"       content="https://your-domain.com/assets/og-image.jpg">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card"        content="summary_large_image">
-    <meta name="twitter:url"         content="https://tarotcardgenerator.online/support-us.html">
-    <meta name="twitter:title"       content="Support Us | tarotcardgenerator.online">
-    <meta name="twitter:description" content="Support tarotcardgenerator.online to help grow and maintain the best free AI tarot card reading experience for all.">
-    <meta name="twitter:image"       content="https://tarotcardgenerator.online/assets/og-image.jpg">
+  <!-- Twitter -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:url"         content="https://your-domain.com/support-us.html">
+  <meta name="twitter:title"       content="Support Us | Mystic Tarot">
+  <meta name="twitter:description" content="Learn how you can support Mystic Tarot and help us keep our tarot card generator free and evolving.">
+  <meta name="twitter:image"       content="https://your-domain.com/assets/og-image.jpg">
 
-    <!-- Favicon -->
-    <link rel="icon" href="/assets/icons/site-icon-32.png" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/site-icon-32.png" type="image/x-icon" />
 
-    <!-- Font Awesome -->
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-    />
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-…" crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@300;400;600&display=swap"
+        rel="stylesheet" />
 
-    <!-- Site Stylesheet -->
-    <link rel="stylesheet" href="/styles/homepage.css">
+  <link rel="stylesheet" href="/styles/index.css">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QSWHND4TS3"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-QSWHND4TS3');
-    </script>
+  <!-- Centered, Readable Support Styles -->
+  <style>
+    .support-content {
+      max-width: 700px;
+      margin: 2rem auto 4rem;
+      padding: 0 1rem;
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: #ffffff;
+      text-align: left;
+    }
+    .support-content h2 {
+      font-size: 1.75rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .support-content p {
+      margin: 1rem 0;
+    }
+    .support-content i {
+      margin-left: 0.5rem;
+    }
+    .footer-tagline {
+      margin-top: 2.5rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+      text-align: center;
+    }
+    @media (max-width: 480px) {
+      .support-content {
+        font-size: 1rem;
+        margin: 1.5rem auto 3rem;
+      }
+      .support-content h2 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- BACKGROUND EFFECTS -->
+  <!-- starfield & spotlight -->
   <canvas id="starfield"></canvas>
   <div class="spotlight"></div>
 
@@ -66,44 +95,33 @@
           <option value="fr">Français</option>
         </select>
       </div>
-      <button class="mute-btn" aria-label="Toggle Sound">
-        <i class="fas fa-volume-mute"></i>
-      </button>
-      <button class="menu-btn" aria-label="Menu">
-        <i class="fas fa-ellipsis-v"></i>
-      </button>
+      <button class="mute-btn" aria-label="Toggle Sound"><i class="fas fa-volume-mute"></i></button>
+      <button class="menu-btn" aria-label="Menu"><i class="fas fa-ellipsis-v"></i></button>
     </div>
   </header>
 
-  <!-- MAIN CONTENT: Support Us -->
   <main>
-    <section class="seo-cards-container">
-      <div class="seo-card text-center">
-        <h2 style="color: #fad16f;">Support Us</h2>
+    <!-- HERO -->
+    <section class="hero" style="padding:3rem 1rem 0rem">
+      <h1 class="hero-title">Support Us</h1>
+      <p class="hero-subtitle">We’re building a magical way for you to support our mission — keeping tarotcardgenerator.online free, insightful, and constantly improving. <i class="fas fa-hand-holding-heart"></i></p>
+    </section>
 
-        <p class="mb-4">We’re building a magical way for you to support our mission — keeping tarotcardgenerator.online free, insightful, and constantly improving.</p>
+    <!-- SUPPORT US CONTENT -->
+    <section class="support-content">
+      <h2>Coming Soon</h2>
+      <p>Soon, you’ll be able to directly contribute to the platform — supporting the growth of tarot spreads, the accuracy of interpretations, and deeper symbolic AI guidance. Every bit helps us keep this project running and evolving.</p>
 
-        <div class="my-10">
-            <div style="display: flex; flex-direction: column; align-items: center;">
-                <i class="fas fa-hands-helping text-6xl mb-6" style="font-size: 5.5rem; color: #fad16f;"></i>
-                <h3 style="font-size: 2rem;color: #fad16f;margin-bottom: 1rem;">Coming Soon</h3>
-            </div>
-            <p class="max-w-2xl mx-auto">
-            Soon, you’ll be able to directly contribute to the platform — supporting the growth of tarot spreads, the accuracy of interpretations, and deeper symbolic AI guidance. Every bit helps us keep this project running and evolving.
-            </p>
-        </div>
+      <p>Thank you for believing in the magic. Until then, continue to explore and reflect with our free tarot card generator online anytime.</p>
 
-        <p class="mt-10 italic">
-          Thank you for believing in the magic. Until then, continue to explore and reflect with our <strong>free tarot card generator online</strong> anytime.
-        </p>
-      </div>
+      <p class="footer-tagline"><strong>tarotcardgenerator.online</strong><br>Discover the ancient wisdom of tarot to illuminate your path and guide your journey through life’s mysteries.</p>
     </section>
   </main>
 
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-brand">
-      <h2>tarotcardgenerator.online</h2>
+      <h2>Mystic Tarot</h2>
       <p>Discover the ancient wisdom of tarot to illuminate your path and guide your journey through life’s mysteries.</p>
     </div>
     <div class="footer-links">
@@ -137,11 +155,12 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 tarotcardgenerator.online. All rights reserved.</p>
+      <p>© 2025 Mystic Tarot. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- JavaScript for Background Animation -->
-  <script src="/scripts/homepage.js"></script>
+  <!-- JavaScript: Starfield Animation -->
+  <script src="/scripts/index.js"></script>
 </body>
+
 </html>

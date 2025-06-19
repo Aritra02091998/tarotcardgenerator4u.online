@@ -1,57 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us | Mystic Tarot</title>
+  <meta name="description" content="Get in touch with the Mystic Tarot support team for questions, feedback, or dispute resolution.">
+  <meta name="keywords" content="Mystic Tarot, contact us, support, inquiries">
 
-    <title>Contact Us | tarotcardgenerator.online</title>
-    <meta name="description" content="Contact tarotcardgenerator.online for support, feedback, and technical questions. We’re here to help with your tarot card reading experience.">
-    <meta name="keywords" content="contact tarot site, tarot help, support tarot readings, tarotcardgenerator.online support, get in touch tarot">
-    <meta name="author" content="tarotcardgenerator.online Team">
+  <!-- Facebook -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://your-domain.com/contact-us.html">
+  <meta property="og:title"       content="Contact Us | Mystic Tarot">
+  <meta property="og:description" content="Get in touch with the Mystic Tarot support team for questions, feedback, or dispute resolution.">
+  <meta property="og:image"       content="https://your-domain.com/assets/og-image.jpg">
 
-    <!-- Open Graph -->
-    <meta property="og:type"        content="website">
-    <meta property="og:url"         content="https://tarotcardgenerator.online/contact-us.html">
-    <meta property="og:title"       content="Contact Us | tarotcardgenerator.online">
-    <meta property="og:description" content="Contact tarotcardgenerator.online for support, feedback, and technical questions. We’re here to help with your tarot card reading experience.">
-    <meta property="og:image"       content="https://tarotcardgenerator.online/assets/og-image.jpg">
+  <!-- Twitter -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:url"         content="https://your-domain.com/contact-us.html">
+  <meta name="twitter:title"       content="Contact Us | Mystic Tarot">
+  <meta name="twitter:description" content="Get in touch with the Mystic Tarot support team for questions, feedback, or dispute resolution.">
+  <meta name="twitter:image"       content="https://your-domain.com/assets/og-image.jpg">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card"        content="summary_large_image">
-    <meta name="twitter:url"         content="https://tarotcardgenerator.online/contact-us.html">
-    <meta name="twitter:title"       content="Contact Us | tarotcardgenerator.online">
-    <meta name="twitter:description" content="Contact tarotcardgenerator.online for support, feedback, and technical questions.">
-    <meta name="twitter:image"       content="https://tarotcardgenerator.online/assets/og-image.jpg">
+  <link rel="icon" href="/assets/icons/site-icon-32.png" type="image/x-icon" />
 
-    <!-- Favicon -->
-    <link rel="icon" href="/assets/icons/site-icon-32.png" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-…" crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@300;400;600&display=swap"
+        rel="stylesheet" />
 
-    <!-- Font Awesome -->
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-    />
+  <link rel="stylesheet" href="/styles/index.css">
 
-    <!-- Site Stylesheet -->
-    <link rel="stylesheet" href="/styles/homepage.css">
-
-      <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QSWHND4TS3"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-QSWHND4TS3');
-    </script>
+  <!-- Centered, Readable Contact Styles -->
+  <style>
+    .contact-content {
+      max-width: 700px;
+      margin: 2rem auto 4rem;
+      padding: 0 1rem;
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: #ffffff;
+      text-align: left;
+    }
+    .contact-content h2 {
+      font-size: 1.75rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .contact-content p {
+      margin: 1rem 0;
+    }
+    .contact-content a {
+      color: #ffd700;
+      text-decoration: underline;
+    }
+    .footer-tagline {
+      margin-top: 2.5rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+      text-align: center;
+    }
+    @media (max-width: 480px) {
+      .contact-content {
+        font-size: 1rem;
+        margin: 1.5rem auto 3rem;
+      }
+      .contact-content h2 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- BACKGROUND EFFECTS -->
+  <!-- starfield & spotlight -->
   <canvas id="starfield"></canvas>
   <div class="spotlight"></div>
 
@@ -67,46 +96,44 @@
           <option value="fr">Français</option>
         </select>
       </div>
-      <button class="mute-btn" aria-label="Toggle Sound">
-        <i class="fas fa-volume-mute"></i>
-      </button>
-      <button class="menu-btn" aria-label="Menu">
-        <i class="fas fa-ellipsis-v"></i>
-      </button>
+      <button class="mute-btn" aria-label="Toggle Sound"><i class="fas fa-volume-mute"></i></button>
+      <button class="menu-btn" aria-label="Menu"><i class="fas fa-ellipsis-v"></i></button>
     </div>
   </header>
 
-  <!-- MAIN CONTENT: Contact Us -->
   <main>
-    <section class="seo-cards-container">
-      <div class="seo-card">
-        <h2>Contact Us</h2>
+    <!-- HERO -->
+    <section class="hero" style="padding:3rem 1rem 0rem">
+      <h1 class="hero-title">Contact Us</h1>
+      <p class="hero-subtitle">We value your trust and your journey.</p>
+    </section>
 
-        <p>We value your trust and your journey. If you encounter any issues, questions, or concerns while using tarotcardgenerator.online, please don’t hesitate to contact us.</p>
+    <!-- CONTACT CONTENT -->
+    <section class="contact-content">
+      <p>If you encounter any issues, questions, or concerns while using tarotcardgenerator.online, please don’t hesitate to contact us.</p>
 
-        <h3>Support & Inquiries</h3>
-        <p>For feedback, technical issues, or clarifications about card meanings or the experience, please contact our support team. We're always open to improving your experience.</p>
+      <h2>Support &amp; Inquiries</h2>
+      <p>For feedback, technical issues, or clarifications about card meanings or the experience, please contact our support team. We’re always open to improving your experience.</p>
 
-        <h3>Dispute Resolution</h3>
-        <p>If you believe your tarot reading was misleading or technically flawed, feel free to let us know with full details. We'll investigate and provide a thoughtful response.</p>
+      <h2>Dispute Resolution</h2>
+      <p>If you believe your tarot reading was misleading or technically flawed, feel free to let us know with full details. We’ll investigate and provide a thoughtful response.</p>
 
-        <h3>Email Us</h3>
-        <p>
+      <h2>Email Us</h2>
+      <p>
         You can reach us directly at:<br>
-        <a href="mailto:admins@tarotcardgenerator.com" style="font-size: 1.8rem;color: #fad16f; text-decoration: none;" class="highlight-link">
-            admins@tarotcardgenerator.com
-        </a>
-        </p>
+        <a href="mailto:admins@tarotcardgenerator.com">admins@tarotcardgenerator.com</a>
+      </p>
 
-        <p>We typically respond within 48 hours. Thank you for using tarotcardgenerator.online as your guide through symbolic wisdom.</p>
-      </div>
+      <p>We typically respond within 48 hours. Thank you for using tarotcardgenerator.online as your guide through symbolic wisdom.</p>
+
+      <p class="footer-tagline"><strong>tarotcardgenerator.online</strong><br>Discover the ancient wisdom of tarot to illuminate your path and guide your journey through life’s mysteries.</p>
     </section>
   </main>
 
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-brand">
-      <h2>tarotcardgenerator.online</h2>
+      <h2>Mystic Tarot</h2>
       <p>Discover the ancient wisdom of tarot to illuminate your path and guide your journey through life’s mysteries.</p>
     </div>
     <div class="footer-links">
@@ -140,11 +167,12 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 tarotcardgenerator.online. All rights reserved.</p>
+      <p>© 2025 Mystic Tarot. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- JavaScript for Background Animation -->
-  <script src="/scripts/homepage.js"></script>
+  <!-- JavaScript: Starfield Animation -->
+  <script src="/scripts/index.js"></script>
 </body>
+
 </html>

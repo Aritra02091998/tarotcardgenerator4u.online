@@ -1,51 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Basic Tarot Guide | Mystic Tarot</title>
+  <meta name="description" content="A foundational guide to reading tarot cards—understand the deck, spreads, and meanings.">
+  <meta name="keywords" content="Mystic Tarot, tarot guide, tarot basics, how to read tarot">
 
-    <title>Basic Tarot Guide | Mystic Tarot</title>
-    <meta name="description" content="A beginner's guide to tarot cards. Understand tarot card meanings, suits, and how to perform a 3 card tarot spread using our tarot card generator.">
-    <meta name="keywords" content="tarot guide, tarot meanings, how to read tarot, beginner tarot reading, tarot card generator guide">
+  <!-- Facebook -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://your-domain.com/tarot-guide.html">
+  <meta property="og:title"       content="Basic Tarot Guide | Mystic Tarot">
+  <meta property="og:description" content="A foundational guide to reading tarot cards—understand the deck, spreads, and meanings.">
+  <meta property="og:image"       content="https://your-domain.com/assets/og-image.jpg">
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://your-domain.com/tarot-guide.html">
-    <meta property="og:title" content="Basic Tarot Guide | Mystic Tarot">
-    <meta property="og:description" content="Beginner’s guide to tarot cards, meanings, and spreads.">
-    <meta property="og:image" content="https://your-domain.com/assets/og-image.jpg">
+  <!-- Twitter -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:url"         content="https://your-domain.com/tarot-guide.html">
+  <meta name="twitter:title"       content="Basic Tarot Guide | Mystic Tarot">
+  <meta name="twitter:description" content="A foundational guide to reading tarot cards—understand the deck, spreads, and meanings.">
+  <meta name="twitter:image"       content="https://your-domain.com/assets/og-image.jpg">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://your-domain.com/tarot-guide.html">
-    <meta name="twitter:title" content="Basic Tarot Guide | Mystic Tarot">
-    <meta name="twitter:description" content="Beginner’s guide to tarot cards, meanings, and spreads.">
-    <meta name="twitter:image" content="https://your-domain.com/assets/og-image.jpg">
+  <link rel="icon" href="/assets/icons/site-icon-32.png" type="image/x-icon" />
 
-    <!-- Favicon -->
-    <link rel="icon" href="/assets/icons/site-icon-32.png" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-…" crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@300;400;600&display=swap"
+        rel="stylesheet" />
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/styles/index.css">
 
-    <!-- Site Stylesheet -->
-    <link rel="stylesheet" href="/styles/homepage.css">
-
-      <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QSWHND4TS3"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-QSWHND4TS3');
-    </script>
+  <!-- Centered, Readable Guide Styles -->
+  <style>
+    .guide-content {
+      max-width: 700px;
+      margin: 2rem auto 4rem;
+      padding: 0 1rem;
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: #ffffff;
+    }
+    .guide-content h2 {
+      font-size: 1.75rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .guide-content p {
+      margin: 1rem 0;
+    }
+    .guide-content ul {
+      margin: 1rem 0;
+      padding-left: 1.5rem;
+      list-style: disc;
+    }
+    @media (max-width: 480px) {
+      .guide-content {
+        font-size: 1rem;
+        margin: 1.5rem auto 3rem;
+      }
+      .guide-content h2 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- BACKGROUND EFFECTS -->
+  <!-- starfield & spotlight -->
   <canvas id="starfield"></canvas>
   <div class="spotlight"></div>
 
@@ -61,50 +90,49 @@
           <option value="fr">Français</option>
         </select>
       </div>
-      <button class="mute-btn" aria-label="Toggle Sound">
-        <i class="fas fa-volume-mute"></i>
-      </button>
-      <button class="menu-btn" aria-label="Menu">
-        <i class="fas fa-ellipsis-v"></i>
-      </button>
+      <button class="mute-btn" aria-label="Toggle Sound"><i class="fas fa-volume-mute"></i></button>
+      <button class="menu-btn" aria-label="Menu"><i class="fas fa-ellipsis-v"></i></button>
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
   <main>
-    <section class="seo-cards-container">
-      <div class="seo-card">
-        <h2>Basic Tarot Guide</h2>
+    <!-- HERO -->
+    <section class="hero" style="padding:3rem 1rem 0rem">
+      <h1 class="hero-title">Basic Tarot Guide</h1>
+      <p class="hero-subtitle">Welcome to the world of tarot—a mystical tool for self-reflection, guidance, and insight.</p>
+    </section>
 
-        <p>Welcome to the world of tarot—a mystical tool for self-reflection, guidance, and insight. Whether you're using a <strong>free tarot card generator</strong> or shuffling a physical deck, the magic lies in interpretation. This guide introduces foundational tarot knowledge and helps you start reading today.</p>
+    <!-- GUIDE CONTENT -->
+    <section class="guide-content">
+      <p>Whether you're using a free tarot card generator or shuffling a physical deck, the magic lies in interpretation. This guide introduces foundational tarot knowledge and helps you start reading today.</p>
 
-        <h3 style="color:#fad16f;">1. What Is Tarot?</h3>
-        <p>Tarot is a symbolic system of 78 cards—divided into Major and Minor Arcana—used to gain insight into past, present, and future. Each card reflects a universal theme or energy that mirrors life’s patterns.</p>
+      <h2>1. What Is Tarot?</h2>
+      <p>Tarot is a symbolic system of 78 cards—divided into Major and Minor Arcana—used to gain insight into past, present, and future. Each card reflects a universal theme or energy that mirrors life’s patterns.</p>
 
-        <h3 style="color:#fad16f;">2. The Structure of a Tarot Deck</h3>
-        <p>A standard tarot deck includes:</p>
-        <ul>
-          <li><strong>22 Major Arcana:</strong> Life’s spiritual milestones (e.g., The Fool, The Tower).</li>
-          <li><strong>56 Minor Arcana:</strong> Day-to-day events, divided into Cups, Pentacles, Swords, and Wands.</li>
-        </ul>
+      <h2>2. The Structure of a Tarot Deck</h2>
+      <ul>
+        <li><strong>22 Major Arcana:</strong> Life’s spiritual milestones (e.g., The Fool, The Tower).</li>
+        <li><strong>56 Minor Arcana:</strong> Day-to-day events, divided into Cups, Pentacles, Swords, and Wands.</li>
+      </ul>
 
-        <h3 style="color:#fad16f;">3. How to Read Tarot</h3>
-        <p>Start with a question. Then draw cards—physically or with a <strong>tarot generator</strong>. Try these spreads:</p>
-        <ul>
-          <li><strong>1 Card:</strong> Quick daily insight.</li>
-          <li><strong>3 Cards:</strong> Past – Present – Future or Situation – Action – Outcome.</li>
-          <li><strong>Celtic Cross:</strong> A complex 10-card spread for deep questions.</li>
-        </ul>
+      <h2>3. How to Read Tarot</h2>
+      <p>Start with a question. Then draw cards—physically or with a tarot generator. Try these spreads:</p>
+      <ul>
+        <li><strong>1 Card:</strong> Quick daily insight.</li>
+        <li><strong>3 Cards:</strong> Past – Present – Future or Situation – Action – Outcome.</li>
+        <li><strong>Celtic Cross:</strong> A complex 10-card spread for deep questions.</li>
+      </ul>
 
-        <h3 style="color:#fad16f;">4. Understanding Card Meanings</h3>
-        <p>Each card meaning shifts with context and placement. Reversed cards suggest internal conflict or blocked energy. Our online generator includes upright and reversed meanings.</p>
+      <h2>4. Understanding Card Meanings</h2>
+      <p>Each card meaning shifts with context and placement. Reversed cards suggest internal conflict or blocked energy. Our online generator includes upright and reversed meanings.</p>
 
-        <h3 style="color:#fad16f;">5. Practice with Intuition</h3>
-        <p>Tarot isn’t about prediction—it’s about intuition. Use our generator to reflect, meditate, and explore meanings. Let symbols spark self-awareness.</p>
+      <h2>5. Practice with Intuition</h2>
+      <p>Tarot isn’t about prediction—it’s about intuition. Use our generator to reflect, meditate, and explore meanings. Let symbols spark self-awareness.</p>
 
-        <h3 style="color:#fad16f;">6. Ready to Begin?</h3>
-        <p>Try your first free tarot draw now. Ask your question, and the cards will offer their whisper of wisdom—on love, career, or life’s deeper mysteries.</p>
-      </div>
+      <h2>6. Ready to Begin?</h2>
+      <p><a href="/" class="cta-link">Try your first free tarot draw now</a>. Ask your question, and the cards will offer their whisper of wisdom—on love, career, or life’s deeper mysteries.</p>
+
+      <p class="footer-tagline"><strong>Mystic Tarot</strong><br>Discover your path with the best tarot card generator online. Let ancient archetypes and modern technology come together to reveal your story.</p>
     </section>
   </main>
 
@@ -112,7 +140,7 @@
   <footer class="site-footer">
     <div class="footer-brand">
       <h2>Mystic Tarot</h2>
-      <p>Discover your path with the <strong>best tarot card generator</strong> online. Let ancient archetypes and modern technology come together to reveal your story.</p>
+      <p>Discover the ancient wisdom of tarot to illuminate your path and guide your journey through life’s mysteries.</p>
     </div>
     <div class="footer-links">
       <div class="footer-col">
@@ -124,7 +152,7 @@
       </div>
       <div class="footer-col">
         <h4>Legal</h4>
-        <a href="/legal/terms-and-conditions.html">Terms & Conditions</a>
+        <a href="/legal/terms-and-conditions.html">Terms &amp; Conditions</a>
         <a href="/legal/privacy-policy.html">Privacy Policy</a>
         <a href="/legal/disclaimer.html">Disclaimer</a>
         <a href="/legal/cookie-policy.html">Cookie Policy</a>
@@ -149,7 +177,8 @@
     </div>
   </footer>
 
-  <!-- JavaScript -->
-  <script src="/scripts/homepage.js"></script>
+  <!-- JavaScript: Starfield Animation -->
+  <script src="/scripts/index.js"></script>
 </body>
+
 </html>

@@ -6,22 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About Us | Mystic Tarot</title>
-  <meta name="description" content="Learn about Mystic Tarot’s origins, mission, and team behind the magic.">
-  <meta name="keywords" content="Mystic Tarot, about us, tarot team, mission">
+  <title>Testimonials | Mystic Tarot</title>
+  <meta name="description" content="Read testimonials from users of the Mystic Tarot card generator.">
+  <meta name="keywords" content="Mystic Tarot, testimonials, user feedback, reviews">
 
   <!-- Facebook -->
   <meta property="og:type"        content="website">
-  <meta property="og:url"         content="https://your-domain.com/about-us.html">
-  <meta property="og:title"       content="About Us | Mystic Tarot">
-  <meta property="og:description" content="Learn about Mystic Tarot’s origins, mission, and team behind the magic.">
+  <meta property="og:url"         content="https://your-domain.com/testimonials.html">
+  <meta property="og:title"       content="Testimonials | Mystic Tarot">
+  <meta property="og:description" content="Read testimonials from users of the Mystic Tarot card generator.">
   <meta property="og:image"       content="https://your-domain.com/assets/og-image.jpg">
 
   <!-- Twitter -->
   <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:url"         content="https://your-domain.com/about-us.html">
-  <meta name="twitter:title"       content="About Us | Mystic Tarot">
-  <meta name="twitter:description" content="Learn about Mystic Tarot’s origins, mission, and team behind the magic.">
+  <meta name="twitter:url"         content="https://your-domain.com/testimonials.html">
+  <meta name="twitter:title"       content="Testimonials | Mystic Tarot">
+  <meta name="twitter:description" content="Read testimonials from users of the Mystic Tarot card generator.">
   <meta name="twitter:image"       content="https://your-domain.com/assets/og-image.jpg">
 
   <link rel="icon" href="/assets/icons/site-icon-32.png" type="image/x-icon" />
@@ -36,38 +36,55 @@
 
   <link rel="stylesheet" href="/styles/index.css">
 
-  <!-- Centered, Readable About Us Styles -->
+  <!-- Testimonials Page Styles -->
   <style>
-    .about-content {
+    .testimonials-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .testimonial-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    .testimonial-author {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    .testimonial-role {
+      font-size: 0.95rem;
+      opacity: 0.8;
+    }
+    .testimonials-cta {
       max-width: 700px;
       margin: 2rem auto 4rem;
       padding: 0 1rem;
+      text-align: center;
       font-size: 1.125rem;
       line-height: 1.7;
-      color: #ffffff;
     }
-    .about-content h2 {
-      font-size: 1.75rem;
-      margin-top: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    .about-content p {
-      margin: 1rem 0;
-    }
-    .footer-tagline {
-      margin-top: 2.5rem;
-      font-size: 1.25rem;
-      font-weight: 600;
-      text-align: center;
+    .testimonials-cta a {
+      color: #ffd700;
+      text-decoration: underline;
     }
     @media (max-width: 480px) {
-      .about-content {
+      .testimonials-cta {
         font-size: 1rem;
         margin: 1.5rem auto 3rem;
-      }
-      .about-content h2 {
-        font-size: 1.5rem;
-        margin-top: 2rem;
       }
     }
   </style>
@@ -99,38 +116,43 @@
   <main>
     <!-- HERO -->
     <section class="hero" style="padding:3rem 1rem 0rem">
-      <h1 class="hero-title">About Us</h1>
-      <p class="hero-subtitle">Our story, mission, and the magic behind Mystic Tarot.</p>
+      <h1 class="hero-title">Testimonials</h1>
+      <p class="hero-subtitle">What Our Users Say</p>
     </section>
 
-    <!-- ABOUT CONTENT -->
-    <section class="about-content">
-      <h2>Our Origins</h2>
-      <p>
-        Mystic Tarot is born from a fusion of passion — blending deep spiritual curiosity with the powers of modern technology.
-      </p>
+    <!-- TESTIMONIALS GRID -->
+    <section class="testimonials-container">
+      <div class="testimonial-card">
+        <p class="testimonial-text">“The most intuitive tarot card generator I’ve ever used. The reversals and meanings feel so personal. I’m amazed!”</p>
+        <p class="testimonial-author">Lena M.</p>
+        <p class="testimonial-role">Astrology Enthusiast</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">“I love using this random tarot card generator every morning—it’s my daily moment of clarity and magic.”</p>
+        <p class="testimonial-author">Carlos T.</p>
+        <p class="testimonial-role">Spiritual Blogger</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">“This site helped me reconnect with tarot. It’s the best AI tarot card generator I’ve found—no fluff, just deep insight.”</p>
+        <p class="testimonial-author">Ravi N.</p>
+        <p class="testimonial-role">Meditation Coach</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">“The tarot card generator with meaning made everything easy to understand, even for a beginner like me. Thank you!”</p>
+        <p class="testimonial-author">Jasmine A.</p>
+        <p class="testimonial-role">New to Tarot</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">“So glad I found this. The online free tarot card reading is spot on. It’s my go-to whenever I’m stuck.”</p>
+        <p class="testimonial-author">Amira Z.</p>
+        <p class="testimonial-role">Student &amp; Dreamer</p>
+      </div>
+    </section>
 
-      <h2>Who We Are</h2>
-      <p>
-        We’re a team of intuitive developers and professional tarot readers who’ve come together to craft something truly magical. Each card meaning and interpretation is aligned with traditional symbolism, offering a genuine reading experience.
-      </p>
-
-      <h2>Our Mission</h2>
-      <p>
-        We aim to make tarot accessible and powerful through an AI-driven platform that respects mystic traditions. Whether you’re new to tarot or a seasoned reader, our platform adapts to your curiosity.
-      </p>
-
-      <h2>What Sets Us Apart</h2>
-      <p>
-        Unlike random card pickers, we embed spiritual logic, reversal support, and zodiac interpretations to make each reading resonate personally and intuitively.
-      </p>
-
-      <h2>Our Belief</h2>
-      <p>
-        We believe that technology can be soulful — and Mystic Tarot is a living testament to that harmony of logic and intuition.
-      </p>
-
-      <p class="footer-tagline"><strong>Mystic Tarot</strong></p>
+    <!-- CALL TO ACTION -->
+    <section class="testimonials-cta">
+      <p>Want to share your experience with our tarot card generator free online? <a href="/legal/contact-us.html">Reach out here</a> — we love hearing from you.</p>
+      <p><strong>tarotcardgenerator.online</strong></p>
     </section>
   </main>
 
