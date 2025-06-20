@@ -29,295 +29,293 @@
         rel="stylesheet"/>
 
   <style>
-  /*─────────────────────────────────────────────────────────────────────────
+    /*─────────────────────────────────────────────────────────────────────────
     HOMEPAGE.CSS (variables, reset, background, header, footer, responsive)
-  ──────────────────────────────────────────────────────────────────────────*/
-  :root {
-    --bg-dark:       #2f004f;
-    --bg-mid:        #5c0088;
-    --text-light:    #ffffff;
-    --text-faint:    #cccccc;
-    --accent:        #fad16f;
-    --footer-bg:     #0b091c;
-    --footer-text:   #999999;
-  }
-  *, *::before, *::after {
-    margin: 0; padding: 0; box-sizing: border-box;
-  }
-  body {
-    position: relative;
-    min-height: 100vh;
-    font-family: 'Cormorant Garamond', serif;
-    color: var(--text-light);
-    background:
-      radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 70%),
-      linear-gradient(135deg, var(--bg-dark), var(--bg-mid), var(--bg-dark));
-    overflow-x: hidden;
-  }
-  /* STARFIELD & SPOTLIGHT */
-  #starfield {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    z-index: -2;
-  }
-  .spotlight {
-    position: fixed;
-    top: -25%; left: -20%;
-    width: 160vw; height: 160vh;
-    background: radial-gradient(circle at top center,
-      rgba(255,255,255,0.12), transparent 60%);
-    pointer-events: none;
-    z-index: -1;
-    animation: swing 12s ease-in-out infinite;
-  }
-  @keyframes swing {
-    0%   { transform: translateX(0)    rotate(-20deg); }
-    50%  { transform: translateX(35vw) rotate(20deg); }
-    100% { transform: translateX(0)    rotate(-20deg); }
-  }
-
-  /* HEADER */
-  .site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    position: relative; z-index: 1;
-  }
-  .logo {
-    font-family: 'Cinzel Decorative', serif;
-    font-size: 1.9rem;
-    color: var(--text-light);
-    text-decoration: none;
-  }
-  .header-controls {
-    display: flex; align-items: center;
-  }
-  .lang-select-wrapper {
-    background: transparent;
-    border: 1px solid var(--text-light);
-    border-radius: 4px;
-    overflow: hidden;
-    margin-right: 1rem;
-  }
-  .lang-select {
-    background: transparent;
-    border: none;
-    color: var(--text-light);
-    font-family: inherit;
-    font-size: 0.9rem;
-    padding: 0.25rem 0.5rem;
-    appearance: none;
-  }
-  .lang-select option {
-    background: var(--bg-dark);
-    color: var(--text-light);
-  }
-  .mute-btn, .menu-btn {
-    background: none;
-    border: none;
-    color: var(--text-faint);
-    font-size: 1.1rem;
-    margin-left: 0.75rem;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
-  .mute-btn:hover, .menu-btn:hover {
-    color: var(--text-light);
-  }
-
-  /* FOOTER */
-  .site-footer {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 2rem;
-    background: var(--footer-bg);
-    color: var(--footer-text);
-    padding: 2.5rem 2rem 1rem;
-    position: relative; z-index: 1;
-  }
-  .footer-brand {
-    margin-bottom: 2rem;
-  }
-  .footer-brand h2 {
-    font-family: 'Cinzel Decorative', serif;
-    font-size: 1.5rem;
-    color: var(--text-light);
-    margin-bottom: 0.5rem;
-  }
-  .footer-brand p {
-    max-width: 400px;
-    line-height: 1.4;
-    color: var(--text-faint);
-  }
-  .footer-links {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-  .footer-col {
-    flex: 1; min-width: 140px;
-  }
-  .footer-col h4 {
-    position: relative;
-    font-family: 'Cinzel Decorative', serif;
-    font-size: 1.1rem;
-    color: var(--accent);
-    text-transform: uppercase;
-    margin-bottom: 0.75rem;
-  }
-  .footer-col h4::after {
-    content: '';
-    position: absolute;
-    left: 0; bottom: -4px;
-    width: 40px; height: 2px;
-    background: var(--accent);
-  }
-  .footer-col a {
-    display: block;
-    color: var(--footer-text);
-    text-decoration: none;
-    margin-bottom: 0.5rem;
-    transition: color 0.3s, text-shadow 0.3s;
-  }
-  .footer-col a:hover {
-    color: var(--accent);
-    text-shadow: 0 0 6px var(--accent);
-  }
-  .footer-col a i {
-    margin-right: 0.5rem;
-  }
-  .footer-bottom {
-    grid-column: 1 / -1;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 1rem;
-    text-align: center;
-  }
-  .footer-bottom p {
-    font-size: 1.1rem;
-    color: var(--text-faint);
-  }
-
-  /* RESPONSIVE FOOTER */
-  @media (max-width: 768px) {
-    .site-footer {
-      grid-template-columns: 1fr;
-      text-align: center;
+    ──────────────────────────────────────────────────────────────────────────*/
+    :root {
+        --bg-dark:       #2f004f;
+        --bg-mid:        #5c0088;
+        --text-light:    #ffffff;
+        --text-faint:    #cccccc;
+        --accent:        #fad16f;
+        --footer-bg:     #0b091c;
+        --footer-text:   #999999;
     }
-    .footer-links {
-      justify-content: center;
+    *, *::before, *::after {
+        margin: 0; padding: 0; box-sizing: border-box;
     }
-  }
-
-  /*─────────────────────────────────────────────────────────────────────────
-    COMING-SOON.CSS
-  ──────────────────────────────────────────────────────────────────────────*/
-  .coming-soon-hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 4rem 1rem;
-    min-height: 60vh;
-    text-align: center;
-    position: relative; z-index: 1;
-  }
-  .coming-soon-title {
-    font-family: 'Cinzel Decorative', serif;
-    font-size: 3.5rem;
-    color: var(--accent);
-    margin-bottom: 2rem;
-    text-shadow:
-      0 0 12px var(--accent),
-      0 0 20px var(--accent);
-    animation: glow 2s ease-in-out infinite alternate;
-  }
-
-  .thanks-title{
-    font-family: 'Cinzel Decorative', serif;
-    font-size: 2rem;
-    color: var(--accent);
-    margin-top: 5rem;
-    text-shadow:
-      0 0 12px var(--accent),
-      0 0 20px var(--accent);
-    animation: glow 2s ease-in-out infinite alternate;
-  }
-  @keyframes glow {
-    from {
-      text-shadow:
-        0 0 8px var(--accent),
-        0 0 16px var(--accent);
+    body {
+        position: relative;
+        min-height: 100vh;
+        font-family: 'Cormorant Garamond', serif;
+        color: var(--text-light);
+        background:
+            radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 70%),
+            radial-gradient(circle at center, #5a3591 0%, #06030a 100%);
+        overflow-x: hidden;
     }
-    to {
-      text-shadow:
-        0 0 16px var(--accent),
-        0 0 32px var(--accent);
+    /* STARFIELD & SPOTLIGHT */
+    #starfield {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: -2;
     }
-  }
-  .countdown {
-    display: flex;
-    gap: 2rem;
-    font-family: 'Cinzel Decorative', serif;
-  }
-  .countdown-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .countdown-item span:first-child {
-    font-size: 2.5rem;
-    color: var(--accent);
-  }
-  .countdown-item span:last-child {
-    font-size: 1rem;
-    color: var(--text-faint);
-  }
-
-  /* RESPONSIVE COUNTDOWN */
-  @media (max-width: 480px) {
-    .countdown {
-      flex-wrap: wrap;
-      gap: 1rem;
+    .spotlight {
+        position: fixed;
+        top: -25%; left: -20%;
+        width: 160vw; height: 160vh;
+        background: radial-gradient(circle at top center,
+            rgba(255,255,255,0.12), transparent 60%);
+        pointer-events: none;
+        z-index: -1;
+        animation: swing 12s ease-in-out infinite;
     }
-    .countdown-item span:first-child {
-      font-size: 2rem;
+    @keyframes swing {
+        0%   { transform: translateX(0)    rotate(-20deg); }
+        50%  { transform: translateX(35vw) rotate(20deg); }
+        100% { transform: translateX(0)    rotate(-20deg); }
     }
 
-    /*Controls responsive behaviour of header only*/
+    /* HEADER */
+    .site-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        position: relative; z-index: 1;
+    }
     .logo {
         font-family: 'Cinzel Decorative', serif;
-        font-size: 1.4rem;
+        font-size: 1.9rem;
         color: var(--text-light);
         text-decoration: none;
     }
-    .menu-btn, .mute-btn{
-        display: none;
+    .header-controls {
+        display: flex; align-items: center;
     }
-    /*end of responsive header*/
+    .lang-select-wrapper {
+        background: transparent;
+        border: 1px solid var(--text-light);
+        border-radius: 4px;
+        overflow: hidden;
+        margin-right: 1rem;
+    }
+    .lang-select {
+        background: transparent;
+        border: none;
+        color: var(--text-light);
+        font-family: inherit;
+        font-size: 0.9rem;
+        padding: 0.25rem 0.5rem;
+        appearance: none;
+    }
+    .lang-select option {
+        background: var(--bg-dark);
+        color: var(--text-light);
+    }
+    .mute-btn, .menu-btn {
+        background: none;
+        border: none;
+        color: var(--text-faint);
+        font-size: 1.1rem;
+        margin-left: 0.75rem;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+    .mute-btn:hover, .menu-btn:hover {
+        color: var(--text-light);
+    }
 
-    /* Start of responsive footer */
+    /* FOOTER */
     .site-footer {
-        display: block;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 2rem;
+        background: var(--footer-bg);
+        color: var(--footer-text);
+        padding: 2.5rem 2rem 1rem;
+        position: relative; z-index: 1;
+    }
+    .footer-brand {
+        margin-bottom: 2rem;
+    }
+    .footer-brand h2 {
+        font-family: 'Cinzel Decorative', serif;
+        font-size: 1.5rem;
+        color: var(--text-light);
+        margin-bottom: 0.5rem;
+    }
+    .footer-brand p {
+        max-width: 400px;
+        line-height: 1.4;
+        color: var(--text-faint);
     }
     .footer-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2rem;
     }
     .footer-col {
-        width: 100%;
-        text-align: center;
+        flex: 1; min-width: 140px;
+    }
+    .footer-col h4 {
+        position: relative;
+        font-family: 'Cinzel Decorative', serif;
+        font-size: 1.1rem;
+        color: var(--accent);
+        text-transform: uppercase;
+        margin-bottom: 0.75rem;
     }
     .footer-col h4::after {
-        left: 50%;
-        transform: translateX(-50%);
+        content: '';
+        position: absolute;
+        left: 0; bottom: -4px;
+        width: 40px; height: 2px;
+        background: var(--accent);
     }
+    .footer-col a {
+        display: block;
+        color: var(--footer-text);
+        text-decoration: none;
+        margin-bottom: 0.5rem;
+        transition: color 0.3s, text-shadow 0.3s;
+    }
+    .footer-col a:hover {
+        color: var(--accent);
+        text-shadow: 0 0 6px var(--accent);
+    }
+    .footer-col a i {
+        margin-right: 0.5rem;
+    }
+    .footer-bottom {
+        grid-column: 1 / -1;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding-top: 1rem;
+        text-align: center;
+    }
+    .footer-bottom p {
+        font-size: 1.1rem;
+        color: var(--text-faint);
+    }
+
+    /* RESPONSIVE FOOTER */
+    @media (max-width: 768px) {
+        .site-footer {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+        .footer-links {
+            justify-content: center;
+        }
+    }
+
+    /*-------------------COMING-SOON.CSS---------------------------------*/
+    .coming-soon-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 1rem;
+        min-height: 60vh;
+        text-align: center;
+        position: relative; z-index: 1;
+    }
+    .coming-soon-title {
+        font-family: 'Cinzel Decorative', serif;
+        font-size: 3.5rem;
+        color: var(--accent);
+        margin-bottom: 2rem;
+        text-shadow:
+            0 0 12px var(--accent),
+            0 0 20px var(--accent);
+        animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    .thanks-title{
+        font-family: 'Cinzel Decorative', serif;
+        font-size: 2rem;
+        color: var(--accent);
+        margin-top: 5rem;
+        text-shadow:
+            0 0 12px var(--accent),
+            0 0 20px var(--accent);
+        animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+        from {
+            text-shadow:
+            0 0 8px var(--accent),
+            0 0 16px var(--accent);
+        }
+        to {
+            text-shadow:
+            0 0 16px var(--accent),
+            0 0 32px var(--accent);
+        }
+    }
+    .countdown {
+        display: flex;
+        gap: 2rem;
+        font-family: 'Cinzel Decorative', serif;
+    }
+    .countdown-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .countdown-item span:first-child {
+        font-size: 2.5rem;
+        color: var(--accent);
+    }
+    .countdown-item span:last-child {
+        font-size: 1rem;
+        color: var(--text-faint);
+    }
+
+    /* RESPONSIVE COUNTDOWN */
+    @media (max-width: 480px) {
+        .countdown {
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .countdown-item span:first-child {
+            font-size: 2rem;
+        }
+
+        /*Controls responsive behaviour of header only*/
+        .logo {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.4rem;
+            color: var(--text-light);
+            text-decoration: none;
+        }
+        .menu-btn, .mute-btn{
+            display: none;
+        }
+        /*end of responsive header*/
+
+        /* Start of responsive footer */
+        .site-footer {
+            display: block;
+        }
+        .footer-links {
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .footer-col {
+            width: 100%;
+            text-align: center;
+        }
+        .footer-col h4::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
     /* End of footer */
 
-  }
+    }
   </style>
 </head>
 

@@ -15,59 +15,60 @@
 
 /* GLOBAL */
 body {
-  font-family: 'Cormorant Garamond', serif;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  color: var(--txt);
-  background: linear-gradient(135deg, var(--bg-a), var(--bg-b) 50%, var(--bg-a));
-  overflow-x: hidden;
+    font-family: 'Cormorant Garamond', serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: var(--txt);
+    background:
+        radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 70%),
+        radial-gradient(circle at center, #5a3591 0%, #06030a 100%);
+    overflow-x: hidden;
 }
 
 canvas#star {
-  position: fixed;
-  inset: 0;
-  z-index: -2;
+    position: fixed;
+    inset: 0;
+    z-index: -2;
 }
 
 .sweep {
-  position: fixed;
-  top: -30%;
-  left: -25%;
-  width: 160vw;
-  height: 160vh;
-  pointer-events: none;
-  z-index: -1;
-  background: radial-gradient(circle at 50% 25%, rgba(255, 255, 255, .13), transparent 60%);
-  animation: sweep 14s ease-in-out infinite;
+    position: fixed;
+    top: -30%;
+    left: -25%;
+    width: 160vw;
+    height: 160vh;
+    pointer-events: none;
+    z-index: -1;
+    background: radial-gradient(circle at 50% 25%, rgba(255, 255, 255, .13), transparent 60%);
+    animation: sweep 14s ease-in-out infinite;
 }
 
 @keyframes sweep {
-  0% { transform: translateX(0) rotate(-18deg); }
-  50% { transform: translateX(38vw) rotate(18deg); }
-  100% { transform: translateX(0) rotate(-18deg); }
+    0% { transform: translateX(0) rotate(-18deg); }
+    50% { transform: translateX(38vw) rotate(18deg); }
+    100% { transform: translateX(0) rotate(-18deg); }
 }
 
 /* HEADER */
 .site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  position: relative;
-  z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: relative;
+    z-index: 1;
 }
 .logo {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 1.9rem;
-  color: var(--text-light);
-  text-decoration: none;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.9rem;
+    color: var(--text-light);
+    text-decoration: none;
 }
 .header-controls {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
-
 
 header select {
   background: transparent;

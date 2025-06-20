@@ -32,25 +32,25 @@
   /*─────────────────────────────────────────────────────────────────────────
     COMMON STYLES (RESET, VARIABLES, BACKGROUND, HEADER, FOOTER)
   ──────────────────────────────────────────────────────────────────────────*/
-  :root {
-    --bg-dark:    #2f004f;
-    --bg-mid:     #5c0088;
-    --text-light: #ffffff;
-    --text-faint: #cccccc;
-    --accent:     #fad16f;
-    --footer-bg:  #0b091c;
-    --footer-text:#999999;
-  }
-  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-  body {
-    min-height:100vh;
-    font-family:'Cormorant Garamond', serif;
-    color:var(--text-light);
-    background:
-      radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 70%),
-      linear-gradient(135deg, var(--bg-dark), var(--bg-mid), var(--bg-dark));
-    overflow-x:hidden;
-  }
+    :root {
+        --bg-dark:    #2f004f;
+        --bg-mid:     #5c0088;
+        --text-light: #ffffff;
+        --text-faint: #cccccc;
+        --accent:     #fad16f;
+        --footer-bg:  #0b091c;
+        --footer-text:#999999;
+    }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    body {
+        min-height:100vh;
+        font-family:'Cormorant Garamond', serif;
+        color:var(--text-light);
+        background:
+            radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 70%),
+            radial-gradient(circle at center, #5a3591 0%, #06030a 100%);
+        overflow-x:hidden;
+    }
   /* HEADER */
   .site-header {
     display:flex; justify-content:space-between; align-items:center;

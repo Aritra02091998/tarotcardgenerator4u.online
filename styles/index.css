@@ -22,7 +22,7 @@ body {
     color: var(--text-light);
     background:
         radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 70%),
-        linear-gradient(135deg, var(--bg-dark), var(--bg-mid), var(--bg-dark));
+        radial-gradient(circle at center, #5a3591 0%, #06030a 100%);
     overflow-x: hidden;
 }
 
@@ -113,71 +113,71 @@ body {
   HERO & MENU GRID
 ──────────────────────────────────────────────────────────────────────────*/
 .hero {
-  text-align: center;
-  padding: 3rem 1rem 2rem;
-  position: relative;
-  z-index: 1;
+    text-align: center;
+    padding: 3rem 1rem 2rem;
+    position: relative;
+    z-index: 1;
 }
 .hero-title {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--text-light);
-  text-shadow: 0 0 8px var(--accent);
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+    text-shadow: 0 0 8px var(--accent);
 }
 .hero-subtitle {
-  font-size: 1.3rem;
-  color: var(--text-faint);
-  margin-bottom: 4rem; /* increased gap */
-  text-shadow: 0 0 6px var(--accent);
+    font-size: 1.3rem;
+    color: var(--text-faint);
+    margin-bottom: 4rem; /* increased gap */
+    text-shadow: 0 0 6px var(--accent);
 }
 .after-menu-header-2 {
-  font-size: 1.5rem;
-  color: var(--accent);
-  margin-top: 4rem; /* increased gap */
-  text-shadow: 0 0 6px var(--accent);
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-top: 4rem; /* increased gap */
+    text-shadow: 0 0 6px var(--accent);
 }
 .tools-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
 }
 .tool-card {
-  width: 128px;
-  height: 135px;       /* reduced by 5px */
-  background: var(--accent);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: transform 0.3s, box-shadow 0.3s;
+    width: 128px;
+    height: 135px;       /* reduced by 5px */
+    background: var(--accent);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 .tool-card:hover {
-  transform: translateY(-8px);
-  box-shadow:
-    0 0 50px var(--accent),
-    inset 0 0 0 0 var(--bg-mid);
+    transform: translateY(-8px);
+    box-shadow:
+        0 0 50px var(--accent),
+        inset 0 0 0 0 var(--bg-mid);
 }
 .tool-card .icon {
-  font-size: 2rem;
-  color: var(--bg-dark);
-  margin-bottom: 0.5rem;
+    font-size: 2rem;
+    color: var(--bg-dark);
+    margin-bottom: 0.5rem;
 }
 .tool-card .name {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 1rem;
-  color: var(--bg-dark);
-  text-align: center;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1rem;
+    color: var(--bg-dark);
+    text-align: center;
 }
 .after-menu-header-1 {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 2.0rem;   /* same as hero-title */
-  color: var(--accent);
-  margin: 3rem 0;       /* ample gap above & below */
-  /*text-shadow: 0 0 8px var(--accent); turned off glow effect*/
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 2.0rem;   /* same as hero-title */
+    color: var(--accent);
+    margin: 3rem 0;       /* ample gap above & below */
+    /*text-shadow: 0 0 8px var(--accent); turned off glow effect*/
 }
 
 /* ── Psychic CTA (match page purple) ── */
@@ -233,12 +233,10 @@ body {
 .psychic-help__btn:hover {
     box-shadow: 0 0 12px var(--accent);
 }
-/* end of Pshychic section designs*/
+/* ---------------------End of Pshychic section designs----------------------------- */
 
 
-/*─────────────────────────────────────────────────────────────────────────
-  SECTION DIVIDER
-──────────────────────────────────────────────────────────────────────────*/
+/* ---------------------------SECTION DIVIDER----------------------------------------*/
 .section-divider {
   border: none;
   border-top: 1px solid var(--accent); /* gold color */
