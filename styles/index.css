@@ -14,43 +14,44 @@
   margin: 0; padding: 0; box-sizing: border-box;
 }
 
-/*─────────────────────────────────────────────────────────────────────────
-  BODY & BACKGROUND
-──────────────────────────────────────────────────────────────────────────*/
+/*-------------------------------BODY & BACKGROUND------------------------------*/
 body {
-  position: relative;
-  min-height: 100vh;
-  font-family: 'Cormorant Garamond', serif;
-  color: var(--text-light);
-  background:
-    radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 70%),
-    linear-gradient(135deg, var(--bg-dark), var(--bg-mid), var(--bg-dark));
-  overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--text-light);
+    background:
+        radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 70%),
+        linear-gradient(135deg, var(--bg-dark), var(--bg-mid), var(--bg-dark));
+    overflow-x: hidden;
 }
+
 /* starfield canvas */
 #starfield {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  z-index: -2;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -2;
 }
+
 /* swinging spotlight torch from top */
 .spotlight {
-  position: fixed;
-  top: -25%;
-  left: -20%;
-  width: 160vw;
-  height: 160vh;
-  background: radial-gradient(circle at top center,
+    position: fixed;
+    top: -25%;
+    left: -20%;
+    width: 160vw;
+    height: 160vh;
+    background: radial-gradient(circle at top center,
     rgba(255,255,255,0.12), transparent 60%);
-  pointer-events: none;
-  z-index: -1;
-  animation: swing 12s ease-in-out infinite;
+    pointer-events: none;
+    z-index: -1;
+    animation: swing 12s ease-in-out infinite;
 }
+
 @keyframes swing {
-  0%   { transform: translateX(0)   rotate(-20deg); }
-  50%  { transform: translateX(35vw) rotate(20deg); }
-  100% { transform: translateX(0)   rotate(-20deg); }
+    0%   { transform: translateX(0)   rotate(-20deg); }
+    50%  { transform: translateX(35vw) rotate(20deg); }
+    100% { transform: translateX(0)   rotate(-20deg); }
 }
 
 /*─────────────────────────────────────────────────────────────────────────
@@ -119,13 +120,13 @@ body {
 }
 .hero-title {
   font-family: 'Cinzel Decorative', serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
   color: var(--text-light);
   text-shadow: 0 0 8px var(--accent);
 }
 .hero-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--text-faint);
   margin-bottom: 4rem; /* increased gap */
   text-shadow: 0 0 6px var(--accent);
