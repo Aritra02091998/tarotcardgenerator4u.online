@@ -40,3 +40,33 @@ function animate() {
 }
 initStars();
 animate();
+
+// ── AOS Scroll Animations ──
+AOS.init({
+  duration: 800,
+  once: true
+});
+
+// ── Animated Counters ──
+const counters = document.querySelectorAll('.counter');
+const speed = 200;
+counters.forEach(counter => {
+  const update = () => {
+    const target = +counter.dataset.target;
+    const count  = +counter.innerText;
+    const inc    = target / speed;
+    if (count < target) {
+      counter.innerText = Math.ceil(count + inc);
+      setTimeout(update, 20);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  // only start when scrolled into view
+  new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      update();
+      this.disconnect();
+    }
+  }, { threshold: 0.5 }).observe(counter);
+});

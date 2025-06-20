@@ -246,39 +246,8 @@ body {
   z-index: 1;
 }
 
-/*─────────────────────────────────────────────────────────────────────────
-  SEO CARDS
-──────────────────────────────────────────────────────────────────────────*/
-.seo-cards-container {
-  padding: 0 1rem 3rem;
-  position: relative;
-  z-index: 1;
-}
-.seo-card {
-  max-width: 800px;
-  margin: 2rem auto;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 12px;
-  padding: 2rem;
-}
-.seo-card h2 {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 1.75rem;
-  color: var(--accent);
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.seo-card p {
-  font-size: 1rem;
-  color: var(--text-faint);
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
 
-/*─────────────────────────────────────────────────────────────────────────
-  FOOTER – NEW DESIGN
-──────────────────────────────────────────────────────────────────────────*/
+/*---------------------------------FOOTER-------------------------*/
 .site-footer {
   display: grid;
   grid-template-columns: 1fr 3fr;
@@ -354,9 +323,140 @@ body {
   color: var(--text-faint);
 }
 
-/*─────────────────────────────────────────────────────────────────────────
-  RESPONSIVE – stack footer on mobile
-──────────────────────────────────────────────────────────────────────────*/
+
+/*---------------Enhanced Section---------------------*/
+.enhanced-section {
+  background: rgba(255,255,255,0.03);
+  padding: 4rem 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Shape Divider */
+.shape-divider-top svg {
+  display: block;
+  width: 100%;
+  height: 60px;
+}
+
+/* Feature Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.feature-card {
+  border: 1px solid #fad16f;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.feature-card i {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+.feature-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+}
+.feature-card p {
+  color: var(--text-faint);
+  font-size: 0.95rem;
+}
+
+/* Stats Counters */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+.stat {
+  text-align: center;
+}
+.counter {
+  font-size: 2.5rem;
+  color: var(--accent);
+  display: block;
+}
+.stat p {
+  color: var(--text-faint);
+}
+
+/* Accordion */
+.accordion details {
+  border-radius: 8px;
+  margin-bottom: 1.7rem;
+  padding: 1rem;
+}
+.accordion summary {
+  font-size: 1.3rem;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  padding-right: 1.5rem;
+  list-style: none;
+}
+.accordion summary::-webkit-details-marker {
+  display: none;
+}
+.accordion summary::after {
+  content: '+';
+  position: absolute;
+  right: 1rem;
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+}
+.accordion details[open] summary::after {
+  content: '-';
+}
+.accordion p {
+  margin-top: 0.5rem;
+  line-height: 1.6;
+  color: var(--text-faint);
+  font-size: 1.3rem;
+}
+
+/* CTA */
+.enhanced-cta {
+  text-align: center;
+  margin: 3rem;
+}
+.enhanced-cta h2 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin: 1.5rem;
+}
+.btn-primary {
+  background: var(--accent);
+  color: var(--bg-dark);
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+/*---------------End of ENHANCED SECTION------------------------*/
+
+
+/*-------------RESPONSIVE – stack footer on mobile--------------*/
 @media (max-width: 768px) {
     .tool-card {
     width: 120px;

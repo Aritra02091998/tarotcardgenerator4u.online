@@ -29,7 +29,10 @@
 
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-…" crossorigin="anonymous" referrerpolicy="no-referrer">
-      <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet" />
+      
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
 
     <link rel="stylesheet" href="/styles/index.css" >
 
@@ -45,7 +48,6 @@
     
 </head>
 
-</head>
 
 <body>
 
@@ -125,50 +127,82 @@
 
         <hr class="section-divider">
 
-        <!-- SEO TEXTS -->
-        <section class="seo-cards-container">
-            <div class="seo-card">
-                <h2>The Wisdom of Tarot</h2>
-                <p>Tarot cards have been used for centuries as a tool for introspection, guidance, and divination. Each
-                card in the deck holds symbolic imagery and meaning, offering insights into our lives and the challenges
-                we face. Whether you're seeking clarity on a specific issue or looking for general guidance, the tarot
-                can help illuminate your path.</p>
-                <p>Our AI-powered tarot readings combine ancient wisdom with modern technology to provide you with
-                personalized insights that resonate with your unique situation. The cards you draw are not random—they're
-                selected based on your energy and the questions you bring to the reading.</p>
+        <section class="enhanced-section">
+
+            <!-- SVG Shape Divider -->
+            <div class="shape-divider-top">
+                <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M0,0 C600,120 600,0 1200,100 L1200,0 L0,0 Z"
+                    fill="rgba(255,255,255,0.05)"
+                ></path>
+                </svg>
             </div>
-            <div class="seo-card">
-                <h2>Tarot Card Generator</h2>
-                <p>Discover our powerful tarot card generator, designed to provide you with instant, meaningful readings.
-                Whether you're a beginner or an experienced reader, the Mystic Tarot card generator delivers clarity and
-                insight. Easily generate a personalized tarot card reading that helps unveil hidden messages and guide
-                your path.</p>
+
+            <!-- Feature Cards -->
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up">
+                <i class="fas fa-hands"></i>
+                <h3>Ancient Wisdom</h3>
+                <p>Timeless tarot insights to guide your journey.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-bolt"></i>
+                <h3>Instant Clarity</h3>
+                <p>Quick, intuitive readings at your fingertips.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-robot"></i>
+                <h3>AI Enhanced</h3>
+                <p>Modern algorithms meet mystical traditions.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-chart-line"></i>
+                <h3>Track Progress</h3>
+                <p>Review past readings and watch your growth.</p>
+                </div>
             </div>
-            <div class="seo-card">
-                <h2>Random Tarot Card Generator</h2>
-                <p>Our random tarot card generator offers spontaneous readings at the click of a button. Perfect for yes-or-no
-                questions and quick insights, this tool draws cards at random and interprets their meanings, providing
-                you with immediate guidance. Use it for daily reflections, journaling prompts, or decision making.</p>
+
+            <!-- Animated Counters -->
+            <div class="stats" data-aos="fade-up" data-aos-delay="400">
+                <div class="stat">
+                <span class="counter" data-target="10000">0</span>
+                <p>Readings Completed</p>
+                </div>
+                <div class="stat">
+                <span class="counter" data-target="95">0</span>
+                <p>% Satisfaction</p>
+                </div>
+                <div class="stat">
+                <span class="counter" data-target="50">0</span>
+                <p>Expert Psychics</p>
+                </div>
             </div>
-            <div class="seo-card">
-                <h2>Tarot Card Generator Online</h2>
-                <p>Access our tarot card generator online anytime, anywhere. No downloads or sign-ups required—just visit Mystic
-                Tarot and begin your reading. Get free tarot card readings online on any device, and explore the ancient
-                wisdom of the cards to gain insight into your past, present, and future.</p>
+
+            <!-- FAQ Accordion -->
+            <div class="accordion" data-aos="fade-up" data-aos-delay="500">
+                <details>
+                <summary>What is a Tarot Card Generator?</summary>
+                <p>Tarot cards have been used for centuries as a tool for introspection, guidance, and divination. Each card holds symbolic imagery and offers insights into our lives.</p>
+                </details>
+                <details>
+                <summary>How does the AI selection work?</summary>
+                <p>Our AI analyzes your energy and question to select cards that most closely resonate with your current path for a truly personalized experience.</p>
+                </details>
+                <details>
+                <summary>Is it really free?</summary>
+                <p>Yes! Enjoy unlimited tarot readings without any cost—no signup required. Dive in whenever you need guidance.</p>
+                </details>
             </div>
-            <div class="seo-card">
-                <h2>Tarot Card Generator Free</h2>
-                <p>Enjoy our tarot card generator free of charge. Mystic Tarot provides unlimited readings, allowing you to
-                explore various spreads, interpretations, and reversals without spending a dime. Dive into your personal
-                journey with our completely free tarot card reading experience.</p>
+
+            <!-- Strong CTA -->
+            <div class="enhanced-cta" data-aos="fade-up" data-aos-delay="700">
+                <h2>Ready to unlock your future?</h2>
+                <a href="/daily-tarot-card-draw.html" class="btn-primary">Draw Your Tarot Now</a>
             </div>
-            <div class="seo-card">
-                <h2>Best AI Tarot Card Generator</h2>
-                <p>Experience the best AI tarot card generator with Mystic Tarot. Our advanced AI algorithms interpret card
-                meanings, provide contextual insights, and offer personalized guidance. Combining traditional tarot
-                knowledge with modern AI, we deliver accurate, intuitive readings that resonate with your unique situation.</p>
-            </div>
+
         </section>
+
     </main>
 
     <!-- FOOTER -->
@@ -215,7 +249,7 @@
         </div>
     </footer>
 
-    <!--JavaScript: Starfield Animation-->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="/scripts/index.js"></script>
 </body>
 </html>
