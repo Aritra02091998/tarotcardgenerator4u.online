@@ -1,6 +1,4 @@
-/* ------------------------------------------------------------------
-   Tarot page JS – now wrapped in DOMContentLoaded & self-healing
------------------------------------------------------------------- */
+/* Tarot page JS – now wrapped in DOMContentLoaded & self-healing */
 document.addEventListener('DOMContentLoaded', () => {
 
     AOS.init();
@@ -15,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const ctx = cv.getContext('2d');
-
     function fit() {
         cv.width = innerWidth;
         cv.height = innerHeight;
@@ -79,7 +76,16 @@ document.addEventListener('DOMContentLoaded', () => {
         fanWrap.appendChild(promptTxt);
     }
 
-    /* ---------- 3. Result / details panel (same guard) ---------- */
+    // simple toast helper
+    function showToast(msg) {
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.textContent = msg;
+        document.body.appendChild(toast);
+        setTimeout(() => toast.remove(), 2000);
+    }
+
+    /* ---------- Result / details panel (same guard) ---------- */
     let result = document.getElementById('result');
     if (!result) {
         result = document.createElement('div');
@@ -155,10 +161,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /* ---------- Button only works for small screens ---------- */
+    const drawBtn = document.getElementById('draw-btn');
+    if (drawBtn) {
+        drawBtn.addEventListener('click', () => {
+            // pick the middle available card
+            const cards = fan.querySelectorAll('.card:not(.fade)');
+            if (!cards.length) return;
+            const mid = Math.floor(cards.length / 2);
+            cards[mid].click(); 
+        });
+    }
+
     /* ---------- 5. Click-to-draw functionality ---------- */
     function onPick(e) {
         const card = e.currentTarget;
         const mobile = innerWidth < 768;
+
+        // — hide the mobile Draw-Card helper as soon as a draw starts
+        if (mobile && drawBtn) drawBtn.style.display = 'none';
 
         fan.querySelectorAll('.card').forEach(c => {
             if (c !== card) c.classList.add('fade');
@@ -228,90 +249,143 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function fillDetails(c) {
-    const rev = Math.random() > 0.5;
-    const details = document.getElementById('details');
+        const rev = Math.random() > 0.5;
+        const details = document.getElementById('details');
 
-    // Populate each tab
-    details.querySelector('#arcana').innerHTML = `
-        <h2>${c.name}</h2>
-        <h3>${c.arcana}</h3>
-        <p><strong>Orientation:</strong> ${rev ? 'Reversed' : 'Upright'}</p>
-    `;
-    details.querySelector('#meaning').textContent =
-        (rev ? c.meanings.shadow : c.meanings.light).join(', ');
-    details.querySelector('#fortune').textContent =
-        c.fortune_telling.join(', ');
-    details.querySelector('#keywords').textContent =
-        c.keywords.join(', ');
+        // Populate each tab
+        details.querySelector('#arcana').innerHTML = `
+            <h2>${c.name}</h2>
+            <h3>${c.arcana}</h3>
+            <p><strong>Orientation:</strong> ${rev ? 'Reversed' : 'Upright'}</p>`;
+        details.querySelector('#meaning').textContent =
+            (rev ? c.meanings.shadow : c.meanings.light).join(', ');
+        details.querySelector('#fortune').textContent =
+            c.fortune_telling.join(', ');
+        details.querySelector('#keywords').textContent =
+            c.keywords.join(', ');
 
-    // Tab switching
-    details.querySelectorAll('.tab-buttons li').forEach(btn => {
-        btn.addEventListener('click', () => {
-        // deactivate
-        details.querySelectorAll('.tab-buttons li').forEach(b => b.classList.remove('active'));
-        details.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
-        // activate
-        btn.classList.add('active');
-        details.querySelector(`#${btn.dataset.tab}`).classList.add('active');
+        // Tab switching
+        details.querySelectorAll('.tab-buttons li').forEach(btn => {
+            btn.addEventListener('click', () => {
+            // deactivate
+            details.querySelectorAll('.tab-buttons li').forEach(b => b.classList.remove('active'));
+            details.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+            // activate
+            btn.classList.add('active');
+            details.querySelector(`#${btn.dataset.tab}`).classList.add('active');
+            });
         });
-    });
 
-    // Copy current tab
-    document.getElementById('copy-btn').addEventListener('click', () => {
-        const activeTab = details.querySelector('.tab-content.active');
-        navigator.clipboard.writeText(activeTab.textContent);
-    });
 
-    // Download PDF (requires jsPDF)
-    document.getElementById('pdf-btn').addEventListener('click', () => {
-    import('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js')
-    .then((module) => {
-    const { jsPDF } = module;
-    const doc = new jsPDF();  
-        let text = '';
-        details.querySelectorAll('.tab-content').forEach(tc => {
-            text += tc.previousElementSibling
-            ? tc.previousElementSibling.textContent + '\n' + tc.textContent + '\n\n'
-            : tc.textContent + '\n\n';
+        // wire up Copy button
+        document.getElementById('copy-btn').addEventListener('click', () => {
+            const details = document.getElementById('details');
+            const active = details.querySelector('.tab-content.active');
+            if (!active) return;
+            navigator.clipboard.writeText(active.textContent.trim())
+                .then(() => showToast('Copied!'))
+                .catch(err => console.error('Copy failed', err));
         });
-        doc.text(text, 10, 10);
-        doc.save(`${c.name}-reading.pdf`);
-        });
-    });
 
-    // Share via Web Share API
-    document.getElementById('share-btn').addEventListener('click', () => {
-        const shareData = {
-        title: `${c.name} Tarot Reading`,
-        text: `I just drew the ${c.name} tarot card!`,
-        url: window.location.href
-        };
-        if (navigator.share) navigator.share(shareData);
-        else alert('Sharing is not supported on this browser.');
-    });
+
+        document.getElementById('draw-again-btn').addEventListener('click', () => {
+            location.reload();
+        });
+
+        // Download PDF
+        document.getElementById('pdf-btn').addEventListener('click', () => {
+            const details = document.getElementById('details');
+            const doc = new window.jspdf.jsPDF();
+            const gold = [255, 215, 0];
+
+            // Header
+            doc.setFont('helvetica', 'bold');
+            doc.setTextColor(...gold);
+            doc.setFontSize(20);
+            doc.text(`${c.name} Tarot Reading`, 15, 20);
+
+            // Underline
+            doc.setDrawColor(...gold);
+            doc.setLineWidth(0.5);
+            doc.line(15, 24, 195, 24);
+
+            // Body
+            doc.setFont('helvetica', 'normal');
+            doc.setTextColor(33, 33, 33);
+            doc.setFontSize(12);
+            let y = 30;
+
+            details.querySelectorAll('.tab-content').forEach(tc => {
+                const title = details.querySelector(`.tab-buttons li[data-tab="${tc.id}"]`).textContent;
+                // title
+                doc.setFont('helvetica', 'bold');
+                doc.setTextColor(...gold);
+                doc.text(title, 15, y);
+                y += 6;
+                // content
+                doc.setFont('helvetica', 'normal');
+                doc.setTextColor(33, 33, 33);
+                const lines = doc.splitTextToSize(tc.textContent.trim(), 180);
+                doc.text(lines, 15, y);
+                y += lines.length * 6 + 8;
+                // page break if needed
+                if (y > 270) {
+                doc.addPage();
+                y = 20;
+                }
+            });
+
+            // Footer
+            doc.setFontSize(10);
+            doc.setTextColor(128);
+            doc.text(
+                'Generated from http://tarotcardgenerator.online/',
+                15,
+                doc.internal.pageSize.getHeight() - 10
+            );
+
+            doc.save(`${c.name}-reading.pdf`);
+        });
+
+        // Share via Web Share API
+        document.getElementById('share-btn').addEventListener('click', () => {
+            const shareData = {
+            title: `${c.name} Tarot Reading`,
+            text: `I just drew the ${c.name} tarot card!`,
+            url: window.location.href
+            };
+            if (navigator.share) navigator.share(shareData);
+            else alert('Sharing is not supported on this browser.');
+        });
     }
 
-    // Simple count-up
-    function animateCount(el, target) {
-        let current = 0;
-        const duration = 1500;
-        const step = Math.ceil(target / (duration / 16));
-        function tick() {
-                current = Math.min(current + step, target);
-                el.textContent = current.toLocaleString();
-                if (current < target) requestAnimationFrame(tick);
+    // Simple count-up animation for the statistics.
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+    counters.forEach(counter => {
+    const update = () => {
+        const target = +counter.dataset.target;
+        const count  = +counter.innerText;
+        const inc    = target / speed;
+        if (count < target) {
+        counter.innerText = Math.ceil(count + inc);
+        setTimeout(update, 20);
+        } else {
+        counter.innerText = target;
         }
-        tick();
-    }
+    };
+
+    // only start when scrolled into view
+    new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) {
+        update();
+        this.disconnect();
+        }
+    }, { threshold: 0.5 }).observe(counter);
+    });
+
 
     // When AOS reveals a .stat-item, kick off its counter
-    document.querySelectorAll('.stat-item').forEach(item => {
-        item.addEventListener('aos:in', () => {
-            const p = item.querySelector('p');
-            animateCount(p, +p.dataset.target);
-        }, { once: true });
-    });
-
     document.querySelectorAll('.faq-question').forEach(q => {
         q.addEventListener('click', () => {
             const item = q.parentElement;

@@ -117,6 +117,38 @@ header button:hover {
   height: 340px;
 }
 
+.draw-btn {
+    display: none;
+    margin: 1.5rem auto;
+    padding: .8rem 1.5rem;
+    font-family: 'Cinzel Decorative', serif;
+    border: 2px solid var(--accent);
+    background: transparent;
+    color: var(--accent);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: box-shadow .3s;
+}
+.draw-btn:hover {
+    box-shadow: 0 0 8px var(--accent);
+}
+
+.detail-buttons button#draw-again-btn {
+    /* same style as the other .detail-buttons button rules */
+    padding: .6rem 1.2rem;
+    border: 2px solid var(--accent);
+    background: transparent;
+    color: var(--accent);
+    font-family: 'Cinzel Decorative', serif;
+    cursor: pointer;
+    transition: box-shadow .3s;
+}
+.detail-buttons button#draw-again-btn:hover {
+    box-shadow: 0 0 8px var(--accent);
+}
+/*----------End of Deck Settings --------------*/
+
+
 .card {
   --w: 118px;
   --h: 170px;
@@ -279,11 +311,9 @@ header button:hover {
 }
 
 .view .card {
-  --w: 238px;
-  --h: 344px;
-  cursor: default;
-  /*animation: dock .9s cubic-bezier(.25, .7, .3, 1) forwards;
-  transition: box-shadow .35s;*/
+    --w: 225px;
+    --h: 335px;
+    cursor: default;
 }
 
 .view .card:hover {
@@ -480,7 +510,70 @@ header button:hover {
     font-size: 1.5rem;
 }
 
-/* ── Psychic CTA (match page purple) ── */
+/* ── Toast notification ── */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    opacity: 0;
+    animation: fadeInOut 2s forwards;
+    z-index: 1000;
+}
+@keyframes fadeInOut {
+    0%   { opacity: 0; }
+    10%  { opacity: 1; }
+    90%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* ------------ Result Tabs ----------- */
+.tabs { }
+.tab-buttons {
+  display: flex;
+  list-style: none;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 1rem;
+}
+.tab-buttons li {
+  margin-right: 1.5rem;
+  padding: .5rem;
+  cursor: pointer;
+  font-family: 'Cinzel Decorative', serif;
+}
+.tab-buttons li.active {
+  border-bottom: 3px solid var(--accent);
+}
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* ── Action Buttons ── */
+.detail-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+.detail-buttons button {
+  padding: .6rem 1.2rem;
+  border: 2px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  font-family: 'Cinzel Decorative', serif;
+  cursor: pointer;
+  transition: box-shadow .3s;
+}
+.detail-buttons button:hover {
+  box-shadow: 0 0 8px var(--accent);
+}
+
+/* ------------ End of Result Tabs ----------- */
+
+
+/* ----------- Psychic CTA (match page purple) ----------------- */
 .psychic-help {
     margin-left: auto;
     margin-right: auto;
@@ -528,9 +621,81 @@ header button:hover {
 .psychic-help__btn:hover {
     box-shadow: 0 0 12px var(--accent);
 }
-/* end of Pshychic section designs*/
+/*-------End of Pshychic section designs------------------*/
 
-/* ── Collapsible FAQ Section ── */
+/*-------------Transparent Boxes -------------------*/
+.glass-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    width: 70%;
+    margin: auto;
+}
+.glass-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+    transition: transform .3s, box-shadow .3s;
+}
+.glass-box i {
+  font-size: 2.9rem;
+  color: var(--accent);
+  margin: 0.5rem;
+}
+.glass-box span {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1rem;
+    margin: 0.7rem;
+}
+.glass-box p {
+    font-family: 'Cinzel Decorative', serif;
+    margin:0.2rem;
+    color: var(--txt-faint);
+    font-size: 0.6rem;
+    text-align: center;
+    width: 60%;
+}
+.glass-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+/*-----------End of Transparent Boxes -----------*/
+
+/*-------------Stats Counters-------------------*/
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 800px;
+  margin: 5rem auto 3rem;
+}
+.stat {
+  text-align: center;
+}
+.counter {
+  font-size: 2.5rem;
+  color: var(--accent);
+  display: block;
+}
+.stat p {
+  color: var(--text-faint);
+}
+/*-------------End of Stats Counters-------------------*/
+
+/* ── Collapsible FAQ Section and heading ── */
+.faq-heading {
+    text-align: center;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 2rem;
+    color: var(--accent);
+    margin: 3rem auto 1rem;
+}
 .faq-section {
   width: 70%;
   margin: 3rem auto;
@@ -563,11 +728,10 @@ header button:hover {
 .faq-item.open .faq-question::after {
   content: "−";
 }
-/* ── End of FAQ Section ── */
+/* ──----- End of FAQ Section -----── */
 
 
 @media (max-width: 768px){
-
     /* 1 ▸ deck area & cards shrink */
     #fanWrap          { height: 260px; }
     #fan              { height: 200px; overflow: visible; }
@@ -647,17 +811,13 @@ header button:hover {
             0 0 32px var(--accent);
     }
 
+    /* Show the Draw button for small-screens only----*/
+    .draw-btn { 
+        display: block; 
+    }
+
     #prompt-after {
-        position: absolute;
-        top: 130%;
-        text-align: center;
-        transform: translate(-50%, -50%);
-        font-family: 'Cinzel Decorative', serif;
-        font-size: 0.8rem;
-        color: var(--txt);
-        text-shadow:
-            0 0 8px var(--accent),
-            0 0 32px var(--accent);
+        display: none;
     }
     /* End of responsive text around deck */
 
@@ -673,7 +833,40 @@ header button:hover {
     }
     /* End of responsive FAQ */
 
-    /* Start of responsive footer */
+    /* -- Glass Box --*/
+    .glass-links {
+        width: 100%;
+    }
+
+    /* -- Result Tabs --*/
+    .tab-buttons { 
+        flex-wrap: wrap; 
+    }
+    .detail-buttons { 
+        flex-direction: column; 
+    }
+
+    /* -----------Mobile friendly tabs---------------- */
+    .tabs .tab-buttons {
+        display: none;
+    }
+
+    .tab-content {
+        display: block !important;
+        border-top: 1px solid var(--accent);
+        padding: 1rem 0;
+        margin-top: 1rem;
+    }
+    .tab-content::before {
+        content: attr(data-title);
+        font-family: 'Cinzel Decorative', serif;
+        font-size: 1.2rem;
+        color: var(--accent);
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+    /*-----------Start of responsive footer--------------*/
     .site-footer {
         display: block;
     }
@@ -692,111 +885,4 @@ header button:hover {
     }
     /* End of footer */
 }
-
-
-/* ── Tabs ── */
-.tabs { }
-.tab-buttons {
-  display: flex;
-  list-style: none;
-  border-bottom: 2px solid var(--accent);
-  margin-bottom: 1rem;
-}
-.tab-buttons li {
-  margin-right: 1.5rem;
-  padding: .5rem;
-  cursor: pointer;
-  font-family: 'Cinzel Decorative', serif;
-}
-.tab-buttons li.active {
-  border-bottom: 3px solid var(--accent);
-}
-.tab-content { display: none; }
-.tab-content.active { display: block; }
-
-/* ── Action Buttons ── */
-.detail-buttons {
-  margin-top: 2rem;
-  display: flex;
-  gap: 1rem;
-}
-.detail-buttons button {
-  padding: .6rem 1.2rem;
-  border: 2px solid var(--accent);
-  background: transparent;
-  color: var(--accent);
-  font-family: 'Cinzel Decorative', serif;
-  cursor: pointer;
-  transition: box-shadow .3s;
-}
-.detail-buttons button:hover {
-  box-shadow: 0 0 8px var(--accent);
-}
-
-/* Responsive tweak */
-@media (max-width: 768px) {
-  .tab-buttons { flex-wrap: wrap; }
-  .detail-buttons { flex-direction: column; }
-}
-
-
-
-.glass-links {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap: 1.5rem;
-  padding: 2rem 1rem;
-}
-
-.glass-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-  backdrop-filter: blur(10px);
-  background: rgba(255,255,255,0.05);
-  border: 2px solid #FFD700;
-  border-radius: 16px;
-  text-decoration: none;
-  color: #fff;
-  transition: transform .3s, box-shadow .3s;
-}
-.glass-box i {
-  font-size: 2rem;
-  color: #FFD700;
-  margin-bottom: 0.5rem;
-}
-.glass-box span {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 1.1rem;
-}
-.glass-box:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-}
-
-.stats-section {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  padding: 2rem 1rem;
-}
-.stat-item h3 {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 1.4rem;
-  margin-bottom: .5rem;
-  color: var(--accent);
-}
-.stat-item p {
-  font-size: 2rem;
-  font-weight: bold;
-}
-@media (max-width: 768px) {
-  .stats-section {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-}
-
-
 

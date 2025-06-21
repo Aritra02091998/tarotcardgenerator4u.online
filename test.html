@@ -76,32 +76,41 @@
             <p id="prompt">Select a card for today</p>
             <p id="prompt-after">Let the UNIVERSE Answer YOU</p>
         </div>
+
+        <button id="draw-btn" class="draw-btn" data-aos="fade-up" data-aos-delay="100">
+            Draw Card
+        </button>
+
         <div id="result">
             <div class="view" id="view"></div>
             <div class="info" id="details">
                 <div class="tabs">
+
                     <ul class="tab-buttons">
-                    <li class="active" data-tab="arcana">Arcana & Orientation</li>
-                    <li data-tab="meaning">Card Meaning</li>
-                    <li data-tab="fortune">Fortune Telling</li>
-                    <li data-tab="keywords">Keywords</li>
+                        <li class="active" data-tab="arcana">Arcana & Orientation</li>
+                        <li data-tab="meaning">Card Meaning</li>
+                        <li data-tab="fortune">Fortune Telling</li>
+                        <li data-tab="keywords">Keywords</li>
                     </ul>
-                    <div class="tab-content active" id="arcana"></div>
-                    <div class="tab-content" id="meaning"></div>
-                    <div class="tab-content" id="fortune"></div>
-                    <div class="tab-content" id="keywords"></div>
+
+                    <div class="tab-content active" id="arcana" data-title="Arcana & Orientation"></div>
+                    <div class="tab-content" id="meaning" data-title="Card Meaning"></div>
+                    <div class="tab-content" id="fortune" data-title="Fortune Telling"></div>
+                    <div class="tab-content" id="keywords" data-title="Keywords"></div>
+
                 </div>
                 <div class="detail-buttons">
                     <button id="copy-btn">Copy</button>
                     <button id="pdf-btn">Download PDF</button>
                     <button id="share-btn">Share</button>
+                    <button id="draw-again-btn">Draw Again</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="psychic-help">
-        <div class="psychic-help__inner">
+    <div class="psychic-help" data-aos="fade-up">
+        <div class="psychic-help__inner" data-aos="fade-up" data-aos-delay="100">
             <h2><i class="fa-solid fa-moon-stars"></i>Get Advice from Gifted Psychics</h2>
             <p>Feeling lost or stuck? Searching for your path today?<br>
             Receive guidance from gifted psychics, spiritual advisors, and tarot experts.</p>
@@ -111,13 +120,14 @@
     </div>
 
     <!-- DIVIDER & SEO CARDS -->
-    <hr class="section-divider" />
+    <hr class="section-divider" data-aos="fade-up" data-aos-delay="100" />
 
     <section class="glass-links">
         <div class="glass-item" data-aos="fade-up">
             <a href="/love-tarot.html" class="glass-box">
             <i class="fas fa-heart"></i>
             <span>Love Tarot</span>
+            <p> Sample text to describe Health Tarot which is so good you.</p>
             </a>
         </div>
 
@@ -125,6 +135,7 @@
             <a href="/health-tarot.html" class="glass-box">
             <i class="fas fa-apple-alt"></i>
             <span>Health Tarot</span>
+            <p> Sample text to describe Health Tarot which is so good you.</p>
             </a>
         </div>
 
@@ -132,6 +143,26 @@
             <a href="/career-tarot.html" class="glass-box">
             <i class="fas fa-briefcase"></i>
             <span>Career Tarot</span>
+            <p> Sample text to describe Health Tarot which is so good you.</p>
+            </a>
+        </div>
+
+    </section>
+
+    <section class="glass-links">
+        <div class="glass-item" data-aos="fade-up">
+            <a href="/love-tarot.html" class="glass-box">
+            <i class="fas fa-heart"></i>
+            <span>Love Tarot</span>
+            <p> Sample text to describe Health Tarot which is so good you.</p>
+            </a>
+        </div>
+
+        <div class="glass-item" data-aos="fade-up" data-aos-delay="100">
+            <a href="/health-tarot.html" class="glass-box">
+            <i class="fas fa-apple-alt"></i>
+            <span>Health Tarot</span>
+            <p> Sample text to describe Health Tarot which is so good you.</p>
             </a>
         </div>
 
@@ -139,52 +170,50 @@
             <a href="/career-tarot.html" class="glass-box">
             <i class="fas fa-briefcase"></i>
             <span>Career Tarot</span>
-            </a>
-        </div>
-
-        <div class="glass-item" data-aos="fade-up" data-aos-delay="200">
-            <a href="/career-tarot.html" class="glass-box">
-            <i class="fas fa-briefcase"></i>
-            <span>Career Tarot</span>
-            </a>
-        </div>
-
-        <div class="glass-item" data-aos="fade-up" data-aos-delay="200">
-            <a href="/career-tarot.html" class="glass-box">
-            <i class="fas fa-briefcase"></i>
-            <span>Career Tarot</span>
+            <p> Sample text to describe Health Tarot which is so good you.</p>
             </a>
         </div>
     </section>
 
-    <section class="stats-section">
-        <div class="stat-item" data-aos="fade-up">
-            <h3>Readings Completed</h3>
-            <p data-target="10000">0</p>
+    <div class="stats" data-aos="fade-up" data-aos-delay="400">
+        <div class="stat">
+            <span class="counter" data-target="10000">0</span>
+            <p>Readings Completed</p>
         </div>
+        <div class="stat">
+            <span class="counter" data-target="95">0</span>
+            <p>% Satisfaction</p>
+        </div>
+        <div class="stat">
+            <span class="counter" data-target="50">0</span>
+            <p>Expert Psychics</p>
+        </div>
+    </div>
 
-        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
-            <h3>Satisfaction Rate</h3>
-            <p data-target="95">0</p>
-        </div>
-
-        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
-            <h3>Expert Psychics</h3>
-            <p data-target="50">0</p>
-        </div>
-    </section>
+    <h2 class="faq-heading" data-aos="fade-up">Frquetly Adked Questions</h2>
 
     <!-- COLLAPSIBLE FAQ SECTION -->
     <section class="faq-section">
-        <div class="faq-item">
+        <div class="faq-item" data-aos="fade-up">
             <div class="faq-question">What is a Tarot Card Generator?</div>
             <div class="faq-answer">…</div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
             <div class="faq-question">How does the AI selection work?</div>
             <div class="faq-answer">…</div>
         </div>
+
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="faq-question">How does the AI selection work?</div>
+            <div class="faq-answer">…</div>
+        </div>
+
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="faq-question">How does the AI selection work?</div>
+            <div class="faq-answer">…</div>
+        </div>
+
     </section>
 
     <!-- Structured FAQ Schema -->
@@ -287,6 +316,7 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="/scripts/test.js"></script>
 </body>
 </html>
