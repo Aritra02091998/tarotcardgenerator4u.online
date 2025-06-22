@@ -144,7 +144,7 @@ header button:hover {
     transition: box-shadow .3s;
 }
 .detail-buttons button#draw-again-btn:hover {
-    box-shadow: 0 0 8px var(--accent);
+box-shadow: 0 0 8px var(--accent);
 }
 /*----------End of Deck Settings --------------*/
 
@@ -651,15 +651,16 @@ header button:hover {
 .glass-box span {
     font-family: 'Cinzel Decorative', serif;
     font-size: 1rem;
+    font-weight: bold;
     margin: 0.7rem;
 }
 .glass-box p {
     font-family: 'Cinzel Decorative', serif;
     margin:0.2rem;
     color: var(--txt-faint);
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     text-align: center;
-    width: 60%;
+    width: 90%;
 }
 .glass-box:hover {
   transform: translateY(-6px);

@@ -3,6 +3,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     AOS.init();
 
+    // get/set history in localStorage
+    function getHistory() {
+        return JSON.parse(localStorage.getItem('tarotHistory') || '[]');
+    }
+
+    function saveHistory(arr) {
+        localStorage.setItem('tarotHistory', JSON.stringify(arr));
+    }
+
+    // helper to turn an image URL into base64 for embedding
+    function toBase64(url) {
+        return new Promise(resolve => {
+            const img = new Image();
+            img.crossOrigin = 'Anonymous';
+            img.onload = () => {
+            const c = document.createElement('canvas');
+            c.width = img.width;
+            c.height = img.height;
+            c.getContext('2d').drawImage(img, 0, 0);
+            resolve(c.toDataURL('image/png'));
+            };
+            img.src = url;
+        });
+    }
+
     /* ---------- 1. Starfield canvas (auto-create if absent) ---------- */
     let cv = document.getElementById('star');
     if (!cv) {
@@ -252,6 +277,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const rev = Math.random() > 0.5;
         const details = document.getElementById('details');
 
+        // store this draw in history (keep last 5)
+        const hist = getHistory();
+        hist.unshift({
+            name: c.name,
+            orientation: rev ? 'Reversed' : 'Upright',
+            meaning: (rev ? c.meanings.shadow : c.meanings.light).join(', ')
+        });
+        if (hist.length > 5) hist.pop();
+        saveHistory(hist);
+
         // Populate each tab
         details.querySelector('#arcana').innerHTML = `
             <h2>${c.name}</h2>
@@ -263,6 +298,17 @@ document.addEventListener('DOMContentLoaded', () => {
             c.fortune_telling.join(', ');
         details.querySelector('#keywords').textContent =
             c.keywords.join(', ');
+
+        // Render history list
+        const htab = details.querySelector('#history');
+        const past = getHistory();
+        if (past.length === 0) {
+            htab.innerHTML = '<p>No history yet.</p>';
+        } else {
+            htab.innerHTML = '<ul>' + past.map(entry =>
+                `<li><strong>${entry.name}</strong> (${entry.orientation}): ${entry.meaning}</li>`
+            ).join('') + '</ul>';
+        }
 
         // Tab switching
         details.querySelectorAll('.tab-buttons li').forEach(btn => {
@@ -293,57 +339,61 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Download PDF
-        document.getElementById('pdf-btn').addEventListener('click', () => {
-            const details = document.getElementById('details');
+        document.getElementById('pdf-btn').addEventListener('click', async () => {
             const doc = new window.jspdf.jsPDF();
-            const gold = [255, 215, 0];
+            const { width, height } = doc.internal.pageSize;
+            // 1) background fill (solid purple fallback for gradient)
+            doc.setFillColor(33, 0, 68); // #210044
+            doc.rect(0, 0, width, height, 'F');
 
-            // Header
+            // 2) embed the card image
+            const imgEl = document.querySelector('#view .card img');
+            const imgData = await toBase64(imgEl.src);
+            const imgW = 60, imgH = (imgEl.naturalHeight / imgEl.naturalWidth) * imgW;
+            doc.addImage(imgData, 'PNG', 15, 15, imgW, imgH);
+
+            // 3) header text
+            const accent = getComputedStyle(document.documentElement)
+                            .getPropertyValue('--accent').trim();
             doc.setFont('helvetica', 'bold');
-            doc.setTextColor(...gold);
-            doc.setFontSize(20);
-            doc.text(`${c.name} Tarot Reading`, 15, 20);
+            doc.setTextColor(accent);
+            doc.setFontSize(18);
+            doc.text(`${c.name} Tarot Reading`, 15 + imgW + 10, 25);
 
-            // Underline
-            doc.setDrawColor(...gold);
-            doc.setLineWidth(0.5);
-            doc.line(15, 24, 195, 24);
-
-            // Body
-            doc.setFont('helvetica', 'normal');
-            doc.setTextColor(33, 33, 33);
-            doc.setFontSize(12);
-            let y = 30;
-
-            details.querySelectorAll('.tab-content').forEach(tc => {
-                const title = details.querySelector(`.tab-buttons li[data-tab="${tc.id}"]`).textContent;
-                // title
-                doc.setFont('helvetica', 'bold');
-                doc.setTextColor(...gold);
+            // 4) body sections
+            let y = 15 + Math.max(imgH, 30) + 10;
+            for (const tabId of ['arcana','meaning','fortune','keywords','history']) {
+                const title = details.querySelector(`.tab-buttons li[data-tab="${tabId}"]`).textContent;
+                const content = details.querySelector(`#${tabId}`).textContent.trim();
+                doc.setFont('helvetica','bold');
+                doc.setTextColor(accent);
+                doc.setFontSize(14);
                 doc.text(title, 15, y);
                 y += 6;
-                // content
-                doc.setFont('helvetica', 'normal');
-                doc.setTextColor(33, 33, 33);
-                const lines = doc.splitTextToSize(tc.textContent.trim(), 180);
+
+                doc.setFont('helvetica','normal');
+                doc.setTextColor(255,255,255);
+                doc.setFontSize(11);
+                const lines = doc.splitTextToSize(content, width - 30);
                 doc.text(lines, 15, y);
                 y += lines.length * 6 + 8;
-                // page break if needed
-                if (y > 270) {
+                if (y > height - 40) {
                 doc.addPage();
+                // re-fill page background
+                doc.setFillColor(33, 0, 68);
+                doc.rect(0, 0, width, height, 'F');
                 y = 20;
                 }
-            });
+            }
 
-            // Footer
-            doc.setFontSize(10);
-            doc.setTextColor(128);
-            doc.text(
-                'Generated from http://tarotcardgenerator.online/',
-                15,
-                doc.internal.pageSize.getHeight() - 10
+            // 5) big footer with link
+            doc.setFontSize(16);
+            doc.setTextColor(accent);
+            doc.textWithLink(
+                'TarotCardGenerator.online',
+                width / 2, height - 20,
+                { align: 'center', url: 'http://tarotcardgenerator.online/' }
             );
-
             doc.save(`${c.name}-reading.pdf`);
         });
 
